@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volcano Tracker - Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../styles.css">
+    <script src="navigation.js"></script>
+    <script src="carousel.js"></script>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="nav">
+        <!-- Carousel Background -->
+        <div class="nav-carousel" data-carousel="static">
+            <!-- Glass Effect Overlay -->
+            <div class="nav-glass-overlay"></div>
+            
+            <!-- Carousel wrapper -->
+            <div class="carousel-wrapper">
+                <!-- Item 1 -->
+                <div class="carousel-item active" data-carousel-item="active">
+                    <img src="../images/navbar/volcano-banner_1.jpg" alt="Volcano Background 1">
+                </div>
+                <!-- Item 2 -->
+                <div class="carousel-item" data-carousel-item>
+                    <img src="../images/navbar/volcano-banner_2.jpg" alt="Volcano Background 2">
+                </div>
+                <!-- Item 3 -->
+                <div class="carousel-item" data-carousel-item>
+                    <img src="../images/navbar/volcano-banner_3.jpg" alt="Volcano Background 3">
+                </div>
+                <!-- Item 4 -->
+                <div class="carousel-item" data-carousel-item>
+                    <img src="../images/navbar/volcano-banner_4.jpg" alt="Volcano Background 4">
+                </div>
+            </div>
+            
+            <!-- Indicators -->
+            <div class="carousel-indicators">
+                <div class="carousel-indicator active" data-carousel-slide-to="0"></div>
+                <div class="carousel-indicator" data-carousel-slide-to="1"></div>
+                <div class="carousel-indicator" data-carousel-slide-to="2"></div>
+                <div class="carousel-indicator" data-carousel-slide-to="3"></div>
+            </div>
+        </div>
+        
+        <div class="nav-container">
+            <!-- App Logo/Name - Left -->
+            <a href="index.html" class="nav-logo">
+                <i class="fa-solid fa-volcano"></i>
+                Volcano Tracker
+            </a>
+            
+            <!-- Modern Tab Navigation - Center -->
+            <div class="nav-tabs">
+                <input type="radio" id="nav-home" name="nav-tabs" checked />
+                <label class="nav-tab" for="nav-home">Home<span class="nav-icon"><i class="fa-solid fa-house"></i></span></label>
+                
+                <input type="radio" id="nav-volcanoes" name="nav-tabs" />
+                <label class="nav-tab" for="nav-volcanoes" onclick="window.location.href='my-volcanoes.html'">My Volcanoes<span class="nav-icon"><i class="fa-solid fa-volcano"></i></span></label>
+                
+                <input type="radio" id="nav-profile" name="nav-tabs" />
+                <label class="nav-tab" for="nav-profile" onclick="window.location.href='profile.html'">Profile<span class="nav-icon"><i class="fa-solid fa-user"></i></span></label>
+                
+                <span class="nav-glider"></span>
+            </div>
+            
+            <!-- Spacer for balance -->
+            <div style="width: 200px;"></div>
+        </div>
+    </nav>
+
+    <!-- Search Bar Below Navbar -->
+    <div class="search-below-nav">
+        <div class="nav-search-section">
+            <!-- Text Container - Both texts in same position -->
+            <div class="text-container">
+                <div class="adventure-text" id="adventureText">
+                    Search for your next adventure
+                </div>
+                
+                <div class="title-container">
+                    <h1 class="title">Discover Amazing Volcanoes</h1>
+                    <h1 class="title-down">Finding volcanic wonders...</h1>
+                </div>
+            </div>
+            
+            <fieldset class="field-container">
+                <div class="search-icon-left">
+                    <div class="icon-search"></div>
+                </div>
+                <input type="text" placeholder="Search volcanoes..." class="field" id="searchField" />
+            </fieldset>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="container fade-in">
+        <h1 class="text-center text-volcano">Discover Volcanoes Around the World</h1>
+        
+        <!-- Search Section -->
+        <section class="section">
+            <!-- Search moved to navbar -->
+        </section>
+
+        <!-- Map Section -->
+        <section class="section map-section">
+            <p>Map coming soon</p>
+        </section>
+
+        <!-- Volcano Cards -->
+        <section class="section">
+            <h2 class="text-center mb-8">Featured Volcanoes</h2>
+            <div class="grid grid-auto-fit">
+                <!-- Volcano cards will be populated with your data -->
+                <div class="card hover-scale">
+                    <div class="volcano-badge">🌋 Active</div>
+                    <h3 class="card-title">Sample Volcano</h3>
+                    <div class="card-content">
+                        <p class="text-gray">This volcano was a blast</p>
+                        <p class="text-gray mt-4"><strong>Location:</strong> TBD</p>
+                        <p class="text-gray"><strong>Type:</strong> TBD</p>
+                    </div>
+                    <button class="btn btn-primary btn-full">Mark as Visited</button>
+                </div>
+
+                <div class="card hover-scale">
+                    <div class="volcano-badge">🔥 Inactive</div>
+                    <h3 class="card-title">Another Sample</h3>
+                    <div class="card-content">
+                        <p class="text-gray">This volcano was a blast</p>
+                        <p class="text-gray mt-4"><strong>Location:</strong> TBD</p>
+                        <p class="text-gray"><strong>Type:</strong> TBD</p>
+                    </div>
+                    <button class="btn btn-primary btn-full">Mark as Visited</button>
+                </div>
+
+                <div class="card hover-scale">
+                    <div class="volcano-badge">⛰️ Active</div>
+                    <h3 class="card-title">Third Sample</h3>
+                    <div class="card-content">
+                        <p class="text-gray">This volcano was a blast</p>
+                        <p class="text-gray mt-4"><strong>Location:</strong> TBD</p>
+                        <p class="text-gray"><strong>Type:</strong> TBD</p>
+                    </div>
+                    <button class="btn btn-primary btn-full">Mark as Visited</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const field = document.querySelector('.field');
+            const body = document.body;
+            const adventureText = document.getElementById('adventureText');
+            
+            field.addEventListener('focus', function() {
+                body.classList.add('is-focus');
+                adventureText.classList.add('hidden');
+            });
+            
+            field.addEventListener('blur', function() {
+                body.classList.remove('is-focus', 'is-type');
+                adventureText.classList.remove('hidden');
+            });
+            
+            field.addEventListener('input', function(event) {
+                if (this.value.length > 0) {
+                    body.classList.add('is-type');
+                } else {
+                    body.classList.remove('is-type');
+                }
+            });
+            
+            field.addEventListener('keydown', function(event) {
+                if (this.value.length > 0) {
+                    body.classList.add('is-type');
+                }
+                if ((event.which === 8 || event.key === 'Backspace') && this.value === '') {
+                    body.classList.remove('is-type');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
