@@ -41,7 +41,7 @@
 
             <!-- Main Navigation Links -->
             <div class="nav-links">
-                <a href="../myVolcanoes/my-volcanoes.html" class="nav-link">
+                <a href="../home/index.html" class="nav-link">
                     <i class="fa-solid fa-house"></i>
                     Home
                 </a>
@@ -55,7 +55,7 @@
 
             <!-- Right Side Actions -->
             <div class="nav-actions">
-                <a href="#" class="nav-link active">
+                <a href="../userProfile/profile.html" class="profile-link">
                     <i class="fa-solid fa-user"></i>
                     Profile
                 </a>
@@ -65,36 +65,44 @@
     </nav>
 
     <!-- Main Content -->
-    <main>
-        <h1>My Profile</h1>
-        
-        <!-- Profile Info -->
-        <section>
-            <h2>User Information</h2>
-            <p>Name: [User Name]</p>
-            <p>Email: [User Email]</p>
-            <p>Member since: [Join Date]</p>
-        </section>
+    <main class="container" style="padding: 2rem 0; max-width: 820px;">
+    <!-- Profile Box (taken inspiration from volcano cards) -->
+    <section class="volcano-card profile-card" aria-labelledby="profileTitle">
+      <h3 id="profileTitle">My Profile</h3>
 
-        <!-- Progress Section -->
-        <section>
-            <h2>Progress</h2>
-            <p>Progress to Next Badge: 0/5 Volcanoes</p>
-            <p>Visit 5 volcanoes to earn your first "Explorer" badge!</p>
-        </section>
+      <!-- Header: avatar + identity + action -->
+      <div class="profile-header">
+        <img id="userPhoto" class="profile-avatar" alt="User photo" src="../images/users/default.jpg"/>
 
-        <!-- Badges -->
-        <section>
-            <h2>Achievement Badges</h2>
-            <ul>
-                <li>Explorer (Visit 5 different volcanoes) - Locked</li>
-                <li>World Traveler (Visit volcanoes in 3 different countries) - Locked</li>
-                <li>Fire Walker (Visit 3 active volcanoes) - Locked</li>
-                <li>Mountain Climber (Visit 10 different volcanoes) - Locked</li>
-                <li>Completionist (Visit 25 different volcanoes) - Locked</li>
-                <li>Volcano Master (Visit 50 different volcanoes) - Locked</li>
-            </ul>
-        </section>
-    </main>
+        <div class="profile-ident">
+          <div id="userName" class="profile-name">User Name</div>
+          <div id="userHandle" class="profile-handle">@username</div>
+        </div>
+      </div>
+
+      <!-- Basic info -->
+      <dl class="profile-dl">
+        <dt>Member since</dt>
+        <dd id="memberSince">—</dd>
+
+        <dt>Total volcanoes visited</dt>
+        <dd id="totalVisited">0</dd>
+      </dl>
+
+      <!-- Badges -->
+      <div>
+        <h4>Badges</h4>
+          <!-- PUT HERE BADGES EXAMPLE -->
+        </div>
+      </div>
+
+      <!-- Progress to next badge -->
+      <div class="profile-progress">
+        <label for="nextProgress">Next badge progress</label>
+        <progress id="nextProgress" value="0" max="10">0 of 10</progress>
+        <div id="nextLabel" class="profile-hint">— volcanoes left to earn the next badge (10)</div>
+      </div>
+    </section>
+  </main>
 </body>
 </html>
