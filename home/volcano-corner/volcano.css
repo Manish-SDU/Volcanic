@@ -1,0 +1,155 @@
+/* Volcano Animation CSS */
+:root {
+  --mainColor: #FF5345;
+  --secondaryColor: #4F3F32;
+  --bgColor: #A9E2EB;
+}
+
+/* Hide scrollbar */
+* {
+  scrollbar-width: none !important; /* Firefox */
+  -ms-overflow-style: none !important; /* Internet Explorer 10+ */
+}
+
+/* WebKit browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  background: transparent;
+  display: none;
+}
+
+#volcano-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 300px;
+  height: 300px;
+  overflow: visible;
+  z-index: 100;
+  pointer-events: none;
+}
+
+#volcano {
+  min-width: 220px;
+  height: 140%;
+  enable-background: new 0 0 220 200;
+  position: absolute;
+  bottom: -20%;
+  left: -140px;
+  margin-left: 30px;
+  transform: translateX(0);
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+.f {
+  position: fixed;
+  bottom: 5px;
+  left: 15px;
+  font-family: 'Arial';
+  font-size: 0.7rem;
+  color: var(--mainColor);
+  text-align: center;
+}
+
+.f a {
+  font-size: 0.8rem;
+  color: var(--secondaryColor);
+}
+
+.st0 {
+  fill: #807063;
+}
+
+.st1 {
+  fill: #4F3F32;
+}
+
+.st3 {
+  fill: #EC9797;
+}
+
+.st4 {
+  fill: none;
+  stroke: #4F3F32;
+  stroke-width: 0.75;
+  stroke-miterlimit: 10;
+}
+
+.st6 {
+  fill: #FFB444;
+}
+
+.st7 {
+  fill: #FE8443;
+}
+
+.st8 {
+  fill: #FF5345;
+}
+
+#group3-text {
+  position: fixed;
+  bottom: 350px;
+  left: 45px;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.3s ease-out;
+}
+
+#group3-text .text-content {
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+  font-size: 32px;
+  background: linear-gradient(45deg, #FFB444, #FE8443, #FF5345);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  user-select: none;
+  animation: lavaText 2s infinite alternate, wobble 2.5s ease-in-out infinite;
+  transform-origin: center;
+}
+
+@keyframes lavaText {
+  0% {
+    background: linear-gradient(45deg, #FFB444, #FE8443, #FF5345);
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+  50% {
+    background: linear-gradient(45deg, #FE8443, #FF5345, #FFB444);
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+  100% {
+    background: linear-gradient(45deg, #FF5345, #FFB444, #FE8443);
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+}
+
+@keyframes wobble {
+  0%, 100% {
+    transform: rotate(-2deg) scale(1.02);
+  }
+  25% {
+    transform: rotate(0deg) scale(0.98);
+  }
+  50% {
+    transform: rotate(2deg) scale(1.02);
+  }
+  75% {
+    transform: rotate(0deg) scale(0.98);
+  }
+}
+
+#group3-text.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
