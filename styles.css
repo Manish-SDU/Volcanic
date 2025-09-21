@@ -924,3 +924,53 @@ body {
 html {
     scroll-behavior: smooth;
 }
+
+.achievement-grid {
+    display: grid;
+    border-spacing: 75px;
+}
+
+.achievement-grid img {
+    width: 150px;
+    height: 150px;
+}
+
+.achievement-grid h4 {
+    color:#D96F32;
+}
+
+.achievement-grid p {
+    font-size: small;
+}
+
+#lockedBadges {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+
+#lockedBadges.expanded {
+  max-height: 1000px;
+}
+
+.togglebutton {
+    display: inline-block;
+    background:#D96F32;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: background 0.2s ease, transform 0.1s ease;
+    margin-top: 1rem;
+}
+
+.togglebutton:hover {
+    background:#C75D2C;
+}
+
+.togglebutton:active {
+    transform: scale(0.97);
+}

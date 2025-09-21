@@ -6,6 +6,7 @@
     <title>VOLCANIC - Profile</title>
     <link rel="stylesheet" href="../styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="profile.js" defer></script>
 </head>
 <body>
     <!-- Modern Navigation -->
@@ -89,19 +90,40 @@
         <dd id="totalVisited">0</dd>
       </dl>
 
-      <!-- Badges -->
-      <div>
-        <h4>Badges</h4>
-          <!-- PUT HERE BADGES EXAMPLE -->
-        </div>
-      </div>
+    <!-- Achievement Page -->
+    </section>
+    <section class="volcano-card" aria-labelledby="achievementsTitle">
+      <h3 id="achievementsTitle">Achievements</h3>
 
-      <!-- Progress to next badge -->
-      <div class="profile-progress">
-        <label for="nextProgress">Next badge progress</label>
-        <progress id="nextProgress" value="0" max="10">0 of 10</progress>
-        <div id="nextLabel" class="profile-hint">— volcanoes left to earn the next badge (10)</div>
-      </div>
+      <table id="earnedBadges" class="achievement-grid">
+        <tr>
+          <td>
+            <img src="../images/badges/First Eruption.png" alt="Badge for visiting your first volcano">
+            <h4>First Eruption </h4>
+            <p>Visit your first volcano</p>
+          </td>
+          <td>  
+            <img src="../images/badges/Dormant Dreamer.png" alt="Badge for visiting an extint volcano">
+            <h4>Dormant Dreamer</h4>
+            <p>Visit an extint volcano</p>
+          </td>
+        </tr>
+      </table>
+
+      <button id="toggleAchievements" class="togglebutton" aria-expanded="false" aria-controls="achievementsList">
+        Show All Achievements
+      </button>
+
+      <table id="lockedBadges" class="achievement-grid">
+        <tr>
+          <td>
+            <img src="../images/badges/Explorer Locked.png" alt="Badged for exploring a volcano on each continent">
+            <h4>Explorer</h4>
+            <p>Visit a volcano on each continent</p>
+          </td>
+        </tr>
+      </table>
+    
     </section>
   </main>
 </body>
