@@ -928,6 +928,8 @@ html {
 .achievement-grid {
     display: grid;
     border-spacing: 75px;
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .achievement-grid img {
