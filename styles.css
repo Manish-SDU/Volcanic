@@ -925,6 +925,9 @@ html {
     scroll-behavior: smooth;
 }
 
+/* ==================
+   ACHIEVEMENTS PAGE
+   ================== */
 .achievement-grid {
     display: grid;
     border-spacing: 75px;
@@ -975,4 +978,118 @@ html {
 
 .togglebutton:active {
     transform: scale(0.97);
+}
+
+/* ==============
+   LOG IN PAGE
+   ============== */
+
+.login-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 30px;
+}
+    
+.login-container .text {
+    font-size: 35px;
+    font-weight: 600;
+    text-align: center;
+    padding: 15px;
+}
+
+.login-container .form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+
+.login-container .form .login-data {
+    height: 85px;
+    width: 100%;
+    margin: 20px 0;
+}
+
+form .login-data label {
+    font-size: 18px;
+}
+
+form .login-data input {
+    height: 100%;
+    width: 100%;
+    padding-left: 10px;
+    font-size: 20px;
+    border: 2px solid silver;
+}
+
+form .forgot-password {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center
+    ;
+    align-self: start;
+}
+
+form .forgot-password a {
+    color: #D96F32;
+    text-decoration: none;
+}
+
+form .forgot-password a:hover {
+    text-decoration: underline;
+}
+
+form .loginpage-btn {
+    margin: 30px 0;
+    height: 45px;
+    width: 100%;
+}
+
+form .loginpage-btn button{
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(43deg, #C75D2C 0%, #D96F32 46%, #F8B259 100%);
+    color:white ;
+    font-size: 18px;
+    font-weight: 500;
+    border: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    background-size: 200%;
+    transition: all 0.6s;
+}
+
+.login-btn:hover {
+    background-position: center;
+}
+
+form .signup-link {
+    text-align: center;
+}
+
+form .signup-link a {
+    color: #D96F32;
+    text-decoration: none;
+}
+
+form .signup-link a:hover {
+    text-decoration: underline;
+}
+
+.login-card {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-lg);
+    padding: 4rem;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow-sm);
+}
+
+.login-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary-color);
 }

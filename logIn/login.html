@@ -1,16 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VOLCANIC - Profile</title>
-    <link rel="stylesheet" href="../styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <script src="profile.js" defer></script>
-</head>
-<body>
-    <!-- Modern Navigation -->
-    <nav class="modern-nav">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>VOLCANIC - Log In</title>
+        <link rel="stylesheet" href="../styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    </head>
+    <body>
+            <nav class="modern-nav">
         <div class="nav-bubble-container">
             <svg xmlns="http://www.w3.org/2000/svg">
                 <defs>
@@ -56,75 +54,45 @@
 
             <!-- Right Side Actions -->
             <div class="nav-actions">
-                <a href="#" class="nav-link active">
+                <a href="../userProfile/profile.html" class="profile-link">
                     <i class="fa-solid fa-user"></i>
                     Profile
                 </a>
-                <a href="../logIn/login.html" class="login-btn">Log In</a>
+                <a href="#" class="nav-link active">Log in</a>
             </div>
         </div>
     </nav>
 
-    <!-- Main Content -->
-    <main class="container" style="padding: 2rem 0; max-width: 820px;">
-    <!-- Profile Box (taken inspiration from volcano cards) -->
-    <section class="volcano-card profile-card" aria-labelledby="profileTitle">
-      <h3 id="profileTitle">My Profile</h3>
+    <!-- Log In -->
+        <main class="login-container">
+            <section class="login-card" aria-labelledby="achievementsTitle">
+            <div class="text">
+                Log In
+            </div>
 
-      <!-- Header: avatar + identity + action -->
-      <header class="profile-header">
-        <img id="userPhoto" class="profile-avatar" alt="User photo" src="../images/users/default.jpg"/>
+            <form action="#">
+                <div class="login-data">
+                    <label for="">Username</label>
+                    <input type="text" required>
+                </div>
+                <div class="login-data">
+                    <label for="">Password</label>
+                    <input type="password" required>
 
-        <div class="profile-ident">
-          <div id="userName" class="profile-name">User Name</div>
-          <div id="userHandle" class="profile-handle">@username</div>
-        </div>
-      </header>
+                <div class="forgot-password">
+                    <a href="#">Forgot Password?</a>
+                </div>
 
-      <!-- Basic info -->
-      <dl class="profile-dl">
-        <dt>Member since</dt>
-        <dd id="memberSince">—</dd>
+                <div class="loginpage-btn">
+                    <button type="submit">Log In</button>
+                </div>
 
-        <dt>Total volcanoes visited</dt>
-        <dd id="totalVisited">0</dd>
-      </dl>
-
-    <!-- Achievement Page -->
-    </section>
-    <section class="volcano-card" aria-labelledby="achievementsTitle">
-      <h3 id="achievementsTitle">Achievements</h3>
-
-      <table id="earnedBadges" class="achievement-grid">
-        <tr>
-          <td>
-            <img src="../images/badges/First Eruption.png" alt="Badge for visiting your first volcano">
-            <h4>First Eruption </h4>
-            <p>Visit your first volcano</p>
-          </td>
-          <td>  
-            <img src="../images/badges/Dormant Dreamer.png" alt="Badge for visiting an extint volcano">
-            <h4>Dormant Dreamer</h4>
-            <p>Visit an extint volcano</p>
-          </td>
-        </tr>
-      </table>
-
-      <button id="toggleAchievements" class="togglebutton" aria-expanded="false" aria-controls="achievementsList">
-        Show All Achievements
-      </button>
-
-      <table id="lockedBadges" class="achievement-grid">
-        <tr>
-          <td>
-            <img src="../images/badges/Explorer Locked.png" alt="Badged for exploring a volcano on each continent">
-            <h4>Explorer</h4>
-            <p>Visit a volcano on each continent</p>
-          </td>
-        </tr>
-      </table>
-    
-    </section>
-  </main>
-</body>
+                <div class="signup-link">
+                    <label for="">Not a member?</label>
+                    <a href="#">Sign-Up now</a>
+                </div>
+            </form>
+            </section>
+        </main>
+    </body>
 </html>
