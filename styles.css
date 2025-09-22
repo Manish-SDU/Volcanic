@@ -1120,3 +1120,172 @@ form .signup-link a:hover {
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
     text-align: center;
    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   /* =========================
+   Statistics SECTIONS
+   ========================= */
+   .statistics-section{
+    padding: 3rem 0;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(217, 111, 50, 0.8), 0 1.5px 0 var(--primary-color);
+    margin: 3rem auto 2.5rem;
+    max-width: 900px;
+    border: 2px solid var(--primary-color);
+    position: relative;
+   }
+
+   .statistics-title {
+    font-family: var(--front-heading);
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 2.5rem;
+    letter-spacing: -0.01em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.7rem;
+   }
+
+   .statistics-title i{
+    color: var(--primary-hover);
+    font-size: 2rem;
+   }
+
+   .statistics-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    justify-content: center;
+    align-content: center;
+    max-width: 500;
+    margin: 25px;
+   }
+
+   .stat-box{
+    background: var(--bg-primary);
+    border: 2px solid var(--primary-color);
+    border-radius: 14px;
+    box-shadow: 0 2px 12px rgba(217, 111, 50, 0.07);
+    padding: 2rem 1.5rem;
+    min-width: 150px;
+    text-align: center;
+    transition: transform 0.15s, box-shadow 0.15s;
+   }
+
+   .stat-box:hover {
+    transform: translateY(-4px) scale(1.04);
+    box-shadow: 0 6px 24px rgba(217, 111, 50, 0.13);
+    border-color: var(--primary-color);
+   }
+
+   .stat-label {
+    display: block;
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.01rem;
+   }
+
+   .stat-value {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--primary-color);
+    font-family: var(--font-heading);
+    letter-spacing: 0.02rem;
+   }
+
