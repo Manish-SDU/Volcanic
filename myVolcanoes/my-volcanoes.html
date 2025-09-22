@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="panels.js" defer></script>
     <title>VOLCANIC - My Volcanoes</title>
 </head>
 <body>
@@ -67,26 +68,61 @@
 
     <!-- Main Content -->
     <main>
-        <h1 class="myv-title">My Visited Volcanoes</h1>
-        <p class="myv-description">Track your volcanic adventures and discoveries</p>
+        <header class="myv-header">
+            <h1>My Visited Volcanoes</h1>
+            <p>Track your volcanic adventures and discoveries</p>
+        </header>
+        
 
-        <!-- Stats -->
-        <section>
-            <h2>Statistics</h2>
-            <ul>
-                <li>Volcanoes Visited: 0</li>
-                <li>Countries Explored: 0</li>
-                <li>Active Volcanoes: 0</li>
-                <li>Inactive Volcanoes: 0</li>
-            </ul>
-        </section>
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
 
         <!-- Visited Volcanoes -->
-        <section>
+        <!-- panels -->
+        <section id="visited" class="myv-panel">
             <h2>Visited Volcanoes</h2>
             <p>No volcanoes visited yet. Start your volcanic adventure by exploring and marking volcanoes as visited on the home page.</p>
-            <a href="index.html">Explore Volcanoes</a>
+            <a href="../home/index.html">Explore Volcanoes</a>
+
+            <!-- arrow button -->
+            <button class="next-btn" onclick="nextPanel()">→</button>
         </section>
+
+        <section id="wish" class="myv-panel" style="display:none">
+            <h2>Wish to Visit</h2>
+            <p>Add volcanoes you'd like to visit in the future.</p>
+            <a href="../home/index.html">Explore Volcanoes</a>
+
+            <!-- arrow button (loops back to visited) -->
+            <button class="prev-btn" onclick="nextPanel()">←</button>
+        </section>
+
+        
+            
     </main>
 </body>
 </html>

@@ -1098,19 +1098,22 @@ form .signup-link a:hover {
             🌋 MY VOLCANOES 🌋
    ======================================= */
 
-   .myv-title{
+.myv-header{
+    text-align: center;
+}
+
+.myv-header h1{
     font-family: var(--font-heading);
     font-size: clamp(2.5rem, 5vw, 4rem);
     font-weight: 700;
     line-height: 1.1;
     color: var(--text-primary);
-    margin-bottom: 1.5rem;
+    margin: 2rem 0 1.5rem;
     letter-spacing: -0.02em;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-    text-align: center;
-   }
+}
 
-   .myv-description{
+.myv-header p{
     font-size: 1.375rem;
     color: var(--text-primary);
     max-width: 700px;
@@ -1118,5 +1121,99 @@ form .signup-link a:hover {
     line-height: 1.6;
     font-weight: 500;
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+/* =======================================
+            🌋 VISITED/WISH 🌋
+   ======================================= */
+
+.myv-panel {
+    max-width: 700px;
+    margin: 2rem auto;
     text-align: center;
-   }
+    padding: 2rem;
+    border-radius: 1rem;
+    background: #f9fafb;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    border: 2px solid #D96F32;
+    position: relative;
+}
+
+.myv-panel h2 {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 3rem;
+}
+
+.myv-panel p {
+    font-size: 1.375rem;
+    color: var(--text-primary);
+    max-width: 700px;
+    margin: 0 auto 1rem;
+    line-height: 1.6;
+    font-weight: 500;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+
+.myv-panel a {
+    display: inline-block;
+    padding: 0.5rem 1.25rem;
+    background: #2563eb;
+    color: white;
+    text-decoration: none;
+    border-radius: 0.75rem;
+    font-weight: 600;
+    transition: background 0.2s ease;
+}
+
+.myv-panel a:hover {
+    background: #1d4ed8;
+}
+
+/* arrow button */
+.next-btn {
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.25rem;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+.next-btn:hover {
+    background: #1d4ed8;
+}
+
+.prev-btn {
+    position: absolute;
+    left: 1rem;     /* distance from the left edge */
+    bottom: 1rem;   /* distance from the bottom edge */
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.25rem;
+    line-height: 2.5rem; /* centers the arrow vertically */
+    text-align: center;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.prev-btn:hover {
+    background: #1d4ed8;
+}
+
+
+
+
+   
