@@ -1128,22 +1128,22 @@ form .signup-link a:hover {
    ======================================= */
 
 .myv-panel {
-    max-width: 700px;
-    margin: 2rem auto;
-    text-align: center;
-    padding: 2rem;
-    border-radius: 1rem;
-    background: #f9fafb;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-    border: 2px solid #D96F32;
+    padding: 3rem 0;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(217, 111, 50, 0.8), 0 1.5px 0 var(--primary-color);
+    margin: 3rem auto 2.5rem;
+    max-width: 900px;
+    border: 2px solid var(--primary-color);
     position: relative;
+    text-align: center;
 }
 
 .myv-panel h2 {
     font-family: var(--font-heading);
     font-size: 2.5rem;
     font-weight: 700;
-    color: var(--text-primary);
+    color: var(--primary-color);
     margin-bottom: 3rem;
 }
 
@@ -1161,7 +1161,7 @@ form .signup-link a:hover {
 .myv-panel a {
     display: inline-block;
     padding: 0.5rem 1.25rem;
-    background: #2563eb;
+    background: #D96F32;
     color: white;
     text-decoration: none;
     border-radius: 0.75rem;
@@ -1170,7 +1170,7 @@ form .signup-link a:hover {
 }
 
 .myv-panel a:hover {
-    background: #1d4ed8;
+    background: #C75D2C;
 }
 
 /* arrow button */
@@ -1178,7 +1178,7 @@ form .signup-link a:hover {
     position: absolute;
     right: 1rem;
     bottom: 1rem;
-    background: #2563eb;
+    background: #D96F32;
     color: white;
     border: none;
     border-radius: 50%;
@@ -1189,14 +1189,14 @@ form .signup-link a:hover {
     transition: background 0.2s ease;
 }
 .next-btn:hover {
-    background: #1d4ed8;
+    background: #C75D2C;
 }
 
 .prev-btn {
     position: absolute;
     left: 1rem;     /* distance from the left edge */
     bottom: 1rem;   /* distance from the bottom edge */
-    background: #2563eb;
+    background: #D96F32;
     color: white;
     border: none;
     border-radius: 50%;
@@ -1210,7 +1210,7 @@ form .signup-link a:hover {
 }
 
 .prev-btn:hover {
-    background: #1d4ed8;
+    background: #C75D2C;
 }
 
    /* =========================
