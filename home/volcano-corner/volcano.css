@@ -1,4 +1,7 @@
-/* Volcano Animation CSS */
+/* Volcano Corner Animation CSS */
+
+
+
 :root {
   --mainColor: #FF5345;
   --secondaryColor: #4F3F32;
@@ -58,6 +61,8 @@
   color: var(--secondaryColor);
 }
 
+/* Volcano Mountain and Lava Strings Colors */
+
 .st0 {
   fill: #807063;
 }
@@ -89,6 +94,8 @@
   fill: #FF5345;
 }
 
+
+/* Pop-Up Group 3 text with transition */
 #group3-text {
   position: fixed;
   bottom: 350px;
