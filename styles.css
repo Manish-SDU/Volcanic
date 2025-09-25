@@ -1228,7 +1228,7 @@ form .signup-link a:hover {
    }
 
    .statistics-title {
-    font-family: var(--front-heading);
+    font-family: var(--font-heading);
     font-size: 2.2rem;
     font-weight: 700;
     color: var(--primary-color);
