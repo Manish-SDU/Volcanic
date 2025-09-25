@@ -306,6 +306,7 @@ body {
     margin: 0 auto;
     padding-left: 4rem;
     padding-right: 0;
+    overflow: visible;
 }
 
 .nav-logo {
@@ -320,8 +321,8 @@ body {
     text-decoration: none;
     transition: transform 0.3s ease;
     position: absolute;
-    top: -90px;
-    left: -280px;
+    top: -50px;
+    left: -160px;
 }
 
 .nav-logo a:hover {
@@ -895,12 +896,12 @@ body {
     }
     
     .nav-logo a {
-        top: -60px;
-        left: -100px;
+        top: -30px;
+        left: -40px;
     }
     
     .nav-logo-img {
-        height: 120px;
+        height: 100px;
     }
     
     .nav-links {
@@ -941,16 +942,46 @@ body {
 /* Surface/tablet specific adjustments */
 @media (max-width: 1024px) and (min-width: 769px) {
     .nav-logo a {
-        top: -70px;
-        left: -150px;
+        top: -40px;
+        left: -20px;
     }
     
     .nav-logo-img {
-        height: 140px;
+        height: 120px;
     }
     
     .nav-container {
-        padding-left: 3rem;
+        padding-left: 2rem;
+        overflow: visible;
+    }
+}
+
+/* Surface Pro and similar devices (broader range) */
+@media (max-width: 1400px) and (min-width: 1025px) {
+    .nav-logo a {
+        top: -60px;
+        left: -80px;
+    }
+    
+    .nav-logo-img {
+        height: 160px;
+    }
+    
+    .nav-container {
+        padding-left: 2.5rem;
+        overflow: visible;
+    }
+}
+
+/* Additional Surface Pro -> This applies to my computer (MANISH)*/
+@media screen and (min-device-width: 1200px) and (max-device-width: 1440px) {
+    .nav-logo a {
+        top: -85px;
+        left: -100px;
+    }
+    
+    .nav-logo-img {
+        height: 220px;
     }
 }
 
@@ -960,12 +991,12 @@ body {
     }
     
     .nav-logo a {
-        top: -40px;
+        top: -10px;
         left: -50px;
     }
     
     .nav-logo-img {
-        height: 80px;
+        height: 70px;
     }
     
     .hero-title {
