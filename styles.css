@@ -306,7 +306,6 @@ body {
     margin: 0 auto;
     padding-left: 4rem;
     padding-right: 0;
-    overflow: visible;
 }
 
 .nav-logo {
@@ -321,8 +320,8 @@ body {
     text-decoration: none;
     transition: transform 0.3s ease;
     position: absolute;
-    top: -50px;
-    left: -160px;
+    top: -100px;
+    left: -280px;
 }
 
 .nav-logo a:hover {
@@ -339,7 +338,7 @@ body {
 }
 
 .nav-logo-img {
-    height: 220px;
+    height: 250px;
     width: auto;
     display: block;
     filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
