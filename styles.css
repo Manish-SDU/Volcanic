@@ -67,7 +67,7 @@ body {
     z-index: 100;
     box-shadow: var(--shadow-sm);
     position: relative;
-    overflow: hidden;
+    overflow: visible; /* Allow logo to overflow without affecting height */
 }
 
 /* Bubble Effect to simulate Lava on the NavBar */
@@ -298,31 +298,50 @@ body {
 .nav-container {
     position: relative;
     z-index: 10;
-    display: grid;
-    grid-template-columns: auto 1fr auto;
+    display: flex;
     align-items: center;
-    gap: 2rem;
+    justify-content: space-between;
     padding: 1rem;
     max-width: var(--container-max-width);
     margin: 0 auto;
-    padding-left: 1rem;
-    padding-right: 2rem;
+    padding-left: 4rem;
+    padding-right: 0;
 }
 
 .nav-logo {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
-    font-family: var(--font-heading);
-    font-weight: 700;
-    font-size: 1.5rem;
-    color: var(--text-primary);
-    text-decoration: none;
+    position: relative;
+    z-index: 1000;
 }
 
-.nav-logo i {
-    font-size: 1.75rem;
-    color: var(--primary-color);
+.nav-logo a {
+    display: block;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+    position: absolute;
+    top: -90px;
+    left: -280px;
+}
+
+.nav-logo a:hover {
+    transform: scale(1.05);
+}
+
+.nav-logo a:focus {
+    outline: none;
+    transform: scale(1.05);
+}
+
+.nav-logo a:focus-visible {
+    outline: none;
+}
+
+.nav-logo-img {
+    height: 220px;
+    width: auto;
+    display: block;
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
 }
 
 .nav-links {
@@ -330,6 +349,9 @@ body {
     align-items: center;
     justify-content: center;
     gap: 3rem;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .nav-link {
@@ -363,6 +385,7 @@ body {
     gap: 2rem;
     justify-self: end;
     margin-left: auto;
+    padding-right: 0;
 }
 
 .profile-link {
@@ -484,8 +507,8 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(255, 255, 255, 0.35);
-    backdrop-filter: blur(12px) saturate(160%) brightness(1.15) contrast(1.1);
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(8px) saturate(140%) brightness(1.1) contrast(1.05);
     z-index: 1;
 }
 
