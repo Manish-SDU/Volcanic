@@ -1101,7 +1101,7 @@ html {
 }
 
 /* ==============
-   LOG IN PAGE
+    LOG-IN PAGE
    ============== */
 
 .login-container {
@@ -1334,7 +1334,7 @@ form .signup-link a:hover {
 }
 
    /* =========================
-   Statistics SECTIONS
+        Statistics SECTIONS
    ========================= */
    .statistics-section{
     padding: 3rem 0;
@@ -1516,3 +1516,25 @@ form .signup-link a:hover {
     }
 }
 
+.login-footer {
+    margin-top: 4rem;
+    position: relative;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    overflow: hidden;
+}
+
+/* ==================
+         PANEL
+   ================== */
+.panel {
+    padding: 3rem 0;
+    background: #fff;
+    border-radius: 18px;
+    margin: 3rem auto 2.5rem;
+    max-width: 900px;
+    border: 2px solid var(--primary-color);
+    position: relative;
+    text-align: center;
+}
