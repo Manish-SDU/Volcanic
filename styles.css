@@ -1050,14 +1050,14 @@ html {
    ================== */
 .achievement-grid {
     display: grid;
-    border-spacing: 75px;
+    border-spacing: 100px;
     width: 100%;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
 }
 
 .achievement-grid img {
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
 }
 
 .achievement-grid h4 {
@@ -1065,7 +1065,7 @@ html {
 }
 
 .achievement-grid p {
-    font-size: small;
+    font-size: 10px;
 }
 
 #lockedBadges {
@@ -1533,8 +1533,16 @@ form .signup-link a:hover {
     background: #fff;
     border-radius: 18px;
     margin: 3rem auto 2.5rem;
-    max-width: 900px;
+    max-width: 1400px;
     border: 2px solid var(--primary-color);
     position: relative;
     text-align: center;
+}
+
+/* ==================
+        DIVIDORS
+   ================== */
+.divrounded hr{
+  border-top: 8px solid #bbb;
+  border-radius: 5px;
 }
