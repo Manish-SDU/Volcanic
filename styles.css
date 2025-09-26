@@ -1048,11 +1048,19 @@ html {
 /* ==================
    ACHIEVEMENTS PAGE
    ================== */
-.achievement-grid {
-    display: grid;
-    border-spacing: 100px;
-    width: 100%;
-    grid-template-columns: repeat(4, 1fr);
+.achievementTitle {
+    margin-bottom: 2rem;
+}
+   .achievement-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(190px, 1fr));
+  gap: 1.5rem;
+  padding: 0;
+  list-style: none;
+}
+
+.badgedesc {
+  text-align: center;
 }
 
 .achievement-grid img {
@@ -1089,7 +1097,7 @@ html {
     font-size: 1rem;
     font-weight: 600;
     transition: background 0.2s ease, transform 0.1s ease;
-    margin-top: 1rem;
+    margin: 2rem;
 }
 
 .togglebutton:hover {
@@ -1098,6 +1106,14 @@ html {
 
 .togglebutton:active {
     transform: scale(0.97);
+}
+
+.badge-container .long-desc {
+  display: none;
+}
+
+.badge-container:hover .long-desc {
+  display: block;
 }
 
 /* ==============
@@ -1537,12 +1553,4 @@ form .signup-link a:hover {
     border: 2px solid var(--primary-color);
     position: relative;
     text-align: center;
-}
-
-/* ==================
-        DIVIDORS
-   ================== */
-.divrounded hr{
-  border-top: 8px solid #bbb;
-  border-radius: 5px;
 }
