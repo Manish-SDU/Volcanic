@@ -89,6 +89,14 @@
         <dt>Total volcanoes visited</dt>
         <dd id="totalVisited">0</dd>
       </dl>
+      <br>
+      <div class="progress-container">
+        <label class="progresslabel" for="milestone">🎯 Progress until next Visit Milestone:</label>
+          <div class="progress-wrapper">
+            <progress class="progressbar" id="milestone" value="1" max="5"></progress>
+            <span class="progress-text">1/5</span>
+          </div>
+      </div>
 
     <!-- Achievement Panel -->
     </section>
@@ -108,7 +116,6 @@
           <p class="long-desc">Visit an extinct volcano.</p>
         </li>
       </ul>
-      
       <button id="toggleAchievements" class="togglebutton" aria-expanded="false" aria-controls="achievementsList">
         Show All Achievements
       </button>

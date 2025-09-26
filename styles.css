@@ -1116,6 +1116,39 @@ html {
   display: block;
 }
 
+.progressbar {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 50%;
+    height: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #eee;
+  }
+
+  /* Chrome, Edge, Safari */
+  .progressbar::-webkit-progress-bar {
+    background-color: #eee;
+  }
+
+  .progressbar::-webkit-progress-value {
+    background-color: #D96F32;
+    border-radius: 10px 0 0 10px;
+    transition: width 0.3s ease;
+  }
+
+  /* Firefox */
+  .progressbar::-moz-progress-bar {
+    background-color: #D96F32;
+    border-radius: 10px 0 0 10px;
+  }
+
+  .progresslabel {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+
 /* ==============
     LOG-IN PAGE
    ============== */
