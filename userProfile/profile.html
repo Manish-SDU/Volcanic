@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="../images/logo/logo.svg">
     <title>VOLCANIC - Profile</title>
     <link rel="stylesheet" href="../styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -35,11 +36,11 @@
         </div>
         <div class="nav-container">
             <!-- Logo -->
-            <div class="nav-logo">
-                <i class="fa-solid fa-volcano"></i>
-                <span>Volcanic</span>
-            </div>
-
+            <nav class="nav-logo">
+                <a href="../home/index.html" aria-label="Home">
+                    <img src="../images/logo/volcanic.svg" alt="Volcanic Logo" class="nav-logo-img">
+                </a>
+            </nav>
             <!-- Main Navigation Links -->
             <div class="nav-links">
                 <a href="../home/index.html" class="nav-link">
@@ -68,27 +69,38 @@
     <!-- Main Content -->
     <main class="container" style="padding: 2rem 0; max-width: 900px;">
     <!-- Profile Box (taken inspiration from volcano cards) -->
-    <section class="volcano-card profile-card" aria-labelledby="profileTitle">
+    <section class="panel" aria-labelledby="profileTitle">
       <h3 id="profileTitle">My Profile</h3>
-
+      <br>
       <!-- Header: avatar + identity + action -->
       <header class="profile-header">
-        <img id="userPhoto" class="profile-avatar" alt="User photo" src="../images/users/default.jpg"/>
-
+        
         <div class="profile-ident">
+          <img id="userPhoto" class="profile-avatar" alt="User photo" src="../images/users/default1.jpg"/>
           <div id="userName" class="profile-name">User Name</div>
-          <div id="userHandle" class="profile-handle">@username</div>
+          <div id="userHandle" class="profile-handle">@Marcy</div>
         </div>
+
+        <!-- Edit Button -->
+        <button class="edit-btn">✏️ Edit</button>
       </header>
+      
+      <!-- Bio section -->
+      <div id="userBio" class="profile-bio">Explorer of volcanoes and collector of unforgettable sunsets 🌋🌅</div>
+      <br>
 
       <!-- Basic info -->
       <dl class="profile-dl">
+        <dt>Name</dt>
+        <dd id="Name">Marcus Hermansen</dd>
+
         <dt>Member since</dt>
-        <dd id="memberSince">—</dd>
+        <dd id="memberSince">03/04/2023</dd>
 
         <dt>Total volcanoes visited</dt>
-        <dd id="totalVisited">0</dd>
+        <dd id="totalVisited">1</dd>
       </dl>
+      <br>
       <br>
       <div class="progress-container">
         <label class="progresslabel" for="milestone">🎯 Progress until next Visit Milestone:</label>
@@ -97,9 +109,9 @@
             <span class="progress-text">1/5</span>
           </div>
       </div>
+    </section>
 
     <!-- Achievement Panel -->
-    </section>
     <section class="panel" aria-labelledby="achievementsTitle">
       <h2 id="achievementsTitle" class="achievementTitle">Achievements</h2>
 

@@ -805,10 +805,11 @@ body {
 
 /* Header: avatar + identity */
 .profile-header {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 1rem;
+  display: flex;
+  justify-content: center;
   align-items: center;
+  position: relative;
+  gap: 1rem;
 }
 
 /* Avatar */
@@ -823,6 +824,7 @@ body {
 
 /* Identity block */
 .profile-ident {
+  text-align: center;
   display: grid;
   gap: 0.15rem;
 }
@@ -834,6 +836,31 @@ body {
 .profile-handle {
   color: var(--text-secondary);
   font-weight: 600;
+}
+
+/* Bio */
+.profile-bio {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  font-style: italic;
+  margin-top: 0.2rem;
+}
+
+/* Edit button */
+.edit-btn {
+  position: absolute;
+  right: 0.70rem;
+  top: -5.7rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: #D96F32;
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+.edit-btn:hover {
+  background-color: #C75D2C;
 }
 
 /* Basic info list */
