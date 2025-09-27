@@ -1466,7 +1466,6 @@ form .signup-link a:hover {
     padding: 3rem 0;
     background: #fff;
     border-radius: 18px;
-    box-shadow: 0 4px 24px rgba(217, 111, 50, 0.8), 0 1.5px 0 var(--primary-color);
     margin: 3rem auto 2.5rem;
     max-width: 900px;
     border: 2px solid var(--primary-color);
@@ -1485,11 +1484,6 @@ form .signup-link a:hover {
     align-items: center;
     justify-content: center;
     gap: 0.7rem;
-   }
-
-   .statistics-title i{
-    color: var(--primary-hover);
-    font-size: 2rem;
    }
 
    .statistics-grid {
