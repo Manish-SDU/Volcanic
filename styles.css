@@ -1131,12 +1131,12 @@ form .signup-link a:hover {
     padding: 3rem 0;
     background: #fff;
     border-radius: 18px;
-    box-shadow: 0 4px 24px rgba(217, 111, 50, 0.8), 0 1.5px 0 var(--primary-color);
     margin: 3rem auto 2.5rem;
     max-width: 900px;
     border: 2px solid var(--primary-color);
     position: relative;
     text-align: center;
+    overflow: visible;
 }
 
 .myv-panel h2 {
@@ -1211,6 +1211,56 @@ form .signup-link a:hover {
 
 .prev-btn:hover {
     background: #C75D2C;
+}
+
+/* base tooltip shared styles */
+.tooltip {
+    position: absolute;
+    bottom: calc(1rem + 2.5rem + 8px); 
+    background: #fff;
+    color: #D96F32;
+    border: 2px solid var(--primary-color);
+    border-radius: 6px;
+    font-size: 0.75rem;
+    line-height: 1.2;
+    padding: 0.3rem 0.6rem;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(6px);
+    transition: opacity .12s ease, transform .12s ease;
+    box-sizing: border-box;
+    z-index: 10; 
+}
+
+/* position the tooltips so they stay inside the panel */
+.next-tooltip {
+    /* align near the right corner (inside the panel) */
+    right: 1rem;
+    left: auto;               
+    min-width: 72px;         
+    text-align: center;
+    max-width: calc(100% - 2rem); 
+}
+
+.prev-tooltip {
+    /* align near the left corner (inside the panel) */
+    left: 1rem;
+    right: auto;
+    /* make this tooltip a bit wider to fit "Visited list" comfortably */
+    min-width: 110px;
+    text-align: center;
+    max-width: calc(100% - 2rem); 
+}
+
+/* show tooltips on hover/focus of their buttons (accessible) */
+.next-btn:hover + .next-tooltip,
+.next-btn:focus + .next-tooltip,
+.prev-btn:hover + .prev-tooltip,
+.prev-btn:focus + .prev-tooltip {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
 }
 
    /* =========================
