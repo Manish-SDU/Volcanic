@@ -138,4 +138,5 @@ function initializeCarousel() {
 document.addEventListener('DOMContentLoaded', function() {
     initializeSearch();
     initializeCarousel();
+    // Note: Year updating is handled by common.js
 });

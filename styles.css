@@ -1,6 +1,7 @@
 /* ===========================================
-            🌋 VOLCANO APP STYLES 🌋 
+   🌋 VOLCANIC - COMMON CSS STYLES 🌋 
    =========================================== */
+/**
 
 /* fonts */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
@@ -66,7 +67,7 @@ body {
     z-index: 100;
     box-shadow: var(--shadow-sm);
     position: relative;
-    overflow: hidden;
+    overflow: visible; /* Allow logo to overflow without affecting height */
 }
 
 /* Bubble Effect to simulate Lava on the NavBar */
@@ -297,31 +298,50 @@ body {
 .nav-container {
     position: relative;
     z-index: 10;
-    display: grid;
-    grid-template-columns: auto 1fr auto;
+    display: flex;
     align-items: center;
-    gap: 2rem;
+    justify-content: space-between;
     padding: 1rem;
     max-width: var(--container-max-width);
     margin: 0 auto;
-    padding-left: 1rem;
-    padding-right: 2rem;
+    padding-left: 4rem;
+    padding-right: 0;
 }
 
 .nav-logo {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
-    font-family: var(--font-heading);
-    font-weight: 700;
-    font-size: 1.5rem;
-    color: var(--text-primary);
-    text-decoration: none;
+    position: relative;
+    z-index: 1000;
 }
 
-.nav-logo i {
-    font-size: 1.75rem;
-    color: var(--primary-color);
+.nav-logo a {
+    display: block;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+    position: absolute;
+    top: -100px;
+    left: -170px;
+}
+
+.nav-logo a:hover {
+    transform: scale(1.05);
+}
+
+.nav-logo a:focus {
+    outline: none;
+    transform: scale(1.05);
+}
+
+.nav-logo a:focus-visible {
+    outline: none;
+}
+
+.nav-logo-img {
+    height: 260px;
+    width: auto;
+    display: block;
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
 }
 
 .nav-links {
@@ -329,6 +349,9 @@ body {
     align-items: center;
     justify-content: center;
     gap: 3rem;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .nav-link {
@@ -362,6 +385,7 @@ body {
     gap: 2rem;
     justify-self: end;
     margin-left: auto;
+    padding-right: 0;
 }
 
 .profile-link {
@@ -483,8 +507,8 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(255, 255, 255, 0.35);
-    backdrop-filter: blur(12px) saturate(160%) brightness(1.15) contrast(1.1);
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(8px) saturate(140%) brightness(1.1) contrast(1.05);
     z-index: 1;
 }
 
@@ -533,6 +557,17 @@ body {
 
 .hero-badge i {
     color: var(--bg-primary);
+}
+
+.github-link {
+    color: var(--bg-primary);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.github-link:hover {
+    color: var(--secondary-color);
+    text-decoration: none;
 }
 
 .hero-title {
@@ -770,10 +805,11 @@ body {
 
 /* Header: avatar + identity */
 .profile-header {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 1rem;
+  display: flex;
+  justify-content: center;
   align-items: center;
+  position: relative;
+  gap: 1rem;
 }
 
 /* Avatar */
@@ -788,6 +824,7 @@ body {
 
 /* Identity block */
 .profile-ident {
+  text-align: center;
   display: grid;
   gap: 0.15rem;
 }
@@ -799,6 +836,31 @@ body {
 .profile-handle {
   color: var(--text-secondary);
   font-weight: 600;
+}
+
+/* Bio */
+.profile-bio {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  font-style: italic;
+  margin-top: 0.2rem;
+}
+
+/* Edit button */
+.edit-btn {
+  position: absolute;
+  right: 0.70rem;
+  top: -5.7rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: #D96F32;
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+.edit-btn:hover {
+  background-color: #C75D2C;
 }
 
 /* Basic info list */
@@ -850,22 +912,52 @@ body {
 /* =========================
    RESPONSIVE DESIGN
    ======================== */
+/* large monitor styles */
+@media (min-width: 1440px) {
+    .nav-logo a {
+        top: -95px;
+        left: -320px;
+    }
+    
+    .nav-logo-img {
+        height: 260px;
+    }
+    
+    .nav-container {
+        padding-left: 5rem;
+    }
+}
+
 /* tablet and mobile styles */
 @media (max-width: 768px) {
     .nav-container {
         flex-direction: column;
         gap: 1rem;
         padding: 1rem;
+        padding-left: 2rem;
+    }
+    
+    .nav-logo a {
+        top: -30px;
+        left: -40px;
+    }
+    
+    .nav-logo-img {
+        height: 100px;
     }
     
     .nav-links {
         justify-content: center;
         gap: 2rem;
+        position: static;
+        transform: none;
     }
     
     .nav-actions {
         justify-content: center;
         gap: 1.5rem;
+        margin-right: 0;
+        padding-right: 0;
     }
     
     .hero-section {
@@ -889,9 +981,64 @@ body {
     }
 }
 
+/* Surface/tablet specific adjustments */
+@media (max-width: 1024px) and (min-width: 769px) {
+    .nav-logo a {
+        top: -40px;
+        left: -20px;
+    }
+    
+    .nav-logo-img {
+        height: 120px;
+    }
+    
+    .nav-container {
+        padding-left: 2rem;
+        overflow: visible;
+    }
+}
+
+/* Surface Pro and similar devices (broader range) */
+@media (max-width: 1400px) and (min-width: 1025px) {
+    .nav-logo a {
+        top: -60px;
+        left: -80px;
+    }
+    
+    .nav-logo-img {
+        height: 160px;
+    }
+    
+    .nav-container {
+        padding-left: 2.5rem;
+        overflow: visible;
+    }
+}
+
+/* Additional Surface Pro -> This applies to my computer (MANISH)*/
+@media screen and (min-device-width: 1200px) and (max-device-width: 1440px) {
+    .nav-logo a {
+        top: -85px;
+        left: -100px;
+    }
+    
+    .nav-logo-img {
+        height: 220px;
+    }
+}
+
 @media (max-width: 480px) {
     .container {
         padding: 0 1rem;
+    }
+    
+    .nav-logo a {
+        top: -10px;
+        left: -50px;
+    }
+    
+    .nav-logo-img {
+        height: 70px;
     }
     
     .hero-title {
@@ -928,16 +1075,24 @@ html {
 /* ==================
    ACHIEVEMENTS PAGE
    ================== */
-.achievement-grid {
-    display: grid;
-    border-spacing: 75px;
-    width: 100%;
-    grid-template-columns: repeat(3, 1fr);
+.achievementTitle {
+    margin-bottom: 2rem;
+}
+   .achievement-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(190px, 1fr));
+  gap: 1.5rem;
+  padding: 0;
+  list-style: none;
+}
+
+.badgedesc {
+  text-align: center;
 }
 
 .achievement-grid img {
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
 }
 
 .achievement-grid h4 {
@@ -945,7 +1100,7 @@ html {
 }
 
 .achievement-grid p {
-    font-size: small;
+    font-size: 10px;
 }
 
 #lockedBadges {
@@ -969,7 +1124,7 @@ html {
     font-size: 1rem;
     font-weight: 600;
     transition: background 0.2s ease, transform 0.1s ease;
-    margin-top: 1rem;
+    margin: 2rem;
 }
 
 .togglebutton:hover {
@@ -980,8 +1135,49 @@ html {
     transform: scale(0.97);
 }
 
+.badge-container .long-desc {
+  display: none;
+}
+
+.badge-container:hover .long-desc {
+  display: block;
+}
+
+.progressbar {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 50%;
+    height: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #eee;
+  }
+
+  /* Chrome, Edge, Safari */
+  .progressbar::-webkit-progress-bar {
+    background-color: #eee;
+  }
+
+  .progressbar::-webkit-progress-value {
+    background-color: #D96F32;
+    border-radius: 10px 0 0 10px;
+    transition: width 0.3s ease;
+  }
+
+  /* Firefox */
+  .progressbar::-moz-progress-bar {
+    background-color: #D96F32;
+    border-radius: 10px 0 0 10px;
+  }
+
+  .progresslabel {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+
 /* ==============
-   LOG IN PAGE
+    LOG-IN PAGE
    ============== */
 
 .login-container {
@@ -1264,7 +1460,7 @@ form .signup-link a:hover {
 }
 
    /* =========================
-   Statistics SECTIONS
+        Statistics SECTIONS
    ========================= */
    .statistics-section{
     padding: 3rem 0;
@@ -1340,3 +1536,131 @@ form .signup-link a:hover {
     letter-spacing: 0.02rem;
    }
 
+/* ==================
+         FOOTER
+   ================== */
+.glass-footer {
+    margin-top: 4rem;
+    position: relative;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    overflow: hidden;
+}
+
+.glass-footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, 
+        rgba(217, 111, 50, 0.1) 0%, 
+        rgba(248, 178, 89, 0.1) 50%, 
+        rgba(217, 111, 50, 0.1) 100%);
+    pointer-events: none;
+}
+
+.footer-container {
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+    padding: 0.6rem 1rem;
+    position: relative;
+    z-index: 2;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    text-align: center;
+}
+
+.footer-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+
+.footer-info span {
+    color: var(--text-primary);
+    font-weight: 500;
+    font-size: 0.9rem;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.copyright {
+    font-size: 0.8rem !important;
+    color: var(--text-secondary) !important;
+    font-weight: 400 !important;
+}
+
+.footer-volcano {
+    color: var(--primary-color);
+    font-size: 2rem;
+    animation: float 3s ease-in-out infinite;
+    filter: drop-shadow(0 2px 4px rgba(217, 111, 50, 0.3));
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Responsive footer */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.8rem;
+    }
+    
+    .footer-info {
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .footer-info span {
+        font-size: 0.8rem;
+    }
+    
+    .glass-footer {
+        margin-top: 2rem;
+    }
+    
+    .footer-container {
+        padding: 0.5rem 1rem;
+    }
+}
+
+.login-footer {
+    margin-top: 4rem;
+    position: relative;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    overflow: hidden;
+}
+
+/* ==================
+         PANEL
+   ================== */
+.panel {
+    padding: 3rem 0;
+    background: #fff;
+    border-radius: 18px;
+    margin: 3rem auto 2.5rem;
+    max-width: 1400px;
+    border: 2px solid var(--primary-color);
+    position: relative;
+    text-align: center;
+}

@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="../images/logo/logo.svg">
     <title>VOLCANIC - Profile</title>
     <link rel="stylesheet" href="../styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -35,11 +36,11 @@
         </div>
         <div class="nav-container">
             <!-- Logo -->
-            <div class="nav-logo">
-                <i class="fa-solid fa-volcano"></i>
-                <span>Volcanic</span>
-            </div>
-
+            <nav class="nav-logo">
+                <a href="../home/index.html" aria-label="Home">
+                    <img src="../images/logo/volcanic.svg" alt="Volcanic Logo" class="nav-logo-img">
+                </a>
+            </nav>
             <!-- Main Navigation Links -->
             <div class="nav-links">
                 <a href="../home/index.html" class="nav-link">
@@ -66,104 +67,134 @@
     </nav>
 
     <!-- Main Content -->
-    <main class="container" style="padding: 2rem 0; max-width: 820px;">
+    <main class="container" style="padding: 2rem 0; max-width: 900px;">
     <!-- Profile Box (taken inspiration from volcano cards) -->
-    <section class="volcano-card profile-card" aria-labelledby="profileTitle">
+    <section class="panel" aria-labelledby="profileTitle">
       <h3 id="profileTitle">My Profile</h3>
-
+      <br>
       <!-- Header: avatar + identity + action -->
       <header class="profile-header">
-        <img id="userPhoto" class="profile-avatar" alt="User photo" src="../images/users/default.jpg"/>
-
+        
         <div class="profile-ident">
+          <img id="userPhoto" class="profile-avatar" alt="User photo" src="../images/users/default1.jpg"/>
           <div id="userName" class="profile-name">User Name</div>
-          <div id="userHandle" class="profile-handle">@username</div>
+          <div id="userHandle" class="profile-handle">@Marcy</div>
         </div>
+
+        <!-- Edit Button -->
+        <button class="edit-btn">✏️ Edit</button>
       </header>
+      
+      <!-- Bio section -->
+      <div id="userBio" class="profile-bio">Explorer of volcanoes and collector of unforgettable sunsets 🌋🌅</div>
+      <br>
 
       <!-- Basic info -->
       <dl class="profile-dl">
+        <dt>Name</dt>
+        <dd id="Name">Marcus Hermansen</dd>
+
         <dt>Member since</dt>
-        <dd id="memberSince">—</dd>
+        <dd id="memberSince">03/04/2023</dd>
+
+        <dt>Where from</dt>
+        <dd id="memberSince">Aalborg (DK)</dd>
 
         <dt>Total volcanoes visited</dt>
-        <dd id="totalVisited">0</dd>
+        <dd id="totalVisited">1</dd>
       </dl>
-
-    <!-- Achievement Page -->
+      <br>
+      <br>
+      <div class="progress-container">
+        <label class="progresslabel" for="milestone">🎯 Progress until next Visit Milestone:</label>
+          <div class="progress-wrapper">
+            <progress class="progressbar" id="milestone" value="1" max="5"></progress>
+            <span class="progress-text">1/5</span>
+          </div>
+      </div>
     </section>
-    <section class="volcano-card" aria-labelledby="achievementsTitle">
-      <h3 id="achievementsTitle">Achievements</h3>
 
-      <table id="earnedBadges" class="achievement-grid">
-        <tr>
-          <td>
-            <img src="../images/badges/First Eruption.png" alt="Badge for visiting your first volcano">
-            <h4>First Eruption </h4>
-            <p>Visit your first volcano</p>
-          </td>
-          <td>  
-            <img src="../images/badges/Dormant Dreamer.png" alt="Badge for visiting an extint volcano">
-            <h4>Dormant Dreamer</h4>
-            <p>Visit an extint volcano</p>
-          </td>
-        </tr>
-      </table>
+    <!-- Achievement Panel -->
+    <section class="panel" aria-labelledby="achievementsTitle">
+      <h2 id="achievementsTitle" class="achievementTitle">Achievements</h2>
 
+      <!-- Obtained Achievements -->
+      <ul class="achievement-grid badge-container">
+        <li class="badgedesc">
+          <img src="../images/badges/First Eruption.png" alt="Badge for visiting your first volcano.">
+          <h4>First Eruption</h4>
+          <p class="long-desc">Visit your first volcano.</p>
+        </li>
+        <li class="badgedesc">
+          <img src="../images/badges/Dormant Dreamer.png" alt="Badge for visiting an extinct volcano.">
+          <h4>Dormant Dreamer</h4>
+          <p class="long-desc">Visit an extinct volcano.</p>
+        </li>
+      </ul>
       <button id="toggleAchievements" class="togglebutton" aria-expanded="false" aria-controls="achievementsList">
         Show All Achievements
       </button>
 
-      <table id="lockedBadges" class="achievement-grid">
-        <tr>
-          <td>
-            <img src="../images/badges/Explorer Locked.png" alt="Badge for exploring a volcano on each continent">
-            <h4>Explorer</h4>
-            <p>Visit a volcano on each continent</p>
-          </td>
-          <td>
-            <img src="../images/badges/Lava Rookie Locked.png" alt="Badge for exploring 5 volcanoes">
-            <h4>Lava Rookie</h4>
-            <p>Visit 5 volcanoes</p>
-          </td>
-          <td>
-            <img src="../images/badges/Lava Lover Locked.png" alt="Badge for visiting an active volcano with lava">
-            <h4>Lava Lover</h4>
-            <p>Visit an active volcano.</p>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <img src="../images/badges/Ash Walker Locked.png" alt="Badge for exploring 10 volcanoes">
-            <h4>Ash Walker</h4>
-            <p>Visit 10 volcanoes</p>
-          </td>
-          <td>
-          <img src="../images/badges/Magma Master locked.png" alt="Badge for exploring 50+ volcanoes">
-            <h4>Magma Master</h4>
-            <p>Visit 50+ volcanoes</p>
-          </td>
-           <td>
-            <img src="../images/badges/Volcano Veteran Locked.png" alt="Badge for visiting 25 volcanoes.">
-            <h4>Volcano Veteran</h4>
-            <p>Visit 25 volcanoes</p>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <img src="../images/badges/Polar Pioneer Locked.png" alt="Badge for exploring a volcanoe in or near the Artic/Antartica">
-            <h4>Polar Pioneer</h4>
-            <p>Visit a volcano in/near the Arctic or Antarctic</p>
-          </td>
-          <td>
-            <img src="../images/badges/Ring of Fire Explorer Locked.png" alt="Badge for visiting a volcano along the Pacific Ring of Fire.">
-            <h4>Ring of Fire Explorer</h4>
-            <p>Visit a volcano along the Pacific Ring of Fire</p>
-          </td>
-        </tr>
-      </table>
-    
+      <!-- Locked Achievements -->
+      <ul id="lockedBadges" class="achievement-grid badge-container">
+        <li class="badgedesc">
+          <img src="../images/badges/Lava Rookie Locked.png" alt="Badge for exploring 5 volcanoes.">
+          <h4>Lava Rookie</h4>
+          <p class="long-desc">Visit 5 volcanoes.</p>
+        </li>
+        <li class="badgedesc">
+          <img src="../images/badges/Ash Walker Locked.png" alt="Badge for exploring 10 volcanoes.">
+          <h4>Ash Walker</h4>
+          <p class="long-desc">Visit 10 volcanoes.</p>
+        </li>
+        <li class="badgedesc">
+          <img src="../images/badges/Volcano Veteran Locked.png" alt="Badge for visiting 25 volcanoes.">
+          <h4>Volcano Veteran</h4>
+          <p class="long-desc">Visit 25 volcanoes.</p>
+        </li>
+        <li class="badgedesc">
+          <img src="../images/badges/Magma Master locked.png" alt="Badge for exploring 50+ volcanoes.">
+          <h4>Magma Master</h4>
+          <p class="long-desc">Visit 50+ volcanoes.</p>          
+        </li>
+        <li class="badgedesc">
+          <img src="../images/badges/Explorer Locked.png" alt="Badge for exploring a volcano on each continent.">
+          <h4>Explorer</h4>
+          <p class="long-desc">Visit a volcano on each continent.</p>
+        </li>
+        <li class="badgedesc">
+          <img src="../images/badges/Lava Lover Locked.png" alt="Badge for visiting an active volcano with lava.">
+          <h4>Lava Lover</h4>
+          <p class="long-desc">Visit an active volcano.</p>
+        </li>
+        <li class="badgedesc">
+          <img src="../images/badges/Polar Pioneer Locked.png" alt="Badge for exploring a volcano in/near the Artic/Antartica.">
+          <h4>Polar Pioneer</h4>
+          <p class="long-desc">Visit a volcano in/near the Arctic/Antarctic.</p>
+        </li>
+        <li class="badge">
+          <img src="../images/badges/Ring of Fire Explorer Locked.png" alt="Badge for visiting a volcano along the Pacific Ring of Fire.">
+          <h4>Ring of Fire Explorer</h4>
+          <p class="long-desc">Visit a volcano along the Pacific Ring of Fire.</p>
+        </li>
+      </ul>
+
     </section>
   </main>
+
+  <!-- Footer -->
+    <footer class="glass-footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <span>Made by Group 3 SDU Software Students © <span id="currentYear">2025</span> Volcanic. All rights reserved.</span>
+                </div>
+                <div class="footer-volcano">
+                    <i class="fa-solid fa-volcano"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
 </body>
 </html>

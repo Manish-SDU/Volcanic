@@ -131,7 +131,6 @@ class VolcanoApp extends React.Component {
       }
     }
   }
-
   render() {
     return React.createElement('svg', {
       id: "volcano",
