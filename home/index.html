@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,7 +14,7 @@
 
     <!-- CSS for Volcano Animation-->
     <link rel="stylesheet" href="volcano-corner/volcano.css">
-    
+
     <!-- Dependencies -->
     <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
     <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
@@ -21,6 +22,7 @@
 
     <script src="home.js" defer></script>
 </head>
+
 <body>
 
     <!-- Header with Navigation -->
@@ -31,7 +33,8 @@
                     <defs>
                         <filter id="goo">
                             <feGaussianBlur in="SourceGraphic" stdDeviation="8" result="blur" />
-                            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8" result="goo" />
+                            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8"
+                                result="goo" />
                             <feBlend in="SourceGraphic" in2="goo" />
                         </filter>
                     </defs>
@@ -49,20 +52,22 @@
                 </div>
             </div>
             <div class="nav-container">
-            <!-- Logo -->
-            <nav class="nav-logo">
-                <a href="index.html" aria-label="Home">
-                    <img src="../images/logo/volcanic.svg" alt="Volcanic Logo" class="nav-logo-img">
-                </a>
-            </nav>   <!-- NavBar  -->
+                <!-- Logo -->
+                <nav class="nav-logo">
+                    <a href="index.html" aria-label="Home">
+                        <img src="../images/logo/volcanic.svg" alt="Volcanic Logo" class="nav-logo-img">
+                    </a>
+                </nav> <!-- NavBar  -->
                 <div class="nav-links">
                     <a href="#" class="nav-link active">
                         <i class="fa-solid fa-house"></i>
                         Home
                     </a>
                     <a href="../myVolcanoes/my-volcanoes.html" class="nav-link">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" style="width: 28px; height: 28px; fill: currentColor; vertical-align: middle;">
-                            <path d="M224 208C188.7 208 160 179.3 160 144C160 108.7 188.7 80 224 80C239.7 80 254 85.6 265.2 95C276.4 76.4 296.8 64 320 64C343.2 64 363.6 76.4 374.8 95C385.9 85.6 400.3 80 416 80C451.3 80 480 108.7 480 144C480 179.3 451.3 208 416 208C401.3 208 387.7 203 376.9 194.7L344.9 242.7C339.3 251 330 256 320 256C310 256 300.7 251 295.1 242.7L263.1 194.7C252.3 203 238.7 208 224 208zM208 416L256.4 391.8C266.6 386.7 278 384 289.4 384C309 384 327.8 391.8 341.6 405.6L374.1 438.1C380.4 444.4 389 448 397.9 448C409.2 448 419.7 442.4 425.9 433L435.6 418.4L376.6 352.1C367.5 341.9 354.4 336 340.7 336L298.9 336C285.2 336 272.1 341.9 263 352.1L203.1 419.5L207.8 416zM227.4 320.2C245.6 299.7 271.7 288 299.2 288L341 288C368.4 288 394.5 299.7 412.8 320.2L563 489.2C571.5 498.7 576.2 511.1 576.2 523.9C576.2 552.7 552.8 576.1 524 576.1L116.2 576C87.4 576 64 552.6 64 523.8C64 511.1 68.7 498.7 77.2 489.2L227.4 320.2z"/>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"
+                            style="width: 28px; height: 28px; fill: currentColor; vertical-align: middle;">
+                            <path
+                                d="M224 208C188.7 208 160 179.3 160 144C160 108.7 188.7 80 224 80C239.7 80 254 85.6 265.2 95C276.4 76.4 296.8 64 320 64C343.2 64 363.6 76.4 374.8 95C385.9 85.6 400.3 80 416 80C451.3 80 480 108.7 480 144C480 179.3 451.3 208 416 208C401.3 208 387.7 203 376.9 194.7L344.9 242.7C339.3 251 330 256 320 256C310 256 300.7 251 295.1 242.7L263.1 194.7C252.3 203 238.7 208 224 208zM208 416L256.4 391.8C266.6 386.7 278 384 289.4 384C309 384 327.8 391.8 341.6 405.6L374.1 438.1C380.4 444.4 389 448 397.9 448C409.2 448 419.7 442.4 425.9 433L435.6 418.4L376.6 352.1C367.5 341.9 354.4 336 340.7 336L298.9 336C285.2 336 272.1 341.9 263 352.1L203.1 419.5L207.8 416zM227.4 320.2C245.6 299.7 271.7 288 299.2 288L341 288C368.4 288 394.5 299.7 412.8 320.2L563 489.2C571.5 498.7 576.2 511.1 576.2 523.9C576.2 552.7 552.8 576.1 524 576.1L116.2 576C87.4 576 64 552.6 64 523.8C64 511.1 68.7 498.7 77.2 489.2L227.4 320.2z" />
                         </svg>
                         My Volcanoes
                     </a>
@@ -91,7 +96,7 @@
                 <div class="carousel-bg" data-bg="url('../images/navbar/volcano-banner_3.jpg')"></div>
                 <div class="carousel-bg" data-bg="url('../images/navbar/volcano-banner_4.jpg')"></div>
             </div>
-            
+
             <!-- Carousel Indicators -->
             <div class="carousel-indicators">
                 <button class="indicator active" data-slide="0" aria-label="Slide 1"></button>
@@ -99,13 +104,14 @@
                 <button class="indicator" data-slide="2" aria-label="Slide 3"></button>
                 <button class="indicator" data-slide="3" aria-label="Slide 4"></button>
             </div>
-            
+
             <div class="container">
                 <!-- Main Heading -->
                 <h1 class="hero-title">
                     The <i class="fa-solid fa-volcano"></i> volcano<br>
                     <span class="exploration-line">
-                        <button id="searchToggle" class="search-icon-inline"><i class="fa-solid fa-magnifying-glass"></i></button>
+                        <button id="searchToggle" class="search-icon-inline"><i
+                                class="fa-solid fa-magnifying-glass"></i></button>
                         <span class="word-part">exploration platform</span>
                     </span>
                 </h1>
@@ -126,7 +132,8 @@
                 <div class="hero-actions">
                     <div class="hero-badge">
                         <span>MADE BY THE WONDERFUL GROUP 3 - </span>
-                        <strong><a href="https://github.com/Manish-SDU/Volcanic.git" target="_blank" class="github-link">Volcanic <i class="fa-brands fa-github"></i></a></strong>
+                        <strong><a href="https://github.com/Manish-SDU/Volcanic.git" target="_blank"
+                                class="github-link">Volcanic <i class="fa-brands fa-github"></i></a></strong>
                     </div>
                 </div>
             </div>
@@ -135,7 +142,8 @@
         <!-- Map Coming Soon -->
         <section class="map-section">
             <div class="container">
-                <h2>Map Coming Soon</h2>
+                <h2 style="padding: 20px; text-align: center;">Earth's active volcanoes and plate tectonic boundaries</h2>
+                <img src="../images/MAP.webp" style="width: 100%;">
             </div>
         </section>
 
@@ -145,19 +153,31 @@
                 <h2>Discover Amazing Volcanoes</h2>
                 <div class="volcano-grid">
                     <article class="volcano-card">
-                        <img src="#" alt="Placeholder image for volcano" style="width: 100%; height: 200px; background-color: #f0f0f0; border-radius: 8px;">
-                        <h3>Title</h3>
-                        <p>Info TBD</p>
+                        <img src="../images/volcanoes/Etna.webp"
+                            style="width: 100%; height: 200px; background-color: #f0f0f0; border-radius: 8px;">
+                        <h3>Etna</h3>
+                        <p>Active<br>
+                            Type: Effusive<br>
+                            Country: Italy<br>
+                        Age: a lot</p>
                     </article>
                     <article class="volcano-card">
-                        <img src="#" alt="Placeholder image for volcano" style="width: 100%; height: 200px; background-color: #f0f0f0; border-radius: 8px;">
-                        <h3>Title</h3>
-                        <p>Info TBD</p>
+                        <img src="../images/volcanoes/Eyja.webp"
+                            style="width: 100%; height: 200px; background-color: #f0f0f0; border-radius: 8px;">
+                        <h3>Eyjafjallajökull</h3>
+                        <p>Active<br>
+                            Type: Explosive<br>
+                            Country: Iceland<br>
+                        Age: a lot</p>
                     </article>
                     <article class="volcano-card">
-                        <img src="#" alt="Placeholder image for volcano" style="width: 100%; height: 200px; background-color: #f0f0f0; border-radius: 8px;">
-                        <h3>Title</h3>
-                        <p>Info TBD</p>
+                        <img src="../images/volcanoes/Fuji.webp"
+                            style="width: 100%; height: 200px; background-color: #f0f0f0; border-radius: 8px;">
+                        <h3>Fuji</h3>
+                        <p>Dormant<br>
+                            Type: Explosive<br>
+                            Country: Japan<br>
+                        Age: a lot</p>
                     </article>
                 </div>
             </div>
@@ -172,7 +192,8 @@
         <div class="footer-container">
             <div class="footer-content">
                 <div class="footer-info">
-                    <span>Made by Group 3 SDU Software Students © <span id="currentYear">2025</span> Volcanic. All rights reserved.</span>
+                    <span>Made by Group 3 SDU Software Students © <span id="currentYear">2025</span> Volcanic. All
+                        rights reserved.</span>
                 </div>
                 <div class="footer-volcano">
                     <i class="fa-solid fa-volcano"></i>
@@ -182,4 +203,5 @@
     </footer>
 
 </body>
+
 </html>
