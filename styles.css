@@ -1096,7 +1096,7 @@ html {
 }
 
 .achievement-grid h4 {
-    color:#D96F32;
+    color:var(--primary-color);
 }
 
 .achievement-grid p {
@@ -1115,7 +1115,7 @@ html {
 
 .togglebutton {
     display: inline-block;
-    background:#D96F32;
+    background: var(--primary-color);
     color: white;
     border: none;
     padding: 0.5rem 1rem;
@@ -1128,7 +1128,7 @@ html {
 }
 
 .togglebutton:hover {
-    background:#C75D2C;
+    background:var(--primary-hover);
 }
 
 .togglebutton:active {
@@ -1159,14 +1159,14 @@ html {
   }
 
   .progressbar::-webkit-progress-value {
-    background-color: #D96F32;
+    background-color: var(--primary-color);
     border-radius: 10px 0 0 10px;
     transition: width 0.3s ease;
   }
 
   /* Firefox */
   .progressbar::-moz-progress-bar {
-    background-color: #D96F32;
+    background-color: var(--primary-color);
     border-radius: 10px 0 0 10px;
   }
 
@@ -1230,7 +1230,7 @@ form .forgot-password {
 }
 
 form .forgot-password a {
-    color: #D96F32;
+    color: var(--primary-color);
     text-decoration: none;
 }
 
@@ -1247,7 +1247,7 @@ form .loginpage-btn {
 form .loginpage-btn button{
     height: 100%;
     width: 100%;
-    background: linear-gradient(43deg, #C75D2C 0%, #D96F32 46%, #F8B259 100%);
+    background: linear-gradient(43deg, var(--primary-color) 0%, #D96F32 46%, #F8B259 100%);
     color:white ;
     font-size: 18px;
     font-weight: 500;
@@ -1267,7 +1267,7 @@ form .signup-link {
 }
 
 form .signup-link a {
-    color: #D96F32;
+    color: var(--primary-color);
     text-decoration: none;
 }
 
