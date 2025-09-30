@@ -727,13 +727,13 @@ body {
    CONTENT SECTIONS
    ========================= */
 /* main content area */
-.content-section {
+.content-section, .map-section {
     padding: 4rem 0;
     background: var(--bg-primary);
 }
 
 /* section headings */
-.content-section h2 {
+.content-section h2, .map-section h2 {
     font-family: var(--font-heading);
     font-size: 2.5rem;
     font-weight: 700;
