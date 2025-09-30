@@ -15,7 +15,7 @@
 
 /* global variables */
 :root {
-    --primary-color: #D96F32;
+    --primary-color: #FF6F15;
     --primary-hover: #C75D2C;
     --secondary-color: #F8B259;
     --text-primary: #1f2937;
@@ -1392,7 +1392,7 @@ form .signup-link a:hover {
     position: absolute;
     left: 1rem;     /* distance from the left edge */
     bottom: 1rem;   /* distance from the bottom edge */
-    background: #D96F32;
+    background: var(--primary-color);
     color: white;
     border: none;
     border-radius: 50%;
