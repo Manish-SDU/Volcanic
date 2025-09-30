@@ -15,8 +15,8 @@
 
 /* global variables */
 :root {
-    --primary-color: #FF6F15;
-    --primary-hover: #C75D2C;
+    --primary-color: #BB0101;
+    --primary-hover: #FF6F15;
     --secondary-color: #F8B259;
     --text-primary: #1f2937;
     --text-secondary: #6b7280;
@@ -1357,7 +1357,7 @@ form .signup-link a:hover {
 .myv-panel a {
     display: inline-block;
     padding: 0.5rem 1.25rem;
-    background: #D96F32;
+    background: var(--primary-color);
     color: white;
     text-decoration: none;
     border-radius: 0.75rem;
@@ -1366,7 +1366,7 @@ form .signup-link a:hover {
 }
 
 .myv-panel a:hover {
-    background: #C75D2C;
+    background: var(--primary-hover);
 }
 
 /* arrow button */
@@ -1374,7 +1374,7 @@ form .signup-link a:hover {
     position: absolute;
     right: 1rem;
     bottom: 1rem;
-    background: #D96F32;
+    background: var(--primary-color);
     color: white;
     border: none;
     border-radius: 50%;
@@ -1385,7 +1385,7 @@ form .signup-link a:hover {
     transition: background 0.2s ease;
 }
 .next-btn:hover {
-    background: #C75D2C;
+    background: var(--primary-hover);
 }
 
 .prev-btn {
@@ -1406,7 +1406,7 @@ form .signup-link a:hover {
 }
 
 .prev-btn:hover {
-    background: #C75D2C;
+    background: var(--primary-hover);
 }
 
 /* base tooltip shared styles */
@@ -1414,7 +1414,7 @@ form .signup-link a:hover {
     position: absolute;
     bottom: calc(1rem + 2.5rem + 8px); 
     background: #fff;
-    color: #D96F32;
+    color: var(--primary-color);
     border: 2px solid var(--primary-color);
     border-radius: 6px;
     font-size: 0.75rem;

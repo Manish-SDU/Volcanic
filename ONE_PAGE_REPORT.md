@@ -24,7 +24,7 @@ Pages use consistent layout: nav header, main content, footer.
 
 **Layout:** CSS Grid for page structure, Flexbox for navigation and buttons.
 
-**Colors:** Volcanic theme with orange (#D96F32), gold (#F8B259), and beige (#F3E9DC) backgrounds.
+**Colors:** Volcanic theme with orange (#FF6F15), gold (#F8B259), and beige (#F3E9DC) backgrounds.
 
 **Fonts:** Google Fonts - Inter for text, Poppins for headings.
 
