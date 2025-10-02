@@ -559,15 +559,21 @@ body {
     color: var(--bg-primary);
 }
 
+
 .github-link {
     color: var(--bg-primary);
-    text-decoration: none;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
     transition: all 0.3s ease;
+    font-size: 1.2em;
+    font-weight: 600;
+    display: inline-block;
 }
 
 .github-link:hover {
     color: var(--secondary-color);
-    text-decoration: none;
+    transform: scale(1.05);
 }
 
 .hero-title {
