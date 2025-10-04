@@ -51,6 +51,6 @@ Pages use consistent layout: nav header, main content, footer.
 
 **Mobile:** Layout adapts to all screen sizes, buttons resize, content adjust properly.
 
-## CHATGPTTTT
+## AI SECTION
 
 We used AI in our UI design to improve our understanding of HTML, CSS, and JS. By practicing course exercises and asking it how visuals or user interactions could be improved, we learned how to refine code and apply that knowledge to our project, without using AI directly to generate the code, but to get some ideas, that the group implemented.
