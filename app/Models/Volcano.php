@@ -1,0 +1,66 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Model;
+
+class Volcano extends Model
+{
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = [
+        'name',
+        'country',
+        'continent',
+        'region',
+        'activity',
+        'latitude',
+        'longitude',
+        'elevation',
+        'description',
+        'source',
+        'type',
+        'image_url'
+    ];
+    
+    /**
+     * Get the safe image URL attribute - directly from uploads folder.
+     *
+     * @return string
+     */
+    public function getSafeImageUrlAttribute()
+    {
+        // If the image_url field contains a URL, return it directly
+        if (is_string($this->image_url) && filter_var($this->image_url, FILTER_VALIDATE_URL)) {
+            return $this->image_url;
+        }
+        
+        // Look for image using the image_url field as filename
+        $extensions = ['jpg', 'jpeg', 'png', 'gif', 'webp'];
+        
+        // First try using the image_url field directly
+        if ($this->image_url) {
+            foreach ($extensions as $ext) {
+                $imagePath = "images/volcanoes/{$this->image_url}.{$ext}";
+                if (file_exists(public_path($imagePath))) {
+                    return asset($imagePath);
+                }
+            }
+        }
+        
+        // Fallback: Look for any supported image format using volcano name
+        $baseName = strtolower(str_replace(' ', '_', $this->name));
+        foreach ($extensions as $ext) {
+            $imagePath = "images/volcanoes/{$baseName}.{$ext}";
+            if (file_exists(public_path($imagePath))) {
+                return asset($imagePath);
+            }
+        }
+        
+        // If no image is found, return the placeholder
+        return asset('images/volcanoes/placeholder.png');
+    }
+}
