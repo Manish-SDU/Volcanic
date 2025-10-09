@@ -398,6 +398,7 @@ function initializeSearch() {
             console.log('Using client-side filtering');
             filterVolcanoes(searchTerm);
         } else {
+
             console.log('Using API search');
             // Show searching status
             updateSearchStatus(`Searching for "${searchTerm}"...`);
@@ -458,7 +459,8 @@ function initializeSearch() {
     
     // Trial use for cards filtering on the client side
     function filterVolcanoes(searchTerm) {
-        const cards = document.querySelectorAll('.volcano-card');
+        //📌 Only search within cards that were initially visible (not homepage-hidden)
+        const cards = document.querySelectorAll('.volcano-card:not(.homepage-hidden)');
         let visibleCount = 0;
         
         searchTerm = searchTerm.toLowerCase();

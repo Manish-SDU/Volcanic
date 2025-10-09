@@ -15,15 +15,24 @@ class Volcano extends Model
         'name',
         'country',
         'continent',
-        'region',
         'activity',
         'latitude',
         'longitude',
         'elevation',
         'description',
-        'source',
         'type',
         'image_url'
+    ];
+    
+    /**
+     * The attributes that should be cast.
+     *
+     * @var array
+     */
+    protected $casts = [
+        'latitude' => 'float',
+        'longitude' => 'float',
+        'elevation' => 'integer',
     ];
     
     /**

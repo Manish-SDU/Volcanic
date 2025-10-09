@@ -46,15 +46,33 @@ Route::get('/schema', [App\Http\Controllers\SchemaController::class, 'showSchema
 
 // API routes for volcanoes
 Route::get('/api/volcanoes', function() {
-    $volcanoes = App\Models\Volcano::select('id', 'name', 'country', 'region', 'activity', 'type', 'elevation', 'image_url', 'latitude', 'longitude', 'description')
-        ->orderBy('name')
-        ->get();
+    try {
+        \Log::info('API /api/volcanoes called');
+        $volcanoes = App\Models\Volcano::select('id', 'name', 'country', 'activity', 'type', 'elevation', 'image_url', 'latitude', 'longitude', 'description')
+            ->orderBy('name')
+            ->get()
+            ->map(function($volcano) {
+                // Ensure coordinates are numbers
+                $volcano->latitude = (float) $volcano->latitude;
+                $volcano->longitude = (float) $volcano->longitude;
+                $volcano->elevation = (int) $volcano->elevation;
+                return $volcano;
+            });
         
-    return response()->json([
-        'success' => true,
-        'data' => $volcanoes,
-        'count' => $volcanoes->count()
-    ]);
+        \Log::info('Volcanoes retrieved: ' . $volcanoes->count());
+        
+        return response()->json([
+            'success' => true,
+            'data' => $volcanoes,
+            'count' => $volcanoes->count()
+        ]);
+    } catch (\Exception $e) {
+        \Log::error('API Error: ' . $e->getMessage());
+        return response()->json([
+            'success' => false,
+            'error' => $e->getMessage()
+        ], 500);
+    }
 });
 Route::get('/api/volcanoes/search', [App\Http\Controllers\VolcanoController::class, 'search']);
 

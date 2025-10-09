@@ -18,13 +18,11 @@ return new class extends Migration
             $table->string('name');
             $table->string('country');
             $table->string('continent');
-            $table->string('region');
             $table->string('activity');
             $table->decimal('latitude', 10, 6);
             $table->decimal('longitude', 10, 6);
             $table->integer('elevation');
             $table->text('description');
-            $table->string('source');
             $table->string('type');
             $table->string('image_url');
             $table->timestamps();
