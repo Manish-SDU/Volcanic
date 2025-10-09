@@ -1,0 +1,428 @@
+volcano_name,country,type,latitude_(dd),longitude_(dd),elevation_(m),continent
+Abu,Japan,Shield,34.5,131.6,641,Asia
+Acamarachi,Chile,Stratovolcano,-23.3,-67.62,6046,South America
+Acatenango,Guatemala,Stratovolcano,14.5,-90.88,3976,North America
+Acigöl-Nevsehir,Turkey,Caldera,38.57,34.52,1689,Asia
+Adams,United States,Stratovolcano,46.21,-121.49,3742,North America
+Adams Seamount,Pacific Ocean,Submarine,-25.37,-129.27,-39,Ocean
+Adatara,Japan,Stratovolcano,37.64,140.29,1718,Asia
+Adwa,Ethiopia,Stratovolcano,10.07,40.84,1733,Africa
+Afderà,Ethiopia,Stratovolcano,13.08,40.85,1295,Africa
+Agrigan,Mariana Islands,Stratovolcano,18.77,145.67,965,Asia
+Agua,Guatemala,Stratovolcano,14.47,-90.74,3760,North America
+Agua de Pau,Portugal,Stratovolcano,37.77,-25.47,947,Europe
+Aguilera,Chile,Stratovolcano,-50.33,-73.75,2546,South America
+Agung,Indonesia,Stratovolcano,-8.34,115.51,3142,Asia
+Ahyi,Mariana Islands,Submarine,20.42,145.03,-137,Asia
+Akademia Nauk,Russia,Caldera,53.98,159.45,1180,Europe
+Akagi,Japan,Stratovolcano,36.56,139.2,1828,Asia
+Akan,Japan,Caldera,43.38,144.01,1499,Asia
+Akhtang,Russia,Shield,55.43,158.65,1956,Europe
+Akita Komagatake,Japan,Stratovolcano,39.76,140.8,1637,Asia
+Akita Yakeyama,Japan,Stratovolcano,39.96,140.76,1366,Asia
+Akuseki-jima,Japan,Stratovolcano,29.46,129.6,584,Asia
+Akutan,United States,Stratovolcano,54.13,-165.99,1303,North America
+Alaid,Russia,Stratovolcano,50.86,155.55,2339,Europe
+Alamagan,Mariana Islands,Stratovolcano,17.6,145.83,744,Asia
+Alayta,Ethiopia,Shield,12.88,40.57,1501,Africa
+Alban Hills,Italy,Caldera,41.73,12.7,949,Europe
+Alcedo,Galápagos Islands,Shield,-0.43,-91.12,1130,South America
+Ale Bagu,Ethiopia,Stratovolcano,13.52,40.63,1031,Africa
+Alid,Eritrea,Stratovolcano,14.88,39.92,904,Africa
+Ambrym,Vanuatu,"Caldera, Shield",-16.25,168.12,1334,Asia
+Anatahan,Mariana Islands,Stratovolcano,16.35,145.67,790,Asia
+Aneityum,Vanuatu,Stratovolcano,-20.2,169.78,852,Asia
+Aniakchak,United States,Caldera,56.88,-158.17,1341,North America
+Antisana,Ecuador,Stratovolcano,-0.48,-78.14,5753,South America
+Aoba,Vanuatu,Shield,-15.4,167.83,1496,Asia
+Ararat,Turkey,Stratovolcano,39.7,44.3,5165,Asia
+Arenal,Costa Rica,Stratovolcano,10.46,-84.7,1670,North America
+Arintica,Chile,Complex,-18.73,-69.05,5597,South America
+Asacha,Russia,Stratovolcano,52.36,157.83,1910,Europe
+Asama,Japan,Complex,36.4,138.53,2568,Asia
+Ascensión,South Atlantic Ocean,Stratovolcano,-7.95,-14.37,858,Ocean
+Askja,Iceland,Stratovolcano,65.03,-16.75,1516,Europe
+Aso,Japan,Caldera,32.88,131.11,1592,Asia
+Atitlán,Guatemala,Complex,14.58,-91.19,3535,North America
+Atka,United States,Caldera,52.38,-174.15,1533,North America
+Atsonupuri,Russia,Stratovolcano,44.81,147.14,1206,Europe
+Augustine,United States,Lava dome,59.36,-153.43,1252,North America
+Avachinsky,Russia,Stratovolcano,53.26,158.83,2741,Europe
+Awu,Indonesia,Stratovolcano,3.67,125.5,1320,Asia
+Axial Seamount,Pacific Ocean,Submarine,45.95,-130.0,-1410,Ocean
+Ayelu,Ethiopia,Stratovolcano,10.08,40.7,2145,Africa
+Azufre,Chile,Complex,-21.79,-68.24,5846,South America
+Azuma,Japan,Stratovolcano,37.73,140.25,2035,Asia
+Babuyon Claro,Philippines,Stratovolcano,19.5,121.9,1180,Asia
+Bachelor,United States,Stratovolcano,43.8,121.6,2763,North America
+Bagana,Papua New Guinea,Cinder Cone,-6.1,155.2,1750,Asia
+Baker,United States,Stratovolcano,48.79,-121.82,3285,North America
+Bam,Papua New Guinea,Stratovolcano,-3.6,144.85,685,Asia
+Bamus,Papua New Guinea,Stratovolcano,-5.2,151.2,2248,Asia
+Bandai,Japan,Stratovolcano,37.6,140.1,1819,Asia
+Barren Island,India,Pyroclastic cone,12.29,93.88,305,Asia
+Barrier,Kenya,Complex,2.32,36.57,1032,Africa
+Bazman,Iran,Stratovolcano,28.0,60.0,3490,Asia
+Beerenberg,Norway,Stratovolcano,71.1,-8.2,2277,Europe
+Belknap,United States,Shield,44.28,-121.83,2096,North America
+Bezymianny,Russia,Stratovolcano,55.98,160.58,2882,Europe
+Biliran,Philippines,Complex,11.5,124.5,1187,Asia
+Bolshoi Semiachik,Russia,Stratovolcano,54.32,160.02,1720,Europe
+Bulusan,Philippines,Stratovolcano,12.8,124.1,1565,Asia
+Butajira,Ethiopia,"Fissure vent, Maar",8.05,38.35,2281,Africa
+Cameroon (Mount),Cameroon,Stratovolcano,4.2,9.17,4095,Africa
+Camiguin de Babuyanes,Philippines,Stratovolcano,18.83,121.85,712,Asia
+Canlaon,Philippines,Stratovolcano,10.41,123.13,2435,Asia
+Capulin,United States,Cinder Cone,36.45,-104.09,2494,North America
+Carrizozo,United States,Volcanic field,33.7,-106.0,1730,North America
+Cayambe,Ecuador,Stratovolcano,0.03,-77.99,5790,South America
+Cereme,Indonesia,Stratovolcano,-6.9,108.41,3078,Asia
+Chaine des Puys,France,Lava dome,45.78,2.97,1464,Europe
+Chiginagak,United States,Stratovolcano,57.13,-156.99,2067,North America
+Chikurachki,Russia,Stratovolcano,50.33,155.46,5958,Europe
+Chimborazo,Ecuador,Stratovolcano,-1.46,-78.82,6310,South America
+Cleveland,United States,Stratovolcano,52.83,-169.95,1730,North America
+Coatepeque,El Salvador,Caldera,13.86,-89.54,746,North America
+Colima,Mexico,Stratovolcano,19.51,103.62,4100,North America
+Columbia River Flood Basalts,United States,Flood Basalt,,,0,North America
+Concepción,Nicaragua,Stratovolcano,11.5,85.6,1610,North America
+Copahue,Argentina,Stratovolcano,-37.85,-71.17,2965,South America
+Cosigüina,Nicaragua,Shield,12.98,-87.56,847,North America
+Cotopaxi,Ecuador,Stratovolcano,-0.68,-78.44,5911,South America
+Crater Lake,United States,Caldera,42.94,-122.11,2471,North America
+Craters of the Moon,United States,Volcanic field,43.42,-113.5,2005,North America
+Daisetsu,Japan,Stratovolcano,43.7,142.9,2290,Asia
+Dakataua,Papua New Guinea,Caldera,-5.0,150.1,400,Asia
+Damavand,Iran,Stratovolcano,35.95,52.11,5670,Asia
+Deccan Traps,India,Flood Basalt,,,0,Asia
+Dempo,Indonesia,Stratovolcano,-4.0,103.1,3173,Asia
+Devils Garden,United States,Volcanic field,43.5,-120.9,1525,North America
+Devils Tower,United States,Plug,44.6,-104.7,1558,North America
+Diamond Craters,United States,Volcanic field,43.1,-118.7,1450,North America
+Dieng Volcanic Complex,Indonesia,Complex,-7.2,109.9,2565,Asia
+Diky Greben,Russia,Lava dome,51.46,156.98,1331,Europe
+Dubbi,Eritrea,Stratovolcano,13.6,41.8,1625,Africa
+Dukono,Indonesia,Complex,1.7,127.87,1185,Asia
+East Epi,Vanuatu,Caldera,-16.7,168.4,-34,Australia
+Ebeko,Russia,Somma,50.68,156.02,1156,Europe
+Egmont (Taranaki),New Zealand,Stratovolcano,-39.3,174.1,2518,Australia
+Egon,Indonesia,Stratovolcano,-8.7,122.45,788,Asia
+El Chichon,Mexico,Caldera,17.36,-93.23,1060,North America
+Elbrus,Russia,Stratovolcano,43.33,42.45,5633,Europe
+Erebus,Antarctica,Stratovolcano,-77.5,167.2,3794,Australia
+Erta Ale,Ethiopia,Shield,13.6,40.7,613,Africa
+Etna,Italy,Stratovolcano,37.73,15.0,3350,Europe
+Fantale,Ethiopia,Stratovolcano,8.98,39.93,2007,Africa
+Fernandina,Ecuador,Caldera,-0.37,-91.55,1476,South America
+Fisher,United States,Stratovolcano,-54.63,-164.42,1095,North America
+Fogo,Cape Verde Islands,Stratovolcano,14.95,-24.35,2829,Africa
+Fort Rock,United States,Maar,43.37,-121.07,1716,North America
+Frosty Peak,United States,Stratovolcano,55.08,-162.81,1920,North America
+Fuego,Guatemala,Stratovolcano,14.47,-90.88,3763,North America
+Fuerteventura,Spain,Fissure vent,28.36,-14.02,529,Europe
+Fuji,Japan,Stratovolcano,35.36,138.73,3776,Asia
+Furnas,Portugal,Stratovolcano,37.76,-25.33,805,Europe
+Fuss Peak,Russia,Stratovolcano,50.27,155.25,1772,Europe
+Galeras,Colombia,Stratovolcano,1.22,-77.37,4276,South America
+Galunggung,Indonesia,Stratovolcano,-7.26,108.08,2168,Asia
+Gamalama,Indonesia,Stratovolcano,0.81,127.33,1715,Asia
+Gamchen,Russia,Stratovolcano,54.97,160.68,2576,Europe
+Gamkonora,Indonesia,Stratovolcano,1.38,127.53,1635,Asia
+Gareloi,United States,Stratovolcano,51.8,178.8,1573,North America
+Gaua,Vanuatu,Stratovolcano,-14.27,167.5,797,Australia
+Gede,Indonesia,,-6.77,106.94,2958,Asia
+Glacier Peak,United States,Stratovolcano,48.11,-121.11,3213,North America
+Gorely,Russia,Caldera,52.56,158.03,1829,Europe
+Graciosa,Portugal,Stratovolcano,39.02,-27.97,402,Europe
+Gran Canaria,Spain,Fissure vent,28.0,15.58,1950,Europe
+Great Sitkin,United States,Stratovolcano,52.07,-176.13,1740,North America
+Griggs,United States,Stratovolcano,58.35,-155.09,2317,North America
+Grímsvötn,Iceland,Caldera,64.42,-17.33,1725,Europe
+Guagua Pichincha,Ecuador,,-0.17,-78.6,4784,South America
+Guallatiri,Chile,Stratovolcano,-18.42,-69.09,6071,South America
+Guguan,United States,Stratovolcano,17.31,145.84,287,North America
+Hakone,Japan,,35.23,139.02,1439,Asia
+Heard,Australia,Stratovolcano,-53.1,73.5,2745,Australia
+Hibok-hibok,Philippines,Stratovolcano,9.2,124.7,1332,Asia
+Hierro,Spain,Shield,27.73,-18.03,1500,Europe
+Hood,United States,Stratovolcano,45.4,-121.7,3426,North America
+Hualalai,United States,Shield,19.69,-155.87,2523,North America
+Ibu,Indonesia,Stratovolcano,1.49,127.63,1325,Asia
+Ijen,Indonesia,Stratovolcano,-8.06,114.24,2386,Asia
+Iliamna,United States,Stratovolcano,60.03,-153.09,3053,North America
+Iliboleng,Indonesia,Stratovolcano,-8.34,123.26,1659,Asia
+Iliniza,Ecuador,Stratovolcano,-0.66,-78.71,5248,South America
+Ilopango,El Salvador,Caldera,13.67,-89.05,450,North America
+Ilyinsky,Russia,Stratovolcano,51.49,157.2,1578,Europe
+Ioto (Iwo-jima),Japan,Caldera,24.75,141.29,161,Asia
+Iraya,Philippines,Stratovolcano,20.47,122.01,1009,Asia
+Irazu,Costa Rica,Stratovolcano,9.98,83.85,3431,North America
+Isanotski,United States,Stratovolcano,54.77,-163.72,2446,North America
+Izalco,El Salvador,Stratovolcano,13.81,-89.63,1950,North America
+Iztaccihuatl,Mexico,Stratovolcano,19.18,-98.64,5286,North America
+Izu-Tobu,Japan,Pyroclastic cone,34.9,139.1,581,Asia
+Jailolo,Indonesia,Stratovolcano,1.08,127.42,1130,Asia
+Jefferson,United States,Stratovolcano,44.67,-121.8,3199,North America
+Jordan Craters,United States,Volcanic field,43.1,-117.4,1400,North America
+Kadovar,Papua New Guinea,Stratovolcano,-3.63,144.63,365,Australia
+Kaguyak,United States,Stratovolcano,58.62,-154.06,901,North America
+Kahoolawe,United States,Shield,20.55,-156.57,450,North America
+Kambalny,Russia,Stratovolcano,51.3,156.87,2156,Europe
+Kanaga,United States,Stratovolcano,51.92,-177.17,1307,North America
+Karangetang [Api Siau],Indonesia,Stratovolcano,2.78,125.4,1784,Asia
+Karisimbi,"Congo, Rwanda",Stratovolcano,-1.51,29.45,4507,Africa
+Karthala,Comoros,Shield,-11.75,43.38,2361,Africa
+Karymsky,Russia,Stratovolcano,54.05,159.45,1536,Europe
+Katla,Iceland,Fissure vent,63.63,-19.05,1512,Europe
+Katmai,United States,Stratovolcano,58.28,-154.96,2047,North America
+Katwe-Kikorongo,Uganda,Volcanic field,-0.08,29.92,1067,Africa
+Kavachi,Solomon Islands,Submarine,-9.02,157.95,-20,Australia
+Kell,Russia,Stratovolcano,51.65,157.35,900,Europe
+Kelut,Indonesia,Stratovolcano,-7.93,112.31,1731,Asia
+Kerinci,Indonesia,Stratovolcano,1.7,101.26,3800,Asia
+Khodutka,Russia,Stratovolcano,52.06,157.7,2090,Europe
+Kialagvik,United States,Stratovolcano,57.2,-156.75,1677,North America
+Kick 'em Jenny,Grenada,Submarine,12.3,-61.64,-185,North America
+Kikai,Japan,Caldera,30.79,130.31,704,Asia
+Kikhpinych,Russia,Stratovolcano,54.49,160.25,1552,Europe
+Kilauea,United States,Shield,19.42,-155.29,1222,North America
+Kilimanjaro,Tanzania,Stratovolcano,3.07,37.35,5895,Africa
+Kirishima,Japan,Stratovolcano,31.93,130.86,1700,Asia
+Kliuchevskoi,Russia,Stratovolcano,56.06,160.64,4835,Europe
+Komagatake,Japan,Stratovolcano,42.06,140.68,1131,Asia
+Kone,Ethiopia,Caldera,8.8,39.69,1619,Africa
+Koryaksky,Russia,Stratovolcano,53.32,158.69,3456,Europe
+Koshelev,Russia,Stratovolcano,51.36,156.75,1812,Europe
+Krafla,Iceland,Caldera,65.73,-16.78,818,Europe
+Krakatau,Indonesia,Stratovolcano,-6.1,105.42,813,Asia
+Krasheninnikov,Russia,Stratovolcano,54.59,160.27,1856,Europe
+Kronotsky,Russia,Stratovolcano,54.75,160.53,3528,Europe
+Ksudach,Russia,Stratovolcano,51.8,157.53,1079,Europe
+Kukak,United States,Stratovolcano,58.45,-154.36,2043,North America
+Kusatsu-Shirane,Japan,Stratovolcano,36.64,138.54,2171,Asia
+Kutcharo,Japan,Caldera,43.61,144.44,999,Asia
+Kuttara,Japan,Stratovolcano,42.49,141.16,581,Asia
+Kuwae,Vanuatu,Caldera,-16.83,168.54,-2,Australia
+La Palma,Spain,Stratovolcano,28.57,-17.83,2426,Europe
+Lamington,Papua New Guinea,Stratovolcano,-8.95,148.15,1680,Australia
+Langila,Papua New Guinea,Stratovolcano,-5.53,148.42,1330,Australia
+Lanzarote,Spain,Fissure vent,29.03,-13.63,670,Europe
+Láscar,Chile,Stratovolcano,-23.37,-67.73,5592,South America
+Lereboleng,Indonesia,Complex,-8.36,122.84,1117,Asia
+Lewotobi,Indonesia,Stratovolcano,-8.54,122.78,1703,Asia
+Lewotolo,Indonesia,Stratovolcano,-8.27,123.51,1423,Asia
+Liamuiga,St. Kitts and Nevis,Stratovolcano,17.37,-62.8,1156,North America
+Lipari,Italy,Stratovolcano,38.48,14.95,602,Europe
+Little Sitkin,United States,Stratovolcano,51.95,178.54,1174,North America
+Loihi,United States,Submarine,18.92,-155.27,-975,North America
+Lokon-Empung,Indonesia,Stratovolcano,1.36,124.79,1580,Asia
+Lolo,Papua New Guinea,Stratovolcano,-5.47,150.51,805,Australia
+Lolobau,Papua New Guinea,Caldera,-4.92,151.16,858,Australia
+Loloru,Papua New Guinea,Stratovolcano,-6.52,155.62,1887,Australia
+Long Island,Papua New Guinea,Complex,-5.36,147.12,1280,Australia
+Longonot,Kenya,Stratovolcano,-0.91,36.45,2776,Africa
+Lopevi,Vanuatu,Stratovolcano,-16.51,168.35,1413,Australia
+Maderas,Nicaragua,Stratovolcano,11.45,-85.52,1394,North America
+Mageik,United States,Stratovolcano,58.2,155.25,2165,North America
+Mahawu,Indonesia,Stratovolcano,1.36,124.86,1324,Asia
+Makian,Indonesia,Stratovolcano,0.32,127.4,1357,Asia
+Maly Semiachik,Russia,Caldera,54.13,159.67,1560,Europe
+Manam,Papua New Guinea,Stratovolcano,-4.08,145.04,1807,Australia
+Mariveles,Philippines,Stratovolcano,14.52,120.47,1388,Asia
+Marsabit,Kenya,Shield,2.32,37.97,1707,Africa
+Masaya,Nicaragua,Caldera,11.98,-86.16,635,North America
+Mashkovtsev,Russia,Stratovolcano,51.1,156.72,503,Europe
+Mashu,Japan,Caldera,43.57,144.57,855,Asia
+Mauna Kea,United States,Shield,19.82,-155.47,4205,North America
+Mauna Loa,United States,Shield,19.48,-155.61,4170,North America
+Mayon,Philippines,Stratovolcano,13.26,123.69,2462,Asia
+McDonald Islands,Australia,Complex,-53.03,72.6,230,Australia
+McLoughlin,United States,"Lava cone, Stratovolcano",42.45,-122.32,2894,North America
+Mega Basalt Field,"Ethiopia, Kenya",Pyroclastic cone,37.42,4.08,1067,Africa
+Menan Buttes,United States,Tuff ring,43.7,-111.96,1713,North America
+Menengai,Kenya,Shield,-0.2,36.07,2278,Africa
+Merapi,Indonesia,Stratovolcano,-7.54,110.44,2911,Asia
+Merbabu,Indonesia,Stratovolcano,-7.45,110.43,3145,Asia
+Meru,Tanzania,Stratovolcano,-3.25,36.75,4565,Africa
+Methana,Greece,Lava dome,37.62,23.34,760,Europe
+Metis Shoal,Tonga,Submarine,-19.18,-174.87,43,Australia
+Michael,United Kingdom,Stratovolcano,-57.78,-26.45,990,Europe
+Michoacan-Guanajuato,Mexico,Cinder Cone,19.85,-101.75,3860,North America
+Mílos,Greece,Stratovolcano,36.7,24.44,751,Europe
+Miyake-jima,Japan,Stratovolcano,34.08,139.53,815,Asia
+Moffett,United States,Stratovolcano,51.94,-176.75,1196,North America
+Mojanda,Ecuador,Stratovolcano,0.13,-78.27,4263,South America
+Momotombo,Nicaragua,Stratovolcano,12.42,-86.54,1297,North America
+Monaco Bank,Portugal,Submarine,37.6,-25.88,-197,Europe
+Mono Lake Vol Field,United States,Volcanic field,38.0,-119.03,2121,North America
+Monowai Seamount,New Zealand,Submarine,-25.89,-177.19,-132,Australia
+Moti,Indonesia,Stratovolcano,0.45,127.4,950,Asia
+Muria,Indonesia,Stratovolcano,-6.62,110.88,1625,Asia
+Nantai,Japan,Stratovolcano,36.76,139.48,2486,Asia
+Nasu,Japan,Stratovolcano,37.12,139.97,1915,Asia
+Navajo Volcanic Field,United States,Volcanic field,,,2740,North America
+"Negro, Cerro",Nicaragua,Cinder Cone,12.51,-86.7,728,North America
+Nemo Peak,Russia,Caldera,49.57,154.81,1018,Europe
+Nevis Peak,St. Kitts and Nevis,Stratovolcano,17.15,-62.58,985,North America
+Newberry,United States,Shield,43.72,-121.23,2434,North America
+Newer Volcanics Province,Australia,Shield,-37.77,142.5,1011,Australia
+Ngauruhoe,New Zealand,Stratovolcano,-39.13,175.64,1978,Australia
+Nikko-Shirane,Japan,Shield,36.8,139.38,2578,Asia
+Nipesotsu-Maruyama,Japan,Stratovolcano,43.45,143.04,2013,Asia
+Nisyros,Greece,Stratovolcano,36.59,27.16,698,Europe
+Nyambeni Hills,Kenya,Shield,0.23,37.87,750,Africa
+Nyamuragira,Democratic Republic of Congo,Shield,-1.41,29.2,3058,Africa
+Nyiragongo,Democratic Republic of Congo,Stratovolcano,-1.52,29.25,3470,Africa
+Oahu,United States,Shield,,,1220,North America
+Ojos del Salado,"Argentina, Chile",Stratovolcano,-27.12,-68.55,6887,South America
+Okataina,New Zealand,Lava dome,-38.12,176.5,1111,Australia
+Okmok,United States,Shield,53.43,-168.13,1073,North America
+Oku Volcanic Field,Cameroon,Stratovolcano,6.25,10.5,3011,Africa
+Ol Doinyo Lengai,Tanzania,Stratovolcano,-2.76,39.91,2962,Africa
+Opala,Russia,Caldera,52.54,157.34,1776,Europe
+Oraefajokull,Iceland,Stratovolcano,64.0,-16.65,2119,Europe
+Oshima,Japan,Stratovolcano,34.72,139.4,764,Asia
+Pacaya,Guatemala,Complex,14.38,-90.6,2552,North America
+Pagan,United States,Stratovolcano,18.13,145.8,570,North America
+Pago,Papua New Guinea,Caldera,-5.58,150.52,742,Australia
+Papandayan,Indonesia,Stratovolcano,-7.32,107.73,2665,Asia
+Paricutin,Mexico,Cinder Cone,19.5,-102.2,3170,North America
+Parinacota,"Bolivia, Chile",Stratovolcano,-18.17,-69.15,6348,South America
+Pauzhetka,Russia,Lava dome,51.45,156.97,1070,Europe
+Pavlof,United States,Stratovolcano,55.42,-161.89,2519,North America
+Pavlof Sister,United States,Stratovolcano,55.45,-161.84,2142,North America
+Pelee,France,Stratovolcano,14.82,-61.17,1397,Europe
+Peuet Sague,Indonesia,Complex,4.91,96.33,2801,Asia
+Pico,Portugal,Stratovolcano,38.47,-28.4,2351,Europe
+"Pilas, Las",Nicaragua,Stratovolcano,11.54,-85.62,1700,North America
+Pinacate,Mexico,Cinder Cone,31.77,-113.5,1200,North America
+Pinatubo,Philippines,Stratovolcano,15.13,120.35,1486,Asia
+Pisgah Lava Field,United States,Volcanic field,34.75,-116.63,1495,North America
+Piton de la Fournaise,France,Shield,-21.23,55.71,2631,Europe
+Poas,Costa Rica,Stratovolcano,10.2,-84.23,2708,North America
+Popocatepetl,Mexico,Stratovolcano,19.02,-98.62,5246,North America
+Prevo Peak,Russia,Stratovolcano,47.02,152.12,1360,Europe
+Purace,Colombia,Stratovolcano,2.32,-76.4,4650,South America
+"Quill, The",Netherlands,Stratovolcano,17.48,-62.96,601,Europe
+Rabaul,Papua New Guinea,Shield,-4.27,152.2,688,Australia
+Ragang,Philippines,Stratovolcano,7.7,124.5,2815,Asia
+Raikoke,Russia,Stratovolcano,48.29,153.25,551,Europe
+Rainier,United States,Stratovolcano,46.85,-121.76,4392,North America
+Rajabasa,Indonesia,Stratovolcano,-5.78,105.63,1281,Asia
+Raoul,New Zealand,Stratovolcano,-29.27,-177.92,516,Australia
+Rasshua,Russia,Stratovolcano,47.77,153.02,956,Europe
+Raung,Indonesia,Stratovolcano,-8.13,114.04,3332,Asia
+Rausu,Japan,Stratovolcano,44.07,145.13,1660,Asia
+Redoubt,United States,Stratovolcano,60.49,-152.74,3108,North America
+Reventador,Ecuador,Stratovolcano,-0.08,-77.66,3562,South America
+Rincon de la Vieja,Costa Rica,Complex,10.83,-85.32,1916,North America
+Roundtop,United States,Stratovolcano,54.8,-163.59,1871,North America
+Ruapehu,New Zealand,Stratovolcano,-39.28,175.57,2797,Australia
+Rudakov,Russia,Stratovolcano,45.88,149.83,542,Europe
+"Ruiz, Nevado del",Colombia,Stratovolcano,4.89,-75.32,5321,South America
+Rumble IV,New Zealand,Submarine,-36.13,178.05,500,Australia
+Saba,Netherlands,Stratovolcano,17.63,-63.23,887,Europe
+Sabancaya,Peru,Stratovolcano,-15.78,-71.85,5967,South America
+Sakar,Papua New Guinea,Stratovolcano,-5.41,148.09,992,Australia
+Sakura-jima,Japan,Stratovolcano,31.59,130.66,1117,Asia
+Salak,Indonesia,Stratovolcano,-6.72,106.73,2211,Asia
+San Cristobal,Nicaragua,Stratovolcano,12.7,-87.0,1745,North America
+San Salvador,El Salvador,Stratovolcano,13.73,-89.29,1893,North America
+San Vicente,Cape Verde Islands,Stratovolcano,16.9,-25.0,697,Africa
+Sanford,United States,Shield,62.22,-144.13,4949,North America
+Sangay,Ecuador,Stratovolcano,-2.0,-78.34,5230,South America
+Santa Ana,El Salvador,Stratovolcano,13.85,-89.63,2381,North America
+Santa Maria,Guatemala,Stratovolcano,14.76,-91.55,3772,North America
+Santorini,Greece,Shield,36.4,25.4,367,Europe
+Sarychev Peak,Russia,Stratovolcano,48.09,153.2,1496,Europe
+Savo,Solomon Islands,Stratovolcano,-9.13,159.82,485,Australia
+Segula,United States,Stratovolcano,52.02,178.14,1160,North America
+Semeru,Indonesia,Stratovolcano,-8.11,112.92,3676,Asia
+Semisopochnoi,United States,Stratovolcano,51.93,179.58,1221,North America
+Sete Cidades,Portugal,Stratovolcano,37.87,-25.78,856,Europe
+Shasta,United States,Stratovolcano,41.41,-122.19,4317,North America
+Sheveluch,Russia,Stratovolcano,56.65,161.36,3283,Europe
+Shikotsu,Japan,Caldera,42.69,141.38,1320,Asia
+Shiretoko-Iwo-zan,Japan,Stratovolcano,44.13,145.17,1563,Asia
+Shishaldin,United States,Stratovolcano,54.76,-163.97,2857,North America
+Sinarka,Russia,Stratovolcano,48.88,154.18,934,Europe
+Smirnov,Russia,Stratovolcano,44.42,146.14,1189,Europe
+Sollipulli,Chile,Caldera,-38.97,-71.52,2282,South America
+Soputan,Indonesia,Stratovolcano,1.11,124.73,1784,Asia
+Soufriere Guadeloupe,France,Stratovolcano,16.05,-61.67,1467,Europe
+Soufrière Hills,United Kingdom,Stratovolcano,16.72,-62.18,915,Europe
+Soufrière St. Vincent,St. Vincent,Stratovolcano,13.33,-61.18,1220,North America
+South Island,Kenya,,2.63,36.6,800,Africa
+SP Mountain,United States,Cinder Cone,35.6,-111.6,2141,North America
+Spurr,United States,Stratovolcano,61.3,-152.25,3374,North America
+Srednii,Russia,Submarine,47.6,152.92,36,Europe
+Steller,United States,Stratovolcano,58.4,-154.4,2272,North America
+Stromboli,Italy,Stratovolcano,38.79,15.21,924,Europe
+Sumaco,Ecuador,Stratovolcano,-0.54,-77.63,3990,South America
+Sumbing,Indonesia,Stratovolcano,-7.38,110.07,3371,Asia
+Sundoro,Indonesia,Stratovolcano,-7.3,109.99,3136,Asia
+Sunset Craters,United States,Cinder Cone,35.37,-111.5,2447,North America
+Suswa,Kenya,Shield,-1.18,36.35,2356,Africa
+Suwanose-jima,Japan,Stratovolcano,29.64,129.72,799,Asia
+Taal,Philippines,Caldera,14.0,120.99,311,Asia
+Talang,Indonesia,Stratovolcano,-0.98,100.68,2597,Asia
+Tambora,Indonesia,Stratovolcano,-8.25,118.0,2850,Asia
+Tanaga and Takawangha,United States,Stratovolcano,51.89,-178.15,1806,North America
+Tangkubanparahu,Indonesia,Stratovolcano,-6.77,107.6,2084,Asia
+Tao-Rusyr Caldera,Russia,Stratovolcano,49.35,154.7,1325,Europe
+Tarso Voon,Chad,Stratovolcano,20.92,17.28,3100,Africa
+Telica Volcano,Nicaragua,Stratovolcano,12.6,-86.85,1010,North America
+Tenerife,Spain,Stratovolcano,28.27,-16.64,3715,Europe
+Tengger Caldera and Bromo,Indonesia,Stratovolcano,-7.94,112.95,2329,Asia
+Three Fingered Jack,United States,Stratovolcano,44.5,-121.8,2390,North America
+Three Sisters,United States,Stratovolcano,44.1,121.77,3100,North America
+Thule Islands,United Kingdom,Stratovolcano,-59.45,-27.37,1075,Europe
+Tiatia,Russia,Stratovolcano,44.35,146.26,1819,Europe
+Toba,Indonesia,Caldera,2.58,98.83,2157,Asia
+Todoko-Ranu,Indonesia,Caldera,1.25,127.47,979,Asia
+Tokachi,Japan,,43.42,142.69,2077,Asia
+Tolbachik,Russia,Stratovolcano,55.83,160.33,3682,Europe
+Tolimán,Guatemala,Stratovolcano,14.61,-91.19,3158,North America
+Towada,Japan,Caldera,40.47,140.92,1159,Asia
+Traitor's Head,Vanuatu,Stratovolcano,-18.75,169.23,1881,Oceania
+Tri Sestry,Russia,Stratovolcano,45.93,149.92,998,Europe
+Tristan da Cunha,United Kingdom,Shield,-37.09,-12.28,2060,Europe
+Tsurumi,Japan,Lava dome,33.28,131.43,1584,Asia
+Tungurahua,Ecuador,Stratovolcano,-1.47,-78.44,2011,South America
+Ubehebe Craters,United States,Maar,37.02,-117.45,752,North America
+Ubinas,Peru,Stratovolcano,-16.36,-70.9,5672,South America
+Udina,Russia,Stratovolcano,55.76,160.53,2923,Europe
+Ugashik and Peulik,United States,Stratovolcano,57.75,-156.37,1474,North America
+Uinkaret Volcanic Field,United States,Volcanic field,36.38,-113.13,1555,North America
+Ulawun,Papua New Guinea,Stratovolcano,-5.05,151.33,2334,Oceania
+Umboi,Papua New Guinea,Complex,-5.59,147.88,1548,Oceania
+Undara,Australia,Shield,-18.25,144.75,1020,Oceania
+Ungaran and Telomoyo,Indonesia,Stratovolcano,-7.18,110.33,2050,Asia
+Unzen,Japan,Complex,32.76,130.29,1500,Asia
+Urataman,Russia,Somma,47.12,152.25,678,Europe
+Ushishur,Russia,Caldera,47.52,152.8,401,Europe
+Usu,Japan,Stratovolcano,42.54,140.84,737,Asia
+Uzon,Russia,Caldera,54.5,159.97,1617,Europe
+Veniaminof,United States,Stratovolcano,56.17,-159.38,2507,North America
+Vernadskii Ridge,Russia,Cinder Cone,50.55,155.97,1183,Europe
+Vesuvius,Italy,Somma,40.82,14.43,1281,Europe
+Villarrica,Chile,Stratovolcano,-39.42,-71.93,2847,South America
+Vilyuchik,Russia,Stratovolcano,52.7,158.28,2173,Europe
+Visoke,"Congo, Rwanda",Stratovolcano,-1.47,29.49,3711,Africa
+Vsevidof and Recheschnoi Volcanoes,United States,Stratovolcano,53.13,-168.69,2149,North America
+Vulcano,Italy,,38.4,14.96,500,Europe
+Washington,United States,Shield,44.3,-121.8,2376,North America
+Wau-en-Namus,Libya,Caldera,25.05,17.55,547,Africa
+Westdahl,United States,Stratovolcano,54.52,-164.65,1654,North America
+White Island,New Zealand,Stratovolcano,-37.52,177.18,321,Oceania
+Wrangell,United States,Shield,62.0,-144.02,4317,North America
+Wudalianchi,China,Volcanic field,48.72,126.12,597,Asia
+Yake-dake,Japan,Stratovolcano,36.22,137.59,2455,Asia
+Yali,Greece,Lava dome,36.67,27.14,180,Europe
+Yantarni,United States,Stratovolcano,57.02,-157.19,1345,North America
+Yasur,Vanuatu,Stratovolcano,-19.53,169.44,361,Oceania
+Yellowstone,United States,Caldera,44.43,-110.67,2805,North America
+Zavaritzki Caldera,Russia,Caldera,46.93,151.95,624,Europe
+Zheltovsky,Russia,,51.57,157.32,1953,Europe
+Zhupanovsky,Russia,,53.59,159.15,2958,Europe
+Zimina,Russia,Stratovolcano,55.86,160.6,3081,Europe
