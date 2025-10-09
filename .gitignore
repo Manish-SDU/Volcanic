@@ -1,6 +1,5 @@
 *.log
 .DS_Store
-# Remove .env in case its still sqllite -> Make sure you are using MYSQL
 .env 
 .env.backup
 .env.production
