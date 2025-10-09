@@ -340,7 +340,7 @@ function initializeSearch() {
         // Show only the first 6 cards (homepage default)
         const cards = document.querySelectorAll('.volcano-card');
         cards.forEach((card, index) => {
-            if (index < 6) {
+            if (index < 12) {
                 card.style.display = '';
                 card.classList.remove('homepage-hidden');
             } else {
@@ -533,7 +533,7 @@ function initializeSearch() {
     // Try to determine if search is more likely for location or name
     function isLocationSearch(term) {
         // Common location indicators
-        const locationKeywords = ['in', 'at', 'near', 'around', 'country', 'region', 'continent'];
+        const locationKeywords = ['in', 'at', 'near', 'around', 'country', 'continent'];
         term = term.toLowerCase();
         
         // Check if any location keywords are in the search

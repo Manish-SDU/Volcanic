@@ -1,4 +1,4 @@
-# Volcanic Laravel Project Setup
+# Volcanic Laravel Project Setup 
 
 ## Database Configuration
 
@@ -10,6 +10,9 @@ This project uses **MySQL** as the database. Follow these steps to set up your l
 # Copy the example environment file
 cp .env.example .env
 
+# Install dependencies
+composer install
+
 # Generate application key
 php artisan key:generate
 ```
@@ -20,14 +23,12 @@ Make sure you have MySQL running locally, then or have XAMPP running.
 
 ```bash
 # Create the database (you can do this in phpMyAdmin or MySQL command line)
-CREATE DATABASE volcanic;
+CREATE DATABASE volcanic; # mysql -u root -e "CREATE DATABASE volcanic;" #  to run in a MySQL environment
 ```
 
 ### 3. Run Migrations and Seeders
 
 ```bash
-# Install dependencies
-composer install
 
 # Run migrations to create tables
 php artisan migrate
