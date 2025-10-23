@@ -36,22 +36,30 @@ class VolcanoesController extends Controller
             ]);
         }
         
-        $countryMapper = new CountryAcronymMapper();
-        $countryMatches = $countryMapper->getCountryMatches($query);
+        // Search across multiple fields simultaneously
+        // This ensures we catch all matches regardless of field
+        $volcanoes = Volcano::where(function($q) use ($query) {
+            // Search in name field
+            $q->whereRaw('LOWER(name) LIKE LOWER(?)', ['%' . $query . '%'])
+              // Search in country field
+              ->orWhereRaw('LOWER(country) LIKE LOWER(?)', ['%' . $query . '%'])
+              // Search in continent field
+              ->orWhereRaw('LOWER(continent) LIKE LOWER(?)', ['%' . $query . '%'])
+              // Search in type field
+              ->orWhereRaw('LOWER(type) LIKE LOWER(?)', ['%' . $query . '%'])
+              // Search in activity field
+              ->orWhereRaw('LOWER(activity) LIKE LOWER(?)', ['%' . $query . '%']);
+        })->get();
         
-        // First, try direct country search (case insensitive)
-        $countrySearch = Volcano::whereRaw('LOWER(country) LIKE LOWER(?)', ['%' . $query . '%'])->get();
-        
-        if ($countrySearch->count() > 0) {
-            // Found volcanoes by country - this is a country search
-            $volcanoes = $countrySearch;
-        } elseif (!empty($countryMatches)) {
-            // Use mapper matches if direct search didn't work
-            $country = $countryMatches[0];
-            $volcanoes = Volcano::whereRaw('LOWER(country) LIKE LOWER(?)', ['%' . $country . '%'])->get();
-        } else {
-            // Name search
-            $volcanoes = Volcano::whereRaw('LOWER(name) LIKE LOWER(?)', ['%' . $query . '%'])->get();
+        // If no results found, try with country acronym mapper as fallback
+        if ($volcanoes->isEmpty()) {
+            $countryMapper = new CountryAcronymMapper();
+            $countryMatches = $countryMapper->getCountryMatches($query);
+            
+            if (!empty($countryMatches)) {
+                $country = $countryMatches[0];
+                $volcanoes = Volcano::whereRaw('LOWER(country) LIKE LOWER(?)', ['%' . $country . '%'])->get();
+            }
         }
         
         return response()->json([

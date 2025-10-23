@@ -1,4 +1,4 @@
-# Volcanic Laravel Project Setup 
+# Volcanic Laravel Project Setup
 
 ## Database Configuration
 
@@ -48,7 +48,8 @@ The application will be available at `http://127.0.0.1:8000`
 ## Database Configuration in .env
 
 Make sure your `.env` file has these database settings:
-```
+
+```env
 
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
