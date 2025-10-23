@@ -1,5 +1,7 @@
+import './bootstrap';
+
 /* ===========================================
-   🌋 VOLCANIC - COMMON JAVASCRIPT LOGIC 🌋 
+   🌋 VOLCANIC - COMMON JAVASCRIPT LOGIC 🌋
    =========================================== */
 
 /**

@@ -3,7 +3,7 @@
 @section('title', 'Profile')
 
 @section('head_js')
-    <script src="{{ asset('js/profile.js') }}" defer></script>
+    @vite('resources/js/profile/profile.js')
 @endsection
 
 @section('content')

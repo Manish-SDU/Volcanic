@@ -3,8 +3,7 @@
 @section('title', 'My Volcanoes')
 
 @section('head_js')
-    <script src="{{ asset('js/panels.js') }}" defer></script>
-    <script src="{{ asset('js/number_increment.js') }}" defer></script>
+    @vite(['resources/js/my-volcanoes/panels.js', 'resources/js/my-volcanoes/number_increment.js'])
 @endsection
 
 @section('content')

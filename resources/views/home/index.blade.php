@@ -3,14 +3,12 @@
 @section('title', 'Home')
 
 @section('additional_css')
-    <!-- CSS for Volcano Animation -->
-    <link rel="stylesheet" href="{{ asset('css/volcano.css') }}">
+    @vite(['resources/css/home/volcano-animation.css', 'resources/css/home/volcano-map.css'])
     <!-- Leaflet CSS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
         integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
         crossorigin="" />
     <!-- Map Styles -->
-    <link rel="stylesheet" href="{{ asset('css/volcano-map.css') }}">
     <style>
         #filter-pill:hover {
             background: #ff8c00 !important;
@@ -26,6 +24,7 @@
 @endsection
 
 @section('head_js')
+    @vite(['resources/js/home/volcano-animation.js', 'resources/js/home/home.js', 'resources/js/home/volcano-map.js'])
     <!-- Dependencies -->
     <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
     <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
@@ -33,10 +32,6 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
         integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
         crossorigin=""></script>
-    <script src="{{ asset('js/volcano.js') }}" defer></script>
-    <script src="{{ asset('js/home.js') }}" defer></script>
-    <!-- Volcano Map JavaScript -->
-    <script src="{{ asset('js/volcano-map.js') }}" defer></script>
 @endsection
 
 @section('content')
@@ -96,8 +91,8 @@
     <section class="content-section">
         <div class="container">
             <div style="position: relative;">
-                <h2>Discover Amazing Volcanoes</h2>
-                <p id="search-status" class="section-description">Search by name or location</p>
+                <h2>Ignite Your Volcano Journey</h2>
+                <p id="search-status" class="section-description">Discover Earth's Fiery Secrets</p>
                 <div style="position: absolute; top: 0; right: 0; display: flex; gap: 12px;">
                     <span id="filter-pill" class="action-btn"
                           style="border-color: #ff8c00; color: #ff8c00; min-width: 85px; justify-content: center;">
