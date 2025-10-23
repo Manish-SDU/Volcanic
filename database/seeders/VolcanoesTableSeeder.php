@@ -3989,7 +3989,7 @@ class VolcanoesTableSeeder extends Seeder
         [
             'name' => 'Mount Salak',
             'country' => 'Indonesia',
-            'continent}}' => 'Asia',
+            'continent' => 'Asia',
             'activity' => 'Inactive',
             'latitude' => -6.72,
             'longitude' => 106.73,
