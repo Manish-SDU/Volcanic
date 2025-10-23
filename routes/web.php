@@ -74,7 +74,7 @@ Route::get('/api/volcanoes', function() {
         ], 500);
     }
 });
-Route::get('/api/volcanoes/search', [App\Http\Controllers\VolcanoController::class, 'search']);
+Route::get('/api/volcanoes/search', [App\Http\Controllers\VolcanoesController::class, 'search'])->name('api.volcanoes.search');
 
 // Debug route
 Route::get('/debug/image-paths', function () {

@@ -3637,14 +3637,14 @@ class VolcanoesTableSeeder extends Seeder
 
         [
             'name' => 'Piton de la Fournaise',
-            'country' => 'France (Reunion Island, Indian Ocean)',
+            'country' => 'France (Reunion Island)',
             'continent' => 'Europe',  // geographically part of France, though Reunion is offshore
             'activity' => 'Active',  // frequently active basaltic shield / fissure eruptions
             'latitude' => -21.23,
             'longitude' => 55.71,
             'elevation' => 2631,
             'description' => 'A very active shield volcano located on Reunion Island (Indian Ocean), one of the world’s most active volcanoes, regularly erupting lava flows from fissures. (Often described as basaltic shield) ',
-            'type' => 'Shield / Basaltic Volcano',
+            'type' => 'Shield',
             'image_url' => 'piton-de-la-fournaise'
         ],
 

@@ -40,6 +40,8 @@ class CountryAcronymMapper
         'tr' => 'Turkey',
         'russia' => 'Russia',
         'ru' => 'Russia',
+        'greece' => 'Greece',
+        'gr' => 'Greece',
         
         // Asia
         'japan' => 'Japan',
@@ -114,17 +116,19 @@ class CountryAcronymMapper
             $matches[] = self::$countryMap[$searchTerm];
         }
         
-        // Partial matches for flexibility
+        // Only do exact acronym matches - no partial matches
         foreach (self::$countryMap as $acronym => $country) {
-            if (str_contains($acronym, $searchTerm) || str_contains($searchTerm, $acronym)) {
+            if ($acronym === $searchTerm) {
                 if (!in_array($country, $matches)) {
                     $matches[] = $country;
                 }
             }
         }
         
-        // Also include the original search term (in case it's already a country name)
-        $matches[] = $searchTerm;
+        // If the search term is a country name (value), include it
+        if (in_array($searchTerm, self::$countryMap)) {
+            $matches[] = $searchTerm;
+        }
         
         return array_unique($matches);
     }
