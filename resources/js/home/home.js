@@ -38,13 +38,17 @@ function animateTextChange(newText) {
 
 function updateSearchStatus(newText) {
     const searchStatus = document.getElementById('search-status');
-    if (!searchStatus || searchStatus.textContent === newText) return;
+    if (!searchStatus) return;
+    
+    // Check if content is the same (comparing stripped HTML for detection)
+    const currentContent = searchStatus.innerHTML;
+    if (currentContent === newText) return;
     
     searchStatus.style.transition = 'opacity 0.3s ease';
     searchStatus.style.opacity = '0';
     
     setTimeout(() => {
-        searchStatus.textContent = newText;
+        searchStatus.innerHTML = newText;
         searchStatus.style.opacity = '1';
     }, 150);
 }
@@ -248,18 +252,13 @@ function initializeSearch() {
         
         volcanoGrid.classList.add('search-active');
         
-        const isLikelyLocation = isLocationSearch(searchTerm);
-        
-        if (isLikelyLocation) {
-            updateSearchStatus(`${textStates.searchingLocation} "${searchTerm}"...`);
-        } else {
-            updateSearchStatus(`${textStates.searchingName} "${searchTerm}"...`);
-        }
+        // Show searching status with styled term
+        const styledTerm = `<span style="color: #ff6b35; font-weight: 600;">"${searchTerm}"</span>`;
+        updateSearchStatus(`Searching for ${styledTerm}...`);
         searchTermSpan.textContent = searchTerm;
         
         // Always use API search
         console.log('Using API search for:', searchTerm);
-        updateSearchStatus(`Searching for "${searchTerm}"...`);
         
         fetch(`/api/volcanoes/search?query=${encodeURIComponent(searchTerm)}`)
             .then(response => {
@@ -325,12 +324,15 @@ function initializeSearch() {
             noResultsMessage.classList.add('hidden');
             volcanoGrid.classList.remove('no-results');
             
+            // Create styled search term
+            const styledTerm = `<span style="color: #ff6b35; font-weight: 600;">"${searchTerm}"</span>`;
+            
             if (visibleCount === 1) { // IN case there is a singular count
-                updateSearchStatus(`1 volcano found`);
+                updateSearchStatus(`1 volcano found for ${styledTerm}`);
                 console.log('Single volcano result - using singular form');
             } else {
                 // Plural form "volcanoes"
-                updateSearchStatus(`${visibleCount} ${textStates.resultsFound}`);
+                updateSearchStatus(`${visibleCount} volcanoes found for ${styledTerm}`);
             }
         }
     }
