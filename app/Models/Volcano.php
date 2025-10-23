@@ -61,7 +61,7 @@ class Volcano extends Model
         }
         
         // Fallback: Look for any supported image format using volcano name
-        $baseName = strtolower(str_replace(' ', '_', $this->name));
+        $baseName = strtolower(str_replace(' ', '-', $this->name));
         foreach ($extensions as $ext) {
             $imagePath = "images/volcanoes/{$baseName}.{$ext}";
             if (file_exists(public_path($imagePath))) {

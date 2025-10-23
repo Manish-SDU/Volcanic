@@ -11,3 +11,6 @@ function nextPanel() {
     // show next
     document.getElementById(panels[currentIndex]).style.display = "block";
 }
+
+// expose to global so inline onclick works with Vite/bundled modules
+window.nextPanel = nextPanel;
