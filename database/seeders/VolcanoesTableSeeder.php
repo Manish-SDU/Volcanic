@@ -94,14 +94,14 @@ class VolcanoesTableSeeder extends Seeder
             ],
             [
                 'name' => 'Adams Seamount',
-                'country' => 'Pacific Ocean',
+                'country' => 'N/A',
                 'continent' => 'International Waters',
                 'activity' => 'Active',
                 'latitude' => -25.37,
                 'longitude' => -129.27,
                 'elevation' => -39,
                 'description' => 'A submarine volcano rising ~3,500 m above the seafloor to within ~39 m of the surface. No confirmed historic eruptions in very recent times, but geologic data indicates relatively recent activity.',
-                'type' => 'Submarine volcano',
+                'type' => 'Submarine',
                 'image_url' => 'adams-seamount'
             ],
             [
@@ -142,7 +142,7 @@ class VolcanoesTableSeeder extends Seeder
             ],
             [
                 'name' => 'Agrigan',
-                'country' => 'Mariana Islands',
+                'country' => 'United States',
                 'continent' => 'Asia',
                 'activity' => 'Inactive',
                 'latitude' => 18.77,
@@ -202,7 +202,7 @@ class VolcanoesTableSeeder extends Seeder
             ],
             [
                 'name' => 'Ahyi',
-                'country' => 'Mariana Islands',
+                'country' => 'United States',
                 'continent' => 'Asia',
                 'activity' => 'Active',
                 'latitude' => 20.42,
@@ -323,7 +323,7 @@ class VolcanoesTableSeeder extends Seeder
             ],
             [
                 'name' => 'Alamagan',
-                'country' => 'Mariana Islands',
+                'country' => 'United States',
                 'continent' => 'Asia',
                 'activity' => 'Active',
                 'latitude' => 17.6,
@@ -359,7 +359,7 @@ class VolcanoesTableSeeder extends Seeder
             ],
             [
                 'name' => 'Alcedo',
-                'country' => 'Galápagos Islands',
+                'country' => 'Ecuador',
                 'continent' => 'South America',
                 'activity' => 'Active',
                 'latitude' => -0.43,
@@ -402,12 +402,12 @@ class VolcanoesTableSeeder extends Seeder
                 'longitude' => 168.12,
                 'elevation' => 1334,
                 'description' => 'A large volcanic island featuring one of the world’s most active lava lakes within its caldera.',
-                'type' => 'Caldera, Shield',
+                'type' => 'Caldera',
                 'image_url' => 'ambrym'
             ],
             [
                 'name' => 'Anatahan',
-                'country' => 'Mariana Islands',
+                'country' => 'United States',
                 'continent' => 'Asia',
                 'activity' => 'Active',
                 'latitude' => 16.35,
@@ -527,7 +527,7 @@ class VolcanoesTableSeeder extends Seeder
             ],
             [
                 'name' => 'Ascensión',
-                'country' => 'South Atlantic Ocean',
+                'country' => 'N/A',
                 'continent' => 'International Waters',
                 'activity' => 'Inactive',
                 'latitude' => -7.95,
@@ -635,7 +635,7 @@ class VolcanoesTableSeeder extends Seeder
             ],
             [
                 'name' => 'Axial Seamount',
-                'country' => 'Pacific Ocean',
+                'country' => 'N/A',
                 'continent' => 'International Waters',
                 'activity' => 'Active',
                 'latitude' => 45.95,
@@ -714,7 +714,7 @@ class VolcanoesTableSeeder extends Seeder
                 'longitude' => 155.2,
                 'elevation' => 1750,
                 'description' => 'One of the most active volcanoes in Papua New Guinea, producing frequent lava flows and ash plumes.',
-                'type' => 'Cinder Cone',
+                'type' => 'Cinder cone',
                 'image_url' => 'bagana'
             ],
             [
@@ -774,7 +774,7 @@ class VolcanoesTableSeeder extends Seeder
                 'longitude' => 93.88,
                 'elevation' => 305,
                 'description' => 'India’s only active volcano, located in the Andaman Sea with frequent strombolian eruptions.',
-                'type' => 'Pyroclastic cone',
+                'type' => 'Cinder cone',
                 'image_url' => 'barren-island'
             ],
             [
@@ -882,7 +882,7 @@ class VolcanoesTableSeeder extends Seeder
                 'longitude' => 38.35,
                 'elevation' => 2281,
                 'description' => 'A volcanic field with fissure vents and maars in central Ethiopia, now considered extinct.',
-                'type' => 'Fissure vent, Maar',
+                'type' => 'Fissure vent',
                 'image_url' => 'butajira'
             ],
             [
@@ -930,7 +930,7 @@ class VolcanoesTableSeeder extends Seeder
                 'longitude' => -104.09,
                 'elevation' => 2494,
                 'description' => 'An extinct cinder cone in New Mexico, preserved as a classic example of volcanic cone morphology.',
-                'type' => 'Cinder Cone',
+                'type' => 'Cinder cone',
                 'image_url' => 'capulin'
             ],
             [
@@ -1062,7 +1062,7 @@ class VolcanoesTableSeeder extends Seeder
                 'longitude' => 110.67,
                 'elevation' => 0,
                 'description' => 'A vast region of ancient basaltic lava flows covering parts of Washington, Oregon, and Idaho.',
-                'type' => 'Flood Basalt',
+                'type' => 'Flood basalt',
                 'image_url' => 'columbia-river-flood-basalts'
             ],
             [
@@ -1182,7 +1182,7 @@ class VolcanoesTableSeeder extends Seeder
                 'longitude' => 73.5,
                 'elevation' => 600,
                 'description' => 'A massive flood basalt province in western India formed by extensive volcanic eruptions 66 million years ago.',
-                'type' => 'Flood Basalt',
+                'type' => 'Flood basalt',
                 'image_url' => 'deccan-traps'
             ],
             [
@@ -1218,7 +1218,7 @@ class VolcanoesTableSeeder extends Seeder
                 'longitude' => -104.7,
                 'elevation' => 1558,
                 'description' => 'An iconic volcanic plug in Wyoming composed of columnar phonolite, now a national monument.',
-                'type' => 'Plug',
+                'type' => 'Stratovolcano',
                 'image_url' => 'devils-tower'
             ],
             [
@@ -1284,7 +1284,7 @@ class VolcanoesTableSeeder extends Seeder
             [
                 'name' => 'East Epi',
                 'country' => 'Vanuatu',
-                'continent' => 'Oceania',
+                'continent' => 'Australia',
                 'activity' => 'Active',
                 'latitude' => -16.7,
                 'longitude' => 168.4,
@@ -1308,7 +1308,7 @@ class VolcanoesTableSeeder extends Seeder
             [
                 'name' => 'Egmont (Taranaki)',
                 'country' => 'New Zealand',
-                'continent' => 'Oceania',
+                'continent' => 'Australia',
                 'activity' => 'Active',
                 'latitude' => -39.3,
                 'longitude' => 174.1,
@@ -1355,7 +1355,7 @@ class VolcanoesTableSeeder extends Seeder
             ],
             [
                 'name' => 'Erebus',
-                'country' => 'Antarctica',
+                'country' => 'N/A',
                 'continent' => 'Australia',
                 'activity' => 'Active',
                 'latitude' => -77.5,
@@ -1427,7 +1427,7 @@ class VolcanoesTableSeeder extends Seeder
             ],
             [
                 'name' => 'Fogo',
-                'country' => 'Cape Verde Islands',
+                'country' => 'Cabo Verde',
                 'continent' => 'Africa',
                 'activity' => 'Active',
                 'latitude' => 14.95,
@@ -1446,7 +1446,7 @@ class VolcanoesTableSeeder extends Seeder
                 'longitude' => -121.07,
                 'elevation' => 1716,
                 'description' => 'A tuff ring in central Oregon formed by a phreatomagmatic eruption through an ancient lakebed.',
-                'type' => 'Maar',
+                'type' => 'Tuff ring',
                 'image_url' => 'fort-rock'
             ],
             [
@@ -1596,7 +1596,7 @@ class VolcanoesTableSeeder extends Seeder
             [
                 'name' => 'Gaua',
                 'country' => 'Vanuatu',
-                'continent' => 'Oceania',
+                'continent' => 'Australia',
                 'activity' => 'Active',
                 'latitude' => -14.27,
                 'longitude' => 167.5,
@@ -1752,7 +1752,7 @@ class VolcanoesTableSeeder extends Seeder
             [
                 'name' => 'Heard',
                 'country' => 'Australia',
-                'continent' => 'Oceania',
+                'continent' => 'Australia',
                 'activity' => 'Extinct',
                 'latitude' => -53.1,
                 'longitude' => 73.5,
@@ -1974,7 +1974,7 @@ class VolcanoesTableSeeder extends Seeder
                 'longitude' => 139.1,
                 'elevation' => 581,
                 'description' => 'A volcanic field on the Izu Peninsula featuring numerous pyroclastic cones and domes, with active geothermal and seismic phenomena.',
-                'type' => 'Pyroclastic cone',
+                'type' => 'Cinder cone',
                 'image_url' => 'izu-tobu'
             ],
             [
@@ -2016,7 +2016,7 @@ class VolcanoesTableSeeder extends Seeder
             [
                 'name' => 'Kadovar',
                 'country' => 'Papua New Guinea',
-                'continent' => 'Oceania',
+                'continent' => 'Australia',
                 'activity' => 'Active',
                 'latitude' => -3.63,
                 'longitude' => 144.63,
@@ -2160,7 +2160,7 @@ class VolcanoesTableSeeder extends Seeder
             [
                 'name' => 'Kavachi',
                 'country' => 'Solomon Islands',
-                'continent' => 'Oceania',
+                'continent' => 'Australia',
                 'activity' => 'Active',
                 'latitude' => -9.02,
                 'longitude' => 157.95,
@@ -2472,7 +2472,7 @@ class VolcanoesTableSeeder extends Seeder
             [
                 'name' => 'Kuwae',
                 'country' => 'Vanuatu',
-                'continent' => 'Oceania',
+                'continent' => 'Australia',
                 'activity' => 'Active',
                 'latitude' => -16.83,
                 'longitude' => 168.54,
@@ -2496,7 +2496,7 @@ class VolcanoesTableSeeder extends Seeder
             [
                 'name' => 'Lamington',
                 'country' => 'Papua New Guinea',
-                'continent' => 'Oceania',
+                'continent' => 'Australia',
                 'activity' => 'Active',
                 'latitude' => -8.95,
                 'longitude' => 148.15,
@@ -2508,7 +2508,7 @@ class VolcanoesTableSeeder extends Seeder
             [
                 'name' => 'Langila',
                 'country' => 'Papua New Guinea',
-                'continent' => 'Oceania',
+                'continent' => 'Australia',
                 'activity' => 'Active',
                 'latitude' => -5.53,
                 'longitude' => 148.42,
@@ -2640,7 +2640,7 @@ class VolcanoesTableSeeder extends Seeder
             [
                 'name' => 'Lolo',
                 'country' => 'Papua New Guinea',
-                'continent' => 'Oceania',
+                'continent' => 'Australia',
                 'activity' => 'Inactive',
                 'latitude' => -5.47,
                 'longitude' => 150.51,
@@ -2652,7 +2652,7 @@ class VolcanoesTableSeeder extends Seeder
             [
                 'name' => 'Lolobau',
                 'country' => 'Papua New Guinea',
-                'continent' => 'Oceania',
+                'continent' => 'Australia',
                 'activity' => 'Inactive',
                 'latitude' => -4.92,
                 'longitude' => 151.16,
@@ -2664,7 +2664,7 @@ class VolcanoesTableSeeder extends Seeder
             [
                 'name' => 'Loloru',
                 'country' => 'Papua New Guinea',
-                'continent' => 'Oceania',
+                'continent' => 'Australia',
                 'activity' => 'Inactive',
                 'latitude' => -6.52,
                 'longitude' => 155.62,
@@ -2676,7 +2676,7 @@ class VolcanoesTableSeeder extends Seeder
             [
                 'name' => 'Long Island',
                 'country' => 'Papua New Guinea',
-                'continent' => 'Oceania',
+                'continent' => 'Australia',
                 'activity' => 'Active',
                 'latitude' => -5.36,
                 'longitude' => 147.12,
@@ -2700,7 +2700,7 @@ class VolcanoesTableSeeder extends Seeder
             [
                 'name' => 'Lopevi',
                 'country' => 'Vanuatu',
-                'continent' => 'Oceania',
+                'continent' => 'Australia',
                 'activity' => 'Active',
                 'latitude' => -16.51,
                 'longitude' => 168.35,
@@ -2772,7 +2772,7 @@ class VolcanoesTableSeeder extends Seeder
             [
                 'name' => 'Manam',
                 'country' => 'Papua New Guinea',
-                'continent' => 'Oceania',
+                'continent' => 'Australia',
                 'activity' => 'Active',
                 'latitude' => -4.08,
                 'longitude' => 145.04,
@@ -2880,7 +2880,7 @@ class VolcanoesTableSeeder extends Seeder
             [
                 'name' => 'McDonald Islands',
                 'country' => 'Australia',
-                'continent' => 'Oceania',
+                'continent' => 'Australia',
                 'activity' => 'Active',
                 'latitude' => -53.03,
                 'longitude' => 72.6,
@@ -2898,7 +2898,7 @@ class VolcanoesTableSeeder extends Seeder
                 'longitude' => -122.32,
                 'elevation' => 2894,
                 'description' => 'A steep-sided stratovolcano in southern Oregon, part of the Cascade Range, that last erupted about 30,000 years ago and is considered dormant.',
-                'type' => 'Lava cone, Stratovolcano',
+                'type' => 'Stratovolcano',
                 'image_url' => 'mcloughlin'
             ],
             [
@@ -2910,7 +2910,7 @@ class VolcanoesTableSeeder extends Seeder
                 'longitude' => 37.42,
                 'elevation' => 1067,
                 'description' => 'A vast volcanic field extending across southern Ethiopia and northern Kenya, characterized by extensive lava flows and cinder cones from Pleistocene activity.',
-                'type' => 'Pyroclastic cone',
+                'type' => 'Cinder cone',
                 'image_url' => 'mega-basalt-field'
             ],
             [
@@ -2988,7 +2988,7 @@ class VolcanoesTableSeeder extends Seeder
             [
                 'name' => 'Metis Shoal',
                 'country' => 'Tonga',
-                'continent' => 'Oceania',
+                'continent' => 'Australia',
                 'activity' => 'Active',
                 'latitude' => -19.18,
                 'longitude' => -174.87,
@@ -3000,7 +3000,7 @@ class VolcanoesTableSeeder extends Seeder
             [
                 'name' => 'Michael',
                 'country' => 'United Kingdom',
-                'continent' => 'Oceania',
+                'continent' => 'Australia',
                 'activity' => 'Active',
                 'latitude' => -57.78,
                 'longitude' => -26.45,
@@ -3018,7 +3018,7 @@ class VolcanoesTableSeeder extends Seeder
                 'longitude' => -101.75,
                 'elevation' => 3860,
                 'description' => 'A vast volcanic field in central Mexico with over 1,400 cinder cones, including Parícutin, which famously emerged in 1943 and grew over 400 meters high.',
-                'type' => 'Cinder Cone',
+                'type' => 'Cinder cone',
                 'image_url' => 'michoacan-guanajuato'
             ],
             [
@@ -3089,7 +3089,7 @@ class VolcanoesTableSeeder extends Seeder
                 'latitude' => 37.6,
                 'longitude' => -25.88,
                 'elevation' => -197,
-                'description' => 'A submarine volcanic feature near the Azores, Portugal, associated with tectonic and volcanic activity along the Mid-Atlantic Ridge.',
+                'description' => 'A seamount volcanic feature near the Azores, Portugal, associated with tectonic and volcanic activity along the Mid-Atlantic Ridge.',
                 'type' => 'Submarine',
                 'image_url' => 'monaco-bank'
             ],
@@ -3108,7 +3108,7 @@ class VolcanoesTableSeeder extends Seeder
             [
                 'name' => 'Monowai Seamount',
                 'country' => 'New Zealand',
-                'continent' => 'Oceania',
+                'continent' => 'Australia',
                 'activity' => 'Active',
                 'latitude' => -25.89,
                 'longitude' => -177.19,
@@ -3186,7 +3186,7 @@ class VolcanoesTableSeeder extends Seeder
                 'longitude' => -86.7,
                 'elevation' => 728,
                 'description' => 'A cinder cone volcano in Nicaragua, part of the volcanic chain along the Pacific Ring of Fire, with no historical eruptions recorded.',
-                'type' => 'Cinder Cone',
+                'type' => 'Cinder cone',
                 'image_url' => 'cerro-negro'
             ],
             [
@@ -3228,7 +3228,7 @@ class VolcanoesTableSeeder extends Seeder
             [
                 'name' => 'Newer Volcanics Province',
                 'country' => 'Australia',
-                'continent' => 'Oceania',
+                'continent' => 'Australia',
                 'activity' => 'Inactive',
                 'latitude' => -37.77,
                 'longitude' => 142.5,
@@ -3240,7 +3240,7 @@ class VolcanoesTableSeeder extends Seeder
             [
                 'name' => 'Ngauruhoe',
                 'country' => 'New Zealand',
-                'continent' => 'Oceania',
+                'continent' => 'Australia',
                 'activity' => 'Active',
                 'latitude' => -39.13,
                 'longitude' => 175.64,
@@ -3348,7 +3348,7 @@ class VolcanoesTableSeeder extends Seeder
             [
                 'name' => 'Okataina',
                 'country' => 'New Zealand',
-                'continent' => 'Oceania',
+                'continent' => 'Australia',
                 'activity' => 'Active',
                 'latitude' => -38.12,
                 'longitude' => 176.5,
@@ -3453,1752 +3453,1749 @@ class VolcanoesTableSeeder extends Seeder
                 'type' => 'Stratovolcano',
                 'image_url' => 'pagan'
             ],
-        [
-            'name' => 'Pago',
-            'country' => 'Papua New Guinea',
-            'continent' => 'Oceania',
-            'activity' => 'Active',  // Although you wrote “Dormant”, Pago has had recent eruptions (e.g. 2002–2003, 2007)
-            'latitude' => -5.58,
-            'longitude' => 150.52,
-            'elevation' => 742,
-            'description' => 'A young post-caldera cone within the Witori Caldera on New Britain Island, with documented eruptions in the 20th and 21st centuries.',
-            'type' => 'Caldera (with a young cone)',
-            'image_url' => 'pago'  
-        ],
-
-        [
-            'name' => 'Papandayan',
-            'country' => 'Indonesia',
-            'continent' => 'Asia',
-            'activity' => 'Active',  // Historically active, last eruptions in the 20th century (e.g. 1772, 1822, 1843, 2011) :contentReference[oaicite:2]{index=2} (for Pelée) — not direct, but general Indonesian stratovolcano activity; more precise confirmation may need GVP.  
-            'latitude' => -7.32,
-            'longitude' => 107.73,
-            'elevation' => 2665,
-            'description' => 'A stratovolcano in West Java, Indonesia, known for hydrothermal activity and past eruptions. (Data from general Indonesian volcano records.)',
-            'type' => 'Stratovolcano',
-            'image_url' => 'papandayan'
-        ],
-
-        [
-            'name' => 'Parícutin',
-            'country' => 'Mexico',
-            'continent' => 'North America',
-            'activity' => 'Extinct',  // Parícutin erupted between 1943–1952 and is now dormant/essentially extinct for further major activity :contentReference[oaicite:3]{index=3} (just as a reference for volcano types)  
-            'latitude' => 19.50,
-            'longitude' => -102.20,
-            'elevation' => 3170,
-            'description' => 'A famous cinder cone volcano in Michoacán formed in 1943; erupted until ~1952 and then ceased activity, now quiescent.',
-            'type' => 'Cinder Cone',
-            'image_url' => 'paricutin'
-        ],
-
-        [
-            'name' => 'Parinacota',
-            'country' => 'Bolivia / Chile',
-            'continent' => 'South America',
-            'activity' => 'Active',  // Although you wrote “Dormant”, Parinacota is considered to have Holocene activity (some recent lava domes and glacial interaction) — but no historical eruptions in modern times.  
-            'latitude' => -18.17,
-            'longitude' => -69.15,
-            'elevation' => 6348,
-            'description' => 'A high-altitude stratovolcano on the Bolivia–Chile border. Part of the Payachata volcanic group (with Pomerape). Known for glacial erosion and possible recent dome growth. (Holocene activity) ',
-            'type' => 'Stratovolcano',
-            'image_url' => 'parinacota'
-        ],
-
-        [
-            'name' => 'Pauzhetka',
-            'country' => 'Russia',
-            'continent' => 'Asia',
-            'activity' => 'Extinct',
-            'latitude' => 51.45,
-            'longitude' => 156.97,
-            'elevation' => 1070,
-            'description' => 'A lava dome volcano in the Kamchatka region. No well-documented Holocene activity found in common sources.',
-            'type' => 'Lava Dome',
-            'image_url' => 'pauzhetka'
-        ],
-
-        [
-            'name' => 'Pavlof',
-            'country' => 'United States',
-            'continent' => 'North America',
-            'activity' => 'Active',
-            'latitude' => 55.42,
-            'longitude' => -161.89,
-            'elevation' => 2519,
-            'description' => 'A stratovolcano on the Alaska Peninsula known for frequent eruptive activity and lava/ash emissions.',
-            'type' => 'Stratovolcano',
-            'image_url' => 'pavlof'
-        ],
-
-        [
-            'name' => 'Pavlof Sister',
-            'country' => 'United States (Alaska)',
-            'continent' => 'North America',
-            'activity' => 'Extinct',
-            'latitude' => 55.45,
-            'longitude' => -161.84,
-            'elevation' => 2142,
-            'description' => 'A lesser stratovolcanic peak adjacent to Pavlof; minimal eruptive history and considered inactive in modern times.',
-            'type' => 'Stratovolcano',
-            'image_url' => 'pavlof-sister'
-        ],
-
-        [
-            'name' => 'Pelée (Mount Pelée)',
-            'country' => 'France (Martielenique, French West Indies)',
-            'continent' => 'North America / Caribbean',
-            'activity' => 'Active',
-            'latitude' => 14.82,
-            'longitude' => -61.17,
-            'elevation' => 1397,
-            'description' => 'A stratovolcano at the northern tip of Martinique (French West Indies) and part of the Lesser Antilles arc; historically destructive eruptions including 1902 that destroyed Saint-Pierre.',
-            'type' => 'Stratovolcano',
-            'image_url' => 'pelee'
-        ],
-
-        [
-            'name' => 'Peuet Sague',
-            'country' => 'Indonesia',
-            'continent' => 'Asia',
-            'activity' => 'Active',
-            'latitude' => 4.91,
-            'longitude' => 96.33,
-            'elevation' => 2785,  // many sources say ~2,785 m :contentReference[oaicite:1]{index=1}
-            'description' => 'A volcanic complex in northwest Sumatra with four summit peaks, including lava domes; recorded eruptive activity occurred between 1918–1921, 1998–2000 (explosive / ash emissions)’',
-            'type' => 'Complex',
-            'image_url' => 'peuet-sague'
-        ],
-
-        [
-            'name' => 'Pico (Mount Pico)',
-            'country' => 'Portugal (Azores)',
-            'continent' => 'Europe',
-            'activity' => 'Active',  // in volcanic context, “dormant” but considered Holocene active
-            'latitude' => 38.47,
-            'longitude' => -28.40,
-            'elevation' => 2351,
-            'description' => 'The highest mountain in Portugal, located on Pico Island (Azores), built by volcanic activity; no confirmed historical eruptions in recent centuries but part of the Azores volcanic system.',
-            'type' => 'Stratovolcano',
-            'image_url' => 'pico' 
-        ],
-
-        [
-            'name' => 'Las Pilas',
-            'country' => 'Nicaragua',
-            'continent' => 'North America',
-            'activity' => 'Inactive',
-            'latitude' => 11.54,
-            'longitude' => -85.62,
-            'elevation' => 1700,
-            'description' => 'A stratovolcano in Nicaragua, part of the Central American volcanic arc; limited historical activity recorded, sometimes considered dormant.',
-            'type' => 'Stratovolcano',
-            'image_url' => 'las-pilas'
-        ],
-
-        [
-            'name' => 'Pinacate',
-            'country' => 'Mexico',
-            'continent' => 'North America',
-            'activity' => 'Inactive',  // this is a volcanic field / cinder cone area, not a classic eruptive volcano in modern times
-            'latitude' => 31.77,
-            'longitude' => -113.50,
-            'elevation' => 1200,
-            'description' => 'Part of the Pinacate volcanic field (El Pinacate and Gran Desierto de Altar region) with many cinder cones and lava flows; no recent historical eruptions.',
-            'type' => 'Cinder Cone / Volcanic Field',
-            'image_url' => 'pinacate'
-        ],
-
-        [
-            'name' => 'Pinatubo (Mount Pinatubo)',
-            'country' => 'Philippines',
-            'continent' => 'Asia',
-            'activity' => 'Active',
-            'latitude' => 15.13,
-            'longitude' => 120.35,
-            'elevation' => 1486,
-            'description' => 'A large stratovolcano in Luzon, known for the catastrophic 1991 eruption (one of the largest 20th-century eruptions). Between eruptions it remains quiet but not extinct.',
-            'type' => 'Stratovolcano',
-            'image_url' => 'pinatubo'
-        ],
-
-        [
-            'name' => 'Pisgah Lava Field',
-            'country' => 'United States',
-            'continent' => 'North America',
-            'activity' => 'Extinct',
-            'latitude' => 34.75,
-            'longitude' => -116.63,
-            'elevation' => 1495,
-            'description' => 'A volcanic field in southeastern California, USA, consisting of basaltic lava flows and small volcanic cones; no recent volcanic activity.',
-            'type' => 'Volcanic field / lava field',
-            'image_url' => 'pisgah'
-        ],
-
-        [
-            'name' => 'Piton de la Fournaise',
-            'country' => 'France (Reunion Island)',
-            'continent' => 'Europe',  // geographically part of France, though Reunion is offshore
-            'activity' => 'Active',  // frequently active basaltic shield / fissure eruptions
-            'latitude' => -21.23,
-            'longitude' => 55.71,
-            'elevation' => 2631,
-            'description' => 'A very active shield volcano located on Reunion Island (Indian Ocean), one of the world’s most active volcanoes, regularly erupting lava flows from fissures. (Often described as basaltic shield) ',
-            'type' => 'Shield',
-            'image_url' => 'piton-de-la-fournaise'
-        ],
-
-        [
-            'name' => 'Poás (Poás Volcano)',
-            'country' => 'Costa Rica',
-            'continent' => 'North America',
-            'activity' => 'Active',  // has frequent hydrothermal / phreatic eruptions in recent decades
-            'latitude' => 10.20,
-            'longitude' => -84.23,
-            'elevation' => 2708,
-            'description' => 'A stratovolcano in central Costa Rica, with frequent phreatic / fumarolic and minor explosive activity; one of the country’s most active volcanoes.',
-            'type' => 'Stratovolcano',
-            'image_url' => 'poas'
-        ],
-
-        [
-            'name' => 'Popocatépetl',
-            'country' => 'Mexico',
-            'continent' => 'North America',
-            'activity' => 'Active',
-            'latitude' => 19.02,
-            'longitude' => -98.62,
-            'elevation' => 5246,
-            'description' => 'One of Mexico’s most active stratovolcanoes, located near Mexico City; frequent eruptions, ash emissions, and volcanic hazard to nearby population.',
-            'type' => 'Stratovolcano',
-            'image_url' => 'popocatepetl'
-        ],
-
-        [
-            'name' => 'Prevo Peak',
-            'country' => 'Russia',
-            'continent' => 'Asia',
-            'activity' => 'Inactive',
-            'latitude' => 47.02,
-            'longitude' => 152.12,
-            'elevation' => 1360,
-            'description' => 'A stratovolcano on Simushir Island (Kuril Islands), with historical eruptions in 1765 and 1825; no known modern activity.',
-            'type' => 'Stratovolcano',
-            'image_url' => 'prevo'
-        ],
-        
-        [
-            'name' => 'Puracé',
-            'country' => 'Colombia',
-            'continent' => 'South America',
-            'activity' => 'Active',
-            'latitude' => 2.32,
-            'longitude' => -76.40,
-            'elevation' => 4650,
-            'description' => 'An andesitic stratovolcano in the Los Coconucos chain, frequently active with small to moderate explosive eruptions; the most recent unrest and gas-steam emissions were recorded in 2022 and 2025',
-            'type' => 'Stratovolcano',
-            'image_url' => 'purace'
-        ],
-
-        [
-            'name' => 'The Quill (Mount Mazus / “The Quill”)',
-            'country' => 'Netherlands (Caribbean – Sint Eustatius)',
-            'continent' => 'Europe',  // as part of the Kingdom of the Netherlands / but Caribbean location
-            'activity' => 'Inactive',
-            'latitude' => 17.48,
-            'longitude' => -62.96,
-            'elevation' => 601,
-            'description' => 'A volcanic crater forming the highest point of Sint Eustatius island (Leeward Islands); no known historical eruptions, considered dormant. (Also known as Mazus or The Quill) ',
-            'type' => 'Stratovolcano / crater volcano',
-            'image_url' => 'quill'
-        ],
-
-        [
-            'name' => 'Rabaul (Rabaul caldera / volcano complex)',
-            'country' => 'Papua New Guinea',
-            'continent' => 'Oceania',
-            'activity' => 'Active',
-            'latitude' => -4.27,
-            'longitude' => 152.20,
-            'elevation' => 688,
-            'description' => 'A large caldera / volcanic complex in East New Britain; includes active vents (e.g., Tavurvur, Vulcan) and frequent eruptions. Major destructive eruption in 1994. ',
-            'type' => 'Shield / Caldera complex',
-            'image_url' => 'rabaul'
-        ],
-
-        [
-            'name' => 'Ragang (Mount Ragang / Piapayungan)',
-            'country' => 'Philippines',
-            'continent' => 'Asia',
-            'activity' => 'Active',
-            'latitude' => 7.70,
-            'longitude' => 124.50,
-            'elevation' => 2815,
-            'description' => 'A basaltic–andesitic stratovolcano on Mindanao (also called Piapayungan); historical eruptions from 1760s to 1916, seismic activity continues}',
-            'type' => 'Stratovolcano',
-            'image_url' => 'ragang'
-        ],
-
-        [
-            'name' => 'Raikoke',
-            'country' => 'Russia (Kuril Islands)',
-            'continent' => 'Asia',
-            'activity' => 'Active',
-            'latitude' => 48.29,
-            'longitude' => 153.25,
-            'elevation' => 551,
-            'description' => 'A small stratovolcano on a tiny island in the Kurils; eruptive in recent decades, e.g. major eruption in 2019. ',
-            'type' => 'Stratovolcano',
-            'image_url' => 'raikoke'
-        ],
-
-        [
-            'name' => 'Rainier (Mount Rainier)',
-            'country' => 'United States',
-            'continent' => 'North America',
-            'activity' => 'Inactive',
-            'latitude' => 46.85,
-            'longitude' => -121.76,
-            'elevation' => 4392,
-            'description' => 'A massive stratovolcano in Washington State, U.S.A.; last major eruption ~1,000 years ago, but hydrothermal and glacial activity persist. ',
-            'type' => 'Stratovolcano',
-            'image_url' => 'rainier'
-        ],
-
-        [
-            'name' => 'Rajabasa',
-            'country' => 'Indonesia',
-            'continent' => 'Asia',
-            'activity' => 'Inactive',
-            'latitude' => -5.78,
-            'longitude' => 105.63,
-            'elevation' => 1281,
-            'description' => 'A stratovolcano in southern Sumatra (Lampung), Indonesia; limited records and few / no recent eruptions, typically treated as dormant. ',
-            'type' => 'Stratovolcano',
-            'image_url' => 'rajabasa'
-        ],
-
-        [
-            'name' => 'Raoul Island (Raoul volcano)',
-            'country' => 'New Zealand (Kermadec Islands)',
-            'continent' => 'Oceania',
-            'activity' => 'Active',
-            'latitude' => -29.27,
-            'longitude' => -177.92,
-            'elevation' => 516,
-            'description' => 'A stratovolcano on Raoul Island in the Kermadec Islands (New Zealand territory), with past eruptive activity and ongoing seismic / fumarolic activity, but no recent major eruptions. ',
-            'type' => 'Stratovolcano',
-            'image_url' => 'raoul-island'
-        ],
-
-        [
-            'name' => 'Rasshua',
-            'country' => 'Russia (Kuril Islands)',
-            'continent' => 'Asia',
-            'activity' => 'Inactive',
-            'latitude' => 47.77,
-            'longitude' => 153.02,
-            'elevation' => 956,
-            'description' => 'A stratovolcano on Rasshua Island in the Kuril chain; no major recent eruptions documented, considered dormant. ',
-            'type' => 'Stratovolcano',
-            'image_url' => 'rasshua'
-        ],
-
-        [
-            'name' => 'Mount Raung',
-            'country' => 'Indonesia',
-            'continent' => 'Asia',
-            'activity' => 'Active',
-            'latitude' => -8.13,
-            'longitude' => 114.04,
-            'elevation' => 3332,
-            'description' => 'A stratovolcano in eastern Java, frequently active with ash emissions, thermal anomalies, and recent eruptions (latest in 2021/2022).',
-            'type' => 'Stratovolcano',
-            'image_url' => 'mount-raung'
-        ],
-        
-        [
-            'name' => 'Rausu (Rausudake)',
-            'country' => 'Japan',
-            'continent' => 'Asia',
-            'activity' => 'Inactive',
-            'latitude' => 44.076,
-            'longitude' => 145.122,
-            'elevation' => 1660,
-            'description' => 'An andesitic-to-dacitic stratovolcano with summit lava domes on the Shiretoko Peninsula, NE Hokkaido. Its most recent eruption is estimated between 1750 and 1850 CE.',
-            'type' => 'Stratovolcano / lava domes',
-            'image_url' => 'rausu'
-        ],
-
-        [
-            'name' => 'Mount Redoubt',
-            'country' => 'United States',
-            'continent' => 'North America',
-            'activity' => 'Active',
-            'latitude' => 60.49,
-            'longitude' => -152.74,
-            'elevation' => 3108,
-            'description' => 'A stratovolcano in Alaska’s Aleutian arc, frequently monitored; last major eruptions occurred in 2009 and earlier periods.',
-            'type' => 'Stratovolcano',
-            'image_url' => 'mount-redoubt'
-        ],
-
-        [
-            'name' => 'Reventador (El Reventador)',
-            'country' => 'Ecuador',
-            'continent' => 'South America',
-            'activity' => 'Active',
-            'latitude' => -0.08,
-            'longitude' => -77.66,
-            'elevation' => 3562,
-            'description' => 'A stratovolcano in the eastern Andes, with a 4-km wide avalanche scarp and active cone rising ~1,300 m inside the caldera. Frequent explosive and effusive eruptions, daily gas/ash emissions have been recorded as of 2023.',
-            'type' => 'Stratovolcano',
-            'image_url' => 'reventador'
-        ],
-
-        [
-            'name' => 'Rincón de la Vieja',
-            'country' => 'Costa Rica',
-            'continent' => 'North America',
-            'activity' => 'Active',
-            'latitude' => 10.83,
-            'longitude' => -85.32,
-            'elevation' => 1916,
-            'description' => 'A complex volcano in northwest Costa Rica, hosting multiple vents (lava flows, phreatic explosions, fumarolic activity). It has exhibited eruptions (steam / ash) in modern times and is continuously monitored.',
-            'type' => 'Complex / Multi-vent',
-            'image_url' => 'rincon-de-la-vieja'
-        ],
-
-        [
-            'name' => 'Roundtop',
-            'country' => 'United States',
-            'continent' => 'North America',
-            'activity' => 'Extinct',
-            'latitude' => 54.80,
-            'longitude' => -163.59,
-            'elevation' => 1871,
-            'description' => 'A stratovolcano in the Alaska region (remote), with no recorded Holocene eruptions; considered extinct.',
-            'type' => 'Stratovolcano',
-            'image_url' => 'roundtop'
-        ],
-
-        [
-            'name' => 'Mount Ruapehu',
-            'country' => 'New Zealand',
-            'continent' => 'Oceania',
-            'activity' => 'Active',
-            'latitude' => -39.28,
-            'longitude' => 175.57,
-            'elevation' => 2797,
-            'description' => 'One of New Zealand’s most active stratovolcanoes, with regular eruptions (lava, ash, steam) and an active crater lake. It is continuously monitored. ',
-            'type' => 'Stratovolcano',
-            'image_url' => 'mount-ruapehu'
-        ],
-
-        [
-            'name' => 'Rudakov',
-            'country' => 'Russia',
-            'continent' => 'Asia',
-            'activity' => 'Extinct',
-            'latitude' => 45.88,
-            'longitude' => 149.83,
-            'elevation' => 542,
-            'description' => 'A stratovolcano with no known Holocene or historical eruptions; generally considered extinct.',
-            'type' => 'Stratovolcano',
-            'image_url' => 'rudakov'
-        ],
-
-        [
-            'name' => 'Nevado del Ruiz',
-            'country' => 'Colombia',
-            'continent' => 'South America',
-            'activity' => 'Active',
-            'latitude' => 4.89,
-            'longitude' => -75.32,
-            'elevation' => 5321,
-            'description' => 'A stratovolcano in central Colombia, part of the Andean Volcanic Belt. Famous for the 1985 catastrophe (lahar) and periodic eruptions, fumarolic / steam activity ongoing. ',
-            'type' => 'Stratovolcano',
-            'image_url' => 'nevado-del-ruiz'
-        ],
-
-        [
-            'name' => 'Rumble IV (Rumble Seamount IV)',
-            'country' => 'New Zealand',
-            'continent' => 'Oceania',
-            'activity' => 'Inactive',
-            'latitude' => -36.13,
-            'longitude' => 178.05,
-            'elevation' => 500,
-            'description' => 'A submarine (seamount) volcano in the Kermadec arc, known as Rumble IV; no recent eruptions above sea level and considered dormant/submarine. ',
-            'type' => 'Submarine volcano / seamount',
-            'image_url' => 'rumble-iv'
-        ],
-
-        [
-            'name' => 'Mount Scenery',
-            'country' => 'Netherlands (Caribbean Netherlands)',
-            'continent' => 'Europe (territory) / Caribbean region',
-            'activity' => 'Inactive',
-            'latitude' => 17.63,
-            'longitude' => -63.23,
-            'elevation' => 887,
-            'description' => 'A stratovolcano forming the island of Saba in the Caribbean, also called Mount Scenery. No recorded historical eruptions; considered dormant. ',
-            'type' => 'Stratovolcano',
-            'image_url' => 'mount-scenery'
-        ],
-
-        [
-            'name' => 'Sabancaya',
-            'country' => 'Peru',
-            'continent' => 'South America',
-            'activity' => 'Active',
-            'latitude' => -15.78,
-            'longitude' => -71.85,
-            'elevation' => 5967,
-            'description' => 'A stratovolcano in southern Peru (part of the Ampato‐Sabancaya volcanic complex). Its current eruption period started in November 2016, and it produces frequent explosions, gas & ash plumes, and thermal anomalies.',
-            'type' => 'Stratovolcano',
-            'image_url' => 'sabancaya'
-        ],
-
-        [
-            'name' => 'Sakar',
-            'country' => 'Papua New Guinea',
-            'continent' => 'Oceania',
-            'activity' => 'Inactve',
-            'latitude' => -5.41,
-            'longitude' => 148.09,
-            'elevation' => 992,
-            'description' => 'A stratovolcano in Papua New Guinea with sparse or no recent recorded activity. No well-documented recent eruptions.',
-            'type' => 'Stratovolcano',
-            'image_url' => 'sakar'
-        ],
-
-        [
-            'name' => 'Sakurajima',
-            'country' => 'Japan',
-            'continent' => 'Asia',
-            'activity' => 'Active',
-            'latitude' => 31.59,
-            'longitude' => 130.66,
-            'elevation' => 1117,
-            'description' => 'One of Japan’s most active volcanoes (on Kagoshima Bay, Kyushu). Frequent ash eruptions, lava flows, and persistent activity in recent decades.',
-            'type' => 'Stratovolcano / composite volcano',
-            'image_url' => 'sakurajima'
-        ],
-
-        [
-            'name' => 'Mount Salak',
-            'country' => 'Indonesia',
-            'continent' => 'Asia',
-            'activity' => 'Inactive',
-            'latitude' => -6.72,
-            'longitude' => 106.73,
-            'elevation' => 2211,
-            'description' => 'A stratovolcano in West Java, Indonesia. It is not known for frequent historical eruptions; generally considered dormant in modern observations.',
-            'type' => 'Stratovolcano',
-            'image_url' => 'mount-salak'
-        ],
-
-        [
-            'name' => 'San Cristóbal',
-            'country' => 'Nicaragua',
-            'continent' => 'North America',
-            'activity' => 'Active',
-            'latitude' => 12.70,
-            'longitude' => -87.00,
-            'elevation' => 1745,
-            'description' => 'The highest and most active volcano in Nicaragua, with frequent small to moderate eruptions and persistent fumarolic / gas emissions.',
-            'type' => 'Stratovolcano',
-            'image_url' => 'san-cristobal'
-        ],
-
-        [
-            'name' => 'San Salvador',
-            'country' => 'El Salvador',
-            'continent' => 'North America',
-            'activity' => 'Inactive',
-            'latitude' => 13.73,
-            'longitude' => -89.29,
-            'elevation' => 1893,
-            'description' => 'A complex volcano / stratovolcano near the capital (Boquerón edifice). The last confirmed eruption was in 1917. Seismic and fumarolic activity has been recorded.',
-            'type' => 'Complex / Stratovolcano',
-            'image_url' => 'san-salvador'
-        ],
-
-        [
-            'name' => 'San Vicente (Chichontepec)',
-            'country' => 'El Salvador',
-            'continent' => 'North America',
-            'activity' => 'Inactive',
-            'latitude' => 16.90,
-            'longitude' => -25.00,  // Note: your given coords (16.9, -25.0) correspond to Cape Verde, not San Vicente in El Salvador — likely a mismatch. The actual El Salvador San Vicente is ~13.6N, -88.8W.  
-            'elevation' => 697,  // your given value
-            'description' => 'San Vicente (El Salvador) is a stratovolcano (aka Chichontepec) with fumaroles and hot springs. Its last major eruption is unknown / undocumented, perhaps many centuries ago.',
-            'type' => 'Stratovolcano',
-            'image_url' => 'san-vicente'
-        ],
-
-        [
-            'name' => 'Mount Sanford',
-            'country' => 'United States',
-            'continent' => 'North America',
-            'activity' => 'Inactive',
-            'latitude' => 62.22,
-            'longitude' => -144.13,
-            'elevation' => 4949,
-            'description' => 'A large shield volcano in the Wrangell Mountains of Alaska. It is not known to have had historical eruptions — generally considered dormantly or quiescent.',
-            'type' => 'Shield volcano',
-            'image_url' => 'mount-sanford'
-        ],
-
-        [
-            'name' => 'Sangay',
-            'country' => 'Ecuador',
-            'continent' => 'South America',
-            'activity' => 'Active',
-            'latitude' => -2.00,
-            'longitude' => -78.34,
-            'elevation' => 5230,
-            'description' => 'One of Ecuador’s most active stratovolcanoes, with frequent explosive eruptions, ash emissions, and pyroclastic flows. It is continuously monitored. ',
-            'type' => 'Stratovolcano',
-            'image_url' => 'sangay'
-        ],
-
-        [
-            'name' => 'Santa Ana',
-            'country' => 'El Salvador',
-            'continent' => 'North America',
-            'activity' => 'Active',
-            'latitude' => 13.85,
-            'longitude' => -89.63,
-            'elevation' => 2381,
-            'description' => 'Also called Ilamatepec, this stratovolcano in western El Salvador had a notable eruption in October 2005 and remains a monitored active volcano. ',
-            'type' => 'Stratovolcano',
-            'image_url' => 'santa-ana'
-        ],
-
-        [
-        'name' => 'Santa María',
-        'country' => 'Guatemala',
-        'continent' => 'North America',
-        'activity' => 'Active',
-        'latitude' => 14.76,
-        'longitude' => -91.55,
-        'elevation' => 3772,
-        'description' => 'A large stratovolcano in the Western Highlands of Guatemala. It erupted catastrophically in 1902 (one of the 20th century’s largest eruptions). Continuous activity occurs at the Santiaguito lava dome complex, formed after that event.',
-        'type' => 'Stratovolcano',
-        'image_url' => 'santa-maria'
-        ],
-
-        [
-            'name' => 'Santorini (Thera)',
-            'country' => 'Greece',
-            'continent' => 'Europe',
-            'activity' => 'Active',
-            'latitude' => 36.40,
-            'longitude' => 25.40,
-            'elevation' => 367,
-            'description' => 'A caldera-forming volcanic complex in the southern Aegean Sea. The island group is composed of overlapping shield volcanoes and multiple calderas; the most famous eruption is the Minoan eruption (~1600 BC). The last subaerial eruption occurred in 1950; since then activity is limited to fumaroles, seismic events, and ground deformation.',
-            'type' => 'Shield / Caldera complex',
-            'image_url' => 'santorini'
-        ],
-
-        [
-            'name' => 'Sarychev Peak',
-            'country' => 'Russia',
-            'continent' => 'Asia',
-            'activity' => 'Active',
-            'latitude' => 48.09,
-            'longitude' => 153.20,
-            'elevation' => 1496,
-            'description' => 'A young, highly symmetrical stratovolcano on Matua Island, Kurils, within a 3–3.5 km caldera. Known for frequent explosive eruptions (e.g. 2009).',
-            'type' => 'Stratovolcano',
-            'image_url' => 'sarychev-peak'
-        ],
-
-        [
-            'name' => 'Savo',
-            'country' => 'Solomon Islands',
-            'continent' => 'Oceania',
-            'activity' => 'Inactive',
-            'latitude' => -9.13,
-            'longitude' => 159.82,
-            'elevation' => 485,
-            'description' => 'A stratovolcano in the Solomon Islands. Historical records are sparse; last known eruption likely in the 19th century or earlier, so it is generally considered dormant.',
-            'type' => 'Stratovolcano',
-            'image_url' => 'savo'
-        ],
-
-        [
-            'name' => 'Segula',
-            'country' => 'United States',
-            'continent' => 'North America',
-            'activity' => 'Extinct',
-            'latitude' => 52.02,
-            'longitude' => 178.14,
-            'elevation' => 1160,
-            'description' => 'A stratovolcano in the Aleutian chain. It has no recorded Holocene eruptions, so is considered extinct or heavily eroded and inactive.',
-            'type' => 'Stratovolcano',
-            'image_url' => 'segula'
-        ],
-
-        [
-            'name' => 'Mount Semeru',
-            'country' => 'Indonesia',
-            'continent' => 'Asia',
-            'activity' => 'Active',
-            'latitude' => -8.11,
-            'longitude' => 112.92,
-            'elevation' => 3676,
-            'description' => 'The highest volcano on Java. A stratovolcano with frequent eruptions (ash, pyroclastic flows) and a persistent lava dome (Mahameru). It is continuously active in historical time. ',
-            'type' => 'Stratovolcano',
-            'image_url' => 'mount-semeru'
-        ],
-
-        [
-            'name' => 'Semisopochnoi',
-            'country' => 'United States (Alaska, Aleutians)',
-            'continent' => 'North America',
-            'activity' => 'Active',
-            'latitude' => 51.93,
-            'longitude' => 179.58,
-            'elevation' => 1221,
-            'description' => 'A volcanic island in the western Aleutians, comprising a wide caldera and multiple cones. The current eruptive period began in early 2021 and includes ash explosions, elevated thermal signals, sulfur dioxide output.',
-            'type' => 'Caldera / Composite / Multi-cone',
-            'image_url' => 'semisopochnoi'
-        ],
-
-        [
-            'name' => 'Sete Cidades',
-            'country' => 'Portugal',
-            'continent' => 'Europe',
-            'activity' => 'Inactive',
-            'latitude' => 37.87,
-            'longitude' => -25.78,
-            'elevation' => 856,
-            'description' => 'A stratovolcanic / caldera complex on São Miguel Island, Azores. It comprises lava domes, cones, and multiple collapse calderas. Its last eruptions are dated to ~1880.',
-            'type' => 'Stratovolcano / volcanic complex',
-            'image_url' => 'sete-cidades'
-        ],
-
-        [
-            'name' => 'Mount Shasta',
-            'country' => 'United States',
-            'continent' => 'North America',
-            'activity' => 'Inactive',
-            'latitude' => 41.41,
-            'longitude' => -122.19,
-            'elevation' => 4317,
-            'description' => 'A stratovolcano in northern California (Cascade Range). Its last significant eruption is believed to have occurred ~200–300 years ago; it is monitored and considered dormant / potentially active. ',
-            'type' => 'Stratovolcano',
-            'image_url' => 'mount-shasta'
-        ],
-
-        [
-            'name' => 'Shiveluch',
-            'country' => 'Russia',
-            'continent' => 'Asia',
-            'activity' => 'Active',
-            'latitude' => 56.65,
-            'longitude' => 161.36,
-            'elevation' => 3283,
-            'description' => 'One of Kamchatka’s most active stratovolcanoes. It has had at least 60 large eruptions during the Holocene. The current eruptive period began in 1999, with repeated lava dome growth, explosions, ash plumes, dome collapses, and pyroclastic events.',
-            'type' => 'Stratovolcano / Lava dome complex',
-            'image_url' => 'shiveluch'
-        ],
-
-        [
-            'name' => 'Shikotsu',
-            'country' => 'Japan',
-            'continent' => 'Asia',
-            'activity' => 'Inactive',
-            'latitude' => 42.69,
-            'longitude' => 141.38,
-            'elevation' => 1320,
-            'description' => 'A caldera volcano in Hokkaido; contains Lake Shikotsu. Most historical eruptions are from Tarumai vent (on caldera rim). Last eruption circa 1981 (phreatic). Holocene activity includes large eruptions in 1667, 1739.',
-            'type' => 'Caldera',
-            'image_url' => 'shikotsu'
-        ],
-
-        [
-            'name' => 'Shiretoko-Iwo-zan',
-            'country' => 'Japan',
-            'continent' => 'Asia',
-            'activity' => 'Inactive',
-            'latitude' => 44.13,
-            'longitude' => 145.17,
-            'elevation' => 1563,
-            'description' => 'A stratovolcano (“Iwo-zan”) in the Shiretoko Peninsula region; high elevation, steep terrain. Activity is poorly documented; considered dormant in historical period.',
-            'type' => 'Stratovolcano',
-            'image_url' => 'shiretoko-iwo-zan'
-        ],
-
-        [
-            'name' => 'Shishaldin',
-            'country' => 'United States',
-            'continent' => 'North America',
-            'activity' => 'Active',
-            'latitude' => 54.76,
-            'longitude' => -163.97,
-            'elevation' => 2857,
-            'description' => 'A highly symmetric, remote stratovolcano on Unimak Island in the Aleutians. Very frequently active: many eruptions recorded since the 18th century; recent ash & steam emissions. Monitored via AVO.',
-            'type' => 'Stratovolcano',
-            'image_url' => 'shishaldin'
-        ],
-
-        [
-            'name' => 'Sinarka',
-            'country' => 'Russia',
-            'continent' => 'Asia',
-            'activity' => 'Inactive',
-            'latitude' => 48.88,
-            'longitude' => 154.18,
-            'elevation' => 934,
-            'description' => 'A stratovolcano in the Kuril Islands. No recent eruptions documented in modern period; considered dormant. ',
-            'type' => 'Stratovolcano',
-            'image_url' => 'sinarka'
-        ],
-
-        [
-            'name' => 'Smirnov',
-            'country' => 'Russia',
-            'continent' => 'Asia',
-            'activity' => 'Inactive',
-            'latitude' => 44.42,
-            'longitude' => 146.14,
-            'elevation' => 1189,
-            'description' => 'A stratovolcano in the Russian Far East. Historical records are scant; no known eruptions in recent centuries; considered dormant. ',
-            'type' => 'Stratovolcano',
-            'image_url' => 'smirnov'
-        ],
-
-        [
-            'name' => 'Sollipulli',
-            'country' => 'Chile',
-            'continent' => 'South America',
-            'activity' => 'Inactive',
-            'latitude' => -38.97,
-            'longitude' => -71.52,
-            'elevation' => 2282,
-            'description' => 'A caldera volcano in southern Chile, with glacier cover. Holocene eruptions, but little activity in the historic period; considered dormant. ',
-            'type' => 'Caldera',
-            'image_url' => 'sollipulli'
-        ],
-
-        [
-            'name' => 'Soputan',
-            'country' => 'Indonesia',
-            'continent' => 'Asia',
-            'activity' => 'Active',
-            'latitude' => 1.11,
-            'longitude' => 124.73,
-            'elevation' => 1784,
-            'description' => 'A stratovolcano in Sulawesi, Indonesia. Known for regular explosive eruptions; active “eruptive cycles” in recent decades. ',
-            'type' => 'Stratovolcano',
-            'image_url' => 'soputan'
-        ],
-
-        [
-            'name' => 'La Grande Soufrière',
-            'country' => 'France (Guadeloupe, French West Indies)',
-            'continent' => 'North America',
-            'activity' => 'Active',
-            'latitude' => 16.05,
-            'longitude' => -61.67,
-            'elevation' => 1467,
-            'description' => 'A stratovolcano with an active hydrothermal system; regularly monitored. Periods of increased unrest and fumarolic / thermal activity. No large recent eruption but considered active due to continuous degassing and potential for explosive activity.',
-            'type' => 'Stratovolcano',
-            'image_url' => 'la-grande-soufriere'
-        ],
-
-        [
-            'name' => 'Soufrière Hills',
-            'country' => 'United Kingdom (Montserrat)',
-            'continent' => 'North America',
-            'activity' => 'Active',
-            'latitude' => 16.72,
-            'longitude' => -62.18,
-            'elevation' => 915,
-            'description' => 'A complex stratovolcano with many lava domes on Montserrat. After dormancy, became strongly active from 1995 onward; last eruption in 2013. Monitoring continues due to risk.',
-            'type' => 'Stratovolcano / Lava dome complex',
-            'image_url' => 'soufriere-hills'
-        ],
-
-        [
-            'name' => 'Soufrière St. Vincent',
-            'country' => 'St. Vincent and the Grenadines',
-            'continent' => 'North America',
-            'activity' => 'Active',
-            'latitude' => 13.33,
-            'longitude' => -61.18,
-            'elevation' => 1220,
-            'description' => 'A stratovolcano on the island of St. Vincent. Known for major explosive eruptions, with the most recent one in 2021. Steep cone, hazardous to nearby populations. ',
-            'type' => 'Stratovolcano',
-            'image_url' => 'soufriere-st-vincent'
-        ],
-        
-        [
-            'name' => 'South Island',
-            'country' => 'Kenya',
-            'continent' => 'Africa',
-            'activity' => 'Inactive',
-            'latitude' => 2.63,
-            'longitude' => 36.60,
-            'elevation' => 800,
-            'description' => '“South Island” in Kenya — limited documentation; considered dormant in local records; likely a small volcanic remnant or cone.',
-            'type' => 'Unknown / volcanic remnant',
-            'image_url' => 'south-island'
-        ],
-
-        [
-            'name' => 'SP Mountain',
-            'country' => 'United States',
-            'continent' => 'North America',
-            'activity' => 'Inactive',
-            'latitude' => 35.60,
-            'longitude' => -111.60,
-            'elevation' => 2141,
-            'description' => 'A cinder cone volcano (SP Mountain) in Arizona / southwestern USA; no known recent eruptions, considered dormant.',
-            'type' => 'Cinder Cone',
-            'image_url' => 'sp-mountain'
-        ],
-
-        [
-            'name' => 'Spurr (Mount Spurr)',
-            'country' => 'United States',
-            'continent' => 'North America',
-            'activity' => 'Active',
-            'latitude' => 61.30,
-            'longitude' => -152.25,
-            'elevation' => 3374,
-            'description' => 'A stratovolcano in the Aleutian arc, with two historical eruptions from Crater Peak (1953, 1992). Current unrest (seismic activity, ground deformation) is monitored.',
-            'type' => 'Stratovolcano',
-            'image_url' => 'mount-spurr'
-        ],
-
-        [
-            'name' => 'Srednii',
-            'country' => 'Russia',
-            'continent' => 'Asia',
-            'activity' => 'Extinct',
-            'latitude' => 47.60,
-            'longitude' => 152.92,
-            'elevation' => 36,  // submarine volcano, summit ~36 m below sea level
-            'description' => 'A submarine volcano (seamount) in the Kurils. No known Holocene eruptions; considered extinct or inactive. ',
-            'type' => 'Submarine volcano / seamount',
-            'image_url' => ''
-        ],
-
-        [
-            'name' => 'Mount Steller',
-            'country' => 'United States',
-            'continent' => 'North America',
-            'activity' => 'Extinct',
-            'latitude' => 58.40,
-            'longitude' => -154.40,
-            'elevation' => 2272,
-            'description' => 'A stratovolcano on the Alaska Peninsula. No historical eruptions recorded; often considered extinct. ',
-            'type' => 'Stratovolcano',
-            'image_url' => 'mount-steller'
-        ],
-
-        [
-            'name' => 'Stromboli',
-            'country' => 'Italy',
-            'continent' => 'Europe',
-            'activity' => 'Active',
-            'latitude' => 38.79,
-            'longitude' => 15.21,
-            'elevation' => 924,
-            'description' => 'One of the world’s most persistently active volcanoes. Stromboli exhibits continuous Strombolian (explosive) activity, with multiple vents producing regular bursts of lava bombs and ash.',
-            'type' => 'Stratovolcano / composite volcano',
-            'image_url' => 'stromboli'
-        ],
-
-        [
-            'name' => 'Sumaco',
-            'country' => 'Ecuador',
-            'continent' => 'South America',
-            'activity' => 'Inactive',
-            'latitude' => -0.54,
-            'longitude' => -77.63,
-            'elevation' => 3990,
-            'description' => 'A stratovolcano in Ecuador. Limited historical activity; considered dormant in modern times. ',
-            'type' => 'Stratovolcano',
-            'image_url' => 'sumaco'
-        ],
-
-        [
-            'name' => 'Mount Sumbing',
-            'country' => 'Indonesia',
-            'continent' => 'Asia',
-            'activity' => 'Inactive',
-            'latitude' => -7.38,
-            'longitude' => 110.07,
-            'elevation' => 3371,
-            'description' => 'A stratovolcano on Java, Indonesia. Last known activity is prehistoric / poorly documented; considered dormant. ',
-            'type' => 'Stratovolcano',
-            'image_url' => 'mount-sumbing'
-        ],
-
-        [
-            'name' => 'Mount Sundoro',
-            'country' => 'Indonesia',
-            'continent' => 'Asia',
-            'activity' => 'Inactive',
-            'latitude' => -7.30,
-            'longitude' => 109.99,
-            'elevation' => 3136,
-            'description' => 'A stratovolcano in Central Java, Indonesia. No recent confirmed eruptions; often categorized as dormant. ',
-            'type' => 'Stratovolcano',
-            'image_url' => 'mount-sundoro'
-        ],
-
-        [
-            'name' => 'Sunset Crater',
-            'country' => 'United States',
-            'continent' => 'North America',
-            'activity' => 'Inactive',
-            'latitude' => 35.37,
-            'longitude' => -111.50,
-            'elevation' => 2447,
-            'description' => 'A cinder cone volcanic field in northern Arizona (Sunset Craters). Last eruptions occurred ~1,000 years ago; now considered dormant. ',
-            'type' => 'Cinder Cone / volcanic field',
-            'image_url' => 'sunset-crater'
-        ],
-
-        [
-            'name' => 'Suswa',
-            'country' => 'Kenya',
-            'continent' => 'Africa',
-            'activity' => 'Inactive',
-            'latitude' => -1.18,
-            'longitude' => 36.35,
-            'elevation' => 2356,
-            'description' => 'Mount Suswa is a shield volcano in Kenya’s Great Rift Valley, characterized by a double caldera and lava caves. No historical eruptions; considered dormant.',
-            'type' => 'Shield',
-            'image_url' => 'suswa'
-        ],
-
-        [
-            'name' => 'Suwanosejima',
-            'country' => 'Japan',
-            'continent' => 'Asia',
-            'activity' => 'Active',
-            'latitude' => 29.64,
-            'longitude' => 129.72,
-            'elevation' => 799,
-            'description' => 'Suwanosejima is one of Japan’s most active volcanoes, with frequent strombolian eruptions and ash plumes. It forms part of the Ryukyu Islands arc.',
-            'type' => 'Stratovolcano',
-            'image_url' => 'suwanosejima'
-        ],
-        [
-            'name' => 'Taal',
-            'country' => 'Philippines',
-            'continent' => 'Asia',
-            'activity' => 'Active',
-            'latitude' => 14.00,
-            'longitude' => 120.99,
-            'elevation' => 311,
-            'description' => 'Taal Volcano is a large caldera system located in Batangas, Philippines. Known for its 2020 eruption; remains one of the most active volcanoes in the country.',
-            'type' => 'Caldera',
-            'image_url' => 'taal'
-        ],
-        [
-            'name' => 'Talang',
-            'country' => 'Indonesia',
-            'continent' => 'Asia',
-            'activity' => 'Active',
-            'latitude' => -0.98,
-            'longitude' => 100.68,
-            'elevation' => 2597,
-            'description' => 'Mount Talang is a stratovolcano in West Sumatra, Indonesia. It has produced phreatic eruptions in the 21st century and is classified as active.',
-            'type' => 'Stratovolcano',
-            'image_url' => 'talang'
-        ],
-        [
-            'name' => 'Tambora',
-            'country' => 'Indonesia',
-            'continent' => 'Asia',
-            'activity' => 'Inactive',
-            'latitude' => -8.25,
-            'longitude' => 118.00,
-            'elevation' => 2850,
-            'description' => 'Mount Tambora is a stratovolcano in Sumbawa, Indonesia, famous for its 1815 eruption — the largest in recorded history. Currently shows mild fumarolic activity and is considered dormant.',
-            'type' => 'Stratovolcano',
-            'image_url' => 'tambora'
-        ],
-        [
-            'name' => 'Tanaga and Takawangha',
-            'country' => 'United States',
-            'continent' => 'North America',
-            'activity' => 'Active',
-            'latitude' => 51.89,
-            'longitude' => -178.15,
-            'elevation' => 1806,
-            'description' => 'Tanaga and Takawangha are neighboring stratovolcanoes on Tanaga Island, Alaska. Both are considered active; Tanaga erupted in 2023 with seismic unrest continuing.',
-            'type' => 'Stratovolcano',
-            'image_url' => 'tanaga-and-takawangha'
-        ],
-        [
-            'name' => 'Tangkuban Perahu',
-            'country' => 'Indonesia',
-            'continent' => 'Asia',
-            'activity' => 'Active',
-            'latitude' => -6.77,
-            'longitude' => 107.60,
-            'elevation' => 2084,
-            'description' => 'Tangkuban Parahu is a stratovolcano north of Bandung, Indonesia. It experiences minor phreatic explosions, most recently in 2019.',
-            'type' => 'Stratovolcano',
-            'image_url' => 'tangkuban-perahu'
-        ],
-        [
-            'name' => 'Tao-Rusyr Caldera',
-            'country' => 'Russia',
-            'continent' => 'Asia',
-            'activity' => 'Extinct',
-            'latitude' => 49.35,
-            'longitude' => 154.70,
-            'elevation' => 1325,
-            'description' => 'Tao-Rusyr Caldera is located on Onekotan Island in the Kuril chain. The last known eruption occurred in 1952; currently considered extinct.',
-            'type' => 'Caldera / Stratovolcano',
-            'image_url' => 'tao-rusyr-caldera'
-        ],
-        [
-            'name' => 'Tarso Voon',
-            'country' => 'Chad',
-            'continent' => 'Africa',
-            'activity' => 'Extinct',
-            'latitude' => 20.92,
-            'longitude' => 17.28,
-            'elevation' => 3100,
-            'description' => 'Tarso Voon is a volcanic massif in northern Chad’s Tibesti Mountains. No known Holocene eruptions; regarded as extinct.',
-            'type' => 'Stratovolcano',
-            'image_url' => 'tarso-voon'
-        ],
-        [
-            'name' => 'Telica',
-            'country' => 'Nicaragua',
-            'continent' => 'North America',
-            'activity' => 'Active',
-            'latitude' => 12.60,
-            'longitude' => -86.85,
-            'elevation' => 1010,
-            'description' => 'Telica is one of Nicaragua’s most active volcanoes, frequently emitting ash and gas. Part of the Maribios volcanic range.',
-            'type' => 'Stratovolcano',
-            'image_url' => 'telica'
-        ],
-
-        [
-            'name' => 'Mount Teide',
-            'country' => 'Spain',
-            'continent' => 'Europe',
-            'activity' => 'Inactive',
-            'latitude' => 28.27,
-            'longitude' => -16.64,
-            'elevation' => 3715,
-            'description' => 'Mount Teide is a stratovolcano on Tenerife in the Canary Islands. It is the highest peak in Spain and has a large caldera; last eruption occurred in 1909, currently dormant.',
-            'type' => 'Stratovolcano',
-            'image_url' => 'mount-teide'
-        ],
-
-        [
-            'name' => 'Tengger Caldera and Bromo',
-            'country' => 'Indonesia',
-            'continent' => 'Asia',
-            'activity' => 'Active',
-            'latitude' => -7.94,
-            'longitude' => 112.95,
-            'elevation' => 2329,
-            'description' => 'A volcanic complex in East Java, Indonesia, consisting of the Tengger Caldera and active Bromo cone. Bromo regularly emits ash and steam; historically very active.',
-            'type' => 'Stratovolcano / Caldera complex',
-            'image_url' => 'tengger-caldera-and-bromo'
-        ],
-        [
-            'name' => 'Three Fingered Jack',
-            'country' => 'United States',
-            'continent' => 'North America',
-            'activity' => 'Extinct',
-            'latitude' => 44.50,
-            'longitude' => -121.80,
-            'elevation' => 2390,
-            'description' => 'An extinct stratovolcano in Oregon’s Cascade Range. Highly eroded; no Holocene eruptions.',
-            'type' => 'Stratovolcano',
-            'image_url' => 'Three Fingered Jack'
-        ],
-        [
-            'name' => 'Three Sisters',
-            'country' => 'United States',
-            'continent' => 'North America',
-            'activity' => 'Extinct',
-            'latitude' => 44.10,
-            'longitude' => -121.77,
-            'elevation' => 3100,
-            'description' => 'A trio of heavily eroded stratovolcanoes in Oregon’s Cascade Range. No Holocene eruptions; considered extinct.',
-            'type' => 'Stratovolcano',
-            'image_url' => 'three-sisters'
-        ],
-        [
-            'name' => 'Thule Islands',
-            'country' => 'United Kingdom',
-            'continent' => 'Europe / South Atlantic',
-            'activity' => 'Inactive',
-            'latitude' => -59.45,
-            'longitude' => -27.37,
-            'elevation' => 1075,
-            'description' => 'A volcanic island group in the South Sandwich Islands. Limited eruption records; currently dormant.',
-            'type' => 'Stratovolcano',
-            'image_url' => 'thule-islands'
-        ],
-        [
-            'name' => 'Tyatya',
-            'country' => 'Russia',
-            'continent' => 'Asia',
-            'activity' => 'Inactive',
-            'latitude' => 44.35,
-            'longitude' => 146.26,
-            'elevation' => 1819,
-            'description' => 'A stratovolcano in Russia’s Far East. No recorded Holocene eruptions; considered dormant.',
-            'type' => 'Stratovolcano',
-            'image_url' => 'tyatya'
-        ],
-        [
-            'name' => 'Toba',
-            'country' => 'Indonesia',
-            'continent' => 'Asia',
-            'activity' => 'Inactive',
-            'latitude' => 2.58,
-            'longitude' => 98.83,
-            'elevation' => 2157,
-            'description' => 'Toba Caldera is a massive caldera on Sumatra, Indonesia, site of the largest known Quaternary eruption (~74,000 years ago). No recent eruptions; dormant.',
-            'type' => 'Caldera',
-            'image_url' => 'toba'
-        ],
-        [
-            'name' => 'Todoko-Ranu',
-            'country' => 'Indonesia',
-            'continent' => 'Asia',
-            'activity' => 'Inactive',
-            'latitude' => 1.25,
-            'longitude' => 127.47,
-            'elevation' => 979,
-            'description' => 'A caldera volcano on Halmahera, Indonesia. No known recent eruptions; considered dormant.',
-            'type' => 'Caldera',
-            'image_url' => 'todokoranu'
-        ],
-        [
-            'name' => 'Mount Tokachi',
-            'country' => 'Japan',
-            'continent' => 'Asia',
-            'activity' => 'Active',
-            'latitude' => 43.42,
-            'longitude' => 142.69,
-            'elevation' => 2077,
-            'description' => 'Mount Tokachi in Hokkaido is an active volcano with frequent minor eruptions, lava flows, and ash emissions monitored by JMA.',
-            'type' => 'Stratovolcano',
-            'image_url' => 'mount-tokachi'
-        ],
-        [
-            'name' => 'Tolbachik',
-            'country' => 'Russia',
-            'continent' => 'Asia',
-            'activity' => 'Active',
-            'latitude' => 55.83,
-            'longitude' => 160.33,
-            'elevation' => 3682,
-            'description' => 'Tolbachik is a large stratovolcano in Kamchatka, Russia, famous for fissure eruptions. Last major eruption 2012–2013; considered active.',
-            'type' => 'Stratovolcano',
-            'image_url' => 'tolbachik'
-        ],
-        
-        [
-            'name' => 'Tolimán',
+            [
+                'name' => 'Pago',
+                'country' => 'Papua New Guinea',
+                'continent' => 'Australia',
+                'activity' => 'Active',
+                'latitude' => -5.58,
+                'longitude' => 150.52,
+                'elevation' => 742,
+                'description' => 'A young post-caldera cone within the Witori Caldera on New Britain Island, with documented eruptions in the 20th and 21st centuries.',
+                'type' => 'Caldera',
+                'image_url' => 'pago'  
+            ],
+
+            [
+                'name' => 'Papandayan',
+                'country' => 'Indonesia',
+                'continent' => 'Asia',
+                'activity' => 'Active',
+                'longitude' => 107.73,
+                'elevation' => 2665,
+                'description' => 'A stratovolcano in West Java, Indonesia, known for hydrothermal activity and past eruptions. (Data from general Indonesian volcano records.)',
+                'type' => 'Stratovolcano',
+                'image_url' => 'papandayan'
+            ],
+
+            [
+                'name' => 'Parícutin',
+                'country' => 'Mexico',
+                'continent' => 'North America',
+                'activity' => 'Extinct',
+                'longitude' => -102.20,
+                'elevation' => 3170,
+                'description' => 'A famous cinder cone volcano in Michoacán formed in 1943; erupted until ~1952 and then ceased activity, now quiescent.',
+                'type' => 'Cinder cone',
+                'image_url' => 'paricutin'
+            ],
+
+            [
+                'name' => 'Parinacota',
+                'country' => 'Bolivia',
+                'continent' => 'South America',
+                'activity' => 'Active',
+                'longitude' => -69.15,
+                'elevation' => 6348,
+                'description' => 'A high-altitude stratovolcano on the Bolivia–Chile border. Part of the Payachata volcanic group (with Pomerape). Known for glacial erosion and possible recent dome growth. (Holocene activity) ',
+                'type' => 'Stratovolcano',
+                'image_url' => 'parinacota'
+            ],
+
+            [
+                'name' => 'Pauzhetka',
+                'country' => 'Russia',
+                'continent' => 'Asia',
+                'activity' => 'Extinct',
+                'latitude' => 51.45,
+                'longitude' => 156.97,
+                'elevation' => 1070,
+                'description' => 'A lava dome volcano in the Kamchatka region. No well-documented Holocene activity found in common sources.',
+                'type' => 'Lava dome',
+                'image_url' => 'pauzhetka'
+            ],
+
+            [
+                'name' => 'Pavlof',
+                'country' => 'United States',
+                'continent' => 'North America',
+                'activity' => 'Active',
+                'latitude' => 55.42,
+                'longitude' => -161.89,
+                'elevation' => 2519,
+                'description' => 'A stratovolcano on the Alaska Peninsula known for frequent eruptive activity and lava/ash emissions.',
+                'type' => 'Stratovolcano',
+                'image_url' => 'pavlof'
+            ],
+
+            [
+                'name' => 'Pavlof Sister',
+                'country' => 'United States',
+                'continent' => 'North America',
+                'activity' => 'Extinct',
+                'latitude' => 55.45,
+                'longitude' => -161.84,
+                'elevation' => 2142,
+                'description' => 'A lesser stratovolcanic peak adjacent to Pavlof; minimal eruptive history and considered inactive in modern times.',
+                'type' => 'Stratovolcano',
+                'image_url' => 'pavlof-sister'
+            ],
+
+            [
+                'name' => 'Pelée',
+                'country' => 'France',
+                'continent' => 'North America',
+                'activity' => 'Active',
+                'latitude' => 14.82,
+                'longitude' => -61.17,
+                'elevation' => 1397,
+                'description' => 'A stratovolcano at the northern tip of Martinique (French West Indies) and part of the Lesser Antilles arc; historically destructive eruptions including 1902 that destroyed Saint-Pierre.',
+                'type' => 'Stratovolcano',
+                'image_url' => 'pelee'
+            ],
+
+            [
+                'name' => 'Peuet Sague',
+                'country' => 'Indonesia',
+                'continent' => 'Asia',
+                'activity' => 'Active',
+                'latitude' => 4.91,
+                'longitude' => 96.33,
+                'elevation' => 2785,
+                'description' => 'A volcanic complex in northwest Sumatra with four summit peaks, including lava domes; recorded eruptive activity occurred between 1918–1921, 1998–2000 (explosive / ash emissions)’',
+                'type' => 'Complex',
+                'image_url' => 'peuet-sague'
+            ],
+
+            [
+                'name' => 'Pico',
+                'country' => 'Portugal',
+                'continent' => 'Europe',
+                'activity' => 'Active',
+                'latitude' => 38.47,
+                'longitude' => -28.40,
+                'elevation' => 2351,
+                'description' => 'The highest mountain in Portugal, located on Pico Island (Azores), built by volcanic activity; no confirmed historical eruptions in recent centuries but part of the Azores volcanic system.',
+                'type' => 'Stratovolcano',
+                'image_url' => 'pico' 
+            ],
+
+            [
+                'name' => 'Las Pilas',
+                'country' => 'Nicaragua',
+                'continent' => 'North America',
+                'activity' => 'Inactive',
+                'latitude' => 11.54,
+                'longitude' => -85.62,
+                'elevation' => 1700,
+                'description' => 'A stratovolcano in Nicaragua, part of the Central American volcanic arc; limited historical activity recorded, sometimes considered dormant.',
+                'type' => 'Stratovolcano',
+                'image_url' => 'las-pilas'
+            ],
+
+            [
+                'name' => 'Pinacate',
+                'country' => 'Mexico',
+                'continent' => 'North America',
+                'activity' => 'Inactive',
+                'latitude' => 31.77,
+                'longitude' => -113.50,
+                'elevation' => 1200,
+                'description' => 'Part of the Pinacate volcanic field (El Pinacate and Gran Desierto de Altar region) with many cinder cones and lava flows; no recent historical eruptions.',
+                'type' => 'Cinder cone',
+                'image_url' => 'pinacate'
+            ],
+
+            [
+                'name' => 'Pinatubo',
+                'country' => 'Philippines',
+                'continent' => 'Asia',
+                'activity' => 'Active',
+                'latitude' => 15.13,
+                'longitude' => 120.35,
+                'elevation' => 1486,
+                'description' => 'A large stratovolcano in Luzon, known for the catastrophic 1991 eruption (one of the largest 20th-century eruptions). Between eruptions it remains quiet but not extinct.',
+                'type' => 'Stratovolcano',
+                'image_url' => 'pinatubo'
+            ],
+
+            [
+                'name' => 'Pisgah Lava Field',
+                'country' => 'United States',
+                'continent' => 'North America',
+                'activity' => 'Extinct',
+                'latitude' => 34.75,
+                'longitude' => -116.63,
+                'elevation' => 1495,
+                'description' => 'A volcanic field in southeastern California, USA, consisting of basaltic lava flows and small volcanic cones; no recent volcanic activity.',
+                'type' => 'Volcanic field',
+                'image_url' => 'pisgah'
+            ],
+
+            [
+                'name' => 'Piton de la Fournaise',
+                'country' => 'France',
+                'continent' => 'Europe',
+                'activity' => 'Active',
+                'latitude' => -21.23,
+                'longitude' => 55.71,
+                'elevation' => 2631,
+                'description' => 'A very active shield volcano located on Reunion Island (Indian Ocean), one of the world’s most active volcanoes, regularly erupting lava flows from fissures. (Often described as basaltic shield) ',
+                'type' => 'Shield',
+                'image_url' => 'piton-de-la-fournaise'
+            ],
+
+            [
+                'name' => 'Poás Volcano',
+                'country' => 'Costa Rica',
+                'continent' => 'North America',
+                'activity' => 'Active',
+                'latitude' => 10.20,
+                'longitude' => -84.23,
+                'elevation' => 2708,
+                'description' => 'A stratovolcano in central Costa Rica, with frequent phreatic / fumarolic and minor explosive activity; one of the country’s most active volcanoes.',
+                'type' => 'Stratovolcano',
+                'image_url' => 'poas'
+            ],
+
+            [
+                'name' => 'Popocatépetl',
+                'country' => 'Mexico',
+                'continent' => 'North America',
+                'activity' => 'Active',
+                'latitude' => 19.02,
+                'longitude' => -98.62,
+                'elevation' => 5246,
+                'description' => 'One of Mexico’s most active stratovolcanoes, located near Mexico City; frequent eruptions, ash emissions, and volcanic hazard to nearby population.',
+                'type' => 'Stratovolcano',
+                'image_url' => 'popocatepetl'
+            ],
+
+            [
+                'name' => 'Prevo Peak',
+                'country' => 'Russia',
+                'continent' => 'Asia',
+                'activity' => 'Inactive',
+                'latitude' => 47.02,
+                'longitude' => 152.12,
+                'elevation' => 1360,
+                'description' => 'A stratovolcano on Simushir Island (Kuril Islands), with historical eruptions in 1765 and 1825; no known modern activity.',
+                'type' => 'Stratovolcano',
+                'image_url' => 'prevo'
+            ],
+            
+            [
+                'name' => 'Puracé',
+                'country' => 'Colombia',
+                'continent' => 'South America',
+                'activity' => 'Active',
+                'latitude' => 2.32,
+                'longitude' => -76.40,
+                'elevation' => 4650,
+                'description' => 'An andesitic stratovolcano in the Los Coconucos chain, frequently active with small to moderate explosive eruptions; the most recent unrest and gas-steam emissions were recorded in 2022 and 2025',
+                'type' => 'Stratovolcano',
+                'image_url' => 'purace'
+            ],
+
+            [
+                'name' => 'The Quill',
+                'country' => 'Netherlands',
+                'continent' => 'Europe',
+                'activity' => 'Inactive',
+                'latitude' => 17.48,
+                'longitude' => -62.96,
+                'elevation' => 601,
+                'description' => 'A volcanic crater forming the highest point of Sint Eustatius island (Leeward Islands); no known historical eruptions, considered dormant. (Also known as Mazus or The Quill) ',
+                'type' => 'Stratovolcano',
+                'image_url' => 'quill'
+            ],
+
+            [
+                'name' => 'Rabaul',
+                'country' => 'Papua New Guinea',
+                'continent' => 'Australia',
+                'activity' => 'Active',
+                'latitude' => -4.27,
+                'longitude' => 152.20,
+                'elevation' => 688,
+                'description' => 'A large caldera / volcanic complex in East New Britain; includes active vents (e.g., Tavurvur, Vulcan) and frequent eruptions. Major destructive eruption in 1994. ',
+                'type' => 'Shield',
+                'image_url' => 'rabaul'
+            ],
+
+            [
+                'name' => 'Ragang',
+                'country' => 'Philippines',
+                'continent' => 'Asia',
+                'activity' => 'Active',
+                'latitude' => 7.70,
+                'longitude' => 124.50,
+                'elevation' => 2815,
+                'description' => 'A basaltic–andesitic stratovolcano on Mindanao (also called Piapayungan); historical eruptions from 1760s to 1916, seismic activity continues}',
+                'type' => 'Stratovolcano',
+                'image_url' => 'ragang'
+            ],
+
+            [
+                'name' => 'Raikoke',
+                'country' => 'Russia',
+                'continent' => 'Asia',
+                'activity' => 'Active',
+                'latitude' => 48.29,
+                'longitude' => 153.25,
+                'elevation' => 551,
+                'description' => 'A small stratovolcano on a tiny island in the Kurils; eruptive in recent decades, e.g. major eruption in 2019. ',
+                'type' => 'Stratovolcano',
+                'image_url' => 'raikoke'
+            ],
+
+            [
+                'name' => 'Rainier',
+                'country' => 'United States',
+                'continent' => 'North America',
+                'activity' => 'Inactive',
+                'latitude' => 46.85,
+                'longitude' => -121.76,
+                'elevation' => 4392,
+                'description' => 'A massive stratovolcano in Washington State, U.S.A.; last major eruption ~1,000 years ago, but hydrothermal and glacial activity persist. ',
+                'type' => 'Stratovolcano',
+                'image_url' => 'rainier'
+            ],
+
+            [
+                'name' => 'Rajabasa',
+                'country' => 'Indonesia',
+                'continent' => 'Asia',
+                'activity' => 'Inactive',
+                'latitude' => -5.78,
+                'longitude' => 105.63,
+                'elevation' => 1281,
+                'description' => 'A stratovolcano in southern Sumatra (Lampung), Indonesia; limited records and few / no recent eruptions, typically treated as dormant. ',
+                'type' => 'Stratovolcano',
+                'image_url' => 'rajabasa'
+            ],
+
+            [
+                'name' => 'Raoul',
+                'country' => 'New Zealand',
+                'continent' => 'Australia',
+                'activity' => 'Active',
+                'latitude' => -29.27,
+                'longitude' => -177.92,
+                'elevation' => 516,
+                'description' => 'A stratovolcano on Raoul Island in the Kermadec Islands (New Zealand territory), with past eruptive activity and ongoing seismic / fumarolic activity, but no recent major eruptions. ',
+                'type' => 'Stratovolcano',
+                'image_url' => 'raoul-island'
+            ],
+
+            [
+                'name' => 'Rasshua',
+                'country' => 'Russia',
+                'continent' => 'Asia',
+                'activity' => 'Inactive',
+                'latitude' => 47.77,
+                'longitude' => 153.02,
+                'elevation' => 956,
+                'description' => 'A stratovolcano on Rasshua Island in the Kuril chain; no major recent eruptions documented, considered dormant. ',
+                'type' => 'Stratovolcano',
+                'image_url' => 'rasshua'
+            ],
+
+            [
+                'name' => 'Mount Raung',
+                'country' => 'Indonesia',
+                'continent' => 'Asia',
+                'activity' => 'Active',
+                'latitude' => -8.13,
+                'longitude' => 114.04,
+                'elevation' => 3332,
+                'description' => 'A stratovolcano in eastern Java, frequently active with ash emissions, thermal anomalies, and recent eruptions (latest in 2021/2022).',
+                'type' => 'Stratovolcano',
+                'image_url' => 'mount-raung'
+            ],
+            
+            [
+                'name' => 'Rausudake',
+                'country' => 'Japan',
+                'continent' => 'Asia',
+                'activity' => 'Inactive',
+                'latitude' => 44.076,
+                'longitude' => 145.122,
+                'elevation' => 1660,
+                'description' => 'An andesitic-to-dacitic stratovolcano with summit lava domes on the Shiretoko Peninsula, NE Hokkaido. Its most recent eruption is estimated between 1750 and 1850 CE.',
+                'type' => 'Stratovolcano',
+                'image_url' => 'rausu'
+            ],
+
+            [
+                'name' => 'Mount Redoubt',
+                'country' => 'United States',
+                'continent' => 'North America',
+                'activity' => 'Active',
+                'latitude' => 60.49,
+                'longitude' => -152.74,
+                'elevation' => 3108,
+                'description' => 'A stratovolcano in Alaska’s Aleutian arc, frequently monitored; last major eruptions occurred in 2009 and earlier periods.',
+                'type' => 'Stratovolcano',
+                'image_url' => 'mount-redoubt'
+            ],
+
+            [
+                'name' => 'El Reventador',
+                'country' => 'Ecuador',
+                'continent' => 'South America',
+                'activity' => 'Active',
+                'latitude' => -0.08,
+                'longitude' => -77.66,
+                'elevation' => 3562,
+                'description' => 'A stratovolcano in the eastern Andes, with a 4-km wide avalanche scarp and active cone rising ~1,300 m inside the caldera. Frequent explosive and effusive eruptions, daily gas/ash emissions have been recorded as of 2023.',
+                'type' => 'Stratovolcano',
+                'image_url' => 'reventador'
+            ],
+
+            [
+                'name' => 'Rincón de la Vieja',
+                'country' => 'Costa Rica',
+                'continent' => 'North America',
+                'activity' => 'Active',
+                'latitude' => 10.83,
+                'longitude' => -85.32,
+                'elevation' => 1916,
+                'description' => 'A complex volcano in northwest Costa Rica, hosting multiple vents (lava flows, phreatic explosions, fumarolic activity). It has exhibited eruptions (steam / ash) in modern times and is continuously monitored.',
+                'type' => 'Complex',
+                'image_url' => 'rincon-de-la-vieja'
+            ],
+
+            [
+                'name' => 'Roundtop',
+                'country' => 'United States',
+                'continent' => 'North America',
+                'activity' => 'Extinct',
+                'latitude' => 54.80,
+                'longitude' => -163.59,
+                'elevation' => 1871,
+                'description' => 'A stratovolcano in the Alaska region (remote), with no recorded Holocene eruptions; considered extinct.',
+                'type' => 'Stratovolcano',
+                'image_url' => 'roundtop'
+            ],
+
+            [
+                'name' => 'Mount Ruapehu',
+                'country' => 'New Zealand',
+                'continent' => 'Australia',
+                'activity' => 'Active',
+                'latitude' => -39.28,
+                'longitude' => 175.57,
+                'elevation' => 2797,
+                'description' => 'One of New Zealand’s most active stratovolcanoes, with regular eruptions (lava, ash, steam) and an active crater lake. It is continuously monitored. ',
+                'type' => 'Stratovolcano',
+                'image_url' => 'mount-ruapehu'
+            ],
+
+            [
+                'name' => 'Rudakov',
+                'country' => 'Russia',
+                'continent' => 'Asia',
+                'activity' => 'Extinct',
+                'latitude' => 45.88,
+                'longitude' => 149.83,
+                'elevation' => 542,
+                'description' => 'A stratovolcano with no known Holocene or historical eruptions; generally considered extinct.',
+                'type' => 'Stratovolcano',
+                'image_url' => 'rudakov'
+            ],
+
+            [
+                'name' => 'Nevado del Ruiz',
+                'country' => 'Colombia',
+                'continent' => 'South America',
+                'activity' => 'Active',
+                'latitude' => 4.89,
+                'longitude' => -75.32,
+                'elevation' => 5321,
+                'description' => 'A stratovolcano in central Colombia, part of the Andean Volcanic Belt. Famous for the 1985 catastrophe (lahar) and periodic eruptions, fumarolic / steam activity ongoing. ',
+                'type' => 'Stratovolcano',
+                'image_url' => 'nevado-del-ruiz'
+            ],
+
+            [
+                'name' => 'Rumble IV',
+                'country' => 'New Zealand',
+                'continent' => 'Australia',
+                'activity' => 'Inactive',
+                'latitude' => -36.13,
+                'longitude' => 178.05,
+                'elevation' => 500,
+                'description' => 'A seamount volcano in the Kermadec arc, known as Rumble IV; no recent eruptions above sea level. ',
+                'type' => 'Submarine',
+                'image_url' => 'rumble-iv'
+            ],
+
+            [
+                'name' => 'Mount Scenery',
+                'country' => 'Netherlands',
+                'continent' => 'Europe',
+                'activity' => 'Inactive',
+                'latitude' => 17.63,
+                'longitude' => -63.23,
+                'elevation' => 887,
+                'description' => 'A stratovolcano forming the island of Saba in the Caribbean, also called Mount Scenery. No recorded historical eruptions; considered dormant. ',
+                'type' => 'Stratovolcano',
+                'image_url' => 'mount-scenery'
+            ],
+
+            [
+                'name' => 'Sabancaya',
+                'country' => 'Peru',
+                'continent' => 'South America',
+                'activity' => 'Active',
+                'latitude' => -15.78,
+                'longitude' => -71.85,
+                'elevation' => 5967,
+                'description' => 'A stratovolcano in southern Peru (part of the Ampato‐Sabancaya volcanic complex). Its current eruption period started in November 2016, and it produces frequent explosions, gas & ash plumes, and thermal anomalies.',
+                'type' => 'Stratovolcano',
+                'image_url' => 'sabancaya'
+            ],
+
+            [
+                'name' => 'Sakar',
+                'country' => 'Papua New Guinea',
+                'continent' => 'Australia',
+                'activity' => 'Inactive',
+                'latitude' => -5.41,
+                'longitude' => 148.09,
+                'elevation' => 992,
+                'description' => 'A stratovolcano in Papua New Guinea with sparse or no recent recorded activity. No well-documented recent eruptions.',
+                'type' => 'Stratovolcano',
+                'image_url' => 'sakar'
+            ],
+
+            [
+                'name' => 'Sakurajima',
+                'country' => 'Japan',
+                'continent' => 'Asia',
+                'activity' => 'Active',
+                'latitude' => 31.59,
+                'longitude' => 130.66,
+                'elevation' => 1117,
+                'description' => 'One of Japan’s most active volcanoes (on Kagoshima Bay, Kyushu). Frequent ash eruptions, lava flows, and persistent activity in recent decades.',
+                'type' => 'Stratovolcano',
+                'image_url' => 'sakurajima'
+            ],
+
+            [
+                'name' => 'Mount Salak',
+                'country' => 'Indonesia',
+                'continent' => 'Asia',
+                'activity' => 'Inactive',
+                'latitude' => -6.72,
+                'longitude' => 106.73,
+                'elevation' => 2211,
+                'description' => 'A stratovolcano in West Java, Indonesia. It is not known for frequent historical eruptions; generally considered dormant in modern observations.',
+                'type' => 'Stratovolcano',
+                'image_url' => 'mount-salak'
+            ],
+
+            [
+                'name' => 'San Cristóbal',
+                'country' => 'Nicaragua',
+                'continent' => 'North America',
+                'activity' => 'Active',
+                'latitude' => 12.70,
+                'longitude' => -87.00,
+                'elevation' => 1745,
+                'description' => 'The highest and most active volcano in Nicaragua, with frequent small to moderate eruptions and persistent fumarolic / gas emissions.',
+                'type' => 'Stratovolcano',
+                'image_url' => 'san-cristobal'
+            ],
+
+            [
+                'name' => 'San Salvador',
+                'country' => 'El Salvador',
+                'continent' => 'North America',
+                'activity' => 'Inactive',
+                'latitude' => 13.73,
+                'longitude' => -89.29,
+                'elevation' => 1893,
+                'description' => 'A stratovolcano near the capital (Boquerón edifice). The last confirmed eruption was in 1917. Seismic and fumarolic activity has been recorded.',
+                'type' => 'Stratovolcano',
+                'image_url' => 'san-salvador'
+            ],
+
+            [
+                'name' => 'San Vicente (Chichontepec)',
+                'country' => 'El Salvador',
+                'continent' => 'North America',
+                'activity' => 'Inactive',
+                'latitude' => 16.90,
+                'longitude' => -25.00,
+                'elevation' => 697,
+                'description' => 'San Vicente (El Salvador) is a stratovolcano (aka Chichontepec) with fumaroles and hot springs. Its last major eruption is unknown / undocumented, perhaps many centuries ago.',
+                'type' => 'Stratovolcano',
+                'image_url' => 'san-vicente'
+            ],
+
+            [
+                'name' => 'Mount Sanford',
+                'country' => 'United States',
+                'continent' => 'North America',
+                'activity' => 'Inactive',
+                'latitude' => 62.22,
+                'longitude' => -144.13,
+                'elevation' => 4949,
+                'description' => 'A large shield volcano in the Wrangell Mountains of Alaska. It is not known to have had historical eruptions — generally considered dormantly or quiescent.',
+                'type' => 'Shield',
+                'image_url' => 'mount-sanford'
+            ],
+
+            [
+                'name' => 'Sangay',
+                'country' => 'Ecuador',
+                'continent' => 'South America',
+                'activity' => 'Active',
+                'latitude' => -2.00,
+                'longitude' => -78.34,
+                'elevation' => 5230,
+                'description' => 'One of Ecuador’s most active stratovolcanoes, with frequent explosive eruptions, ash emissions, and pyroclastic flows. It is continuously monitored. ',
+                'type' => 'Stratovolcano',
+                'image_url' => 'sangay'
+            ],
+
+            [
+                'name' => 'Santa Ana',
+                'country' => 'El Salvador',
+                'continent' => 'North America',
+                'activity' => 'Active',
+                'latitude' => 13.85,
+                'longitude' => -89.63,
+                'elevation' => 2381,
+                'description' => 'Also called Ilamatepec, this stratovolcano in western El Salvador had a notable eruption in October 2005 and remains a monitored active volcano. ',
+                'type' => 'Stratovolcano',
+                'image_url' => 'santa-ana'
+            ],
+
+            [
+            'name' => 'Santa María',
             'country' => 'Guatemala',
             'continent' => 'North America',
-            'activity' => 'Inactive',
-            'latitude' => 14.61,
-            'longitude' => -91.19,
-            'elevation' => 3158,
-            'description' => 'Tolimán is a stratovolcano on the shores of Lake Atitlán, Guatemala. No recorded historical eruptions; considered dormant.',
+            'activity' => 'Active',
+            'latitude' => 14.76,
+            'longitude' => -91.55,
+            'elevation' => 3772,
+            'description' => 'A large stratovolcano in the Western Highlands of Guatemala. It erupted catastrophically in 1902 (one of the 20th century’s largest eruptions). Continuous activity occurs at the Santiaguito lava dome complex, formed after that event.',
             'type' => 'Stratovolcano',
-            'image_url' => 'toliman'
-        ],
+            'image_url' => 'santa-maria'
+            ],
 
-        [
-            'name' => 'Towada',
-            'country' => 'Japan',
-            'continent' => 'Asia',
-            'activity' => 'Active',
-            'latitude' => 40.47,
-            'longitude' => 140.92,
-            'elevation' => 1159,
-            'description' => 'Towada is a caldera volcano in northern Honshu, Japan. Although the last magmatic eruption was prehistoric, it has active hydrothermal activity and minor eruptions, considered active.',
-            'type' => 'Caldera',
-            'image_url' => 'towada'
-        ],
-        [
-            'name' => "Traitor's Head",
-            'country' => 'Vanuatu',
-            'continent' => 'Oceania',
-            'activity' => 'Inactive',
-            'latitude' => -18.75,
-            'longitude' => 169.23,
-            'elevation' => 1881,
-            'description' => 'A stratovolcano on Ambrym Island, Vanuatu. Known for past eruptions, but currently considered dormant.',
-            'type' => 'Stratovolcano',
-            'image_url' => 'traitors-head'
-        ],
-        [
-            'name' => 'Tri Sestry',
-            'country' => 'Russia',
-            'continent' => 'Asia',
-            'activity' => 'Extinct',
-            'latitude' => 45.93,
-            'longitude' => 149.92,
-            'elevation' => 998,
-            'description' => 'Tri Sestry is a group of eroded stratovolcanoes in Kamchatka, Russia. No Holocene eruptions; considered extinct.',
-            'type' => 'Stratovolcano',
-            'image_url' => 'tri-sestry'
-        ],
-        [
-            'name' => 'Tristan da Cunha',
-            'country' => 'United Kingdom',
-            'continent' => 'Europe / South Atlantic',
-            'activity' => 'Inactive',
-            'latitude' => -37.09,
-            'longitude' => -12.28,
-            'elevation' => 2060,
-            'description' => 'A shield volcano forming the main island of Tristan da Cunha in the South Atlantic. No recent eruptions; considered dormant.',
-            'type' => 'Shield',
-            'image_url' => 'tristan-da-cunha'
-        ],
-        [
-            'name' => 'Mount Tsurumi',
-            'country' => 'Japan',
-            'continent' => 'Asia',
-            'activity' => 'Inactive',
-            'latitude' => 33.28,
-            'longitude' => 131.43,
-            'elevation' => 1584,
-            'description' => 'A lava dome volcano in Kyushu, Japan. No recorded historical eruptions; considered dormant.',
-            'type' => 'Lava dome',
-            'image_url' => 'mount-tsurumi'
-        ],
-        [
-            'name' => 'Tungurahua',
-            'country' => 'Ecuador',
-            'continent' => 'South America',
-            'activity' => 'Active',
-            'latitude' => -1.47,
-            'longitude' => -78.44,
-            'elevation' => 2011,
-            'description' => 'Tungurahua is an active stratovolcano in Ecuador. Frequent eruptions, ash emissions, and pyroclastic activity make it one of Ecuador’s most monitored volcanoes.',
-            'type' => 'Stratovolcano',
-            'image_url' => 'tungurahua'
-        ],
-        [
-            'name' => 'Ubehebe Craters',
-            'country' => 'United States',
-            'continent' => 'North America',
-            'activity' => 'Inactive',
-            'latitude' => 37.02,
-            'longitude' => -117.45,
-            'elevation' => 752,
-            'description' => 'A volcanic maar field in Death Valley National Park, California. Last eruption ~2,000 years ago; now considered dormant.',
-            'type' => 'Maar',
-            'image_url' => 'ubehebe-craters'
-        ],
-        [
-            'name' => 'Ubinas',
-            'country' => 'Peru',
-            'continent' => 'South America',
-            'activity' => 'Active',
-            'latitude' => -16.36,
-            'longitude' => -70.90,
-            'elevation' => 5672,
-            'description' => 'Ubinas is the most active volcano in Peru. Frequent explosive eruptions, ash emissions, and lava flows. Currently monitored by INGEMMET.',
-            'type' => 'Stratovolcano',
-            'image_url' => 'ubinas'
-        ],
-        [
-            'name' => 'Udina',
-            'country' => 'Russia',
-            'continent' => 'Asia',
-            'activity' => 'Active',
-            'latitude' => 55.76,
-            'longitude' => 160.53,
-            'elevation' => 2923,
-            'description' => 'Udina is a stratovolcano in Kamchatka, Russia, part of the Eastern volcanic belt. Last major eruption occurred 2013–2014; still considered active.',
-            'type' => 'Stratovolcano',
-            'image_url' => 'udina'
-        ],
+            [
+                'name' => 'Santorini (Thera)',
+                'country' => 'Greece',
+                'continent' => 'Europe',
+                'activity' => 'Active',
+                'latitude' => 36.40,
+                'longitude' => 25.40,
+                'elevation' => 367,
+                'description' => 'A caldera-forming volcanic complex in the southern Aegean Sea. The island group is composed of overlapping shield volcanoes and multiple calderas; the most famous eruption is the Minoan eruption (~1600 BC). The last subaerial eruption occurred in 1950; since then activity is limited to fumaroles, seismic events, and ground deformation.',
+                'type' => 'Shield',
+                'image_url' => 'santorini'
+            ],
 
-        [
-            'name' => 'Ugashik and Peulik',
-            'country' => 'United States',
-            'continent' => 'North America',
-            'activity' => 'Inactive',
-            'latitude' => 57.75,
-            'longitude' => -156.37,
-            'elevation' => 1474,
-            'description' => 'A pair of stratovolcanoes in Alaska’s Aleutian arc. No recorded historical eruptions; considered dormant.',
-            'type' => 'Stratovolcano',
-            'image_url' => 'ugashik-and-peulik'
-        ],
+            [
+                'name' => 'Sarychev Peak',
+                'country' => 'Russia',
+                'continent' => 'Asia',
+                'activity' => 'Active',
+                'latitude' => 48.09,
+                'longitude' => 153.20,
+                'elevation' => 1496,
+                'description' => 'A young, highly symmetrical stratovolcano on Matua Island, Kurils, within a 3–3.5 km caldera. Known for frequent explosive eruptions (e.g. 2009).',
+                'type' => 'Stratovolcano',
+                'image_url' => 'sarychev-peak'
+            ],
 
-        [
-            'name' => 'Uinkaret Volcanic Field',
-            'country' => 'United States',
-            'continent' => 'North America',
-            'activity' => 'Inactive',
-            'latitude' => 36.38,
-            'longitude' => -113.13,
-            'elevation' => 1555,
-            'description' => 'A volcanic field in northwest Arizona, USA. Consists of cinder cones and lava flows; last eruption ~1,500 years ago; dormant.',
-            'type' => 'Volcanic field',
-            'image_url' => 'uinkaret-volcanic-field'
-        ],
-        [
-            'name' => 'Ulawun',
-            'country' => 'Papua New Guinea',
-            'continent' => 'Oceania',
-            'activity' => 'Active',
-            'latitude' => -5.05,
-            'longitude' => 151.33,
-            'elevation' => 2334,
-            'description' => 'Ulawun is the highest and most active volcano in Papua New Guinea. Frequent explosive eruptions and lava flows are recorded.',
-            'type' => 'Stratovolcano',
-            'image_url' => 'ulawun'
-        ],
-        [
-            'name' => 'Umboi',
-            'country' => 'Papua New Guinea',
-            'continent' => 'Oceania',
-            'activity' => 'Extinct',
-            'latitude' => -5.59,
-            'longitude' => 147.88,
-            'elevation' => 1548,
-            'description' => 'A complex volcano on Umboi Island. No Holocene eruptions recorded; considered extinct.',
-            'type' => 'Complex',
-            'image_url' => 'umboi'
-        ],
-        [
-            'name' => 'Undara',
-            'country' => 'Australia',
-            'continent' => 'Oceania',
-            'activity' => 'Extinct',
-            'latitude' => -18.25,
-            'longitude' => 144.75,
-            'elevation' => 1020,
-            'description' => 'A shield volcano in northern Queensland, Australia. Last erupted in the Pleistocene; considered extinct. Famous for its lava tubes.',
-            'type' => 'Shield',
-            'image_url' => 'undara'
-        ],
-        [
-            'name' => 'Ungaran and Telomoyo',
-            'country' => 'Indonesia',
-            'continent' => 'Asia',
-            'activity' => 'Extinct',
-            'latitude' => -7.18,
-            'longitude' => 110.33,
-            'elevation' => 2050,
-            'description' => 'A pair of stratovolcanoes in Central Java, Indonesia. No historical eruptions; classified as extinct.',
-            'type' => 'Stratovolcano',
-            'image_url' => 'ungaran-and-telomoyo'
-        ],
-        [
-            'name' => 'Mount Unzen',
-            'country' => 'Japan',
-            'continent' => 'Asia',
-            'activity' => 'Active',
-            'latitude' => 32.76,
-            'longitude' => 130.29,
-            'elevation' => 1500,
-            'description' => 'Unzen is a complex volcano in Kyushu, Japan. Produced deadly pyroclastic flows during 1990–1995 eruptions; considered active.',
-            'type' => 'Complex',
-            'image_url' => 'mount-unzen'
-        ],
-        [
-            'name' => 'Urataman',
-            'country' => 'Russia',
-            'continent' => 'Asia',
-            'activity' => 'Extinct',
-            'latitude' => 47.12,
-            'longitude' => 152.25,
-            'elevation' => 678,
-            'description' => 'A somma volcano in Kamchatka, Russia. No historical eruptions; considered extinct.',
-            'type' => 'Somma',
-            'image_url' => 'urataman'
-        ],
-        [
-            'name' => 'Ushishur',
-            'country' => 'Russia',
-            'continent' => 'Asia',
-            'activity' => 'Inactive',
-            'latitude' => 47.52,
-            'longitude' => 152.80,
-            'elevation' => 401,
-            'description' => 'A caldera volcano in the Kuril Islands, Russia. No recent eruptions; classified as dormant.',
-            'type' => 'Caldera',
-            'image_url' => 'ushishur'
-        ],
-        [
-            'name' => 'Mount Usu',
-            'country' => 'Japan',
-            'continent' => 'Asia',
-            'activity' => 'Active',
-            'latitude' => 42.54,
-            'longitude' => 140.84,
-            'elevation' => 737,
-            'description' => 'Mount Usu is an active stratovolcano in Hokkaido, Japan. Frequent eruptions include phreatic explosions and lava flows; last erupted in 2000.',
-            'type' => 'Stratovolcano',
-            'image_url' => 'mount-usu'
-        ],
+            [
+                'name' => 'Savo',
+                'country' => 'Solomon Islands',
+                'continent' => 'Australia',
+                'activity' => 'Inactive',
+                'latitude' => -9.13,
+                'longitude' => 159.82,
+                'elevation' => 485,
+                'description' => 'A stratovolcano in the Solomon Islands. Historical records are sparse; last known eruption likely in the 19th century or earlier, so it is generally considered dormant.',
+                'type' => 'Stratovolcano',
+                'image_url' => 'savo'
+            ],
 
-        [
-            'name' => 'Uzon',
-            'country' => 'Russia',
-            'continent' => 'Asia',
-            'activity' => 'Inactive',
-            'latitude' => 54.50,
-            'longitude' => 159.97,
-            'elevation' => 1617,
-            'description' => 'Uzon is a caldera volcano in the Kamchatka Peninsula, Russia. No historical eruptions; features geothermal activity and fumaroles.',
-            'type' => 'Caldera',
-            'image_url' => 'uzon'
-        ],
+            [
+                'name' => 'Segula',
+                'country' => 'United States',
+                'continent' => 'North America',
+                'activity' => 'Extinct',
+                'latitude' => 52.02,
+                'longitude' => 178.14,
+                'elevation' => 1160,
+                'description' => 'A stratovolcano in the Aleutian chain. It has no recorded Holocene eruptions, so is considered extinct or heavily eroded and inactive.',
+                'type' => 'Stratovolcano',
+                'image_url' => 'segula'
+            ],
 
-        [
-            'name' => 'Mount Veniaminof',
-            'country' => 'United States',
-            'continent' => 'North America',
-            'activity' => 'Active',
-            'latitude' => 56.17,
-            'longitude' => -159.38,
-            'elevation' => 2507,
-            'description' => 'Veniaminof is an active stratovolcano in Alaska. Its eruptions produce lava flows and ash emissions; monitored by AVO.',
-            'type' => 'Stratovolcano',
-            'image_url' => 'mount-veniaminof'
-        ],
-        [
-            'name' => 'Vernadskii Ridge',
-            'country' => 'Russia',
-            'continent' => 'Asia',
-            'activity' => 'Extinct',
-            'latitude' => 50.55,
-            'longitude' => 155.97,
-            'elevation' => 1183,
-            'description' => 'A cinder cone ridge in Kamchatka, Russia. No Holocene eruptions; considered extinct.',
-            'type' => 'Cinder Cone',
-            'image_url' => 'vernadskii-ridge'
-        ],
-        [
-            'name' => 'Mount Vesuvius',
-            'country' => 'Italy',
-            'continent' => 'Europe',
-            'activity' => 'Inactive',
-            'latitude' => 40.82,
-            'longitude' => 14.43,
-            'elevation' => 1281,
-            'description' => 'Vesuvius is a somma-type volcano near Naples, Italy. Famous for the 79 AD eruption; currently dormant but closely monitored.',
-            'type' => 'Somma',
-            'image_url' => 'mount-vesuvius'
-        ],
-        [
-            'name' => 'Villarrica',
-            'country' => 'Chile',
-            'continent' => 'South America',
-            'activity' => 'Active',
-            'latitude' => -39.42,
-            'longitude' => -71.93,
-            'elevation' => 2847,
-            'description' => 'Villarrica is one of Chile’s most active stratovolcanoes, frequently erupting lava and ash. Part of the Southern Volcanic Zone.',
-            'type' => 'Stratovolcano',
-            'image_url' => 'villarrica'
-        ],
-        [
-            'name' => 'Vilyuchik',
-            'country' => 'Russia',
-            'continent' => 'Asia',
-            'activity' => 'Inactive',
-            'latitude' => 52.70,
-            'longitude' => 158.28,
-            'elevation' => 2173,
-            'description' => 'A stratovolcano in Kamchatka, Russia. No historical eruptions; currently dormant.',
-            'type' => 'Stratovolcano',
-            'image_url' => 'vilyuchik'
-        ],
-        [
-            'name' => 'Visoke',
-            'country' => 'Congo / Rwanda',
-            'continent' => 'Africa',
-            'activity' => 'Inactive',
-            'latitude' => -1.47,
-            'longitude' => 29.49,
-            'elevation' => 3711,
-            'description' => 'Visoke is a stratovolcano in the Virunga Mountains, straddling Rwanda and Congo. No recent eruptions; considered dormant.',
-            'type' => 'Stratovolcano',
-            'image_url' => 'visoke'
-        ],
-        [
-            'name' => 'Vsevidof and Recheschnoi',
-            'country' => 'United States',
-            'continent' => 'North America',
-            'activity' => 'Extinct',
-            'latitude' => 53.13,
-            'longitude' => -168.69,
-            'elevation' => 2149,
-            'description' => 'A pair of stratovolcanoes in the Aleutian Islands, Alaska. No historical eruptions; considered extinct.',
-            'type' => 'Stratovolcano',
-            'image_url' => 'vsevidof-and-recheschnoi'
-        ],
-        [
-            'name' => 'Vulcano',
-            'country' => 'Italy',
-            'continent' => 'Europe',
-            'activity' => 'Inactive',
-            'latitude' => 38.40,
-            'longitude' => 14.96,
-            'elevation' => 500,
-            'description' => 'Vulcano is a small volcanic island in the Aeolian Islands, Italy. Last major eruptions occurred in the late 19th century; currently dormant.',
-            'type' => 'Stratovolcano',
-            'image_url' => 'vulcano'
-        ],
-        [
-            'name' => 'Washington',
-            'country' => 'United States',
-            'continent' => 'North America',
-            'activity' => 'Inactive',
-            'latitude' => 44.30,
-            'longitude' => -121.80,
-            'elevation' => 2376,
-            'description' => 'Mount Washington is a shield volcano in Oregon, part of the Cascade Range. No Holocene eruptions; considered dormant.',
-            'type' => 'Shield',
-            'image_url' => 'washington'
-        ],
+            [
+                'name' => 'Mount Semeru',
+                'country' => 'Indonesia',
+                'continent' => 'Asia',
+                'activity' => 'Active',
+                'latitude' => -8.11,
+                'longitude' => 112.92,
+                'elevation' => 3676,
+                'description' => 'The highest volcano on Java. A stratovolcano with frequent eruptions (ash, pyroclastic flows) and a persistent lava dome (Mahameru). It is continuously active in historical time. ',
+                'type' => 'Stratovolcano',
+                'image_url' => 'mount-semeru'
+            ],
 
-        [
-            'name' => 'Wau an Namus',
-            'country' => 'Libya',
-            'continent' => 'Africa',
-            'activity' => 'Extinct',
-            'latitude' => 25.05,
-            'longitude' => 17.55,
-            'elevation' => 547,
-            'description' => 'A caldera volcano in Libya’s central desert. No historical eruptions; considered extinct.',
-            'type' => 'Caldera',
-            'image_url' => 'wau-an-namus'
-        ],
-        
-        [
-            'name' => 'Westdahl',
-            'country' => 'United States',
-            'continent' => 'North America',
-            'activity' => 'Inactive',
-            'latitude' => 54.52,
-            'longitude' => -164.65,
-            'elevation' => 1654,
-            'description' => 'Westdahl is a stratovolcano in the Aleutian Islands, Alaska. Last eruption in 1992; currently dormant.',
-            'type' => 'Stratovolcano',
-            'image_url' => 'westdahl'
-        ],
-        [
-            'name' => 'White Island',
-            'country' => 'New Zealand',
-            'continent' => 'Oceania',
-            'activity' => 'Active',
-            'latitude' => -37.52,
-            'longitude' => 177.18,
-            'elevation' => 321,
-            'description' => 'Whakaari / White Island is an active stratovolcano in New Zealand. Frequent eruptions, including the deadly 2019 event.',
-            'type' => 'Stratovolcano',
-            'image_url' => 'white-island'
-        ],
-        [
-            'name' => 'Mount Wrangell',
-            'country' => 'United States',
-            'continent' => 'North America',
-            'activity' => 'Inactive',
-            'latitude' => 62.00,
-            'longitude' => -144.02,
-            'elevation' => 4317,
-            'description' => 'Mount Wrangell is a shield volcano in Alaska. Last minor eruptions occurred in the 19th century; currently dormant.',
-            'type' => 'Shield',
-            'image_url' => 'mount-wrangell'
-        ],
-        [
-            'name' => 'Wudalianchi',
-            'country' => 'China',
-            'continent' => 'Asia',
-            'activity' => 'Inactive',
-            'latitude' => 48.72,
-            'longitude' => 126.12,
-            'elevation' => 597,
-            'description' => 'A volcanic field in Heilongjiang Province, China. Last eruptions in the 18th century; currently dormant.',
-            'type' => 'Volcanic field',
-            'image_url' => 'wudalianchi'
-        ],
-        [
-            'name' => 'Mount Yake',
-            'country' => 'Japan',
-            'continent' => 'Asia',
-            'activity' => 'Active',
-            'latitude' => 36.22,
-            'longitude' => 137.59,
-            'elevation' => 2455,
-            'description' => 'Yake-dake is a stratovolcano in Nagano Prefecture, Japan. Regular minor eruptions; actively monitored.',
-            'type' => 'Stratovolcano',
-            'image_url' => 'mount-yake'
-        ],
-        [
-            'name' => 'Yali',
-            'country' => 'Greece',
-            'continent' => 'Europe',
-            'activity' => 'Inactive',
-            'latitude' => 36.67,
-            'longitude' => 27.14,
-            'elevation' => 180,
-            'description' => 'A lava dome volcano in the Dodecanese Islands, Greece. No historical eruptions; considered dormant.',
-            'type' => 'Lava dome',
-            'image_url' => 'yali'
-        ],
-        [
-            'name' => 'Yantarni',
-            'country' => 'United States',
-            'continent' => 'North America',
-            'activity' => 'Inactive',
-            'latitude' => 57.02,
-            'longitude' => -157.19,
-            'elevation' => 1345,
-            'description' => 'A stratovolcano in Alaska’s Aleutian arc. Last eruption ~1930s; currently dormant.',
-            'type' => 'Stratovolcano',
-            'image_url' => 'yantarni'
-        ],
-        [
-            'name' => 'Mount Yasur',
-            'country' => 'Vanuatu',
-            'continent' => 'Oceania',
-            'activity' => 'Active',
-            'latitude' => -19.53,
-            'longitude' => 169.44,
-            'elevation' => 361,
-            'description' => 'Yasur is one of Vanuatu’s most active volcanoes. Strombolian eruptions occur almost continuously, making it a popular tourist attraction.',
-            'type' => 'Stratovolcano',
-            'image_url' => 'mount-yasur'
-        ],
-        [
-            'name' => 'Yellowstone',
-            'country' => 'United States',
-            'continent' => 'North America',
-            'activity' => 'Inactive',
-            'latitude' => 44.43,
-            'longitude' => -110.67,
-            'elevation' => 2805,
-            'description' => 'Yellowstone Caldera is a supervolcano in Wyoming, USA. Last major eruption ~640,000 years ago; currently dormant but monitored for geothermal activity.',
-            'type' => 'Caldera',
-            'image_url' => 'yellowstone'
-        ]                  
-    ];
+            [
+                'name' => 'Semisopochnoi',
+                'country' => 'United States',
+                'continent' => 'North America',
+                'activity' => 'Active',
+                'latitude' => 51.93,
+                'longitude' => 179.58,
+                'elevation' => 1221,
+                'description' => 'A volcanic island in the western Aleutians, comprising a wide caldera and multiple cones. The current eruptive period began in early 2021 and includes ash explosions, elevated thermal signals, sulfur dioxide output.',
+                'type' => 'Caldera',
+                'image_url' => 'semisopochnoi'
+            ],
+
+            [
+                'name' => 'Sete Cidades',
+                'country' => 'Portugal',
+                'continent' => 'Europe',
+                'activity' => 'Inactive',
+                'latitude' => 37.87,
+                'longitude' => -25.78,
+                'elevation' => 856,
+                'description' => 'A stratovolcanic on São Miguel Island, Azores. It comprises lava domes, cones, and multiple collapse calderas. Its last eruptions are dated to ~1880.',
+                'type' => 'Stratovolcano',
+                'image_url' => 'sete-cidades'
+            ],
+
+            [
+                'name' => 'Mount Shasta',
+                'country' => 'United States',
+                'continent' => 'North America',
+                'activity' => 'Inactive',
+                'latitude' => 41.41,
+                'longitude' => -122.19,
+                'elevation' => 4317,
+                'description' => 'A stratovolcano in northern California (Cascade Range). Its last significant eruption is believed to have occurred ~200–300 years ago; it is monitored and considered dormant / potentially active. ',
+                'type' => 'Stratovolcano',
+                'image_url' => 'mount-shasta'
+            ],
+
+            [
+                'name' => 'Shiveluch',
+                'country' => 'Russia',
+                'continent' => 'Asia',
+                'activity' => 'Active',
+                'latitude' => 56.65,
+                'longitude' => 161.36,
+                'elevation' => 3283,
+                'description' => 'One of Kamchatka’s most active stratovolcanoes. It has had at least 60 large eruptions during the Holocene. The current eruptive period began in 1999, with repeated lava dome growth, explosions, ash plumes, dome collapses, and pyroclastic events.',
+                'type' => 'Stratovolcano',
+                'image_url' => 'shiveluch'
+            ],
+
+            [
+                'name' => 'Shikotsu',
+                'country' => 'Japan',
+                'continent' => 'Asia',
+                'activity' => 'Inactive',
+                'latitude' => 42.69,
+                'longitude' => 141.38,
+                'elevation' => 1320,
+                'description' => 'A caldera volcano in Hokkaido; contains Lake Shikotsu. Most historical eruptions are from Tarumai vent (on caldera rim). Last eruption circa 1981 (phreatic). Holocene activity includes large eruptions in 1667, 1739.',
+                'type' => 'Caldera',
+                'image_url' => 'shikotsu'
+            ],
+
+            [
+                'name' => 'Shiretoko-Iwo-zan',
+                'country' => 'Japan',
+                'continent' => 'Asia',
+                'activity' => 'Inactive',
+                'latitude' => 44.13,
+                'longitude' => 145.17,
+                'elevation' => 1563,
+                'description' => 'A stratovolcano (“Iwo-zan”) in the Shiretoko Peninsula region; high elevation, steep terrain. Activity is poorly documented; considered dormant in historical period.',
+                'type' => 'Stratovolcano',
+                'image_url' => 'shiretoko-iwo-zan'
+            ],
+
+            [
+                'name' => 'Shishaldin',
+                'country' => 'United States',
+                'continent' => 'North America',
+                'activity' => 'Active',
+                'latitude' => 54.76,
+                'longitude' => -163.97,
+                'elevation' => 2857,
+                'description' => 'A highly symmetric, remote stratovolcano on Unimak Island in the Aleutians. Very frequently active: many eruptions recorded since the 18th century; recent ash & steam emissions. Monitored via AVO.',
+                'type' => 'Stratovolcano',
+                'image_url' => 'shishaldin'
+            ],
+
+            [
+                'name' => 'Sinarka',
+                'country' => 'Russia',
+                'continent' => 'Asia',
+                'activity' => 'Inactive',
+                'latitude' => 48.88,
+                'longitude' => 154.18,
+                'elevation' => 934,
+                'description' => 'A stratovolcano in the Kuril Islands. No recent eruptions documented in modern period; considered dormant. ',
+                'type' => 'Stratovolcano',
+                'image_url' => 'sinarka'
+            ],
+
+            [
+                'name' => 'Smirnov',
+                'country' => 'Russia',
+                'continent' => 'Asia',
+                'activity' => 'Inactive',
+                'latitude' => 44.42,
+                'longitude' => 146.14,
+                'elevation' => 1189,
+                'description' => 'A stratovolcano in the Russian Far East. Historical records are scant; no known eruptions in recent centuries; considered dormant. ',
+                'type' => 'Stratovolcano',
+                'image_url' => 'smirnov'
+            ],
+
+            [
+                'name' => 'Sollipulli',
+                'country' => 'Chile',
+                'continent' => 'South America',
+                'activity' => 'Inactive',
+                'latitude' => -38.97,
+                'longitude' => -71.52,
+                'elevation' => 2282,
+                'description' => 'A caldera volcano in southern Chile, with glacier cover. Holocene eruptions, but little activity in the historic period; considered dormant. ',
+                'type' => 'Caldera',
+                'image_url' => 'sollipulli'
+            ],
+
+            [
+                'name' => 'Soputan',
+                'country' => 'Indonesia',
+                'continent' => 'Asia',
+                'activity' => 'Active',
+                'latitude' => 1.11,
+                'longitude' => 124.73,
+                'elevation' => 1784,
+                'description' => 'A stratovolcano in Sulawesi, Indonesia. Known for regular explosive eruptions; active “eruptive cycles” in recent decades. ',
+                'type' => 'Stratovolcano',
+                'image_url' => 'soputan'
+            ],
+
+            [
+                'name' => 'La Grande Soufrière',
+                'country' => 'France',
+                'continent' => 'North America',
+                'activity' => 'Active',
+                'latitude' => 16.05,
+                'longitude' => -61.67,
+                'elevation' => 1467,
+                'description' => 'A stratovolcano with an active hydrothermal system; regularly monitored. Periods of increased unrest and fumarolic / thermal activity. No large recent eruption but considered active due to continuous degassing and potential for explosive activity.',
+                'type' => 'Stratovolcano',
+                'image_url' => 'la-grande-soufriere'
+            ],
+
+            [
+                'name' => 'Soufrière Hills',
+                'country' => 'United Kingdom',
+                'continent' => 'North America',
+                'activity' => 'Active',
+                'latitude' => 16.72,
+                'longitude' => -62.18,
+                'elevation' => 915,
+                'description' => 'A complex stratovolcano with many lava domes on Montserrat. After dormancy, became strongly active from 1995 onward; last eruption in 2013. Monitoring continues due to risk.',
+                'type' => 'Stratovolcano',
+                'image_url' => 'soufriere-hills'
+            ],
+
+            [
+                'name' => 'Soufrière St. Vincent',
+                'country' => 'St. Vincent and the Grenadines',
+                'continent' => 'North America',
+                'activity' => 'Active',
+                'latitude' => 13.33,
+                'longitude' => -61.18,
+                'elevation' => 1220,
+                'description' => 'A stratovolcano on the island of St. Vincent. Known for major explosive eruptions, with the most recent one in 2021. Steep cone, hazardous to nearby populations. ',
+                'type' => 'Stratovolcano',
+                'image_url' => 'soufriere-st-vincent'
+            ],
+            
+            [
+                'name' => 'South Island',
+                'country' => 'Kenya',
+                'continent' => 'Africa',
+                'activity' => 'Inactive',
+                'latitude' => 2.63,
+                'longitude' => 36.60,
+                'elevation' => 800,
+                'description' => '“South Island” in Kenya — limited documentation; considered dormant in local records; likely a small volcanic remnant or cone.',
+                'type' => 'Stratovolcano',
+                'image_url' => 'south-island'
+            ],
+
+            [
+                'name' => 'SP Mountain',
+                'country' => 'United States',
+                'continent' => 'North America',
+                'activity' => 'Inactive',
+                'latitude' => 35.60,
+                'longitude' => -111.60,
+                'elevation' => 2141,
+                'description' => 'A cinder cone volcano (SP Mountain) in Arizona / southwestern USA; no known recent eruptions, considered dormant.',
+                'type' => 'Cinder cone',
+                'image_url' => 'sp-mountain'
+            ],
+
+            [
+                'name' => 'Spurr',
+                'country' => 'United States',
+                'continent' => 'North America',
+                'activity' => 'Active',
+                'latitude' => 61.30,
+                'longitude' => -152.25,
+                'elevation' => 3374,
+                'description' => 'A stratovolcano in the Aleutian arc, with two historical eruptions from Crater Peak (1953, 1992). Current unrest (seismic activity, ground deformation) is monitored.',
+                'type' => 'Stratovolcano',
+                'image_url' => 'mount-spurr'
+            ],
+
+            [
+                'name' => 'Srednii',
+                'country' => 'Russia',
+                'continent' => 'Asia',
+                'activity' => 'Extinct',
+                'latitude' => 47.60,
+                'longitude' => 152.92,
+                'elevation' => 36,
+                'description' => 'A seamount volcano in the Kurils. No known Holocene eruptions; considered extinct or inactive. ',
+                'type' => 'Submarine',
+                'image_url' => 'srednii'
+            ],
+
+            [
+                'name' => 'Mount Steller',
+                'country' => 'United States',
+                'continent' => 'North America',
+                'activity' => 'Extinct',
+                'latitude' => 58.40,
+                'longitude' => -154.40,
+                'elevation' => 2272,
+                'description' => 'A stratovolcano on the Alaska Peninsula. No historical eruptions recorded; often considered extinct. ',
+                'type' => 'Stratovolcano',
+                'image_url' => 'mount-steller'
+            ],
+
+            [
+                'name' => 'Stromboli',
+                'country' => 'Italy',
+                'continent' => 'Europe',
+                'activity' => 'Active',
+                'latitude' => 38.79,
+                'longitude' => 15.21,
+                'elevation' => 924,
+                'description' => 'One of the world’s most persistently active volcanoes. Stromboli exhibits continuous Strombolian (explosive) activity, with multiple vents producing regular bursts of lava bombs and ash.',
+                'type' => 'Stratovolcano',
+                'image_url' => 'stromboli'
+            ],
+
+            [
+                'name' => 'Sumaco',
+                'country' => 'Ecuador',
+                'continent' => 'South America',
+                'activity' => 'Inactive',
+                'latitude' => -0.54,
+                'longitude' => -77.63,
+                'elevation' => 3990,
+                'description' => 'A stratovolcano in Ecuador. Limited historical activity; considered dormant in modern times. ',
+                'type' => 'Stratovolcano',
+                'image_url' => 'sumaco'
+            ],
+
+            [
+                'name' => 'Mount Sumbing',
+                'country' => 'Indonesia',
+                'continent' => 'Asia',
+                'activity' => 'Inactive',
+                'latitude' => -7.38,
+                'longitude' => 110.07,
+                'elevation' => 3371,
+                'description' => 'A stratovolcano on Java, Indonesia. Last known activity is prehistoric / poorly documented; considered dormant. ',
+                'type' => 'Stratovolcano',
+                'image_url' => 'mount-sumbing'
+            ],
+
+            [
+                'name' => 'Mount Sundoro',
+                'country' => 'Indonesia',
+                'continent' => 'Asia',
+                'activity' => 'Inactive',
+                'latitude' => -7.30,
+                'longitude' => 109.99,
+                'elevation' => 3136,
+                'description' => 'A stratovolcano in Central Java, Indonesia. No recent confirmed eruptions; often categorized as dormant. ',
+                'type' => 'Stratovolcano',
+                'image_url' => 'mount-sundoro'
+            ],
+
+            [
+                'name' => 'Sunset Crater',
+                'country' => 'United States',
+                'continent' => 'North America',
+                'activity' => 'Inactive',
+                'latitude' => 35.37,
+                'longitude' => -111.50,
+                'elevation' => 2447,
+                'description' => 'A cinder cone volcanic field in northern Arizona (Sunset Craters). Last eruptions occurred ~1,000 years ago; now considered dormant. ',
+                'type' => 'Cinder cone',
+                'image_url' => 'sunset-crater'
+            ],
+
+            [
+                'name' => 'Suswa',
+                'country' => 'Kenya',
+                'continent' => 'Africa',
+                'activity' => 'Inactive',
+                'latitude' => -1.18,
+                'longitude' => 36.35,
+                'elevation' => 2356,
+                'description' => 'Mount Suswa is a shield volcano in Kenya’s Great Rift Valley, characterized by a double caldera and lava caves. No historical eruptions; considered dormant.',
+                'type' => 'Shield',
+                'image_url' => 'suswa'
+            ],
+
+            [
+                'name' => 'Suwanosejima',
+                'country' => 'Japan',
+                'continent' => 'Asia',
+                'activity' => 'Active',
+                'latitude' => 29.64,
+                'longitude' => 129.72,
+                'elevation' => 799,
+                'description' => 'Suwanosejima is one of Japan’s most active volcanoes, with frequent strombolian eruptions and ash plumes. It forms part of the Ryukyu Islands arc.',
+                'type' => 'Stratovolcano',
+                'image_url' => 'suwanosejima'
+            ],
+            [
+                'name' => 'Taal',
+                'country' => 'Philippines',
+                'continent' => 'Asia',
+                'activity' => 'Active',
+                'latitude' => 14.00,
+                'longitude' => 120.99,
+                'elevation' => 311,
+                'description' => 'Taal Volcano is a large caldera system located in Batangas, Philippines. Known for its 2020 eruption; remains one of the most active volcanoes in the country.',
+                'type' => 'Caldera',
+                'image_url' => 'taal'
+            ],
+            [
+                'name' => 'Talang',
+                'country' => 'Indonesia',
+                'continent' => 'Asia',
+                'activity' => 'Active',
+                'latitude' => -0.98,
+                'longitude' => 100.68,
+                'elevation' => 2597,
+                'description' => 'Mount Talang is a stratovolcano in West Sumatra, Indonesia. It has produced phreatic eruptions in the 21st century and is classified as active.',
+                'type' => 'Stratovolcano',
+                'image_url' => 'talang'
+            ],
+            [
+                'name' => 'Tambora',
+                'country' => 'Indonesia',
+                'continent' => 'Asia',
+                'activity' => 'Inactive',
+                'latitude' => -8.25,
+                'longitude' => 118.00,
+                'elevation' => 2850,
+                'description' => 'Mount Tambora is a stratovolcano in Sumbawa, Indonesia, famous for its 1815 eruption — the largest in recorded history. Currently shows mild fumarolic activity and is considered dormant.',
+                'type' => 'Stratovolcano',
+                'image_url' => 'tambora'
+            ],
+            [
+                'name' => 'Tanaga and Takawangha',
+                'country' => 'United States',
+                'continent' => 'North America',
+                'activity' => 'Active',
+                'latitude' => 51.89,
+                'longitude' => -178.15,
+                'elevation' => 1806,
+                'description' => 'Tanaga and Takawangha are neighboring stratovolcanoes on Tanaga Island, Alaska. Both are considered active; Tanaga erupted in 2023 with seismic unrest continuing.',
+                'type' => 'Stratovolcano',
+                'image_url' => 'tanaga-and-takawangha'
+            ],
+            [
+                'name' => 'Tangkuban Perahu',
+                'country' => 'Indonesia',
+                'continent' => 'Asia',
+                'activity' => 'Active',
+                'latitude' => -6.77,
+                'longitude' => 107.60,
+                'elevation' => 2084,
+                'description' => 'Tangkuban Parahu is a stratovolcano north of Bandung, Indonesia. It experiences minor phreatic explosions, most recently in 2019.',
+                'type' => 'Stratovolcano',
+                'image_url' => 'tangkuban-perahu'
+            ],
+            [
+                'name' => 'Tao-Rusyr Caldera',
+                'country' => 'Russia',
+                'continent' => 'Asia',
+                'activity' => 'Extinct',
+                'latitude' => 49.35,
+                'longitude' => 154.70,
+                'elevation' => 1325,
+                'description' => 'Tao-Rusyr Caldera is located on Onekotan Island in the Kuril chain. The last known eruption occurred in 1952; currently considered extinct.',
+                'type' => 'Caldera',
+                'image_url' => 'tao-rusyr-caldera'
+            ],
+            [
+                'name' => 'Tarso Voon',
+                'country' => 'Chad',
+                'continent' => 'Africa',
+                'activity' => 'Extinct',
+                'latitude' => 20.92,
+                'longitude' => 17.28,
+                'elevation' => 3100,
+                'description' => 'Tarso Voon is a volcanic massif in northern Chad’s Tibesti Mountains. No known Holocene eruptions; regarded as extinct.',
+                'type' => 'Stratovolcano',
+                'image_url' => 'tarso-voon'
+            ],
+            [
+                'name' => 'Telica',
+                'country' => 'Nicaragua',
+                'continent' => 'North America',
+                'activity' => 'Active',
+                'latitude' => 12.60,
+                'longitude' => -86.85,
+                'elevation' => 1010,
+                'description' => 'Telica is one of Nicaragua’s most active volcanoes, frequently emitting ash and gas. Part of the Maribios volcanic range.',
+                'type' => 'Stratovolcano',
+                'image_url' => 'telica'
+            ],
+
+            [
+                'name' => 'Mount Teide',
+                'country' => 'Spain',
+                'continent' => 'Europe',
+                'activity' => 'Inactive',
+                'latitude' => 28.27,
+                'longitude' => -16.64,
+                'elevation' => 3715,
+                'description' => 'Mount Teide is a stratovolcano on Tenerife in the Canary Islands. It is the highest peak in Spain and has a large caldera; last eruption occurred in 1909, currently dormant.',
+                'type' => 'Stratovolcano',
+                'image_url' => 'mount-teide'
+            ],
+
+            [
+                'name' => 'Tengger Caldera and Bromo',
+                'country' => 'Indonesia',
+                'continent' => 'Asia',
+                'activity' => 'Active',
+                'latitude' => -7.94,
+                'longitude' => 112.95,
+                'elevation' => 2329,
+                'description' => 'A volcanic complex in East Java, Indonesia, consisting of the Tengger Caldera and active Bromo cone. Bromo regularly emits ash and steam; historically very active.',
+                'type' => 'Stratovolcano',
+                'image_url' => 'tengger-caldera-and-bromo'
+            ],
+            [
+                'name' => 'Three Fingered Jack',
+                'country' => 'United States',
+                'continent' => 'North America',
+                'activity' => 'Extinct',
+                'latitude' => 44.50,
+                'longitude' => -121.80,
+                'elevation' => 2390,
+                'description' => 'An extinct stratovolcano in Oregon’s Cascade Range. Highly eroded; no Holocene eruptions.',
+                'type' => 'Stratovolcano',
+                'image_url' => 'Three Fingered Jack'
+            ],
+            [
+                'name' => 'Three Sisters',
+                'country' => 'United States',
+                'continent' => 'North America',
+                'activity' => 'Extinct',
+                'latitude' => 44.10,
+                'longitude' => -121.77,
+                'elevation' => 3100,
+                'description' => 'A trio of heavily eroded stratovolcanoes in Oregon’s Cascade Range. No Holocene eruptions; considered extinct.',
+                'type' => 'Stratovolcano',
+                'image_url' => 'three-sisters'
+            ],
+            [
+                'name' => 'Thule Islands',
+                'country' => 'United Kingdom',
+                'continent' => 'Europe',
+                'activity' => 'Inactive',
+                'latitude' => -59.45,
+                'longitude' => -27.37,
+                'elevation' => 1075,
+                'description' => 'A volcanic island group in the South Sandwich Islands. Limited eruption records; currently dormant.',
+                'type' => 'Stratovolcano',
+                'image_url' => 'thule-islands'
+            ],
+            [
+                'name' => 'Tyatya',
+                'country' => 'Russia',
+                'continent' => 'Asia',
+                'activity' => 'Inactive',
+                'latitude' => 44.35,
+                'longitude' => 146.26,
+                'elevation' => 1819,
+                'description' => 'A stratovolcano in Russia’s Far East. No recorded Holocene eruptions; considered dormant.',
+                'type' => 'Stratovolcano',
+                'image_url' => 'tyatya'
+            ],
+            [
+                'name' => 'Toba',
+                'country' => 'Indonesia',
+                'continent' => 'Asia',
+                'activity' => 'Inactive',
+                'latitude' => 2.58,
+                'longitude' => 98.83,
+                'elevation' => 2157,
+                'description' => 'Toba Caldera is a massive caldera on Sumatra, Indonesia, site of the largest known Quaternary eruption (~74,000 years ago). No recent eruptions; dormant.',
+                'type' => 'Caldera',
+                'image_url' => 'toba'
+            ],
+            [
+                'name' => 'Todoko-Ranu',
+                'country' => 'Indonesia',
+                'continent' => 'Asia',
+                'activity' => 'Inactive',
+                'latitude' => 1.25,
+                'longitude' => 127.47,
+                'elevation' => 979,
+                'description' => 'A caldera volcano on Halmahera, Indonesia. No known recent eruptions; considered dormant.',
+                'type' => 'Caldera',
+                'image_url' => 'todokoranu'
+            ],
+            [
+                'name' => 'Mount Tokachi',
+                'country' => 'Japan',
+                'continent' => 'Asia',
+                'activity' => 'Active',
+                'latitude' => 43.42,
+                'longitude' => 142.69,
+                'elevation' => 2077,
+                'description' => 'Mount Tokachi in Hokkaido is an active volcano with frequent minor eruptions, lava flows, and ash emissions monitored by JMA.',
+                'type' => 'Stratovolcano',
+                'image_url' => 'mount-tokachi'
+            ],
+            [
+                'name' => 'Tolbachik',
+                'country' => 'Russia',
+                'continent' => 'Asia',
+                'activity' => 'Active',
+                'latitude' => 55.83,
+                'longitude' => 160.33,
+                'elevation' => 3682,
+                'description' => 'Tolbachik is a large stratovolcano in Kamchatka, Russia, famous for fissure eruptions. Last major eruption 2012–2013; considered active.',
+                'type' => 'Stratovolcano',
+                'image_url' => 'tolbachik'
+            ],
+            
+            [
+                'name' => 'Tolimán',
+                'country' => 'Guatemala',
+                'continent' => 'North America',
+                'activity' => 'Inactive',
+                'latitude' => 14.61,
+                'longitude' => -91.19,
+                'elevation' => 3158,
+                'description' => 'Tolimán is a stratovolcano on the shores of Lake Atitlán, Guatemala. No recorded historical eruptions; considered dormant.',
+                'type' => 'Stratovolcano',
+                'image_url' => 'toliman'
+            ],
+
+            [
+                'name' => 'Towada',
+                'country' => 'Japan',
+                'continent' => 'Asia',
+                'activity' => 'Active',
+                'latitude' => 40.47,
+                'longitude' => 140.92,
+                'elevation' => 1159,
+                'description' => 'Towada is a caldera volcano in northern Honshu, Japan. Although the last magmatic eruption was prehistoric, it has active hydrothermal activity and minor eruptions, considered active.',
+                'type' => 'Caldera',
+                'image_url' => 'towada'
+            ],
+            [
+                'name' => "Traitor's Head",
+                'country' => 'Vanuatu',
+                'continent' => 'Australia',
+                'activity' => 'Inactive',
+                'latitude' => -18.75,
+                'longitude' => 169.23,
+                'elevation' => 1881,
+                'description' => 'A stratovolcano on Ambrym Island, Vanuatu. Known for past eruptions, but currently considered dormant.',
+                'type' => 'Stratovolcano',
+                'image_url' => 'traitors-head'
+            ],
+            [
+                'name' => 'Tri Sestry',
+                'country' => 'Russia',
+                'continent' => 'Asia',
+                'activity' => 'Extinct',
+                'latitude' => 45.93,
+                'longitude' => 149.92,
+                'elevation' => 998,
+                'description' => 'Tri Sestry is a group of eroded stratovolcanoes in Kamchatka, Russia. No Holocene eruptions; considered extinct.',
+                'type' => 'Stratovolcano',
+                'image_url' => 'tri-sestry'
+            ],
+            [
+                'name' => 'Tristan da Cunha',
+                'country' => 'United Kingdom',
+                'continent' => 'Europe',
+                'activity' => 'Inactive',
+                'latitude' => -37.09,
+                'longitude' => -12.28,
+                'elevation' => 2060,
+                'description' => 'A shield volcano forming the main island of Tristan da Cunha in the South Atlantic. No recent eruptions; considered dormant.',
+                'type' => 'Shield',
+                'image_url' => 'tristan-da-cunha'
+            ],
+            [
+                'name' => 'Mount Tsurumi',
+                'country' => 'Japan',
+                'continent' => 'Asia',
+                'activity' => 'Inactive',
+                'latitude' => 33.28,
+                'longitude' => 131.43,
+                'elevation' => 1584,
+                'description' => 'A lava dome volcano in Kyushu, Japan. No recorded historical eruptions; considered dormant.',
+                'type' => 'Lava dome',
+                'image_url' => 'mount-tsurumi'
+            ],
+            [
+                'name' => 'Tungurahua',
+                'country' => 'Ecuador',
+                'continent' => 'South America',
+                'activity' => 'Active',
+                'latitude' => -1.47,
+                'longitude' => -78.44,
+                'elevation' => 2011,
+                'description' => 'Tungurahua is an active stratovolcano in Ecuador. Frequent eruptions, ash emissions, and pyroclastic activity make it one of Ecuador’s most monitored volcanoes.',
+                'type' => 'Stratovolcano',
+                'image_url' => 'tungurahua'
+            ],
+            [
+                'name' => 'Ubehebe Craters',
+                'country' => 'United States',
+                'continent' => 'North America',
+                'activity' => 'Inactive',
+                'latitude' => 37.02,
+                'longitude' => -117.45,
+                'elevation' => 752,
+                'description' => 'A volcanic maar field in Death Valley National Park, California. Last eruption ~2,000 years ago; now considered dormant.',
+                'type' => 'Tuff ring',
+                'image_url' => 'ubehebe-craters'
+            ],
+            [
+                'name' => 'Ubinas',
+                'country' => 'Peru',
+                'continent' => 'South America',
+                'activity' => 'Active',
+                'latitude' => -16.36,
+                'longitude' => -70.90,
+                'elevation' => 5672,
+                'description' => 'Ubinas is the most active volcano in Peru. Frequent explosive eruptions, ash emissions, and lava flows. Currently monitored by INGEMMET.',
+                'type' => 'Stratovolcano',
+                'image_url' => 'ubinas'
+            ],
+            [
+                'name' => 'Udina',
+                'country' => 'Russia',
+                'continent' => 'Asia',
+                'activity' => 'Active',
+                'latitude' => 55.76,
+                'longitude' => 160.53,
+                'elevation' => 2923,
+                'description' => 'Udina is a stratovolcano in Kamchatka, Russia, part of the Eastern volcanic belt. Last major eruption occurred 2013–2014; still considered active.',
+                'type' => 'Stratovolcano',
+                'image_url' => 'udina'
+            ],
+
+            [
+                'name' => 'Ugashik and Peulik',
+                'country' => 'United States',
+                'continent' => 'North America',
+                'activity' => 'Inactive',
+                'latitude' => 57.75,
+                'longitude' => -156.37,
+                'elevation' => 1474,
+                'description' => 'A pair of stratovolcanoes in Alaska’s Aleutian arc. No recorded historical eruptions; considered dormant.',
+                'type' => 'Stratovolcano',
+                'image_url' => 'ugashik-and-peulik'
+            ],
+
+            [
+                'name' => 'Uinkaret Volcanic Field',
+                'country' => 'United States',
+                'continent' => 'North America',
+                'activity' => 'Inactive',
+                'latitude' => 36.38,
+                'longitude' => -113.13,
+                'elevation' => 1555,
+                'description' => 'A volcanic field in northwest Arizona, USA. Consists of cinder cones and lava flows; last eruption ~1,500 years ago; dormant.',
+                'type' => 'Volcanic field',
+                'image_url' => 'uinkaret-volcanic-field'
+            ],
+            [
+                'name' => 'Ulawun',
+                'country' => 'Papua New Guinea',
+                'continent' => 'Australia',
+                'activity' => 'Active',
+                'latitude' => -5.05,
+                'longitude' => 151.33,
+                'elevation' => 2334,
+                'description' => 'Ulawun is the highest and most active volcano in Papua New Guinea. Frequent explosive eruptions and lava flows are recorded.',
+                'type' => 'Stratovolcano',
+                'image_url' => 'ulawun'
+            ],
+            [
+                'name' => 'Umboi',
+                'country' => 'Papua New Guinea',
+                'continent' => 'Australia',
+                'activity' => 'Extinct',
+                'latitude' => -5.59,
+                'longitude' => 147.88,
+                'elevation' => 1548,
+                'description' => 'A complex volcano on Umboi Island. No Holocene eruptions recorded; considered extinct.',
+                'type' => 'Complex',
+                'image_url' => 'umboi'
+            ],
+            [
+                'name' => 'Undara',
+                'country' => 'Australia',
+                'continent' => 'Australia',
+                'activity' => 'Extinct',
+                'latitude' => -18.25,
+                'longitude' => 144.75,
+                'elevation' => 1020,
+                'description' => 'A shield volcano in northern Queensland, Australia. Last erupted in the Pleistocene; considered extinct. Famous for its lava tubes.',
+                'type' => 'Shield',
+                'image_url' => 'undara'
+            ],
+            [
+                'name' => 'Ungaran and Telomoyo',
+                'country' => 'Indonesia',
+                'continent' => 'Asia',
+                'activity' => 'Extinct',
+                'latitude' => -7.18,
+                'longitude' => 110.33,
+                'elevation' => 2050,
+                'description' => 'A pair of stratovolcanoes in Central Java, Indonesia. No historical eruptions; classified as extinct.',
+                'type' => 'Stratovolcano',
+                'image_url' => 'ungaran-and-telomoyo'
+            ],
+            [
+                'name' => 'Mount Unzen',
+                'country' => 'Japan',
+                'continent' => 'Asia',
+                'activity' => 'Active',
+                'latitude' => 32.76,
+                'longitude' => 130.29,
+                'elevation' => 1500,
+                'description' => 'Unzen is a complex volcano in Kyushu, Japan. Produced deadly pyroclastic flows during 1990–1995 eruptions; considered active.',
+                'type' => 'Complex',
+                'image_url' => 'mount-unzen'
+            ],
+            [
+                'name' => 'Urataman',
+                'country' => 'Russia',
+                'continent' => 'Asia',
+                'activity' => 'Extinct',
+                'latitude' => 47.12,
+                'longitude' => 152.25,
+                'elevation' => 678,
+                'description' => 'A somma volcano in Kamchatka, Russia. No historical eruptions; considered extinct.',
+                'type' => 'Somma',
+                'image_url' => 'urataman'
+            ],
+            [
+                'name' => 'Ushishur',
+                'country' => 'Russia',
+                'continent' => 'Asia',
+                'activity' => 'Inactive',
+                'latitude' => 47.52,
+                'longitude' => 152.80,
+                'elevation' => 401,
+                'description' => 'A caldera volcano in the Kuril Islands, Russia. No recent eruptions; classified as dormant.',
+                'type' => 'Caldera',
+                'image_url' => 'ushishur'
+            ],
+            [
+                'name' => 'Mount Usu',
+                'country' => 'Japan',
+                'continent' => 'Asia',
+                'activity' => 'Active',
+                'latitude' => 42.54,
+                'longitude' => 140.84,
+                'elevation' => 737,
+                'description' => 'Mount Usu is an active stratovolcano in Hokkaido, Japan. Frequent eruptions include phreatic explosions and lava flows; last erupted in 2000.',
+                'type' => 'Stratovolcano',
+                'image_url' => 'mount-usu'
+            ],
+
+            [
+                'name' => 'Uzon',
+                'country' => 'Russia',
+                'continent' => 'Asia',
+                'activity' => 'Inactive',
+                'latitude' => 54.50,
+                'longitude' => 159.97,
+                'elevation' => 1617,
+                'description' => 'Uzon is a caldera volcano in the Kamchatka Peninsula, Russia. No historical eruptions; features geothermal activity and fumaroles.',
+                'type' => 'Caldera',
+                'image_url' => 'uzon'
+            ],
+
+            [
+                'name' => 'Mount Veniaminof',
+                'country' => 'United States',
+                'continent' => 'North America',
+                'activity' => 'Active',
+                'latitude' => 56.17,
+                'longitude' => -159.38,
+                'elevation' => 2507,
+                'description' => 'Veniaminof is an active stratovolcano in Alaska. Its eruptions produce lava flows and ash emissions; monitored by AVO.',
+                'type' => 'Stratovolcano',
+                'image_url' => 'mount-veniaminof'
+            ],
+            [
+                'name' => 'Vernadskii Ridge',
+                'country' => 'Russia',
+                'continent' => 'Asia',
+                'activity' => 'Extinct',
+                'latitude' => 50.55,
+                'longitude' => 155.97,
+                'elevation' => 1183,
+                'description' => 'A cinder cone ridge in Kamchatka, Russia. No Holocene eruptions; considered extinct.',
+                'type' => 'Cinder cone',
+                'image_url' => 'vernadskii-ridge'
+            ],
+            [
+                'name' => 'Mount Vesuvius',
+                'country' => 'Italy',
+                'continent' => 'Europe',
+                'activity' => 'Inactive',
+                'latitude' => 40.82,
+                'longitude' => 14.43,
+                'elevation' => 1281,
+                'description' => 'Vesuvius is a somma-type volcano near Naples, Italy. Famous for the 79 AD eruption; currently dormant but closely monitored.',
+                'type' => 'Somma',
+                'image_url' => 'mount-vesuvius'
+            ],
+            [
+                'name' => 'Villarrica',
+                'country' => 'Chile',
+                'continent' => 'South America',
+                'activity' => 'Active',
+                'latitude' => -39.42,
+                'longitude' => -71.93,
+                'elevation' => 2847,
+                'description' => 'Villarrica is one of Chile’s most active stratovolcanoes, frequently erupting lava and ash. Part of the Southern Volcanic Zone.',
+                'type' => 'Stratovolcano',
+                'image_url' => 'villarrica'
+            ],
+            [
+                'name' => 'Vilyuchik',
+                'country' => 'Russia',
+                'continent' => 'Asia',
+                'activity' => 'Inactive',
+                'latitude' => 52.70,
+                'longitude' => 158.28,
+                'elevation' => 2173,
+                'description' => 'A stratovolcano in Kamchatka, Russia. No historical eruptions; currently dormant.',
+                'type' => 'Stratovolcano',
+                'image_url' => 'vilyuchik'
+            ],
+            [
+                'name' => 'Visoke',
+                'country' => 'Congo',
+                'continent' => 'Africa',
+                'activity' => 'Inactive',
+                'latitude' => -1.47,
+                'longitude' => 29.49,
+                'elevation' => 3711,
+                'description' => 'Visoke is a stratovolcano in the Virunga Mountains, straddling Rwanda and Congo. No recent eruptions; considered dormant.',
+                'type' => 'Stratovolcano',
+                'image_url' => 'visoke'
+            ],
+            [
+                'name' => 'Vsevidof and Recheschnoi',
+                'country' => 'United States',
+                'continent' => 'North America',
+                'activity' => 'Extinct',
+                'latitude' => 53.13,
+                'longitude' => -168.69,
+                'elevation' => 2149,
+                'description' => 'A pair of stratovolcanoes in the Aleutian Islands, Alaska. No historical eruptions; considered extinct.',
+                'type' => 'Stratovolcano',
+                'image_url' => 'vsevidof-and-recheschnoi'
+            ],
+            [
+                'name' => 'Vulcano',
+                'country' => 'Italy',
+                'continent' => 'Europe',
+                'activity' => 'Inactive',
+                'latitude' => 38.40,
+                'longitude' => 14.96,
+                'elevation' => 500,
+                'description' => 'Vulcano is a small volcanic island in the Aeolian Islands, Italy. Last major eruptions occurred in the late 19th century; currently dormant.',
+                'type' => 'Stratovolcano',
+                'image_url' => 'vulcano'
+            ],
+            [
+                'name' => 'Washington',
+                'country' => 'United States',
+                'continent' => 'North America',
+                'activity' => 'Inactive',
+                'latitude' => 44.30,
+                'longitude' => -121.80,
+                'elevation' => 2376,
+                'description' => 'Mount Washington is a shield volcano in Oregon, part of the Cascade Range. No Holocene eruptions; considered dormant.',
+                'type' => 'Shield',
+                'image_url' => 'washington'
+            ],
+
+            [
+                'name' => 'Wau an Namus',
+                'country' => 'Libya',
+                'continent' => 'Africa',
+                'activity' => 'Extinct',
+                'latitude' => 25.05,
+                'longitude' => 17.55,
+                'elevation' => 547,
+                'description' => 'A caldera volcano in Libya’s central desert. No historical eruptions; considered extinct.',
+                'type' => 'Caldera',
+                'image_url' => 'wau-an-namus'
+            ],
+            
+            [
+                'name' => 'Westdahl',
+                'country' => 'United States',
+                'continent' => 'North America',
+                'activity' => 'Inactive',
+                'latitude' => 54.52,
+                'longitude' => -164.65,
+                'elevation' => 1654,
+                'description' => 'Westdahl is a stratovolcano in the Aleutian Islands, Alaska. Last eruption in 1992; currently dormant.',
+                'type' => 'Stratovolcano',
+                'image_url' => 'westdahl'
+            ],
+            [
+                'name' => 'White Island',
+                'country' => 'New Zealand',
+                'continent' => 'Australia',
+                'activity' => 'Active',
+                'latitude' => -37.52,
+                'longitude' => 177.18,
+                'elevation' => 321,
+                'description' => 'Whakaari / White Island is an active stratovolcano in New Zealand. Frequent eruptions, including the deadly 2019 event.',
+                'type' => 'Stratovolcano',
+                'image_url' => 'white-island'
+            ],
+            [
+                'name' => 'Mount Wrangell',
+                'country' => 'United States',
+                'continent' => 'North America',
+                'activity' => 'Inactive',
+                'latitude' => 62.00,
+                'longitude' => -144.02,
+                'elevation' => 4317,
+                'description' => 'Mount Wrangell is a shield volcano in Alaska. Last minor eruptions occurred in the 19th century; currently dormant.',
+                'type' => 'Shield',
+                'image_url' => 'mount-wrangell'
+            ],
+            [
+                'name' => 'Wudalianchi',
+                'country' => 'China',
+                'continent' => 'Asia',
+                'activity' => 'Inactive',
+                'latitude' => 48.72,
+                'longitude' => 126.12,
+                'elevation' => 597,
+                'description' => 'A volcanic field in Heilongjiang Province, China. Last eruptions in the 18th century; currently dormant.',
+                'type' => 'Volcanic field',
+                'image_url' => 'wudalianchi'
+            ],
+            [
+                'name' => 'Mount Yake',
+                'country' => 'Japan',
+                'continent' => 'Asia',
+                'activity' => 'Active',
+                'latitude' => 36.22,
+                'longitude' => 137.59,
+                'elevation' => 2455,
+                'description' => 'Yake-dake is a stratovolcano in Nagano Prefecture, Japan. Regular minor eruptions; actively monitored.',
+                'type' => 'Stratovolcano',
+                'image_url' => 'mount-yake'
+            ],
+            [
+                'name' => 'Yali',
+                'country' => 'Greece',
+                'continent' => 'Europe',
+                'activity' => 'Inactive',
+                'latitude' => 36.67,
+                'longitude' => 27.14,
+                'elevation' => 180,
+                'description' => 'A lava dome volcano in the Dodecanese Islands, Greece. No historical eruptions; considered dormant.',
+                'type' => 'Lava dome',
+                'image_url' => 'yali'
+            ],
+            [
+                'name' => 'Yantarni',
+                'country' => 'United States',
+                'continent' => 'North America',
+                'activity' => 'Inactive',
+                'latitude' => 57.02,
+                'longitude' => -157.19,
+                'elevation' => 1345,
+                'description' => 'A stratovolcano in Alaska’s Aleutian arc. Last eruption ~1930s; currently dormant.',
+                'type' => 'Stratovolcano',
+                'image_url' => 'yantarni'
+            ],
+            [
+                'name' => 'Mount Yasur',
+                'country' => 'Vanuatu',
+                'continent' => 'Australia',
+                'activity' => 'Active',
+                'latitude' => -19.53,
+                'longitude' => 169.44,
+                'elevation' => 361,
+                'description' => 'Yasur is one of Vanuatu’s most active volcanoes. Strombolian eruptions occur almost continuously, making it a popular tourist attraction.',
+                'type' => 'Stratovolcano',
+                'image_url' => 'mount-yasur'
+            ],
+            [
+                'name' => 'Yellowstone',
+                'country' => 'United States',
+                'continent' => 'North America',
+                'activity' => 'Inactive',
+                'latitude' => 44.43,
+                'longitude' => -110.67,
+                'elevation' => 2805,
+                'description' => 'Yellowstone Caldera is a supervolcano in Wyoming, USA. Last major eruption ~640,000 years ago; currently dormant but monitored for geothermal activity.',
+                'type' => 'Caldera',
+                'image_url' => 'yellowstone'
+            ]                  
+        ];
             
         foreach ($volcanoes as $volcano) {
             Volcano::create($volcano);
