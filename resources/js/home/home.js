@@ -1,26 +1,12 @@
-// search functionality
+// Search functionality - Text states for hero description
 const textStates = {
     initial: "Discover extraordinary volcanic destinations or revisit your favorite eruptions",
     searching: "What volcanic wonder are you seeking today?",
     typing: "Searching...",
-    searchingName: "Showing volcanoes named",
-    searchingLocation: "Showing volcanoes in",
     noResults: "No matches found in our database",
-    resultsFound: "volcanoes found"
 };
 
-// country matches for a search term
-function getCountryMatches(searchTerm) {
-    const lowerTerm = searchTerm.toLowerCase().trim();
-    const matches = [];
-    
-    // Direct match
-    matches.push(lowerTerm);
-    
-    return matches;
-}
-
-// FChange from one text to another from the above functionality
+// Animate text change for hero description
 function animateTextChange(newText) {
     const heroDescription = document.getElementById('heroDescription');
     if (heroDescription.textContent === newText) return;
@@ -63,68 +49,6 @@ function initializeSearch() {
     
     let hasStartedTyping = false;
     let searchTimeout = null;
-    let allVolcanoes = [];
-    let isDataLoaded = false;
-    
-    function loadVolcanoData() {
-        return new Promise((resolve, reject) => {
-            const timeoutDuration = 5000;
-            
-            const timeoutPromise = new Promise((_, reject) => {
-                setTimeout(() => reject(new Error('Request timed out')), timeoutDuration);
-            });
-            
-            const fetchPromise = fetch('/api/volcanoes')
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error(`Network response was not ok: ${response.status}`);
-                    }
-                    return response.json();
-                });
-            
-            Promise.race([fetchPromise, timeoutPromise])
-                .then(data => {
-                    if (data.success) {
-                        isDataLoaded = true;
-                        resolve(data.data);
-                    } else {
-                        reject(new Error('Invalid data format'));
-                    }
-                })
-                .catch(error => {
-                    console.error('Error loading volcanoes:', error);
-                    reject(error);
-                });
-        });
-    }
-    
-    function loadVolcanoesWithRetry(maxRetries = 2) {
-        let retryCount = 0;
-        
-        function tryLoad() {
-            loadVolcanoData()
-                .then(data => {
-                    allVolcanoes = data;
-                    isDataLoaded = true;
-                    console.log('Volcano data loaded successfully');
-                })
-                .catch(error => {
-                    if (retryCount < maxRetries) {
-                        retryCount++;
-                        console.log(`Retry attempt ${retryCount}...`);
-                        setTimeout(tryLoad, 1000 * retryCount);
-                    } else {
-                        console.error('Failed to load volcano data after retries');
-                        // Continue without data - search will use API calls
-                    }
-                });
-        }
-        
-        tryLoad();
-    }
-    
-    // Start loading volcano data
-    loadVolcanoesWithRetry();
 
     // Default search status text
     const defaultSearchStatus = document.getElementById('search-status').textContent;
@@ -336,27 +260,9 @@ function initializeSearch() {
             }
         }
     }
-    
-    function isLocationSearch(term) {
-        // Common location indicators
-        const locationKeywords = ['in', 'at', 'near', 'around', 'country', 'continent'];
-        term = term.toLowerCase();
-        
-        // Check if any location keywords are in the search
-        if (locationKeywords.some(keyword => term.includes(keyword))) {
-            return true;
-        }
-        
-        // Check if it's a short term that might be a country name
-        if (term.length <= 3 && /^[a-z]+$/.test(term)) {
-            return true;
-        }
-        
-        return false;
-    }
 }
 
-// carousel with preloading
+// Carousel with preloading
 function initializeCarousel() {
     const carouselBgs = document.querySelectorAll('.carousel-bg');
     const indicators = document.querySelectorAll('.indicator');
