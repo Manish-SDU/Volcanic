@@ -14,7 +14,7 @@
     <!-- Additional JS -->
     @yield('head_js')
 </head>
-<body>
+<body class="@yield('body_class')">
     <!-- Header with Navigation -->
     <header>
         <nav class="modern-nav">
@@ -66,11 +66,27 @@
 
                 <!-- User and LogIn -->
                 <div class="nav-actions">
-                    <a href="{{ route('profile') }}" class="profile-link {{ request()->routeIs('profile') ? 'active' : '' }}">
-                        <i class="fa-solid fa-user"></i>
-                        Profile
-                    </a>
-                    <a href="{{ route('login') }}" class="login-btn {{ request()->routeIs('login') ? 'active' : '' }}">Log in</a>
+                    {{-- Show only when logged in --}}
+                    @auth
+                        <a href="{{ route('profile') }}" class="profile-link {{ request()->routeIs('profile') ? 'active' : '' }}">
+                            <i class="fa-solid fa-user"></i>
+                            Profile
+                        </a>
+
+                        <form action="{{ route('logout') }}" method="POST" style="display:inline;">
+                            @csrf
+                            <button type="submit" class="login-btn" style="border:none;">
+                                <i class="fa-solid fa-right-from-bracket"></i> Logout
+                            </button>
+                        </form>
+                    @endauth
+
+                    {{-- Show only when not logged in --}}
+                    @guest
+                        <a href="{{ route('login') }}" class="login-btn {{ request()->routeIs('login') ? 'active' : '' }}">
+                            Log in
+                        </a>
+                    @endguest
                 </div>
             </div>
         </nav>

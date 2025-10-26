@@ -40,6 +40,24 @@
    BASE STYLES
    =============== */
 /* base body styling */
+
+/* Sticky footer for auth pages */
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.auth-page main {
+  flex: 1 0 auto;
+}
+
+/* Adjust footer margin for auth pages */
+.auth-page .glass-footer,
+.auth-page .login-footer {
+  margin-top: auto;
+}
+
 body {
     font-family: var(--font-primary);
     font-size: 16px;
