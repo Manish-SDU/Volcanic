@@ -2,10 +2,12 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\VolcanoesController;
+use App\Http\Controllers\SchemaController;
 use App\Models\Volcano;
+use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\Auth\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,14 +23,23 @@ use App\Models\Volcano;
 // Home Routes
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
-// Login Routes
-Route::get('/login', [LoginController::class, 'index'])->name('login');
-Route::post('/login', [LoginController::class, 'authenticate'])->name('login.process');
+// Authentication Routes
+Route::middleware('guest')->group(function () {
+    // Registration
+    Route::get('/register', [RegisterController::class, 'show'])->name('register.show');
+    Route::post('/register', [RegisterController::class, 'store'])->name('register.store');
 
-// Registration Routes (placeholders for future implementation)
-Route::get('/register', function() {
-    return redirect()->route('login');
-})->name('register');
+    // Login
+    Route::get('/login', [LoginController::class, 'show'])->name('login');
+    Route::post('/login', [LoginController::class, 'authenticate'])->name('login.perform');
+});
+
+Route::get('/login', [LoginController::class, 'show'])->name('login');
+
+// Logout (only accessible when authenticated)
+Route::post('/logout', [LoginController::class, 'logout'])
+    ->middleware('auth')
+    ->name('logout');
 
 // Password Reset Routes (placeholders for future implementation)
 Route::get('/forgot-password', function() {
@@ -36,10 +47,14 @@ Route::get('/forgot-password', function() {
 })->name('password.request');
 
 // Profile Routes
-Route::get('/profile', [ProfileController::class, 'index'])->name('profile');
+Route::get('/profile', [ProfileController::class, 'index'])
+    ->middleware('auth')
+    ->name('profile');
 
 // My Volcanoes Routes
-Route::get('/my-volcanoes', [VolcanoesController::class, 'index'])->name('my-volcanoes');
+Route::get('/my-volcanoes', [VolcanoesController::class, 'index'])
+    ->middleware('auth')
+    ->name('my-volcanoes');
 
 // Schema route (for development only)
 Route::get('/schema', [App\Http\Controllers\SchemaController::class, 'showSchema']);
@@ -73,8 +88,9 @@ Route::get('/api/volcanoes', function() {
             'error' => $e->getMessage()
         ], 500);
     }
-});
-Route::get('/api/volcanoes/search', [App\Http\Controllers\VolcanoesController::class, 'search'])->name('api.volcanoes.search');
+})->name('api.volcanoes');
+Route::get('/api/volcanoes/search', [VolcanoesController::class, 'search'])
+    ->name('api.volcanoes.search');
 
 // Debug route
 Route::get('/debug/image-paths', function () {
@@ -92,4 +108,4 @@ Route::get('/debug/image-paths', function () {
     }
     
     return response()->json($paths);
-});
+})->name('debug.image-paths');
