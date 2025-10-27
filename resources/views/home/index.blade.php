@@ -3,7 +3,7 @@
 @section('title', 'Home')
 
 @section('additional_css')
-    @vite(['resources/css/home/volcano-animation.css', 'resources/css/home/volcano-map.css'])
+    @vite(['resources/css/home/volcano-animation.css', 'resources/css/home/volcano-map.css', 'resources/js/home/volcano-buttons.js'])
     <!-- Leaflet CSS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
         integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
