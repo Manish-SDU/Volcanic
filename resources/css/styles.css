@@ -1862,11 +1862,38 @@ form .login-data input {
     border: 2px solid silver;
 }
 
+.password-field {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.password-field input {
+    flex: 1;
+    padding-right: 2.75rem;
+}
+.password-toggle {
+    position: absolute;
+    right: .5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: .25rem;
+    color: #666;
+}
+.password-toggle:hover { color: #111; }
+
+.password-toggle:focus {
+    outline: none;
+    box-shadow: none;
+}
+
 form .forgot-password {
     margin-top: 20px;
     display: flex;
-    justify-content: center
-    ;
+    justify-content: center;
     align-self: start;
 }
 
