@@ -16,10 +16,12 @@ class DatabaseSeeder extends Seeder
         User::create([
             'name'          => 'Mario',
             'surname'       => 'Rossi',
-            'username'      => 'MarioRossi',
+            'username'      => 'MaRoss777',
             'date_of_birth' => '2000-01-01',
             'where_from'    => 'Italy',
-            'bio'           => 'Volcano enthusiast.',
+            'bio'           => 'Born between a cup of espresso and a plate of carbonara. 🍝☕
+                                I rate volcanoes the way sommeliers rate wine — by aroma, heat, and aftertaste.
+                                If it rumbles, I’m probably already there with my moka pot. 🌋🇮🇹',
             'password'      => Hash::make('password123'), 
         ]);
             

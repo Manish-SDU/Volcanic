@@ -1452,10 +1452,11 @@ body {
 
 /* Bio */
 .profile-bio {
-  font-size: 0.9rem;
-  color: var(--text-secondary);
-  font-style: italic;
-  margin-top: 0.2rem;
+  padding: 1rem 1.25rem;
+  margin: 0.5rem 0 1.5rem 0;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.05);
+  line-height: 1.6;
 }
 
 /* Edit button */

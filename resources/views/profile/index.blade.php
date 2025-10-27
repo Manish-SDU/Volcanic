@@ -15,45 +15,63 @@
       <br>
       <!-- Header: avatar + identity + action -->
       <header class="profile-header">
-        
         <div class="profile-ident">
-          <img id="userPhoto" class="profile-avatar" alt="User photo" src="{{ asset('images/users/default1.jpg') }}"/>
-          <div id="userName" class="profile-name">User Name</div>
-          <div id="userHandle" class="profile-handle">@Marcy</div>
+          {{-- Avatar: using a default image for now (since pfp is not stored) --}}
+          <img id="userPhoto" class="profile-avatar" alt="User photo"
+               src="{{ asset('images/users/default1.jpg') }}"/>
+
+          <div id="userHandle" class="profile-handle">
+            {{ $user->username }}
+          </div>
         </div>
 
-        <!-- Edit Button -->
-        <button class="edit-btn">✏️ Edit</button>
+        <!-- Edit Button (route to be implemented) -->
+        <a class="edit-btn" href="{{ route('profile') }}#edit" aria-label="Edit profile">✏️ Edit</a>
       </header>
       
       <!-- Bio section -->
-      <div id="userBio" class="profile-bio">Explorer of volcanoes and collector of unforgettable sunsets 🌋🌅</div>
+      <div id="userBio" class="profile-bio">
+        {{ $user->bio ?? 'No bio yet.' }}
+      </div>
       <br>
 
       <!-- Basic info -->
       <dl class="profile-dl">
         <dt>Name</dt>
-        <dd id="Name">Marcus Hermansen</dd>
+        <dd id="Name">
+          {{ $user->name }}{{ $user->surname ? ' ' . $user->surname : '' }}
+        </dd>
 
         <dt>Member since</dt>
-        <dd id="memberSince">03/04/2023</dd>
+        <dd id="memberSince">
+          {{ optional($user->created_at)->format('d/m/Y') ?? '—' }}
+        </dd>
 
         <dt>Where from</dt>
-        <dd id="memberSince">Aalborg (DK)</dd>
-        
+        <dd id="whereFrom">
+          {{ $user->where_from ?? '—' }}
+        </dd>
+
+        @if($user->date_of_birth)
+        <dt>Date of birth</dt>
+        <dd id="dob">
+          {{ \Carbon\Carbon::parse($user->date_of_birth)->format('d/m/Y') }}
+        </dd>
+        @endif
       </dl>
-      <br>
-      <br>
+      <br><br>
+
+      {{-- Progress mock (to be implemented yet) --}}
       <div class="progress-container">
         <label class="progresslabel" for="milestone">🎯 Progress until next Visit Milestone:</label>
-          <div class="progress-wrapper">
-            <progress class="progressbar" id="milestone" value="1" max="5"></progress>
-            <span class="progress-text">1/5</span>
-          </div>
+        <div class="progress-wrapper">
+          <progress class="progressbar" id="milestone" value="1" max="5"></progress>
+          <span class="progress-text">1/5</span>
+        </div>
       </div>
     </section>
 
-    <!-- Achievement Panel -->
+    <!-- Achievement Panel (still static, to be implemented) -->
     <section class="panel" aria-labelledby="achievementsTitle">
       <h2 id="achievementsTitle" class="achievementTitle">Achievements</h2>
 
@@ -70,6 +88,7 @@
           <p class="long-desc">Visit an extinct volcano.</p>
         </li>
       </ul>
+
       <button id="toggleAchievements" class="togglebutton" aria-expanded="false" aria-controls="achievementsList">
         Show All Achievements
       </button>
@@ -117,7 +136,6 @@
           <p class="long-desc">Visit a volcano along the Pacific Ring of Fire.</p>
         </li>
       </ul>
-
     </section>
   </main>
 @endsection
