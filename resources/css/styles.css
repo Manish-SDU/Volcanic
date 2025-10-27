@@ -1464,16 +1464,25 @@ body {
   position: absolute;
   right: 0.70rem;
   top: -5.7rem;
-  padding: 0.5rem 1rem;
-  border: none;
-  background-color: #D96F32;
+  background: var(--primary-color);
   color: white;
+  padding: 0.45rem 1rem; /* smaller padding */
   border-radius: 20px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem; /* slightly smaller text */
+  transition: all 0.3s ease;
+  border: none;
   cursor: pointer;
-  font-size: 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
 }
+
 .edit-btn:hover {
-  background-color: #C75D2C;
+  background: var(--primary-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 3px 10px rgba(217, 111, 50, 0.25);
 }
 
 /* Basic info list */
