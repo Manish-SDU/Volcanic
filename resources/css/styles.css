@@ -1984,32 +1984,6 @@ form .signup-link a:hover {
     margin-bottom: 3rem;
 }
 
-.myv-panel p {
-    font-size: 1.375rem;
-    color: var(--text-primary);
-    max-width: 700px;
-    margin: 0 auto 1rem;
-    line-height: 1.6;
-    font-weight: 500;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
-}
-
-
-.myv-panel a {
-    display: inline-block;
-    padding: 0.5rem 1.25rem;
-    background: var(--primary-color);
-    color: white;
-    text-decoration: none;
-    border-radius: 0.75rem;
-    font-weight: 600;
-    transition: background 0.2s ease;
-}
-
-.myv-panel a:hover {
-    background: var(--primary-hover);
-}
-
 /* arrow button */
 .next-btn {
     position: absolute;
@@ -2098,6 +2072,133 @@ form .signup-link a:hover {
     opacity: 1;
     pointer-events: auto;
     transform: translateY(0);
+}
+
+/* Add to your existing CSS */
+.myv-panel .volcano-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 300px;
+}
+
+.myv-panel .image-container {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    background: #f5f5f5;
+    position: relative;
+}
+
+.myv-panel .volcano-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary-color);
+}
+
+.myv-panel .volcano-thumb {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.myv-panel .card-content {
+    padding: 1rem;
+}
+
+.myv-panel .card-content h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.2rem;
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+.myv-panel .card-content p {
+    margin: 0;
+    color: var(--text-secondary);
+    font-size: 1rem;
+}
+
+.myv-panel .card-content .country {
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.myv-panel .remove-btn {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.myv-panel .remove-btn:hover {
+    background: var(--primary-hover);
+}
+
+/* Center volcano cards in panels */
+.myv-panel .volcano-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 300px;
+    padding: 2rem;
+}
+
+.myv-panel .volcanoes-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    justify-content: center;
+    width: 100%;
+    max-width: 1000px;
+}
+
+/* Center empty state content */
+.myv-panel .empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    text-align: center;
+    padding: 2rem;
+    margin: 0;
+    width: 100%;
+    max-width: 400px;
+}
+
+.myv-panel .empty-state p {
+    font-size: 1.375rem;
+    color: var(--text-primary);
+    max-width: 700px;
+    margin: 0 auto 1rem;
+    line-height: 1.6;
+    font-weight: 500;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+.myv-panel .empty-state a {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background: var(--primary-color);
+    color: white;
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.myv-panel .empty-state a:hover {
+    background: var(--primary-hover);
+    transform: translateY(-2px);
 }
 
    /* =========================
