@@ -5,6 +5,8 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\VolcanoesController;
 use App\Http\Controllers\SchemaController;
+use App\Http\Controllers\Admin\DashboardController as AdminDashboardController;
+use App\Http\Middleware\IsAdmin;
 use App\Models\Volcano;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\LoginController;
@@ -50,6 +52,11 @@ Route::get('/forgot-password', function() {
 Route::get('/profile', [ProfileController::class, 'index'])
     ->middleware('auth')
     ->name('profile');
+
+// Admin Dashboard (only for admins)
+Route::get('/admin/dashboard', [AdminDashboardController::class, 'index'])
+    ->middleware(['auth', IsAdmin::class])
+    ->name('admin.dashboard');
 
 // My Volcanoes Routes
 Route::get('/my-volcanoes', [VolcanoesController::class, 'index'])

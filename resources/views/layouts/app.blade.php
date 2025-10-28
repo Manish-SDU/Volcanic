@@ -63,6 +63,14 @@
                             </svg>
                             My Volcanoes
                         </a>
+
+                        {{-- Control Dashboard (only for admins) --}}
+                        @if(Auth::user()->is_admin)
+                            <a href="{{ route('admin.dashboard') }}" class="nav-link {{ request()->routeIs('admin.dashboard') ? 'active' : '' }}">
+                                <i class="fa-solid fa-crown"></i>
+                                Control Dashboard
+                            </a>
+                        @endif
                     @endauth
                 </div>
 
@@ -86,7 +94,7 @@
                     {{-- Show only when not logged in --}}
                     @guest
                         <a href="{{ route('login') }}" class="login-btn {{ request()->routeIs('login') ? 'active' : '' }}">
-                            Log in
+                            <i class="fa-solid fa-right-to-bracket"></i> Log in
                         </a>
                     @endguest
                 </div>

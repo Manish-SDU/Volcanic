@@ -25,6 +25,7 @@ class User extends Authenticatable
         'where_from',
         'bio',
         'password',
+        'is_admin', // Aded the admin user
     ];
 
     /**

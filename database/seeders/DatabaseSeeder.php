@@ -13,16 +13,27 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
+        // Adding the admin features, same as the user bbelow but check if admin role
+        User::create([
+            'name'          => 'Admin',
+            'surname'       => 'User',
+            'username'      => 'admin',
+            'date_of_birth' => '2005-04-27',
+            'where_from'    => 'VolcanoLandia',
+            'bio'           => 'Im the bossy boss 🌋',
+            'password'      => Hash::make('admin123'), 
+            'is_admin'      => true,
+        ]);
+
         User::create([
             'name'          => 'Mario',
             'surname'       => 'Rossi',
             'username'      => 'MaRoss777',
             'date_of_birth' => '2000-01-01',
             'where_from'    => 'Italy',
-            'bio'           => 'Born between a cup of espresso and a plate of carbonara. 🍝☕
-                                I rate volcanoes the way sommeliers rate wine — by aroma, heat, and aftertaste.
-                                If it rumbles, I’m probably already there with my moka pot. 🌋🇮🇹',
-            'password'      => Hash::make('password123'), 
+            'bio'           => 'I rate volcanoes the way sommeliers rate wine. 🌋🇮🇹',
+            'password'      => Hash::make('password123'),
+            'is_admin'      => false, // No admin role for regular user check
         ]);
             
         // Run the volcano seeder
