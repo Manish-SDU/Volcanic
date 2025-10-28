@@ -4,6 +4,10 @@
 
 @section('body_class', 'auth-page')
 
+@section('head_js')
+    @vite('resources/js/login/login.js')
+@endsection
+
 @section('content')
     <!-- Log In -->
     <main class="login-container">
@@ -67,7 +71,6 @@
                         </button>
                     </div>
                 </div>
-
                 <div class="forgot-password">
                     <a href="{{ route('password.request') }}" class="forgot-link">
                         <i class="fas fa-question-circle"></i>

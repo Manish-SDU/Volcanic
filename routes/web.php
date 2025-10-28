@@ -10,6 +10,7 @@ use App\Http\Middleware\IsAdmin;
 use App\Models\Volcano;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\LoginController;
+use Illuminate\Http\Request;
 
 /*
 |--------------------------------------------------------------------------
@@ -98,6 +99,17 @@ Route::get('/api/volcanoes', function() {
 })->name('api.volcanoes');
 Route::get('/api/volcanoes/search', [VolcanoesController::class, 'search'])
     ->name('api.volcanoes.search');
+
+//Visited/WishList
+Route::get('/api/volcanoes/lists', function (Request $request) {
+    $visited = array_filter(array_map('intval', explode(',', $request->query('visited', ''))));
+    $wishlist = array_filter(array_map('intval', explode(',', $request->query('wishlist', ''))));
+
+    return response()->json([
+        'visited'  => $visited  ? Volcano::whereIn('id', $visited)->get()  : [],
+        'wishlist' => $wishlist ? Volcano::whereIn('id', $wishlist)->get() : [],
+    ]);
+});   
 
 // Debug route
 Route::get('/debug/image-paths', function () {

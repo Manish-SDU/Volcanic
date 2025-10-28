@@ -3,7 +3,7 @@
 @section('title', 'My Volcanoes')
 
 @section('head_js')
-    @vite(['resources/js/my-volcanoes/panels.js', 'resources/js/my-volcanoes/number_increment.js'])
+    @vite(['resources/js/my-volcanoes/panels.js', 'resources/js/my-volcanoes/number_increment.js', 'resources/js/my-volcanoes/render.js'])
 @endsection
 
 @section('content')
@@ -41,23 +41,46 @@
     </section>
 
     <!-- Visited Volcanoes -->
+     <!-- Template for volcano cards -->
+    <template id="volcano-card-template">
+        <div class="volcano-card">
+            <div class="image-container">
+                <img src="" alt="" class="volcano-thumb">
+            </div>
+            <div class="card-content">
+                <h3></h3>
+                <p class="country"></p>
+                <button class="remove-btn" data-type="" data-id="">Remove</button>
+            </div>
+        </div>
+    </template>
+
     <!-- panels -->
+    <!-- Visited Volcanoes -->
     <section id="visited" class="myv-panel">
         <h2>Visited Volcanoes</h2>
-        <p>No volcanoes visited yet. Start your volcanic adventure by exploring and marking volcanoes as visited on the home page.</p>
-        <a href="{{ route('home') }}">Explore Volcanoes</a>
+        <div class="volcano-grid">
+            <div class="empty-state" style="display: none">
+                <p>No volcanoes visited yet</p>
+                <a href="{{ route('home') }}">Explore Volcanoes</a>
+            </div>
+            <div class="volcanoes-container"></div>
+        </div>
 
-        <!-- arrow button -->
         <button class="next-btn" onclick="nextPanel()">→</button>
         <div class="next-tooltip tooltip">Wish list</div>
     </section>
 
     <section id="wish" class="myv-panel" style="display:none">
         <h2>Wish to Visit</h2>
-        <p>Add volcanoes you'd like to visit in the future.</p>
-        <a href="{{ route('home') }}">Explore Volcanoes</a>
+        <div class="volcano-grid">
+            <div class="empty-state" style="display: none">
+                <p>Your wishlist is empty</p>
+                <a href="{{ route('home') }}">Explore Volcanoes</a>
+            </div>
+            <div class="volcanoes-container"></div>
+        </div>
 
-        <!-- arrow button (loops back to visited) -->
         <button class="prev-btn" onclick="nextPanel()">←</button>
         <div class="prev-tooltip tooltip">Visited list</div>
     </section>
