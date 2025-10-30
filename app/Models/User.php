@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class User extends Authenticatable
 {
@@ -26,7 +27,7 @@ class User extends Authenticatable
         'where_from',
         'bio',
         'password',
-        'is_admin', // Aded the admin user
+        'is_admin', // Added the admin user
     ];
 
     /**
@@ -42,5 +43,12 @@ class User extends Authenticatable
     public function userVolcanoes(): HasMany
     {
         return $this->hasMany(UserVolcano::class);
+    }
+
+    //Many-to-Many relationship between achievements and users
+    public function achievements(): BelongsToMany
+    {
+        return $this->belongsToMany(Achievement::class)
+                    ->withTimestamps();
     }
 }

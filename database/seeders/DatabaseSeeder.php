@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use App\Models\User;
 use App\Models\UserVolcano;
 use App\Models\Volcano;
+use App\Models\Achievement;
 use Illuminate\Support\Facades\Hash; 
 use Illuminate\Database\Seeder;
 
@@ -38,9 +39,10 @@ class DatabaseSeeder extends Seeder
             'is_admin'      => false, // No admin role for regular user check
         ]);
             
-        // Run the volcano seeder
+        // Run the volcano and achievements seeders
         $this->call([
             VolcanoesTableSeeder::class,
+            AchievementSeeder::class,
         ]);
     }
 }
