@@ -26,7 +26,7 @@ class VolcanoesTableSeeder extends Seeder
     public function run(): void
     {
         // Clear existing volcanoes
-        DB::table('volcanoes')->truncate();
+        //DB::table('volcanoes')->truncate();
         
         // ⚠️ Remember, to refresh the data you must: "php artisan migrate:fresh --seed"
 

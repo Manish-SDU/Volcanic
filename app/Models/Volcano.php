@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Volcano extends Model
 {
@@ -71,5 +72,36 @@ class Volcano extends Model
         
         // If no image is found, return the placeholder
         return asset('images/volcanoes/placeholder.png');
+    }
+
+    public function userVolcanoes(): HasMany
+    {
+        return $this->hasMany(UserVolcano::class, 'volcanoes_id');
+    }
+
+    public function isVisitedBy($user)
+    {
+        // If no user is logged in, return false
+        if (!$user) {
+            return false;
+        }
+        
+        return $this->userVolcanoes()
+            ->where('user_id', $user->id)
+            ->where('status', 'visited')
+            ->exists();
+    }
+
+    public function isWishlistedBy($user)
+    {
+        // If no user is logged in, return false
+        if (!$user) {
+            return false;
+        }
+        
+        return $this->userVolcanoes()
+            ->where('user_id', $user->id)
+            ->where('status', 'wishlist')
+            ->exists();
     }
 }

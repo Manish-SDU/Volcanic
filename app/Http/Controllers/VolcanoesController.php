@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Volcano;
 use App\Support\CountryAcronymMapper;
 use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Auth;
 
 class VolcanoesController extends Controller
 {
@@ -16,7 +17,21 @@ class VolcanoesController extends Controller
      */
     public function index()
     {
-        return view('my-volcanoes.index');
+        $user = Auth::user();
+    
+        // Get user's volcanoes grouped by status
+        $userVolcanoes = \App\Models\UserVolcano::where('user_id', $user->id)
+            ->with('volcano')
+            ->get()
+            ->groupBy('status');
+        
+        $visited = $userVolcanoes->get('visited', collect());
+        $wishlist = $userVolcanoes->get('wishlist', collect());
+
+        return view('my-volcanoes.index', [
+            'visited' => $visited,
+            'wishlist' => $wishlist,
+        ]);
     }
 
     /**

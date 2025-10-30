@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\VolcanoesController;
+use App\Http\Controllers\UserVolcanoController;
 use App\Http\Controllers\SchemaController;
 use App\Http\Controllers\Admin\DashboardController as AdminDashboardController;
 use App\Http\Middleware\IsAdmin;
@@ -101,15 +102,16 @@ Route::get('/api/volcanoes/search', [VolcanoesController::class, 'search'])
     ->name('api.volcanoes.search');
 
 //Visited/WishList
-Route::get('/api/volcanoes/lists', function (Request $request) {
-    $visited = array_filter(array_map('intval', explode(',', $request->query('visited', ''))));
-    $wishlist = array_filter(array_map('intval', explode(',', $request->query('wishlist', ''))));
+Route::middleware(['auth'])->group(function () {
+    Route::post('/user/volcanoes/{id}/{status}', [UserVolcanoController::class, 'toggleStatus']);
+    Route::get('/user/volcanoes/lists', [UserVolcanoController::class, 'getLists']);
+    Route::get('/user/volcanoes/{id}/status', [UserVolcanoController::class, 'checkStatus']);
+});
 
-    return response()->json([
-        'visited'  => $visited  ? Volcano::whereIn('id', $visited)->get()  : [],
-        'wishlist' => $wishlist ? Volcano::whereIn('id', $wishlist)->get() : [],
-    ]);
-});   
+Route::middleware(['auth'])->group(function () {
+    Route::post('/user/volcanoes/{id}/{status}', [UserVolcanoController::class, 'toggleStatus'])
+         ->name('user.volcanoes.toggle');
+});
 
 // Debug route
 Route::get('/debug/image-paths', function () {

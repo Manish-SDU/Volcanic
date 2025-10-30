@@ -3,6 +3,8 @@
 namespace Database\Seeders;
 
 use App\Models\User;
+use App\Models\UserVolcano;
+use App\Models\Volcano;
 use Illuminate\Support\Facades\Hash; 
 use Illuminate\Database\Seeder;
 
