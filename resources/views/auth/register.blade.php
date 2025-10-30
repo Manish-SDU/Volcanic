@@ -40,7 +40,7 @@
                     <div class="login-data form-col">
                         <label for="name">
                             <i class="fas fa-user-circle"></i>
-                            Full Name <span class="required">*</span>
+                            First Name <span class="required">*</span>
                         </label>
                         <input 
                             type="text" 

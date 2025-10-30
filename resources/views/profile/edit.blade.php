@@ -44,7 +44,7 @@
                     <div class="login-data form-col">
                         <label for="name">
                             <i class="fas fa-user-circle"></i>
-                            Full Name <span class="required">*</span>
+                            First Name <span class="required">*</span>
                         </label>
                         <input 
                             type="text" 
@@ -100,7 +100,7 @@
                 </div>
 
                 <div class="form-row">
-                    <div class="login-data">
+                    <div class="login-data form-col">
                         <label for="date_of_birth">
                             <i class="fas fa-birthday-cake"></i>
                             Date of Birth
@@ -124,7 +124,7 @@
                             id="where_from" 
                             name="where_from" 
                             value="{{ old('where_from', $user->where_from) }}"
-                            placeholder="e.g. Parma, Italy"
+                            placeholder="e.g. Milan, Italy"
                             autocomplete="country-name"
                             class="form-input"
                         >

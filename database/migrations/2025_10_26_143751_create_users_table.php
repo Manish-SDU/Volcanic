@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('where_from', 100)->nullable(); 
             $table->text('bio')->nullable();
             $table->string('password'); 
+            $table->boolean('is_admin')->default(false); 
 
             $table->rememberToken();
             $table->timestamps();
