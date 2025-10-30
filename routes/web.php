@@ -55,6 +55,15 @@ Route::get('/profile', [ProfileController::class, 'index'])
     ->middleware('auth')
     ->name('profile');
 
+// Edit Profile Routes
+Route::get('/profile/edit', [ProfileController::class, 'edit'])
+    ->middleware('auth')
+    ->name('profile.edit');
+
+Route::put('/profile', [ProfileController::class, 'update'])
+    ->middleware('auth')
+    ->name('profile.update');
+
 // Admin Dashboard (only for admins)
 Route::get('/admin/dashboard', [AdminDashboardController::class, 'index'])
     ->middleware(['auth', IsAdmin::class])

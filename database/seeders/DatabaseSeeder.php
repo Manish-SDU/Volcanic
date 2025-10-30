@@ -30,11 +30,11 @@ class DatabaseSeeder extends Seeder
         User::create([
             'name'          => 'Mario',
             'surname'       => 'Rossi',
-            'username'      => 'MaRoss777',
+            'username'      => 'MarioR',
             'date_of_birth' => '2000-01-01',
             'where_from'    => 'Italy',
             'bio'           => 'I rate volcanoes the way sommeliers rate wine. 🌋🇮🇹',
-            'password'      => Hash::make('password123'),
+            'password'      => Hash::make('user123'),
             'is_admin'      => false, // No admin role for regular user check
         ]);
             

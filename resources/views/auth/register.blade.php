@@ -30,6 +30,11 @@
 
             <form action="{{ route('register.store') }}" method="POST" novalidate class="register-form">
                 @csrf
+                
+                {{-- Personal Information --}}
+                <div class="form-divider">
+                    <span>Personal Information</span>
+                </div>
 
                 <div class="form-row">
                     <div class="login-data form-col">
@@ -64,6 +69,11 @@
                     </div>
                 </div>
 
+                {{-- Account Details --}}
+                <div class="form-divider">
+                    <span>Account Details</span>
+                </div>
+
                 <div class="login-data">
                     <label for="username">
                         <i class="fas fa-at"></i>
@@ -79,6 +89,7 @@
                         placeholder="your_username"
                         class="form-input"
                     >
+                    <small class="hint">The username must be unique.</small>
                 </div>
 
                 <div class="form-row">
@@ -126,6 +137,7 @@
                         placeholder="Write about your passion for volcanoes here!"
                         class="form-input textarea-input"
                     >{{ old('bio') }}</textarea>
+                    <small class="hint" id="bioCount">Max 1000 characters.</small>
                 </div>
 
                 <div class="form-divider">

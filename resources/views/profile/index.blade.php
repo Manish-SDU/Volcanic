@@ -25,8 +25,8 @@
           </div>
         </div>
 
-        <!-- Edit Button (route to be implemented) -->
-        <a class="edit-btn" href="{{ route('profile') }}#edit" aria-label="Edit profile">
+        <!-- Edit Button -->
+        <a class="edit-btn" href="{{ route('profile.edit') }}" aria-label="Edit profile">
           <i class="fa-solid fa-pen"></i> Edit
         </a>
       </header>
