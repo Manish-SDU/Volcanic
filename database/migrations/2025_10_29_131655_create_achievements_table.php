@@ -6,9 +6,7 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     */
+
     public function up(): void
     {
         Schema::create('achievements', function (Blueprint $table) {
@@ -19,13 +17,11 @@ return new class extends Migration
             $table->json('dimensions')->nullable();
             $table->enum('aggregator', ['count', 'count_distinct']);
             $table->integer('threshold')->default(1);
+            $table->string('image_path')->nullable();
             $table->timestamps();
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
     public function down(): void
     {
         Schema::dropIfExists('achievements');
