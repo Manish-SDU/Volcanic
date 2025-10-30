@@ -923,7 +923,7 @@ body {
 
 .action-btn {
     flex: 1;
-    padding: 12px 16px;
+    padding: 14px 20px;
     border-radius: var(--border-radius);
     border: 2px solid var(--border-color);
     background: #ffffff;
@@ -942,6 +942,11 @@ body {
 }
 
 .action-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.action-btn:hover:not([disabled]):not(.disabled) {
     transform: translateY(-2px);
     box-shadow: var(--shadow-md);
 }
@@ -970,6 +975,48 @@ body {
 .wishlist-btn:hover {
     background: var(--primary-color);
     color: white;
+}
+
+/* Disable wishlist button when visited is active */
+.volcano-actions:has(.visited-btn.active) .wishlist-btn:not(.active) {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+    background: #f5f5f5;
+    border-color: #ddd;
+    color: #999;
+}
+
+/* Disable visited button when wishlist is active */
+.volcano-actions:has(.wishlist-btn.active) .visited-btn:not(.active) {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+    background: #f5f5f5;
+    border-color: #ddd;
+    color: #999;
+}
+
+/* Generic disabled state */
+.action-btn[disabled],
+.action-btn.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+    background: #f5f5f5;
+    border-color: #ddd;
+    color: #999;
+}
+
+/* Update hover states for disabled buttons */
+.visited-btn[disabled]:hover,
+.wishlist-btn[disabled]:hover,
+.visited-btn.disabled:hover,
+.wishlist-btn.disabled:hover {
+    background: #f5f5f5;
+    color: #999;
+    transform: none;
+    box-shadow: none;
 }
 
 .wishlist-btn.active {
@@ -2447,18 +2494,22 @@ form .signup-link span {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center;
 }
 
 .myv-panel .card-content {
-    padding: 1rem;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    flex: 1;
 }
 
 .myv-panel .card-content h3 {
-    margin: 0 0 0.5rem 0;
-    font-size: 1.2rem;
+    margin: 0;
+    font-size: 1.25rem;
     color: var(--text-primary);
     font-weight: 600;
+    font-family: var(--font-heading);
 }
 
 .myv-panel .card-content p {
@@ -2469,7 +2520,15 @@ form .signup-link span {
 
 .myv-panel .card-content .country {
     color: #666;
-    margin-bottom: 1rem;
+    margin: 0;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.myv-panel .card-content .country i {
+    color: var(--primary-color);
 }
 
 .myv-panel .remove-btn {
@@ -2489,36 +2548,40 @@ form .signup-link span {
 
 /* Center volcano cards in panels */
 .myv-panel .volcano-grid {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 300px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
     padding: 2rem;
+    min-height: 400px;
 }
 
 .myv-panel .volcanoes-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    padding: 2rem;
-    justify-content: center;
-    width: 100%;
-    max-width: 1000px;
+    display: contents;
 }
 
 /* Center empty state content */
+
+.myv-panel .volcano-grid:has(.empty-state) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+}
+
 .myv-panel .empty-state {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 1rem;
-    text-align: center;
-    padding: 2rem;
-    margin: 0;
+    gap: 2rem;
+    padding: 4rem 3rem;
+    background: linear-gradient(135deg, #f7fafc 0%, #fff5f5 100%);
+    border: 2px dashed var(--border-color);
+    border-radius: 16px;
     width: 100%;
-    max-width: 400px;
+    max-width: 600px;
+    text-align: center;
+    transition: all 0.3s ease;
 }
 
 .myv-panel .empty-state p {

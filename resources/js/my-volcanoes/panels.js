@@ -2,15 +2,27 @@ const panels = ["visited", "wish"];
 let currentIndex = 0;
 
 function nextPanel() {
-    // hide current
+    // Hide current
     document.getElementById(panels[currentIndex]).style.display = "none";
 
-    // move to next (loop back if at end)
+    // Move to next
     currentIndex = (currentIndex + 1) % panels.length;
 
-    // show next
+    // Show next
     document.getElementById(panels[currentIndex]).style.display = "block";
 }
 
-// expose to global so inline onclick works with Vite/bundled modules
+function prevPanel() {
+    // Hide current
+    document.getElementById(panels[currentIndex]).style.display = "none";
+
+    // Move to previous
+    currentIndex = (currentIndex - 1 + panels.length) % panels.length;
+
+    // Show previous
+    document.getElementById(panels[currentIndex]).style.display = "block";
+}
+
+// Expose to global so onclick works
 window.nextPanel = nextPanel;
+window.prevPanel = prevPanel;

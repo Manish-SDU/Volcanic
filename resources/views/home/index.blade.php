@@ -3,7 +3,7 @@
 @section('title', 'Home')
 
 @section('additional_css')
-    @vite(['resources/css/home/volcano-animation.css', 'resources/css/home/volcano-map.css', 'resources/js/home/volcano-buttons.js'])
+    @vite(['resources/css/home/volcano-animation.css', 'resources/css/home/volcano-map.css'])
     <!-- Leaflet CSS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
         integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
@@ -159,16 +159,31 @@
                             </div>
                         </div>
                         
-                                                <div class="volcano-actions">
-                            <button class="action-btn visited-btn" data-volcano="{{ $volcano->id }}">
-                                <i class="fas fa-check"></i>
-                                <span>Visited</span>
-                            </button>
-                            <button class="action-btn wishlist-btn" data-volcano="{{ $volcano->id }}">
-                                <i class="fas fa-heart"></i>
-                                <span>Wishlist</span>
-                            </button>
-                        </div>
+                        <!-- Action Buttons -->
+                        @auth
+                            <div class="volcano-actions">
+                                <form action="{{ route('user.volcanoes.toggle', ['id' => $volcano->id, 'status' => 'visited']) }}" 
+                                    method="POST" class="inline">
+                                    @csrf
+                                    <button type="submit" 
+                                            class="action-btn visited-btn {{ $volcano->isVisitedBy(auth()->user()) ? 'active' : '' }}">
+                                        <i class="fas fa-check"></i>
+                                        <span>Visited</span>
+                                    </button>
+                                </form>
+
+                                <form action="{{ route('user.volcanoes.toggle', ['id' => $volcano->id, 'status' => 'wishlist']) }}" 
+                                    method="POST" class="inline">
+                                    @csrf
+                                    <button type="submit" 
+                                            class="action-btn wishlist-btn {{ $volcano->isWishlistedBy(auth()->user()) ? 'active' : '' }}"
+                                            {{ $volcano->isVisitedBy(auth()->user()) ? 'disabled' : '' }}>
+                                        <i class="fas fa-heart"></i>
+                                        <span>Wishlist</span>
+                                    </button>
+                                </form>
+                            </div>
+                        @endauth
                         
                         <!-- Interactive details container -->
                         <div class="details-container">
