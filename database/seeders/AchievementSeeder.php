@@ -21,7 +21,7 @@ class AchievementSeeder extends Seeder
                 'dimensions' => null,
                 'aggregator' => 'count',
                 'threshold' => 1,
-                'image_path' => 'public/images/badges/First Eruption.png',
+                'image_path' => 'images/badges/First Eruption.png',
             ],
             [
                 'name' => 'Lava Rookie',
@@ -30,7 +30,7 @@ class AchievementSeeder extends Seeder
                 'dimensions' => null,
                 'aggregator' => 'count',
                 'threshold' => 5,
-                'image_path' => 'public/images/badges/Lava Rookie.png',
+                'image_path' => 'images/badges/Lava Rookie.png',
             ],
             [
                 'name' => 'Explorer',
@@ -39,7 +39,7 @@ class AchievementSeeder extends Seeder
                 'dimensions' => null,
                 'aggregator' => 'count_distinct',
                 'threshold' => 6,
-                'image_path' => 'public/images/badges/Explorer.png',
+                'image_path' => 'images/badges/Explorer.png',
             ],
             [
                 'name' => 'Dormant Dreamer',
@@ -48,12 +48,12 @@ class AchievementSeeder extends Seeder
                 'dimensions' => ['activity' => 'Extinct'],
                 'aggregator' => 'count',
                 'threshold' => 1,
-                'image_path' => 'public/images/badges/Dormant Dreamer.png',
+                'image_path' => 'images/badges/Dormant Dreamer.png',
             ]
         ];
 
         foreach ($achievements as $achievement) {
-            Achievement::updateOrCreate(['name' => $achievement['name']], $achievement);
+            Achievement::create($achievement);
         }
     }
 }

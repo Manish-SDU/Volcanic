@@ -14,6 +14,7 @@ class Achievement extends Model
         'dimensions',
         'aggregator',
         'threshold',
+        'image_path',
     ];
 
     protected $casts = [
