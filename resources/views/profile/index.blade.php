@@ -63,12 +63,12 @@
       </dl>
       <br><br>
 
-      {{-- Progress mock (to be implemented yet) --}}
+      {{-- Progress bar --}}
       <div class="progress-container">
         <label class="progresslabel" for="milestone">🎯 Progress until next Visit Milestone:</label>
         <div class="progress-wrapper">
-          <progress class="progressbar" id="milestone" value="1" max="5"></progress>
-          <span class="progress-text">1/5</span>
+          <progress class="progressbar" id="milestone" value="{{ $visitCount }}" max="{{ $nextMilestone }}"></progress>
+          <span class="progress-text">{{ $visitCount }}/{{ $nextMilestone }}</span>
         </div>
       </div>
     </section>
@@ -79,16 +79,17 @@
 
       <!-- Obtained Achievements -->
       <ul class="achievement-grid badge-container">
+        @forelse($unlockedAchievements as $achievement)
         <li class="badgedesc">
-          <img src="{{ asset('images/badges/First Eruption.png') }}" alt="Badge for visiting your first volcano.">
-          <h4>First Eruption</h4>
-          <p class="long-desc">Visit your first volcano.</p>
+          <img src="{{ asset($achievement->image_path) }}" alt="Badge for {{ $achievement->description }}">
+          <h4>{{ $achievement->name }}</h4>
+          <p class="long-desc">{{ $achievement->description }}</p>
         </li>
-        <li class="badgedesc">
-          <img src="{{ asset('images/badges/Dormant Dreamer.png') }}" alt="Badge for visiting an extinct volcano.">
-          <h4>Dormant Dreamer</h4>
-          <p class="long-desc">Visit an extinct volcano.</p>
+        @empty
+        <li class="badgedesc no-achievements">
+          <p>No achievements unlocked yet. <br> Start exploring volcanoes to earn badges!</p>
         </li>
+        @endforelse
       </ul>
 
       <button id="toggleAchievements" class="togglebutton" aria-expanded="false" aria-controls="achievementsList">
@@ -97,46 +98,14 @@
 
       <!-- Locked Achievements -->
       <ul id="lockedBadges" class="achievement-grid badge-container">
+        @foreach($lockedAchievements as $achievement)
         <li class="badgedesc">
-          <img src="{{ asset('images/badges/Lava Rookie Locked.png') }}" alt="Badge for exploring 5 volcanoes.">
-          <h4>Lava Rookie</h4>
-          <p class="long-desc">Visit 5 volcanoes.</p>
+          <img src="{{ asset(str_replace('.png', ' Locked.png', $achievement->image_path)) }}" 
+               alt="Badge for {{ $achievement->description }}">
+          <h4>{{ $achievement->name }}</h4>
+          <p class="long-desc">{{ $achievement->description }}</p>
         </li>
-        <li class="badgedesc">
-          <img src="{{ asset('images/badges/Ash Walker Locked.png') }}" alt="Badge for exploring 10 volcanoes.">
-          <h4>Ash Walker</h4>
-          <p class="long-desc">Visit 10 volcanoes.</p>
-        </li>
-        <li class="badgedesc">
-          <img src="{{ asset('images/badges/Volcano Veteran Locked.png') }}" alt="Badge for visiting 25 volcanoes.">
-          <h4>Volcano Veteran</h4>
-          <p class="long-desc">Visit 25 volcanoes.</p>
-        </li>
-        <li class="badgedesc">
-          <img src="{{ asset('images/badges/Magma Master locked.png') }}" alt="Badge for exploring 50+ volcanoes.">
-          <h4>Magma Master</h4>
-          <p class="long-desc">Visit 50+ volcanoes.</p>          
-        </li>
-        <li class="badgedesc">
-          <img src="{{ asset('images/badges/Explorer Locked.png') }}" alt="Badge for exploring a volcano on each continent.">
-          <h4>Explorer</h4>
-          <p class="long-desc">Visit a volcano on each continent.</p>
-        </li>
-        <li class="badgedesc">
-          <img src="{{ asset('images/badges/Lava Lover Locked.png') }}" alt="Badge for visiting an active volcano with lava.">
-          <h4>Lava Lover</h4>
-          <p class="long-desc">Visit an active volcano.</p>
-        </li>
-        <li class="badgedesc">
-          <img src="{{ asset('images/badges/Polar Pioneer Locked.png') }}" alt="Badge for exploring a volcano in/near the Artic/Antartica.">
-          <h4>Polar Pioneer</h4>
-          <p class="long-desc">Visit a volcano in/near the Arctic/Antarctic.</p>
-        </li>
-        <li class="badge">
-          <img src="{{ asset('images/badges/Ring of Fire Explorer Locked.png') }}" alt="Badge for visiting a volcano along the Pacific Ring of Fire.">
-          <h4>Ring of Fire Explorer</h4>
-          <p class="long-desc">Visit a volcano along the Pacific Ring of Fire.</p>
-        </li>
+        @endforeach
       </ul>
     </section>
   </main>
