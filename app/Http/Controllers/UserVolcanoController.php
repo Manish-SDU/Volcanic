@@ -14,7 +14,7 @@ class UserVolcanoController extends Controller
     public function toggleStatus(Request $request, $volcanoId, $status)
     {
         if (!in_array($status, ['visited', 'wishlist'])) {
-            return back()->with('error', 'Invalid status');
+            return response()->json(['success' => false, 'error' => 'Invalid status'], 400);
         }
 
         try {
@@ -28,7 +28,11 @@ class UserVolcanoController extends Controller
                 // If same status, remove it (toggle off)
                 if ($existing->status === $status) {
                     $existing->delete();
-                    return back()->with('success', ucfirst($status) . ' removed!');
+                    return response()->json([
+                        'success' => true,
+                        'message' => ucfirst($status) . ' removed!',
+                        'action' => 'removed'
+                    ]);
                 }
             }
 
@@ -42,19 +46,30 @@ class UserVolcanoController extends Controller
             }
 
             // Create or update entry
+            $data = ['status' => $status];
+            
+            // Set visited_at only when status is 'visited'
+            if ($status === 'visited') {
+                $data['visited_at'] = now();
+            }
+
             UserVolcano::updateOrCreate(
                 [
                     'user_id' => Auth::id(),
                     'volcanoes_id' => $volcanoId,
                 ],
-                ['status' => $status]
+                $data
             );
 
-            return back()->with('success', 'Added to ' . $status . '!');
+            return response()->json([
+            'success' => true,
+            'message' => 'Added to ' . $status . '!',
+            'action' => 'added'
+        ]);
 
         } catch (\Exception $e) {
             Log::error('Error toggling volcano status: ' . $e->getMessage());
-            return back()->with('success', 'Added to ' . $status . '!');
+            return response()->json(['success' => false, 'error' => 'Server error'], 500);
         }
     }
 
@@ -85,12 +100,13 @@ class UserVolcanoController extends Controller
             $status = UserVolcano::where([
                 'user_id' => Auth::id(),
                 'volcanoes_id' => $volcanoId
-            ])->value('status');
+            ])->first();
 
             return response()->json([
-                'status' => $status,
-                'isVisited' => $status === 'visited',
-                'isWishlisted' => $status === 'wishlist'
+                'status' => $userVolcano?->status,
+                'isVisited' => $userVolcano?->status === 'visited',
+                'isWishlisted' => $userVolcano?->status === 'wishlist',
+                'visited_at' => $userVolcano?->visited_at
             ]);
 
         } catch (\Exception $e) {

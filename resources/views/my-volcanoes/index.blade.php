@@ -3,7 +3,7 @@
 @section('title', 'My Volcanoes')
 
 @section('head_js')
-    @vite(['resources/js/my-volcanoes/panels.js', 'resources/js/my-volcanoes/number_increment.js'])
+    @vite(['resources/js/my-volcanoes/panels.js', 'resources/js/my-volcanoes/number_increment.js', 'resources/js/my-volcanoes/volcano-actions.js'])
 @endsection
 
 @section('content')
@@ -66,6 +66,12 @@
                                 <i class="fas fa-map-marker-alt"></i> 
                                 {{ $userVolcano->volcano->country }}
                             </p>
+                            @if($userVolcano->visited_at)
+                                <p class="visited-date">
+                                    <i class="fas fa-calendar-check"></i>
+                                    Visited on {{ $userVolcano->visited_at->format('M d, Y') }}
+                                </p>
+                            @endif
                             <form action="{{ route('user.volcanoes.toggle', ['id' => $userVolcano->volcano->id, 'status' => 'visited']) }}" 
                                   method="POST">
                                 @csrf
@@ -127,4 +133,46 @@
         <button class="prev-btn" onclick="prevPanel()">←</button>
         <div class="prev-tooltip tooltip">Visited list</div>
     </section>
+
+    <!-- Notification Container -->
+    <div id="notifications-container"></div>
+
+    <!-- Success Notification Template -->
+    <template id="success-notification-template">
+        <div class="notification notification-success">
+            <div class="notification-content">
+                <span><i class="fas fa-check-circle"></i> <span class="notification-message"></span></span>
+                <button class="notification-close" onclick="this.closest('.notification').remove()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+        </div>
+    </template>
+
+    <!-- Error Notification Template -->
+    <template id="error-notification-template">
+        <div class="notification notification-info">
+            <div class="notification-content">
+                <span><i class="fas fa-exclamation-circle"></i> <span class="notification-message"></span></span>
+                <button class="notification-close" onclick="this.closest('.notification').remove()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+        </div>
+    </template>
+
+    <!-- Empty State Templates -->
+    <template id="visited-empty-template">
+        <div class="empty-state">
+            <p>No volcanoes visited yet</p>
+            <a href="{{ route('home') }}">Explore Volcanoes</a>
+        </div>
+    </template>
+
+    <template id="wishlist-empty-template">
+        <div class="empty-state">
+            <p>Your wishlist is empty</p>
+            <a href="{{ route('home') }}">Explore Volcanoes</a>
+        </div>
+    </template>
 @endsection
