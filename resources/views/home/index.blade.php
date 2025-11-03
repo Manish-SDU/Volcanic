@@ -232,7 +232,7 @@
                     Load More Volcanoes
                 </button>
                 <p id="all-loaded-message" style="display: none; color: #666; margin-top: 20px;">
-                    🌋 All volcanoes loaded! Use search above to explore more.
+                    All volcanoes loaded! Use search above to explore more.
                 </p>
             </div>
 
