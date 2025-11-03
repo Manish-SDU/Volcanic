@@ -16,34 +16,30 @@ class UserVolcano extends Model
     
     protected $primaryKey = 'list_id';
 
-    /**
-     * The attributes that are mass assignable.
-     */
+    // The attributes that are mass assignable.
     protected $fillable = [
         'user_id',
         'volcanoes_id',
         'note',
         'status',
+        'visited_at',
     ];
 
-    /**
-     * The attributes that should be cast.
-     */
+    // The attributes that should be cast.
     protected $casts = [
         'status' => 'string',
+        'visited_at' => 'datetime',
+        'created_at' => 'datetime',
+        'updated_at' => 'datetime',
     ];
 
-    /**
-     * Get the user that owns this volcano list entry.
-     */
+    // Get the user that owns this volcano list entry.
     public function user(): BelongsTo
     {
         return $this->belongsTo(User::class);
     }
 
-    /**
-     * Get the volcano associated with this list entry.
-     */
+    // Get the volcano associated with this list entry.
     public function volcano(): BelongsTo
     {
         return $this->belongsTo(Volcano::class, 'volcanoes_id');

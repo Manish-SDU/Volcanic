@@ -1799,7 +1799,8 @@ html {
 .achievementTitle {
     margin-bottom: 2rem;
 }
-   .achievement-grid {
+
+.achievement-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(190px, 1fr));
   gap: 1.5rem;
@@ -1809,6 +1810,18 @@ html {
 
 .badgedesc {
   text-align: center;
+}
+
+.badgedesc.no-achievements {
+  grid-column: 1 / -1;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.badgedesc.no-achievements p {
+  font-size: 1rem !important;
+  color: var(--text-secondary);
+  line-height: 1.6;
 }
 
 .achievement-grid img {
@@ -2496,7 +2509,7 @@ form .signup-link span {
     transform: translateY(0);
 }
 
-/* Add to your existing CSS */
+/* Volcano Card Styles */
 .myv-panel .volcano-card {
     background: white;
     border-radius: 8px;
@@ -2574,6 +2587,26 @@ form .signup-link span {
 
 .myv-panel .remove-btn:hover {
     background: var(--primary-hover);
+}
+
+.myv-panel .visited-date {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.95rem;
+    color: #48bb78;
+    font-weight: 600;
+    margin: 0.5rem 0 0 0;
+    padding: 0.5rem;
+    background: #f0fff4;
+    border-radius: 6px;
+    border-left: 3px solid #48bb78;
+    padding-left: 0.75rem;
+}
+
+.myv-panel .visited-date i {
+    color: #48bb78;
+    font-size: 1rem;
 }
 
 /* Center volcano cards in panels */

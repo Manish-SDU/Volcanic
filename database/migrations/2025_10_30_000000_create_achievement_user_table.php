@@ -12,7 +12,7 @@ return new class extends Migration {
             $table->id();
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
             $table->foreignId('achievement_id')->constrained()->onDelete('cascade');
-            $table->timestamp('created_at')->userCurrent();
+            $table->timestamps(); // This will create both created_at and updated_at
             $table->unique(['user_id', 'achievement_id']);
         });
     }

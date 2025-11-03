@@ -14,6 +14,7 @@ return new class extends Migration
             $table->foreignId('volcanoes_id')->constrained('volcanoes')->onDelete('cascade');
             $table->text('note')->nullable();
             $table->enum('status', ['visited', 'wishlist']);
+            $table->timestamp('visited_at')->nullable();
             $table->timestamps();
         });
     }
@@ -24,4 +25,4 @@ return new class extends Migration
     }
 };
 
-// should I add the created_at and updated_at timestamps?
+
