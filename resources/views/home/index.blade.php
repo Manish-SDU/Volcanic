@@ -24,7 +24,7 @@
 @endsection
 
 @section('head_js')
-    @vite(['resources/js/home/lazy-load.js', 'resources/js/home/volcano-animation.js', 'resources/js/home/home.js', 'resources/js/home/volcano-map.js', 'resources/js/my-volcanoes/volcano-actions.js'])
+    @vite(['resources/js/home/lazy-load.js', 'resources/js/home/load-more.js', 'resources/js/home/volcano-animation.js', 'resources/js/home/home.js', 'resources/js/home/volcano-map.js', 'resources/js/my-volcanoes/volcano-actions.js'])
     <!-- Dependencies -->
     <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
     <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
@@ -225,7 +225,17 @@
                 </article>
                 @endforeach
             </div>
-            
+
+            <!-- Load More Button -->
+            <div class="load-more-container" style="text-align: center; margin: 40px 0;">
+                <button id="load-more-btn" class="btn-load-more" data-load-count="10">
+                    Load More Volcanoes
+                </button>
+                <p id="all-loaded-message" style="display: none; color: #666; margin-top: 20px;">
+                    🌋 All volcanoes loaded! Use search above to explore more.
+                </p>
+            </div>
+
             <!-- Fun message for more volcanoes -->
             <div class="more-volcanoes-message">
                 <div class="fun-message-container">
