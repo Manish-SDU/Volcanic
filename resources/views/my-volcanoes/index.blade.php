@@ -66,6 +66,12 @@
                                 <i class="fas fa-map-marker-alt"></i> 
                                 {{ $userVolcano->volcano->country }}
                             </p>
+                            @if($userVolcano->visited_at)
+                                <p class="visited-date">
+                                    <i class="fas fa-calendar-check"></i>
+                                    Visited on {{ $userVolcano->visited_at->format('M d, Y') }}
+                                </p>
+                            @endif
                             <form action="{{ route('user.volcanoes.toggle', ['id' => $userVolcano->volcano->id, 'status' => 'visited']) }}" 
                                   method="POST">
                                 @csrf

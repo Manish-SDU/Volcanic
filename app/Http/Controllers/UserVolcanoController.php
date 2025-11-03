@@ -46,12 +46,19 @@ class UserVolcanoController extends Controller
             }
 
             // Create or update entry
+            $data = ['status' => $status];
+            
+            // Set visited_at only when status is 'visited'
+            if ($status === 'visited') {
+                $data['visited_at'] = now();
+            }
+
             UserVolcano::updateOrCreate(
                 [
                     'user_id' => Auth::id(),
                     'volcanoes_id' => $volcanoId,
                 ],
-                ['status' => $status]
+                $data
             );
 
             return response()->json([
@@ -93,12 +100,13 @@ class UserVolcanoController extends Controller
             $status = UserVolcano::where([
                 'user_id' => Auth::id(),
                 'volcanoes_id' => $volcanoId
-            ])->value('status');
+            ])->first();
 
             return response()->json([
-                'status' => $status,
-                'isVisited' => $status === 'visited',
-                'isWishlisted' => $status === 'wishlist'
+                'status' => $userVolcano?->status,
+                'isVisited' => $userVolcano?->status === 'visited',
+                'isWishlisted' => $userVolcano?->status === 'wishlist',
+                'visited_at' => $userVolcano?->visited_at
             ]);
 
         } catch (\Exception $e) {
