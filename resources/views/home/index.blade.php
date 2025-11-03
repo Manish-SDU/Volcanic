@@ -24,7 +24,7 @@
 @endsection
 
 @section('head_js')
-    @vite(['resources/js/home/volcano-animation.js', 'resources/js/home/home.js', 'resources/js/home/volcano-map.js', 'resources/js/my-volcanoes/volcano-actions.js'])
+    @vite(['resources/js/home/lazy-load.js', 'resources/js/home/volcano-animation.js', 'resources/js/home/home.js', 'resources/js/home/volcano-map.js', 'resources/js/my-volcanoes/volcano-actions.js'])
     <!-- Dependencies -->
     <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
     <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
