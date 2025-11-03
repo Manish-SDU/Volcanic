@@ -1769,7 +1769,8 @@ html {
 .achievementTitle {
     margin-bottom: 2rem;
 }
-   .achievement-grid {
+
+.achievement-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(190px, 1fr));
   gap: 1.5rem;
@@ -1779,6 +1780,18 @@ html {
 
 .badgedesc {
   text-align: center;
+}
+
+.badgedesc.no-achievements {
+  grid-column: 1 / -1;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.badgedesc.no-achievements p {
+  font-size: 1rem !important;
+  color: var(--text-secondary);
+  line-height: 1.6;
 }
 
 .achievement-grid img {
