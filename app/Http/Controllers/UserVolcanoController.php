@@ -14,7 +14,7 @@ class UserVolcanoController extends Controller
     public function toggleStatus(Request $request, $volcanoId, $status)
     {
         if (!in_array($status, ['visited', 'wishlist'])) {
-            return back()->with('error', 'Invalid status');
+            return response()->json(['success' => false, 'error' => 'Invalid status'], 400);
         }
 
         try {
@@ -28,7 +28,11 @@ class UserVolcanoController extends Controller
                 // If same status, remove it (toggle off)
                 if ($existing->status === $status) {
                     $existing->delete();
-                    return back()->with('success', ucfirst($status) . ' removed!');
+                    return response()->json([
+                        'success' => true,
+                        'message' => ucfirst($status) . ' removed!',
+                        'action' => 'removed'
+                    ]);
                 }
             }
 
@@ -50,11 +54,15 @@ class UserVolcanoController extends Controller
                 ['status' => $status]
             );
 
-            return back()->with('success', 'Added to ' . $status . '!');
+            return response()->json([
+            'success' => true,
+            'message' => 'Added to ' . $status . '!',
+            'action' => 'added'
+        ]);
 
         } catch (\Exception $e) {
             Log::error('Error toggling volcano status: ' . $e->getMessage());
-            return back()->with('success', 'Added to ' . $status . '!');
+            return response()->json(['success' => false, 'error' => 'Server error'], 500);
         }
     }
 
