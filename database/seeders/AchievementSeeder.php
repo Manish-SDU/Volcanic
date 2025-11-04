@@ -45,7 +45,7 @@ class AchievementSeeder extends Seeder
                 'name' => 'Dormant Dreamer',
                 'description' => 'Visit an extinct volcano.',
                 'metric' => 'visits_by_activity',
-                'dimensions' => ['activity' => 'Extinct'],
+                'dimensions' => json_encode(['activity' => 'Extinct']),
                 'aggregator' => 'count',
                 'threshold' => 1,
                 'image_path' => 'images/badges/Dormant Dreamer.png',

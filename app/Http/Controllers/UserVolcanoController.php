@@ -4,8 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\UserVolcano;
+use App\Models\Volcano;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Auth;
+use App\Services\AchievementService;
 
 class UserVolcanoController extends Controller
 {
@@ -97,7 +99,7 @@ class UserVolcanoController extends Controller
     public function checkStatus($volcanoId)
     {
         try {
-            $status = UserVolcano::where([
+            $userVolcano = UserVolcano::where([
                 'user_id' => Auth::id(),
                 'volcanoes_id' => $volcanoId
             ])->first();
