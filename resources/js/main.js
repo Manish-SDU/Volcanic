@@ -153,6 +153,7 @@ function showNotification(message, type = 'info') {
 function initializeCommonFeatures() {
     updateYear();
     initializeVolcanoCards();
+    initializeBackToTop();
 }
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -163,3 +164,29 @@ window.VolcanicCommon = {
     updateYear: updateYear,
     initializeCommonFeatures: initializeCommonFeatures
 };
+
+/**
+   * Initialize Back to Top button
+   */
+  function initializeBackToTop() {
+      const backToTopBtn = document.getElementById('back-to-top');
+
+      if (!backToTopBtn) return;
+
+      // Show/hide button based on scroll position
+      window.addEventListener('scroll', function() {
+          if (window.pageYOffset > 300) {
+              backToTopBtn.classList.add('show');
+          } else {
+              backToTopBtn.classList.remove('show');
+          }
+      });
+
+      // Scroll to top when clicked
+      backToTopBtn.addEventListener('click', function() {
+          window.scrollTo({
+              top: 0,
+              behavior: 'smooth'
+          });
+      });
+  }

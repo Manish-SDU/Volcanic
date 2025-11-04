@@ -124,5 +124,11 @@
 
     <!-- Scripts -->
     @yield('scripts')
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top-btn">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
 </body>
 </html>
