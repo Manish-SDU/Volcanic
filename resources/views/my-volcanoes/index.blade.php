@@ -23,19 +23,19 @@
         <div class="statistics-grid">
             <dl class="stat-box">
                 <dt class="stat-label">Volcanoes Visited</dt>
-                <dd class="stat-value" id="visited-value">33</dd>
+                <dd class="stat-value" id="visited-value">{{ $stats['volcanoes_visited'] }}</dd>
             </dl>
             <dl class="stat-box">
                 <dt class="stat-label">Countries Explored</dt>
-                <dd class="stat-value" id="countries-value">4</dd>
+                <dd class="stat-value" id="countries-value">{{ $stats['countries_explored'] }}</dd>
             </dl>
             <dl class="stat-box">
                 <dt class="stat-label">Active Volcanoes</dt>
-                <dd class="stat-value" id="active-value">1000</dd>
+                <dd class="stat-value" id="active-value">{{ $stats['active_volcanoes'] }}</dd>
             </dl>
             <dl class="stat-box">
                 <dt class="stat-label">Inactive Volcanoes</dt>
-                <dd class="stat-value" id="inactive-value">1000</dd>
+                <dd class="stat-value" id="inactive-value">{{ $stats['inactive_volcanoes'] }}</dd>
             </dl>
         </div>
     </section>

@@ -28,10 +28,47 @@ class VolcanoesController extends Controller
         $visited = $userVolcanoes->get('visited', collect());
         $wishlist = $userVolcanoes->get('wishlist', collect());
 
+        $stats = $this->calculateStats($visited);
+
         return view('my-volcanoes.index', [
             'visited' => $visited,
             'wishlist' => $wishlist,
+            'stats' => $stats,
         ]);
+    }
+
+    /**
+     * Calculate statistics 
+     */
+
+    private function calculateStats($visitedVolcanoes)
+    {
+        $totalVolcanoes = $visitedVolcanoes->count();
+
+        $countriesExplored = $visitedVolcanoes
+            ->pluck('volcano.country')
+            ->unique()
+            ->count();
+
+        $activeVolcanoes = $visitedVolcanoes
+            ->filter(function($userV) {
+                return strtolower($userV->volcano->activity) ==='active';
+            })
+            ->count();
+
+        $inactiveVolcanoes = $visitedVolcanoes
+            ->filter(function($userV) {
+                $activity = strtolower($userV->volcano->activity);
+                return in_array($activity, ['inactive', 'extinct']);
+            })
+            ->count();
+
+        return[
+            'volcanoes_visited' => $totalVolcanoes,
+            'countries_explored' => $countriesExplored,
+            'active_volcanoes' => $activeVolcanoes,
+            'inactive_volcanoes' => $inactiveVolcanoes,
+        ];
     }
 
     /**

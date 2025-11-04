@@ -39,6 +39,6 @@ class RegisterController extends Controller
 
         Auth::login($user);
 
-        return redirect()->route('dashboard')->with('status', 'Welcome aboard!');
+        return redirect()->route('my-volcanoes');
     }
 }
