@@ -16,51 +16,6 @@ function updateYear() {
 }
 
 /**
- * Immediate image loading for instant page transitions
- */
-function initializeLazyLoading() {
-    // Preload all images immediately for instant navigation experience
-    const loadAllImages = () => {
-        document.querySelectorAll('img[data-src]').forEach(img => {
-            const src = img.dataset.src;
-            const placeholder = img.dataset.placeholder;
-            
-            if (src) {
-                // Create a new image to preload
-                const preloadImg = new Image();
-                
-                preloadImg.onload = () => {
-                    // Set the actual image source immediately
-                    img.src = src;
-                    img.classList.add('image-loaded');
-                    img.removeAttribute('data-src');
-                    img.removeAttribute('data-placeholder');
-                };
-                
-                preloadImg.onerror = () => {
-                    // Fallback to placeholder if actual image fails
-                    if (placeholder) {
-                        img.src = placeholder;
-                        img.classList.add('placeholder-shown');
-                    }
-                    img.removeAttribute('data-src');
-                };
-                
-                // Start preloading immediately
-                preloadImg.src = src;
-            }
-        });
-    };
-    
-    // Load all images immediately when the page loads
-    if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', loadAllImages);
-    } else {
-        loadAllImages();
-    }
-}
-
-/**
  * Initialize volcano card interactions
  */
 function initializeVolcanoCards() {
@@ -197,7 +152,6 @@ function showNotification(message, type = 'info') {
 
 function initializeCommonFeatures() {
     updateYear();
-    initializeLazyLoading();
     initializeVolcanoCards();
 }
 
@@ -207,6 +161,5 @@ document.addEventListener('DOMContentLoaded', function() {
 
 window.VolcanicCommon = {
     updateYear: updateYear,
-    initializeLazyLoading: initializeLazyLoading,
     initializeCommonFeatures: initializeCommonFeatures
 };
