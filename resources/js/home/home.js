@@ -142,7 +142,7 @@ function initializeSearch() {
         
         const cards = document.querySelectorAll('.volcano-card');
         cards.forEach((card, index) => {
-            if (index < 12) {
+            if (index < 9) {
                 card.style.display = '';
                 card.classList.remove('homepage-hidden');
             } else {

@@ -2,8 +2,8 @@
       const loadMoreBtn = document.getElementById('load-more-btn');
       const allLoadedMessage = document.getElementById('all-loaded-message');
 
-      // Get how many cards to load per click (default 10)
-      const loadCount = parseInt(loadMoreBtn.dataset.loadCount) || 10;
+      // Get how many cards to load per click (default 9)
+      const loadCount = parseInt(loadMoreBtn.dataset.loadCount) || 9;
 
       loadMoreBtn.addEventListener('click', function() {
           // Find all hidden volcano cards

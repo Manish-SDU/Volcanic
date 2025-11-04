@@ -120,7 +120,7 @@
             </div>
             <div class="volcano-grid">
                 @foreach($volcanoes as $index => $volcano)
-                <article class="volcano-card {{ $index >= 12 ? 'homepage-hidden' : '' }}" data-volcano-id="{{ $volcano->id }}" data-card-index="{{ $index }}">
+                <article class="volcano-card {{ $index >= 9 ? 'homepage-hidden' : '' }}" data-volcano-id="{{ $volcano->id }}" data-card-index="{{ $index }}">
                     <div class="volcano-image-container">
                         <!-- Lazy loaded image with delayed placeholder fallback -->
                         <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'%3E%3C/svg%3E" 
@@ -228,7 +228,7 @@
 
             <!-- Load More Button -->
             <div class="load-more-container" style="text-align: center; margin: 40px 0;">
-                <button id="load-more-btn" class="btn-load-more" data-load-count="10">
+                <button id="load-more-btn" class="btn-load-more" data-load-count="9">
                     Load More Volcanoes
                 </button>
                 <p id="all-loaded-message" style="display: none; color: #666; margin-top: 20px;">
