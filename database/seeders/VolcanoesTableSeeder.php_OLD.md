@@ -42,7 +42,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 641,
                 'description' => 'A group of shield volcanoes located on the southwest end of Honshu Island, with the highest peak being Irao-yama.',
                 'type' => 'Shield',
-                'image_url' => 'abu.png'
+                'image_url' => 'abu'
             ],
             [
                 'name' => 'Acamarachi',
@@ -54,7 +54,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 6046,
                 'description' => 'A steep, cone-shaped stratovolcano in the Andes, with evidence of postglacial lava flows and an Incan sanctuary.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'acamarachi.png'
+                'image_url' => 'acamarachi'
             ],
             [
                 'name' => 'Acatenango',
@@ -66,7 +66,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 3976,
                 'description' => 'A prominent stratovolcano near Antigua, Guatemala, with a history of explosive eruptions and significant pyroclastic flows.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'acatenango.png'
+                'image_url' => 'acatenango'
             ],
             [
                 'name' => 'Acıgöl-Nevşehir',
@@ -78,7 +78,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1683,
                 'description' => 'A late Pleistocene caldera (~7 × 8 km), with post-caldera maars, lava domes, pyroclastic cones.',
                 'type' => 'Caldera',
-                'image_url' => 'acigöl-nevsehir.png'
+                'image_url' => 'acigöl-nevsehir'
             ],
             [
                 'name' => 'Mount Adams',
@@ -90,7 +90,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 3742,
                 'description' => 'A large stratovolcano in the Cascades. Last significant eruptions are in the geologic past (~ thousands to tens of thousands of years ago).',
                 'type' => 'Stratovolcano',
-                'image_url' => 'adams.png'
+                'image_url' => 'adams'
             ],
             [
                 'name' => 'Adams Seamount',
@@ -102,7 +102,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => -39,
                 'description' => 'A submarine volcano rising ~3,500 m above the seafloor to within ~39 m of the surface. No confirmed historic eruptions in very recent times, but geologic data indicates relatively recent activity.',
                 'type' => 'Submarine',
-                'image_url' => 'adams-seamount.png'
+                'image_url' => 'adams-seamount'
             ],
             [
                 'name' => 'Adatara',
@@ -114,7 +114,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1728,
                 'description' => 'A complex of overlapping stratovolcanoes east of Bandai volcano. The latest eruptions are from the Numano-daira crater. (volcano.si.edu)',
                 'type' => 'Stratovolcano',
-                'image_url' => 'adatara.png'
+                'image_url' => 'adatara'
             ],
             [
                 'name' => 'Adwa',
@@ -126,7 +126,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1733,
                 'description' => 'A stratovolcano with a 4 × 5 km caldera, young basaltic flows, and fumarolic activity. Uncertain historical eruptions possibly in 1828 or 1928.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'adwa.png'
+                'image_url' => 'adwa'
             ],
             [
                 'name' => 'Afderà',
@@ -138,7 +138,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1295,
                 'description' => 'An isolated rhyolitic stratovolcano located at the intersection of three fault systems between the Erta Ale, Tat Ali, and Alayta mountain ranges in the Danakil Depression.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'afderà.jpg'
+                'image_url' => 'afdera'
             ],
             [
                 'name' => 'Agrigan',
@@ -150,7 +150,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 965,
                 'description' => 'The highest of the Marianas arc volcanoes, containing a 500-meter-deep flat-floored caldera. The elliptical island is 8 km long and its summit is the top of a massive 4000-meter-high submarine volcano. Last eruption was in 1917.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'agrigan.jpg'
+                'image_url' => 'agrigan'
             ],
             [
                 'name' => 'Agua',
@@ -162,7 +162,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 3760,
                 'description' => 'A symmetrical, forested stratovolcano that forms a prominent backdrop to Antigua Guatemala. Despite its youthful profile, it has had no historical eruptions but produced a devastating mudflow in 1541 that destroyed the first Guatemalan capital.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'agua.jpg'
+                'image_url' => 'agua'
             ],
             [
                 'name' => 'Agua de Pau',
@@ -174,7 +174,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 947,
                 'description' => 'A stratovolcanic complex located in the central part of São Miguel Island in the Azores, recognized for the Lagoa do Fogo caldera lake at its center. Last erupted in 1563-1564.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'agua-de-pau.jpeg'
+                'image_url' => 'agua_de_pau'
             ],
             [
                 'name' => 'Aguilera',
@@ -186,7 +186,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 2546,
                 'description' => 'A remote stratovolcano located in southern Chilean Patagonia, within the Southern Patagonian Ice Field. It is one of the most isolated volcanoes in the region.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'aguilera.jpeg'
+                'image_url' => 'aguilera'
             ],
             [
                 'name' => 'Agung',
@@ -198,7 +198,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 3142,
                 'description' => 'A sacred mountain in Bali and the highest point on the island. After 53 years of quiescence, it awoke in 2017 with intense seismicity and erupted in November 2017, continuing with smaller eruptions through 2019.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'agung.jpg'
+                'image_url' => 'agung'
             ],
             [
                 'name' => 'Ahyi',
@@ -210,7 +210,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => -137,
                 'description' => 'A large conical submarine volcano that rises to within 79 meters of the sea surface, located about 18 km southeast of Farallon de Pajaros. Experienced eruptions in 2001, 2014, and recent unrest in 2024-2025.',
                 'type' => 'Submarine',
-                'image_url' => 'ahyi.jpg'
+                'image_url' => 'ahyi'
             ],
             [
                 'name' => 'Akademia Nauk',
@@ -222,7 +222,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1180,
                 'description' => 'A caldera volcano located on the Kamchatka Peninsula in the eastern part of Russia. Part of the volcanically active Pacific Ring of Fire region.',
                 'type' => 'Caldera',
-                'image_url' => 'akademia-nauk.jpg'
+                'image_url' => 'akademia_nauk'
             ],
             [
                 'name' => 'Akagi',
@@ -234,7 +234,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1828,
                 'description' => 'A stratovolcano located in Gunma Prefecture on Honshu Island, featuring a caldera lake called Lake Onuma. The volcano is considered dormant with no historical eruptions.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'akagi.jpg'
+                'image_url' => 'akagi'
             ],
             [
                 'name' => 'Akan',
@@ -246,7 +246,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1499,
                 'description' => 'A caldera volcano in eastern Hokkaido with multiple crater lakes including Lake Akan. The volcanic complex includes several active vents and has experienced numerous small eruptions in recent history.',
                 'type' => 'Caldera',
-                'image_url' => 'akan.jpg'
+                'image_url' => 'akan'
             ],
             [
                 'name' => 'Akhtang',
@@ -258,7 +258,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1956,
                 'description' => 'A shield volcano located on the Kamchatka Peninsula in eastern Russia. Part of the Kamchatka volcanic region with no recorded historical eruptions.',
                 'type' => 'Shield',
-                'image_url' => 'akhtang.jpeg'
+                'image_url' => 'akhtang'
             ],
             //from here GS
             [
@@ -271,7 +271,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1637,
                 'description' => 'An active stratovolcano in northern Honshu known for periodic phreatic eruptions and scenic crater lakes.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'akita-komagatake.jpeg'
+                'image_url' => 'akita-komagatake'
             ],
             [
                 'name' => 'Akita Yakeyama',
@@ -283,7 +283,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1366,
                 'description' => 'A small active stratovolcano in northern Honshu that occasionally emits steam and minor ash.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'akita-yakeyama.jpeg'
+                'image_url' => 'akita-yakeyama'
             ],
             [
                 'name' => 'Akusekijima',
@@ -295,7 +295,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 584,
                 'description' => 'A volcanic island in the Tokara Islands with a steep stratovolcanic cone and occasional fumarolic activity.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'akusekijima.jpeg'
+                'image_url' => 'akusekijima'
             ],
             [
                 'name' => 'Akutan',
@@ -307,7 +307,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1303,
                 'description' => 'An active stratovolcano in the Aleutian Islands frequently producing small eruptions and lava flows.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'akutan.jpg'
+                'image_url' => 'akutan'
             ],
             [
                 'name' => 'Alaid',
@@ -319,7 +319,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 2339,
                 'description' => 'The tallest volcano of the Kuril Islands, Alaid is an active symmetrical stratovolcano known for summit eruptions.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'alaid.jpeg'
+                'image_url' => 'alaid'
             ],
             [
                 'name' => 'Alamagan',
@@ -331,7 +331,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 744,
                 'description' => 'An active stratovolcano in the northern Marianas featuring a large summit crater and geothermal vents.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'alamagan.jpeg'
+                'image_url' => 'alamagan'
             ],
             [
                 'name' => 'Alayta',
@@ -343,7 +343,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1501,
                 'description' => 'A broad shield volcano in the Afar Depression known for extensive basaltic lava flows.',
                 'type' => 'Shield',
-                'image_url' => 'alayta.jpeg'
+                'image_url' => 'alayta'
             ],
             [
                 'name' => 'Alban Hills',
@@ -355,7 +355,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 949,
                 'description' => 'A caldera complex southeast of Rome that last erupted thousands of years ago but shows signs of unrest.',
                 'type' => 'Caldera',
-                'image_url' => 'alban-hills.jpg'
+                'image_url' => 'alban-hills'
             ],
             [
                 'name' => 'Alcedo',
@@ -367,7 +367,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1130,
                 'description' => 'A large shield volcano on Isabela Island featuring a wide caldera and frequent geothermal activity.',
                 'type' => 'Shield',
-                'image_url' => 'alcedo.jpg'
+                'image_url' => 'alcedo'
             ],
             [
                 'name' => 'Ale Bagu',
@@ -379,7 +379,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1031,
                 'description' => 'An active stratovolcano in the Erta Ale Range showing recent lava flows and fumarolic fields.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'ale-bagu.jpeg'
+                'image_url' => 'ale-bagu'
             ],
             [
                 'name' => 'Alid',
@@ -391,7 +391,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 904,
                 'description' => 'A stratovolcano in the Danakil Depression showing strong geothermal and fumarolic activity.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'alid.jpg'
+                'image_url' => 'alid'
             ],
             [
                 'name' => 'Ambrym',
@@ -403,7 +403,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1334,
                 'description' => 'A large volcanic island featuring one of the world’s most active lava lakes within its caldera.',
                 'type' => 'Caldera',
-                'image_url' => 'ambrym.jpg'
+                'image_url' => 'ambrym'
             ],
             [
                 'name' => 'Anatahan',
@@ -415,7 +415,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 790,
                 'description' => 'An active stratovolcano that erupted violently in 2003 after centuries of dormancy.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'anatahan.jpeg'
+                'image_url' => 'anatahan'
             ],
             [
                 'name' => 'Aneityum',
@@ -427,7 +427,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 852,
                 'description' => 'An extinct stratovolcano forming the southernmost island of Vanuatu.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'aneityum.jpeg'
+                'image_url' => 'aneityum'
             ],
             [
                 'name' => 'Aniakchak',
@@ -439,7 +439,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1341,
                 'description' => 'A massive caldera in Alaska with evidence of Holocene eruptions and ongoing geothermal activity.',
                 'type' => 'Caldera',
-                'image_url' => 'aniakchak.jpg'
+                'image_url' => 'aniakchak'
             ],
             [
                 'name' => 'Antisana',
@@ -451,7 +451,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 5753,
                 'description' => 'A glaciated active stratovolcano in the Andes east of Quito, known for its steep summit cone.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'antisana.jpeg'
+                'image_url' => 'antisana'
             ],
             [
                 'name' => 'Aoba',
@@ -463,7 +463,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1496,
                 'description' => 'Also known as Ambae, this large shield volcano has erupted frequently with explosive activity and lava flows.',
                 'type' => 'Shield',
-                'image_url' => 'aoba.jpeg'
+                'image_url' => 'aoba'
             ],
             [
                 'name' => 'Ararat',
@@ -475,7 +475,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 5165,
                 'description' => 'A towering extinct stratovolcano and the highest peak in Turkey, associated with biblical tradition.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'ararat.jpeg'
+                'image_url' => 'ararat'
             ],
             [
                 'name' => 'Arenal',
@@ -487,7 +487,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1670,
                 'description' => 'One of Costa Rica’s most active volcanoes, famous for frequent eruptions between 1968 and 2010.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'arenal.jpeg'
+                'image_url' => 'arenal'
             ],
             [
                 'name' => 'Arintica',
@@ -499,7 +499,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 5597,
                 'description' => 'A large andesitic volcanic complex in northern Chile showing no recent eruptive activity.',
                 'type' => 'Complex',
-                'image_url' => 'arintica.jpeg'
+                'image_url' => 'arintica'
             ],
             [
                 'name' => 'Asacha',
@@ -511,7 +511,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1910,
                 'description' => 'A stratovolcano in southern Kamchatka known for recent eruptions and vigorous fumarolic activity.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'asacha.jpg'
+                'image_url' => 'asacha'
             ],
             [
                 'name' => 'Asama',
@@ -523,7 +523,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 2568,
                 'description' => 'One of Japan’s most active volcanoes, producing frequent explosive eruptions and ash emissions.',
                 'type' => 'Complex',
-                'image_url' => 'asama.jpeg'
+                'image_url' => 'asama'
             ],
             [
                 'name' => 'Ascensión',
@@ -535,7 +535,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 858,
                 'description' => 'A volcanic island in the South Atlantic formed by a dormant stratovolcano with numerous lava domes.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'ascension.jpg'
+                'image_url' => 'ascension'
             ],
             [
                 'name' => 'Askja',
@@ -547,7 +547,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1516,
                 'description' => 'An active volcano in central Iceland with a large caldera and a crater lake known as Öskjuvatn.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'askja.jpeg'
+                'image_url' => 'askja'
             ],
             [
                 'name' => 'Aso',
@@ -559,7 +559,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1592,
                 'description' => 'One of the world’s largest calderas, Aso contains multiple active vents and frequent ash eruptions.',
                 'type' => 'Caldera',
-                'image_url' => 'aso.jpeg'
+                'image_url' => 'aso'
             ],
             [
                 'name' => 'Atitlán',
@@ -571,7 +571,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 3535,
                 'description' => 'A picturesque but active volcano overlooking Lake Atitlán, last erupting in the 19th century.',
                 'type' => 'Complex',
-                'image_url' => 'atitlan.jpeg'
+                'image_url' => 'atitlan'
             ],
             [
                 'name' => 'Atka',
@@ -583,7 +583,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1533,
                 'description' => 'A large volcanic complex in the Aleutian Islands with several active vents and lava domes.',
                 'type' => 'Caldera',
-                'image_url' => 'atka.jpg'
+                'image_url' => 'atka'
             ],
             [
                 'name' => 'Atsonupuri',
@@ -595,7 +595,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1206,
                 'description' => 'A symmetrical stratovolcano on Iturup Island with a central crater and geothermal activity.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'atsonupuri.jpg'
+                'image_url' => 'atsonupuri'
             ],
             [
                 'name' => 'Augustine',
@@ -607,7 +607,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1252,
                 'description' => 'A frequently active lava dome volcano in Alaska known for explosive eruptions and pyroclastic flows.',
                 'type' => 'Lava dome',
-                'image_url' => 'augustine.jpg'
+                'image_url' => 'augustine'
             ],
             [
                 'name' => 'Avachinsky',
@@ -619,7 +619,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 2741,
                 'description' => 'A prominent Kamchatka stratovolcano near Petropavlovsk that erupts frequently with ash plumes.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'avachinsky.jpeg'
+                'image_url' => 'avachinsky'
             ],
             [
                 'name' => 'Awu',
@@ -631,7 +631,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1320,
                 'description' => 'A frequently active stratovolcano in the Sangihe Islands known for explosive summit eruptions.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'awu.jpeg'
+                'image_url' => 'awu'
             ],
             [
                 'name' => 'Axial Seamount',
@@ -643,7 +643,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => -1410,
                 'description' => 'A submarine volcano on the Juan de Fuca Ridge, one of the most active undersea volcanoes on Earth.',
                 'type' => 'Submarine',
-                'image_url' => 'axial-seamount.jpg'
+                'image_url' => 'axial-seamount'
             ],
             [
                 'name' => 'Ayelu',
@@ -655,7 +655,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 2145,
                 'description' => 'An active stratovolcano in the Afar region showing fumarolic activity and geothermal vents.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'ayelu.jpg'
+                'image_url' => 'ayelu'
             ],
             [
                 'name' => 'Azufre',
@@ -667,7 +667,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 5846,
                 'description' => 'A large volcanic complex in the Andes composed of overlapping lava domes and cones.',
                 'type' => 'Complex',
-                'image_url' => 'azufre.jpeg'
+                'image_url' => 'azufre'
             ],
             [
                 'name' => 'Azuma',
@@ -679,7 +679,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 2035,
                 'description' => 'An active volcanic group in northern Honshu known for fumaroles and occasional phreatic eruptions.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'azuma.jpeg'
+                'image_url' => 'azuma'
             ],
             [
                 'name' => 'Babuyon Claro',
@@ -691,7 +691,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1180,
                 'description' => 'A potentially active stratovolcano on Babuyan Island with geothermal and seismic activity.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'babuyon-claro.jpeg'
+                'image_url' => 'babuyon-claro'
             ],
             [
                 'name' => 'Bachelor',
@@ -703,7 +703,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 2763,
                 'description' => 'An extinct stratovolcano in the Cascade Range of Oregon, now a popular ski destination.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'bachelor.jpeg'
+                'image_url' => 'bachelor'
             ],
             [
                 'name' => 'Bagana',
@@ -715,7 +715,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1750,
                 'description' => 'One of the most active volcanoes in Papua New Guinea, producing frequent lava flows and ash plumes.',
                 'type' => 'Cinder cone',
-                'image_url' => 'bagana.jpeg'
+                'image_url' => 'bagana'
             ],
             [
                 'name' => 'Baker',
@@ -727,7 +727,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 3285,
                 'description' => 'A glaciated stratovolcano in Washington State showing fumarolic activity and potential for future eruptions.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'baker.jpg'
+                'image_url' => 'baker'
             ],
             [
                 'name' => 'Bam',
@@ -739,7 +739,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 685,
                 'description' => 'A small active volcanic island off northern Papua New Guinea known for explosive eruptions.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'bam.jpeg'
+                'image_url' => 'bam'
             ],
             [
                 'name' => 'Bamus',
@@ -751,7 +751,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 2248,
                 'description' => 'A forested stratovolcano near Ulawun showing fumarolic activity and signs of recent unrest.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'bamus.jpeg'
+                'image_url' => 'bamus'
             ],
             [
                 'name' => 'Bandai',
@@ -763,7 +763,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1819,
                 'description' => 'A stratovolcano in northern Honshu famous for its 1888 eruption that caused a massive landslide.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'bandai.jpeg'
+                'image_url' => 'bandai'
             ],
             [
                 'name' => 'Barren Island',
@@ -775,7 +775,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 305,
                 'description' => 'India’s only active volcano, located in the Andaman Sea with frequent strombolian eruptions.',
                 'type' => 'Cinder cone',
-                'image_url' => 'barren-island.jpg'
+                'image_url' => 'barren-island'
             ],
             [
                 'name' => 'Barrier',
@@ -787,7 +787,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1032,
                 'description' => 'A large volcanic complex in the Gregory Rift showing recent lava flows and geothermal activity.',
                 'type' => 'Complex',
-                'image_url' => 'barrier.jpeg'
+                'image_url' => 'barrier'
             ],
             [
                 'name' => 'Bazman',
@@ -799,7 +799,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 3490,
                 'description' => 'A dormant stratovolcano in southeastern Iran with a well-preserved cone and summit crater.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'bazman.jpg'
+                'image_url' => 'bazman'
             ],
             [
                 'name' => 'Beerenberg',
@@ -811,7 +811,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 2277,
                 'description' => 'The world’s northernmost active volcano, forming Jan Mayen Island in the Arctic Ocean.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'beerenberg.jpg'
+                'image_url' => 'beerenberg'
             ],
             [
                 'name' => 'Belknap',
@@ -823,7 +823,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 2096,
                 'description' => 'An extinct shield volcano in Oregon’s Cascade Range covered by young basaltic lava flows.',
                 'type' => 'Shield',
-                'image_url' => 'belknap.jpeg'
+                'image_url' => 'belknap'
             ],
             [
                 'name' => 'Bezymianny',
@@ -835,7 +835,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 2882,
                 'description' => 'A highly active stratovolcano in Kamchatka known for dome-building eruptions since 1956.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'bezymianny.jpeg'
+                'image_url' => 'bezymianny'
             ],
             [
                 'name' => 'Biliran',
@@ -847,7 +847,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1187,
                 'description' => 'A volcanic complex in the central Philippines with geothermal fields and historic eruptions.',
                 'type' => 'Complex',
-                'image_url' => 'biliran.jpeg'
+                'image_url' => 'biliran'
             ],
             [
                 'name' => 'Bolshoi Semiachik',
@@ -859,7 +859,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1720,
                 'description' => 'A large multi-vent stratovolcano in Kamchatka featuring hot springs and hydrothermal fields.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'bolshoi-semiachik.jpeg'
+                'image_url' => 'bolshoi-semiachik'
             ],
             [
                 'name' => 'Bulusan',
@@ -871,7 +871,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1565,
                 'description' => 'An active stratovolcano in southern Luzon known for frequent ash explosions and steam-driven eruptions.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'bulusan.jpeg'
+                'image_url' => 'bulusan'
             ],
             [
                 'name' => 'Butajira',
@@ -883,7 +883,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 2281,
                 'description' => 'A volcanic field with fissure vents and maars in central Ethiopia, now considered extinct.',
                 'type' => 'Fissure vent',
-                'image_url' => 'butajira.jpg'
+                'image_url' => 'butajira'
             ],
             [
                 'name' => 'Cameroon (Mount)',
@@ -895,7 +895,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 4095,
                 'description' => 'West Africa’s highest peak, Mount Cameroon is an active stratovolcano with recent eruptions near the coast.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'cameroon-mount.jpg'
+                'image_url' => 'cameroon-mount'
             ],
             [
                 'name' => 'Camiguin de Babuyanes',
@@ -907,7 +907,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 712,
                 'description' => 'A potentially active stratovolcano north of Luzon showing geothermal and seismic activity.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'camiguin-de-babuyanes.jpeg'
+                'image_url' => 'camiguin-de-babuyanes'
             ],
             [
                 'name' => 'Canlaon',
@@ -919,7 +919,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 2435,
                 'description' => 'The highest volcano in the central Philippines, Canlaon frequently emits ash and steam.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'canlaon.jpeg'
+                'image_url' => 'canlaon'
             ],
             [
                 'name' => 'Capulin',
@@ -931,7 +931,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 2494,
                 'description' => 'An extinct cinder cone in New Mexico, preserved as a classic example of volcanic cone morphology.',
                 'type' => 'Cinder cone',
-                'image_url' => 'capulin.jpeg'
+                'image_url' => 'capulin'
             ],
             [
                 'name' => 'Carrizozo',
@@ -943,7 +943,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1730,
                 'description' => 'A volcanic field in New Mexico featuring young basaltic lava flows from Holocene eruptions.',
                 'type' => 'Volcanic field',
-                'image_url' => 'carrizozo.jpg'
+                'image_url' => 'carrizozo'
             ],
             [
                 'name' => 'Cayambe',
@@ -955,7 +955,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 5790,
                 'description' => 'A glaciated stratovolcano near the equator that last erupted in the late 18th century.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'cayambe.jpeg'
+                'image_url' => 'cayambe'
             ],
             [
                 'name' => 'Cereme',
@@ -967,7 +967,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 3078,
                 'description' => 'Also known as Mount Ciremai, this active stratovolcano in West Java occasionally emits ash and gas.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'cereme.jpg'
+                'image_url' => 'cereme'
             ],
             [
                 'name' => 'Chaine des Puys',
@@ -979,7 +979,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1464,
                 'description' => 'A volcanic field of cinder cones and domes in central France, inactive for over 7,000 years.',
                 'type' => 'Lava dome',
-                'image_url' => 'chaine-des-puys.jpg'
+                'image_url' => 'chaine-des-puys'
             ],
             [
                 'name' => 'Chiginagak',
@@ -991,7 +991,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 2067,
                 'description' => 'An active stratovolcano in Alaska with recent hydrothermal activity and crater lake overflow events.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'chiginagak.jpeg'
+                'image_url' => 'chiginagak'
             ],
             [
                 'name' => 'Chikurachki',
@@ -1003,7 +1003,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 5958,
                 'description' => 'The highest volcano of Paramushir Island in the Kurils, frequently emitting ash plumes and lava flows.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'chikurachki.jpg'
+                'image_url' => 'chikurachki'
             ],
             [
                 'name' => 'Chimborazo',
@@ -1015,7 +1015,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 6310,
                 'description' => 'An extinct stratovolcano and Ecuador’s highest peak, notable as the point on Earth farthest from the planet’s center.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'chimborazo.jpg'
+                'image_url' => 'chimborazo'
             ],
             [
                 'name' => 'Cleveland',
@@ -1027,7 +1027,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1730,
                 'description' => 'One of the Aleutians’ most active volcanoes, Cleveland produces frequent explosive eruptions and ash plumes.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'cleveland.jpg'
+                'image_url' => 'cleveland'
             ],
             [
                 'name' => 'Coatepeque',
@@ -1039,7 +1039,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 746,
                 'description' => 'A large caldera in western El Salvador filled by Lake Coatepeque, formed by ancient explosive eruptions.',
                 'type' => 'Caldera',
-                'image_url' => 'coatepeque.jpg'
+                'image_url' => 'coatepeque'
             ],
             [
                 'name' => 'Colima',
@@ -1051,7 +1051,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 4100,
                 'description' => 'One of Mexico’s most active volcanoes, frequently erupting with lava domes and ash explosions.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'colima.jpg'
+                'image_url' => 'colima'
             ],
             [
                 'name' => 'Columbia River Flood Basalts',
@@ -1063,7 +1063,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 0,
                 'description' => 'A vast region of ancient basaltic lava flows covering parts of Washington, Oregon, and Idaho.',
                 'type' => 'Flood basalt',
-                'image_url' => 'columbia-river-flood-basalts.jpg'
+                'image_url' => 'columbia-river-flood-basalts'
             ],
             [
                 'name' => 'Concepción',
@@ -1075,7 +1075,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1610,
                 'description' => 'An active stratovolcano forming part of Ometepe Island in Lake Nicaragua with frequent ash eruptions.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'concepcion.jpeg'
+                'image_url' => 'concepcion'
             ],
             [
                 'name' => 'Copahue',
@@ -1087,7 +1087,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 2965,
                 'description' => 'An active stratovolcano on the Chile-Argentina border known for sulfuric gas emissions and minor eruptions.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'copahue.jpeg'
+                'image_url' => 'copahue'
             ],
             [
                 'name' => 'Cosigüina',
@@ -1099,7 +1099,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 847,
                 'description' => 'A shield volcano in western Nicaragua whose 1835 eruption was among the largest in Central America’s history.',
                 'type' => 'Shield',
-                'image_url' => 'cosiguina.jpeg'
+                'image_url' => 'cosiguina'
             ],
             [
                 'name' => 'Cotopaxi',
@@ -1111,7 +1111,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 5911,
                 'description' => 'One of the world’s highest active volcanoes, Cotopaxi features a symmetrical cone and frequent eruptions.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'cotopaxi.jpg'
+                'image_url' => 'cotopaxi'
             ],
             [
                 'name' => 'Crater Lake',
@@ -1123,7 +1123,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 2471,
                 'description' => 'A massive caldera in Oregon formed by the collapse of Mount Mazama, now filled by deep blue Crater Lake.',
                 'type' => 'Caldera',
-                'image_url' => 'crater-lake.jpeg'
+                'image_url' => 'crater-lake'
             ],
             [
                 'name' => 'Craters of the Moon',
@@ -1135,7 +1135,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 2005,
                 'description' => 'A vast volcanic field in Idaho featuring young basaltic lava flows and spatter cones.',
                 'type' => 'Volcanic field',
-                'image_url' => 'craters-of-the-moon.jpg'
+                'image_url' => 'craters-of-the-moon'
             ],
             [
                 'name' => 'Daisetsu',
@@ -1147,7 +1147,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 2290,
                 'description' => 'A volcanic group in central Hokkaido with active fumaroles and geothermal features in Daisetsuzan National Park.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'daisetsu.jpeg'
+                'image_url' => 'daisetsu'
             ],
             [
                 'name' => 'Dakataua',
@@ -1159,7 +1159,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 400,
                 'description' => 'A flooded caldera on the Willaumez Peninsula with signs of recent volcanic unrest and thermal activity.',
                 'type' => 'Caldera',
-                'image_url' => 'dakataua.jpg'
+                'image_url' => 'dakataua'
             ],
             [
                 'name' => 'Damavand',
@@ -1171,7 +1171,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 5670,
                 'description' => 'The highest peak in Iran and the Middle East, showing fumarolic activity near its summit crater.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'damavand.jpeg'
+                'image_url' => 'damavand'
             ],
             [
                 'name' => 'Deccan Traps',
@@ -1183,7 +1183,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 600,
                 'description' => 'A massive flood basalt province in western India formed by extensive volcanic eruptions 66 million years ago.',
                 'type' => 'Flood basalt',
-                'image_url' => 'deccan-traps.jpg'
+                'image_url' => 'deccan-traps'
             ],
             [
                 'name' => 'Dempo',
@@ -1195,7 +1195,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 3173,
                 'description' => 'An active stratovolcano in southern Sumatra with a crater lake and periodic explosive eruptions.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'dempo.jpg'
+                'image_url' => 'dempo'
             ],
             [
                 'name' => 'Devils Garden',
@@ -1207,7 +1207,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1525,
                 'description' => 'A volcanic field in central Oregon featuring basaltic lava flows and lava tubes formed thousands of years ago.',
                 'type' => 'Volcanic field',
-                'image_url' => 'devils-garden.jpg'
+                'image_url' => 'devils-garden'
             ],
             [
                 'name' => 'Devils Tower',
@@ -1219,7 +1219,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1558,
                 'description' => 'An iconic volcanic plug in Wyoming composed of columnar phonolite, now a national monument.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'devils-tower.jpg'
+                'image_url' => 'devils-tower'
             ],
             [
                 'name' => 'Diamond Craters',
@@ -1231,7 +1231,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1450,
                 'description' => 'An extinct volcanic field in southeastern Oregon featuring maars, lava flows, and cinder cones.',
                 'type' => 'Volcanic field',
-                'image_url' => 'diamond-craters.jpeg'
+                'image_url' => 'diamond-craters'
             ],
             [
                 'name' => 'Dieng Volcanic Complex',
@@ -1243,7 +1243,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 2565,
                 'description' => 'A group of active craters and fumaroles in central Java known for hydrothermal activity and toxic gas emissions.',
                 'type' => 'Complex',
-                'image_url' => 'dieng-volcanic-complex.jpg'
+                'image_url' => 'dieng-volcanic-complex'
             ],
             [
                 'name' => 'Diky Greben',
@@ -1255,7 +1255,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1331,
                 'description' => 'A group of lava domes on the Kamchatka Peninsula showing weak fumarolic activity.',
                 'type' => 'Lava dome',
-                'image_url' => 'diky-greben.jpeg'
+                'image_url' => 'diky-greben'
             ],
             [
                 'name' => 'Dubbi',
@@ -1267,7 +1267,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1625,
                 'description' => 'An active stratovolcano in the Danakil region that last erupted in 1861, producing large lava flows.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'dubbi.jpg'
+                'image_url' => 'dubbi'
             ],
             [
                 'name' => 'Dukono',
@@ -1279,7 +1279,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1185,
                 'description' => 'A persistently active volcano on Halmahera producing continuous ash emissions and explosions.',
                 'type' => 'Complex',
-                'image_url' => 'dukono.jpeg'
+                'image_url' => 'dukono'
             ],
             [
                 'name' => 'East Epi',
@@ -1291,7 +1291,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => -34,
                 'description' => 'A submarine caldera off Epi Island with frequent shallow eruptions and hydrothermal activity.',
                 'type' => 'Caldera',
-                'image_url' => 'east-epi.jpeg'
+                'image_url' => 'east-epi'
             ],
             [
                 'name' => 'Ebeko',
@@ -1303,7 +1303,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1156,
                 'description' => 'A somma volcano on Paramushir Island known for frequent explosive ash eruptions and gas plumes.',
                 'type' => 'Somma',
-                'image_url' => 'ebeko.jpeg'
+                'image_url' => 'ebeko'
             ],
             [
                 'name' => 'Egmont (Taranaki)',
@@ -1315,7 +1315,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 2518,
                 'description' => 'A symmetrical stratovolcano on New Zealand’s North Island with a history of moderate eruptions.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'egmont-taranaki.jpeg'
+                'image_url' => 'egmont-taranaki'
             ],
             [
                 'name' => 'Egon',
@@ -1327,7 +1327,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 788,
                 'description' => 'An active volcano on Flores Island with a crater lake and frequent small explosive eruptions.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'egon.jpeg'
+                'image_url' => 'egon'
             ],
             [
                 'name' => 'El Chichón',
@@ -1339,7 +1339,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1060,
                 'description' => 'A caldera volcano in southern Mexico that erupted catastrophically in 1982 after centuries of dormancy.',
                 'type' => 'Caldera',
-                'image_url' => 'el-chichon.jpeg'
+                'image_url' => 'el-chichon'
             ],
             [
                 'name' => 'Elbrus',
@@ -1351,7 +1351,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 5633,
                 'description' => 'Europe’s highest peak and a dormant stratovolcano in the Caucasus Mountains with no eruptions in recorded history.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'elbrus.jpeg'
+                'image_url' => 'elbrus'
             ],
             [
                 'name' => 'Erebus',
@@ -1363,7 +1363,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 3794,
                 'description' => 'The world’s southernmost active volcano, Erebus features a persistent lava lake on Ross Island.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'erebus.jpeg'
+                'image_url' => 'erebus'
             ],
             [
                 'name' => 'Erta Ale',
@@ -1375,7 +1375,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 613,
                 'description' => 'A low shield volcano in the Danakil Depression known for its long-lived lava lake and continuous activity.',
                 'type' => 'Shield',
-                'image_url' => 'erta-ale.jpeg'
+                'image_url' => 'erta-ale'
             ],
             [
                 'name' => 'Etna',
@@ -1387,7 +1387,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 3350,
                 'description' => 'Europe’s most active volcano, Etna frequently erupts with lava flows and ash emissions near Catania, Sicily.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'etna.jpeg'
+                'image_url' => 'etna'
             ],
             [
                 'name' => 'Fantale',
@@ -1399,7 +1399,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 2007,
                 'description' => 'A caldera volcano in the Ethiopian Rift Valley with fumaroles and recent geothermal activity.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'fantale.jpeg'
+                'image_url' => 'fantale'
             ],
             [
                 'name' => 'Fernandina',
@@ -1411,7 +1411,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1476,
                 'description' => 'The most active volcano in the Galápagos Islands, Fernandina regularly produces basaltic lava flows.',
                 'type' => 'Caldera',
-                'image_url' => 'fernandina.jpeg'
+                'image_url' => 'fernandina'
             ],
             [
                 'name' => 'Fisher',
@@ -1423,7 +1423,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1095,
                 'description' => 'An eroded stratovolcano in the Aleutian Islands showing no signs of recent volcanic activity.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'fisher.jpg'
+                'image_url' => 'fisher'
             ],
             [
                 'name' => 'Fogo',
@@ -1435,7 +1435,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 2829,
                 'description' => 'An active volcano dominating Fogo Island, last erupting in 2014 with significant lava flows.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'fogo.jpeg'
+                'image_url' => 'fogo'
             ],
             [
                 'name' => 'Fort Rock',
@@ -1447,7 +1447,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1716,
                 'description' => 'A tuff ring in central Oregon formed by a phreatomagmatic eruption through an ancient lakebed.',
                 'type' => 'Tuff ring',
-                'image_url' => 'fort-rock.jpeg'
+                'image_url' => 'fort-rock'
             ],
             [
                 'name' => 'Frosty Peak',
@@ -1459,7 +1459,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1920,
                 'description' => 'A glaciated stratovolcano in Alaska’s Aleutian Range showing no known Holocene eruptions.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'frosty-peak.jpg'
+                'image_url' => 'frosty-peak'
             ],
             [
                 'name' => 'Fuego',
@@ -1471,7 +1471,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 3763,
                 'description' => 'One of Central America’s most active volcanoes, Fuego produces frequent explosive eruptions and ash plumes.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'fuego.jpeg'
+                'image_url' => 'fuego'
             ],
             [
                 'name' => 'Fuerteventura',
@@ -1483,7 +1483,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 529,
                 'description' => 'An ancient volcanic island in the Canary Islands, now eroded with no recent eruptive activity.',
                 'type' => 'Fissure vent',
-                'image_url' => 'fuerteventura.jpg'
+                'image_url' => 'fuerteventura'
             ],
             [
                 'name' => 'Fuji',
@@ -1495,7 +1495,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 3776,
                 'description' => 'Japan’s highest and most iconic volcano, Fuji last erupted in 1707 and remains potentially active.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'fuji.jpg'
+                'image_url' => 'fuji'
             ],
             [
                 'name' => 'Furnas',
@@ -1507,7 +1507,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 805,
                 'description' => 'A caldera volcano on São Miguel Island in the Azores with geothermal vents and historical eruptions.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'furnas.jpeg'
+                'image_url' => 'furnas'
             ],
             [
                 'name' => 'Fuss Peak',
@@ -1519,7 +1519,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1772,
                 'description' => 'A steep stratovolcano on Paramushir Island in the Kurils, last known to erupt in the 19th century.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'fuss-peak.jpg'
+                'image_url' => 'fuss-peak'
             ],
             [
                 'name' => 'Galeras',
@@ -1531,7 +1531,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 4276,
                 'description' => 'A frequently active volcano near Pasto, Colombia, known for explosive eruptions and fumarolic activity.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'galeras.jpeg'
+                'image_url' => 'galeras'
             ],
             [
                 'name' => 'Galunggung',
@@ -1543,7 +1543,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 2168,
                 'description' => 'A stratovolcano in West Java that last erupted in 1984, producing significant ash and lahars.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'galunggung.jpg'
+                'image_url' => 'galunggung'
             ],
             [
                 'name' => 'Gamalama',
@@ -1555,7 +1555,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1715,
                 'description' => 'A highly active volcano on Ternate Island with frequent explosive eruptions and ashfall events.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'gamalama.jpg'
+                'image_url' => 'gamalama'
             ],
             [
                 'name' => 'Gamchen',
@@ -1567,7 +1567,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 2576,
                 'description' => 'A large complex stratovolcano in Kamchatka composed of several overlapping cones and craters.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'gamchen.jpeg'
+                'image_url' => 'gamchen'
             ],
             [
                 'name' => 'Gamkonora',
@@ -1579,7 +1579,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1635,
                 'description' => 'An active volcano on Halmahera Island with a large summit crater and frequent eruptions.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'gamkonora.jpeg'
+                'image_url' => 'gamkonora'
             ],
             [
                 'name' => 'Gareloi',
@@ -1591,7 +1591,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1573,
                 'description' => 'An active Aleutian stratovolcano known for frequent ash plumes and explosive eruptions.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'gareloi.jpg'
+                'image_url' => 'gareloi'
             ],
             [
                 'name' => 'Gaua',
@@ -1603,7 +1603,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 797,
                 'description' => 'A volcanic island with an active caldera lake that frequently emits steam and gas.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'gaua.jpg'
+                'image_url' => 'gaua'
             ],
             [
                 'name' => 'Gede',
@@ -1615,7 +1615,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 2958,
                 'description' => 'A twin-peaked volcano near Jakarta with fumaroles and a history of moderate eruptions.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'gede.jpeg'
+                'image_url' => 'gede'
             ],
             [
                 'name' => 'Glacier Peak',
@@ -1627,7 +1627,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 3213,
                 'description' => 'A glaciated stratovolcano in Washington with past large explosive eruptions.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'glacier-peak.jpg'
+                'image_url' => 'glacier-peak'
             ],
             [
                 'name' => 'Gorely',
@@ -1639,7 +1639,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1829,
                 'description' => 'A caldera volcano in Kamchatka featuring multiple craters and frequent small eruptions.',
                 'type' => 'Caldera',
-                'image_url' => 'gorely.jpeg'
+                'image_url' => 'gorely'
             ],
             [
                 'name' => 'Graciosa',
@@ -1651,7 +1651,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 402,
                 'description' => 'A volcanic island in the Azores with a central caldera and geothermal springs.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'graciosa.jpeg'
+                'image_url' => 'graciosa'
             ],
             [
                 'name' => 'Gran Canaria',
@@ -1663,7 +1663,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1950,
                 'description' => 'An ancient shield volcano in the Canary Islands shaped by massive eruptions millions of years ago.',
                 'type' => 'Fissure vent',
-                'image_url' => 'gran-canaria.jpg'
+                'image_url' => 'gran-canaria'
             ],
             [
                 'name' => 'Great Sitkin',
@@ -1675,7 +1675,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1740,
                 'description' => 'A frequently active Aleutian volcano with lava dome growth and ash emissions.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'great-sitkin.jpeg'
+                'image_url' => 'great-sitkin'
             ],
             [
                 'name' => 'Griggs',
@@ -1687,7 +1687,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 2317,
                 'description' => 'A large stratovolcano in Katmai National Park showing no recent eruptive activity.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'griggs.jpg'
+                'image_url' => 'griggs'
             ],
             [
                 'name' => 'Grímsvötn',
@@ -1699,7 +1699,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1725,
                 'description' => 'Iceland’s most active volcano, erupting beneath the Vatnajökull ice cap and producing jökulhlaups.',
                 'type' => 'Caldera',
-                'image_url' => 'grimsvotn.jpeg'
+                'image_url' => 'grimsvotn'
             ],
             [
                 'name' => 'Guagua Pichincha',
@@ -1711,7 +1711,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 4784,
                 'description' => 'A frequently active volcano overlooking Quito, known for ash eruptions and fumarolic activity.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'guagua-pichincha.jpeg'
+                'image_url' => 'guagua-pichincha'
             ],
             [
                 'name' => 'Guallatiri',
@@ -1723,7 +1723,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 6071,
                 'description' => 'A high Andean volcano emitting constant fumaroles and occasional explosive eruptions.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'guallatiri.jpg'
+                'image_url' => 'guallatiri'
             ],
             [
                 'name' => 'Guguan',
@@ -1735,7 +1735,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 287,
                 'description' => 'A small volcanic island in the Northern Marianas that last erupted in the early 20th century.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'guguan.jpeg'
+                'image_url' => 'guguan'
             ],
             [
                 'name' => 'Hakone',
@@ -1747,7 +1747,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1439,
                 'description' => 'A complex volcano in central Japan, known for its hot springs, caldera lakes, and frequent seismic activity.',
                 'type' => 'Caldera',
-                'image_url' => 'hakone.jpg'
+                'image_url' => 'hakone'
             ],
             [
                 'name' => 'Heard',
@@ -1759,7 +1759,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 2745,
                 'description' => 'A remote volcanic island in the Southern Ocean with a large stratovolcano, part of Australian external territory.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'heard.jpg'
+                'image_url' => 'heard'
             ],
             [
                 'name' => 'Hibok-hibok',
@@ -1771,7 +1771,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1332,
                 'description' => 'A stratovolcano on Camiguin Island, known for its explosive eruptions and destructive pyroclastic flows.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'hibok-hibok.jpg'
+                'image_url' => 'hibok-hibok'
             ],
             [
                 'name' => 'Hierro',
@@ -1783,7 +1783,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1500,
                 'description' => 'A shield volcano forming the island of El Hierro in the Canary Islands, the youngest and smallest island of the group.',
                 'type' => 'Shield',
-                'image_url' => 'hierro.jpg'
+                'image_url' => 'hierro'
             ],
             [
                 'name' => 'Hood',
@@ -1795,7 +1795,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 3426,
                 'description' => 'A stratovolcano in Oregon, part of the Cascade Range, known for its glaciers and history of eruptions and lahars.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'hood.jpg'
+                'image_url' => 'hood'
             ],
             [
                 'name' => 'Hualalai',
@@ -1807,7 +1807,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 2523,
                 'description' => 'A shield volcano on the Big Island of Hawaii, last erupted in the 19th century, with ongoing seismic activity.',
                 'type' => 'Shield',
-                'image_url' => 'hualalai.jpg'
+                'image_url' => 'hualalai'
             ],
             [
                 'name' => 'Ibu',
@@ -1819,7 +1819,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1325,
                 'description' => 'A stratovolcano on Halmahera island, Indonesia, known for frequent eruptions and volcanic ash emissions.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'ibu.jpg'
+                'image_url' => 'ibu'
             ],
             [
                 'name' => 'Ijen',
@@ -1831,7 +1831,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 2386,
                 'description' => 'A stratovolcano in East Java, famous for its turquoise acidic crater lake and sulfur mining operations.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'ijen.jpg'
+                'image_url' => 'ijen'
             ],
             [
                 'name' => 'Iliamna',
@@ -1843,7 +1843,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 3053,
                 'description' => 'A large stratovolcano in Alaska, part of the Aleutian Range, monitored for potential explosive eruptions.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'iliamna.jpg'
+                'image_url' => 'iliamna'
             ],
             [
                 'name' => 'Iliboleng',
@@ -1855,7 +1855,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1659,
                 'description' => 'A stratovolcano on Lembata Island, Indonesia, known for periodic eruptions and steep volcanic slopes.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'iliboleng.jpg'
+                'image_url' => 'iliboleng'
             ],
             [
                 'name' => 'Illiniza',
@@ -1867,7 +1867,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 5248,
                 'description' => 'A twin-peaked stratovolcano in the Andes of Ecuador, consisting of Illiniza Norte and Illiniza Sur, popular with climbers for its challenging ascents.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'illiniza.jpg'
+                'image_url' => 'illiniza'
             ],
             [
                 'name' => 'Ilopango',
@@ -1879,7 +1879,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 450,
                 'description' => 'A large caldera in central El Salvador, now filled by Lake Ilopango, the site of a massive eruption around 450 CE that devastated surrounding regions.',
                 'type' => 'Caldera',
-                'image_url' => 'ilopango.jpg'
+                'image_url' => 'ilopango'
             ],
             [
                 'name' => 'Ilyinsky',
@@ -1891,7 +1891,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1578,
                 'description' => 'A stratovolcano located on the Kamchatka Peninsula, near Kurile Lake, featuring a symmetrical cone and last known eruption over a century ago.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'ilyinsky.jpg'
+                'image_url' => 'ilyinsky'
             ],
             [
                 'name' => 'Ioto (Iwo-jima)',
@@ -1903,7 +1903,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 161,
                 'description' => 'A small volcanic island in the Volcano Islands chain, known for its continuous uplift, geothermal activity, and historic WWII significance.',
                 'type' => 'Caldera',
-                'image_url' => 'iwo-jima.JPG'
+                'image_url' => 'iwo-jima'
             ],
             [
                 'name' => 'Iraya',
@@ -1915,7 +1915,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1009,
                 'description' => 'A stratovolcano on Batan Island, northern Philippines, with the most recent eruption recorded in the early 15th century and geothermal activity still present.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'iraya.JPG'
+                'image_url' => 'iraya'
             ],
             [
                 'name' => 'Irazu',
@@ -1927,7 +1927,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 3431,
                 'description' => 'The highest active volcano in Costa Rica, known for its green crater lake and ash eruptions that periodically affect the nearby capital, San José.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'irazu.webp'
+                'image_url' => 'irazu'
             ],
             [
                 'name' => 'Isanotski',
@@ -1939,7 +1939,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 2446,
                 'description' => 'Also known as Isanotski Peak, this is one of the most perfectly symmetrical stratovolcanoes in Alaska’s Aleutian Range, last erupting thousands of years ago.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'isanotski.jpg'
+                'image_url' => 'isanotski'
             ],
             [
                 'name' => 'Izalco',
@@ -1951,7 +1951,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1950,
                 'description' => 'Nicknamed the “Lighthouse of the Pacific” for its frequent eruptions during the 18th and 19th centuries, Izalco remains one of El Salvador’s most iconic volcanoes.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'izalco.jpg'
+                'image_url' => 'izalco'
             ],
             [
                 'name' => 'Iztaccihuatl',
@@ -1963,7 +1963,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 5286,
                 'description' => 'Known as the “Sleeping Woman,” this extinct stratovolcano near Mexico City features snow-capped peaks resembling a reclining female figure.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'iztaccihuatl.jpg'
+                'image_url' => 'iztaccihuatl'
             ],
             [
                 'name' => 'Izu-Tobu',
@@ -1975,7 +1975,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 581,
                 'description' => 'A volcanic field on the Izu Peninsula featuring numerous pyroclastic cones and domes, with active geothermal and seismic phenomena.',
                 'type' => 'Cinder cone',
-                'image_url' => 'izu-tobu.jpg'
+                'image_url' => 'izu-tobu'
             ],
             [
                 'name' => 'Jailolo',
@@ -1987,7 +1987,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1130,
                 'description' => 'A stratovolcano located on the western side of Halmahera Island, Indonesia, known for fumarolic activity and a large caldera partially filled by a bay.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'jailolo.jpg'
+                'image_url' => 'jailolo'
             ],
             [
                 'name' => 'Jefferson',
@@ -1999,7 +1999,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 3199,
                 'description' => 'Mount Jefferson is a heavily eroded stratovolcano in the Cascade Range of Oregon, featuring steep ridges and glacial valleys formed by extensive erosion.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'jefferson.JPG'
+                'image_url' => 'jefferson'
             ],
             [
                 'name' => 'Jordan Craters',
@@ -2011,7 +2011,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1400,
                 'description' => 'A volcanic field in southeastern Oregon with basaltic lava flows and cinder cones, most recently active about 3,200 years ago.',
                 'type' => 'Volcanic field',
-                'image_url' => 'jordan-craters.jpg'
+                'image_url' => 'jordan-craters'
             ],
             [
                 'name' => 'Kadovar',
@@ -2023,7 +2023,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 365,
                 'description' => 'A small volcanic island north of New Guinea that erupted in 2018, displacing residents and producing ongoing gas emissions and ash plumes.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'kadovar.jpg'
+                'image_url' => 'kadovar'
             ],
             [
                 'name' => 'Kaguyak',
@@ -2035,7 +2035,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 901,
                 'description' => 'A stratovolcano on the Alaska Peninsula with a summit crater lake formed after a major eruption about 5,000 years ago.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'kaguyak.jpg'
+                'image_url' => 'kaguyak'
             ],
             [
                 'name' => 'Kahoolawe',
@@ -2047,7 +2047,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 450,
                 'description' => 'The smallest of the main Hawaiian Islands, formed by an extinct shield volcano and known for its dry climate and cultural significance in Hawaiian history.',
                 'type' => 'Shield',
-                'image_url' => 'kahoolawe.jpg'
+                'image_url' => 'kahoolawe'
             ],
             [
                 'name' => 'Kambalny',
@@ -2059,7 +2059,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 2156,
                 'description' => 'A stratovolcano in southern Kamchatka, Russia, with a history of major landslides and an explosive eruption recorded in 2017 after centuries of dormancy.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'kambalny.jpg'
+                'image_url' => 'kambalny'
             ],
             [
                 'name' => 'Kanaga',
@@ -2071,7 +2071,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1307,
                 'description' => 'A symmetrical stratovolcano forming most of Kanaga Island in Alaska’s Aleutian chain, with intermittent eruptions and gas emissions observed in recent decades.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'kanaga.jpg'
+                'image_url' => 'kanaga'
             ],
             [
                 'name' => 'Karangetang (Api Siau)',
@@ -2083,7 +2083,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1784,
                 'description' => 'One of Indonesia’s most active volcanoes, located on Siau Island, known for frequent eruptions producing lava flows and pyroclastic activity.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'karangetang.jpg'
+                'image_url' => 'karangetang'
             ],
             [
                 'name' => 'Karisimbi',
@@ -2095,7 +2095,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 4507,
                 'description' => 'The highest of the Virunga Mountains, straddling the border of Rwanda and the Democratic Republic of the Congo, with no recorded historical eruptions.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'karisimbi.jpg'
+                'image_url' => 'karisimbi'
             ],
             [
                 'name' => 'Karthala',
@@ -2107,7 +2107,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 2361,
                 'description' => 'A large shield volcano forming the southern part of Grande Comore Island, known for its massive summit caldera and frequent eruptions producing lava flows and ash.',
                 'type' => 'Shield',
-                'image_url' => 'karthala.jpg'
+                'image_url' => 'karthala'
             ],
             [
                 'name' => 'Karymsky',
@@ -2119,7 +2119,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1536,
                 'description' => 'One of the most active volcanoes in Kamchatka, featuring frequent explosive eruptions and ash plumes that regularly affect regional air traffic.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'karymsky.jpg'
+                'image_url' => 'karymsky'
             ],
             [
                 'name' => 'Katla',
@@ -2131,7 +2131,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1512,
                 'description' => 'A powerful subglacial volcano beneath the Mýrdalsjökull ice cap, known for massive eruptions that cause catastrophic glacial floods (jökulhlaups).',
                 'type' => 'Fissure vent',
-                'image_url' => 'katla.png'
+                'image_url' => 'katla'
             ],
             [
                 'name' => 'Katmai',
@@ -2143,7 +2143,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 2047,
                 'description' => 'A stratovolcano in Alaska’s Katmai National Park, famous for the 1912 Novarupta eruption that formed a caldera and the Valley of Ten Thousand Smokes.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'katmai.jpg'
+                'image_url' => 'katmai'
             ],
             [
                 'name' => 'Katwe-Kikorongo',
@@ -2155,7 +2155,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1067,
                 'description' => 'A volcanic field in western Uganda containing numerous explosion craters and crater lakes, part of the western branch of the East African Rift.',
                 'type' => 'Volcanic field',
-                'image_url' => 'katwe-kikorongo.jpg'
+                'image_url' => 'katwe-kikorongo'
             ],
             [
                 'name' => 'Kavachi',
@@ -2167,7 +2167,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => -20,
                 'description' => 'An active submarine volcano in the Solomon Islands, known as one of the most active undersea volcanoes on Earth, occasionally forming ephemeral islands.',
                 'type' => 'Submarine',
-                'image_url' => 'kavachi.jpg'
+                'image_url' => 'kavachi'
             ],
             [
                 'name' => 'Kell',
@@ -2179,7 +2179,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 900,
                 'description' => 'A small stratovolcano located near Kurile Lake in Kamchatka, Russia, showing no historical eruptions but considered part of an active volcanic zone.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'kell.jpg'
+                'image_url' => 'kell'
             ],
             [
                 'name' => 'Kelut',
@@ -2191,7 +2191,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1731,
                 'description' => 'A highly active stratovolcano in East Java, Indonesia, known for explosive eruptions that have produced deadly lahars and crater lakes.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'kelut.jpg'
+                'image_url' => 'kelut'
             ],
             [
                 'name' => 'Kerinci',
@@ -2203,7 +2203,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 3800,
                 'description' => 'The highest volcano in Indonesia and Sumatra’s tallest peak, frequently active with persistent gas emissions and occasional ash plumes.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'kerinci.jpg'
+                'image_url' => 'kerinci'
             ],
             [
                 'name' => 'Khodutka',
@@ -2215,7 +2215,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 2090,
                 'description' => 'A stratovolcano located south of the Mutnovsky volcano group in Kamchatka, Russia, featuring hot springs and fumaroles but no recorded eruptions in historical times.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'khodutka.jpg'
+                'image_url' => 'khodutka'
             ],
             [
                 'name' => 'Kialagvik',
@@ -2227,7 +2227,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1677,
                 'description' => 'A stratovolcano on the Alaska Peninsula that has not erupted in historical times, characterized by a well-preserved cone and extensive lava flows.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'kialagvik.jpg'
+                'image_url' => 'kialagvik'
             ],
             [
                 'name' => "Kick 'em Jenny",
@@ -2239,7 +2239,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => -185,
                 'description' => 'An active submarine volcano located north of Grenada in the Caribbean Sea, known for frequent eruptions and potential tsunami hazards.',
                 'type' => 'Submarine',
-                'image_url' => 'kick-em-jenny.jpg'
+                'image_url' => 'kick-em-jenny'
             ],
             [
                 'name' => 'Kikai',
@@ -2251,7 +2251,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 704,
                 'description' => 'A submerged caldera south of Kyushu, Japan, site of one of the largest eruptions in the past 10,000 years, producing widespread ash deposits across Japan.',
                 'type' => 'Caldera',
-                'image_url' => 'kikai.jpg'
+                'image_url' => 'kikai'
             ],
             [
                 'name' => 'Kikhpinych',
@@ -2263,7 +2263,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1552,
                 'description' => 'An active stratovolcano on the Kamchatka Peninsula with a complex structure and geothermal activity including hot springs and fumaroles.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'kikhpinych.jpg'
+                'image_url' => 'kikhpinych'
             ],
             [
                 'name' => 'Kilauea',
@@ -2275,7 +2275,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1222,
                 'description' => 'One of the most active volcanoes on Earth, located on Hawaii’s Big Island, known for its frequent effusive eruptions and extensive lava flows.',
                 'type' => 'Shield',
-                'image_url' => 'kilauea.jpg'
+                'image_url' => 'kilauea'
             ],
             [
                 'name' => 'Kilimanjaro',
@@ -2287,7 +2287,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 5895,
                 'description' => 'The highest mountain in Africa, Kilimanjaro is a massive stratovolcano with three peaks—Kibo, Mawenzi, and Shira—showing no recent eruptive activity.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'kilimanjaro.jpg'
+                'image_url' => 'kilimanjaro'
             ],
             [
                 'name' => 'Kirishima',
@@ -2299,7 +2299,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1700,
                 'description' => 'A group of active stratovolcanoes on Kyushu Island, Japan, featuring frequent explosive eruptions and scenic crater lakes such as Miike and Onami-ike.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'kirishima.jpg'
+                'image_url' => 'kirishima'
             ],
             [
                 'name' => 'Kliuchevskoi',
@@ -2311,7 +2311,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 4835,
                 'description' => 'The highest and most active volcano in Eurasia, located in Kamchatka, Russia, known for frequent Strombolian and Vulcanian eruptions producing lava flows and ash plumes.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'kliuchevskoi.jpg'
+                'image_url' => 'kliuchevskoi'
             ],
             [
                 'name' => 'Komagatake',
@@ -2323,7 +2323,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1131,
                 'description' => 'A stratovolcano on Japan’s Hokkaido Island with a horseshoe-shaped crater and frequent small eruptions that have shaped its modern profile.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'komagatake.jpg'
+                'image_url' => 'komagatake'
             ],
             [
                 'name' => 'Kone',
@@ -2335,7 +2335,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1619,
                 'description' => 'A caldera volcano in Ethiopia’s Main Ethiopian Rift, featuring fumarolic activity and young basaltic lava flows within the caldera floor.',
                 'type' => 'Caldera',
-                'image_url' => 'kone.jpg'
+                'image_url' => 'kone'
             ],
             [
                 'name' => 'Koryaksky',
@@ -2347,7 +2347,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 3456,
                 'description' => 'A prominent stratovolcano near Petropavlovsk-Kamchatsky on the Kamchatka Peninsula, known for its symmetrical cone and periodic explosive eruptions.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'koryaksky.jpg'
+                'image_url' => 'koryaksky'
             ],
             [
                 'name' => 'Koshelev',
@@ -2359,7 +2359,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1812,
                 'description' => 'A large complex of overlapping stratovolcanoes on southern Kamchatka with heavily eroded peaks and no known historical eruptions.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'koshelev.jpg'
+                'image_url' => 'koshelev'
             ],
             [
                 'name' => 'Krafla',
@@ -2371,7 +2371,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 818,
                 'description' => 'An active caldera in northern Iceland, part of the volcanic system along the Mid-Atlantic Ridge, known for geothermal features and historic fissure eruptions.',
                 'type' => 'Caldera',
-                'image_url' => 'krafla.jpg'
+                'image_url' => 'krafla'
             ],
             [
                 'name' => 'Krakatau',
@@ -2383,7 +2383,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 813,
                 'description' => 'The site of the catastrophic 1883 eruption, Krakatau remains active as Anak Krakatau ("Child of Krakatau"), growing from the submerged caldera between Java and Sumatra.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'krakatau.jpg'
+                'image_url' => 'krakatau'
             ],
             [
                 'name' => 'Krasheninnikov',
@@ -2395,7 +2395,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1856,
                 'description' => 'A twin-coned stratovolcano located in Kamchatka’s eastern volcanic zone, showing no historical eruptions but retaining fumarolic activity.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'krasheninnikov.jpg'
+                'image_url' => 'krasheninnikov'
             ],
             [
                 'name' => 'Kronotsky',
@@ -2407,7 +2407,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 3528,
                 'description' => 'Often regarded as one of Kamchatka’s most beautiful volcanoes, Kronotsky is a classic symmetrical stratovolcano showing minor fumarolic activity.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'kronotsky.jpg'
+                'image_url' => 'kronotsky'
             ],
             [
                 'name' => 'Ksudach',
@@ -2419,7 +2419,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1079,
                 'description' => 'A large caldera volcano in southern Kamchatka featuring multiple crater lakes and historic explosive eruptions, most recently in the 20th century.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'ksudach.jpg'
+                'image_url' => 'ksudach'
             ],
             [
                 'name' => 'Kukak',
@@ -2431,7 +2431,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 2043,
                 'description' => 'An eroded stratovolcano in Katmai National Park, Alaska, with no known Holocene eruptions but evidence of ancient lava flows.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'kukak.jpg'
+                'image_url' => 'kukak'
             ],
             [
                 'name' => 'Kusatsu-Shirane',
@@ -2443,7 +2443,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 2171,
                 'description' => 'An active stratovolcano in central Honshu, Japan, known for acidic crater lakes, frequent phreatic eruptions, and popular nearby hot springs.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'kusatsu-shirane.jpg'
+                'image_url' => 'kusatsu-shirane'
             ],
             [
                 'name' => 'Kutcharo',
@@ -2455,7 +2455,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 999,
                 'description' => 'A large caldera in eastern Hokkaido containing Lake Kussharo, formed by major explosive eruptions during the late Pleistocene.',
                 'type' => 'Caldera',
-                'image_url' => 'kutcharo.jpg'
+                'image_url' => 'kutcharo'
             ],
             [
                 'name' => 'Kuttara',
@@ -2467,7 +2467,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 581,
                 'description' => 'A small caldera in Hokkaido, Japan, containing Lake Kuttara, known for its clear waters and geothermal activity in the surrounding area.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'kuttara.jpg'
+                'image_url' => 'kuttara'
             ],
             [
                 'name' => 'Kuwae',
@@ -2479,7 +2479,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => -2,
                 'description' => 'A large submarine caldera between Epi and Tongoa islands in Vanuatu, source of a massive eruption around 1452 CE that impacted global climate.',
                 'type' => 'Caldera',
-                'image_url' => 'kuwae.jpg'
+                'image_url' => 'kuwae'
             ],
             [
                 'name' => 'La Palma',
@@ -2491,7 +2491,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 2426,
                 'description' => 'An island volcano in the Canary Islands, home to the Cumbre Vieja ridge, which experienced a major fissure eruption in 2021.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'la-palma.jpg'
+                'image_url' => 'la-palma'
             ],
             [
                 'name' => 'Lamington',
@@ -2503,7 +2503,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1680,
                 'description' => 'A stratovolcano in southeastern Papua New Guinea, site of a catastrophic eruption in 1951 that caused widespread devastation and loss of life.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'lamington.jpg'
+                'image_url' => 'lamington'
             ],
             [
                 'name' => 'Langila',
@@ -2515,7 +2515,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1330,
                 'description' => 'An active volcanic complex on the north coast of New Britain, frequently producing explosive ash emissions and lava flows.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'langila.jpg'
+                'image_url' => 'langila'
             ],
             [
                 'name' => 'Lanzarote',
@@ -2527,7 +2527,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 670,
                 'description' => 'A volcanic island in the Canary Islands featuring numerous fissure vents and lava fields formed during eruptions in the 18th and 19th centuries.',
                 'type' => 'Fissure vent',
-                'image_url' => 'lanzarote.jpg'
+                'image_url' => 'lanzarote'
             ],
             [
                 'name' => 'Láscar',
@@ -2539,7 +2539,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 5592,
                 'description' => 'The most active volcano in northern Chile, Láscar produces frequent explosive eruptions and gas emissions from its summit crater.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'lascar.jpg'
+                'image_url' => 'lascar'
             ],
             [
                 'name' => 'Leroboleng',
@@ -2551,7 +2551,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1117,
                 'description' => 'A complex volcano on Flores Island in Indonesia, consisting of several overlapping cones and craters showing signs of ancient activity.',
                 'type' => 'Complex',
-                'image_url' => 'leroboleng.jpg'
+                'image_url' => 'leroboleng'
             ],
             [
                 'name' => 'Lewotobi',
@@ -2563,7 +2563,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1703,
                 'description' => 'Twin stratovolcanoes on Flores Island, known as Lewotobi Lakilaki and Lewotobi Perempuan, which erupt periodically with ash plumes and lava flows.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'lewotobi.jpg'
+                'image_url' => 'lewotobi'
             ],
             [
                 'name' => 'Lewotolo',
@@ -2575,7 +2575,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1423,
                 'description' => 'An active stratovolcano in eastern Flores, Indonesia, that erupted in 2020 with ash emissions and lava flow activity.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'lewotolo.jpg'
+                'image_url' => 'lewotolo'
             ],
             [
                 'name' => 'Liamuiga',
@@ -2587,7 +2587,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1156,
                 'description' => 'The highest peak on Saint Kitts, Mount Liamuiga is a stratovolcano with a large crater lake and lush tropical forests covering its slopes.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'liamuiga.jpg'
+                'image_url' => 'liamuiga'
             ],
             [
                 'name' => 'Lipari',
@@ -2599,7 +2599,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 602,
                 'description' => 'A volcanic island in the Aeolian archipelago north of Sicily, Lipari has produced rhyolitic lava domes and obsidian flows during prehistoric eruptions.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'lipari.jpg'
+                'image_url' => 'lipari'
             ],
             [
                 'name' => 'Little Sitkin',
@@ -2611,7 +2611,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1174,
                 'description' => 'An eroded stratovolcano in the Aleutian Islands, Alaska, with a caldera and fumarolic activity but no known historic eruptions.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'little-sitkin.jpg'
+                'image_url' => 'little-sitkin'
             ],
             [
                 'name' => 'Loihi',
@@ -2623,7 +2623,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => -975,
                 'description' => 'A submarine volcano southeast of the Big Island of Hawaii, representing the youngest stage of Hawaiian hotspot volcanism and expected to form a new island in the future.',
                 'type' => 'Submarine',
-                'image_url' => 'loihi.jpg'
+                'image_url' => 'loihi'
             ],
             [
                 'name' => 'Lokon-Empung',
@@ -2635,7 +2635,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1580,
                 'description' => 'A twin volcano complex in North Sulawesi, Indonesia, known for frequent explosive eruptions and pyroclastic flows from the active Tompaluan crater.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'lokon-empung.jpg'
+                'image_url' => 'lokon-empung'
             ],
             [
                 'name' => 'Lolo',
@@ -2647,7 +2647,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 805,
                 'description' => 'A small stratovolcano on New Britain Island, Papua New Guinea, with no recorded eruptions but signs of ancient lava flow formations.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'lolo.jpg'
+                'image_url' => 'lolo'
             ],
             [
                 'name' => 'Lolobau',
@@ -2659,7 +2659,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 858,
                 'description' => 'A large caldera on the northern coast of New Britain, featuring geothermal activity and a forested crater floor with no recent eruptions.',
                 'type' => 'Caldera',
-                'image_url' => 'lolobau.jpg'
+                'image_url' => 'lolobau'
             ],
             [
                 'name' => 'Loloru',
@@ -2671,7 +2671,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1887,
                 'description' => 'A large stratovolcano at the southern end of Bougainville Island, hosting a crater lake formed within a caldera from past explosive eruptions.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'loloru.jpg'
+                'image_url' => 'loloru'
             ],
             [
                 'name' => 'Long Island',
@@ -2683,7 +2683,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1280,
                 'description' => 'A large volcanic island with a central caldera containing Lake Wisdom, known for a major eruption around 1660 CE that produced widespread ash deposits.',
                 'type' => 'Complex',
-                'image_url' => 'long-island.jpg'
+                'image_url' => 'long-island'
             ],
             [
                 'name' => 'Longonot',
@@ -2695,7 +2695,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 2776,
                 'description' => 'A stratovolcano southeast of Lake Naivasha in Kenya, featuring a circular crater with forested slopes and fumarolic activity along the inner walls.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'longonot.jpg'
+                'image_url' => 'longonot'
             ],
             [
                 'name' => 'Lopevi',
@@ -2707,7 +2707,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1413,
                 'description' => 'An active basaltic stratovolcano forming a small island in central Vanuatu, with frequent eruptions that produce ash plumes and lava flows.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'lopevi.jpg'
+                'image_url' => 'lopevi'
             ],
             [
                 'name' => 'Maderas',
@@ -2719,7 +2719,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1394,
                 'description' => 'An inactive stratovolcano forming the eastern half of Ometepe Island in Lake Nicaragua, known for its crater lake and lush cloud forest.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'maderas.jpg'
+                'image_url' => 'maderas'
             ],
             [
                 'name' => 'Mageik',
@@ -2731,7 +2731,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 2165,
                 'description' => 'A glaciated stratovolcano located in Katmai National Park, Alaska, showing fumarolic activity but no known historical eruptions.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'mageik.jpg'
+                'image_url' => 'mageik'
             ],
             [
                 'name' => 'Mahawu',
@@ -2743,7 +2743,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1324,
                 'description' => 'An active stratovolcano near Tomohon, North Sulawesi, Indonesia, featuring a scenic crater with fumaroles and acidic lakes from past eruptions.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'mahawu.jpg'
+                'image_url' => 'mahawu'
             ],
             [
                 'name' => 'Makian',
@@ -2755,7 +2755,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1357,
                 'description' => 'A stratovolcano forming Makian Island in the Maluku Islands of Indonesia, known for major explosive eruptions such as in 1988 and earlier centuries.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'makian.jpg'
+                'image_url' => 'makian'
             ],
             [
                 'name' => 'Maly Semiachik',
@@ -2767,7 +2767,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1560,
                 'description' => 'A caldera complex in Kamchatka, Russia, with a turquoise acid crater lake and frequent geothermal activity from within the central cone.',
                 'type' => 'Caldera',
-                'image_url' => 'maly-semiachik.jpg'
+                'image_url' => 'maly-semiachik'
             ],
             [
                 'name' => 'Manam',
@@ -2779,7 +2779,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1807,
                 'description' => 'One of Papua New Guinea’s most active volcanoes, Manam produces frequent explosive eruptions and pyroclastic flows affecting nearby villages.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'manam.jpg'
+                'image_url' => 'manam'
             ],
             [
                 'name' => 'Mariveles',
@@ -2791,7 +2791,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1388,
                 'description' => 'A large stratovolcano at the southern tip of the Bataan Peninsula, with a breached caldera and geothermal activity but no recent eruptions.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'mariveles.webp'
+                'image_url' => 'mariveles'
             ],
             [
                 'name' => 'Marsabit',
@@ -2803,7 +2803,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1707,
                 'description' => 'A large shield volcano in northern Kenya, characterized by numerous volcanic cones and crater lakes surrounded by forested slopes.',
                 'type' => 'Shield',
-                'image_url' => 'marsabit.jpg'
+                'image_url' => 'marsabit'
             ],
             [
                 'name' => 'Masaya',
@@ -2815,7 +2815,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 635,
                 'description' => 'A large caldera complex near Managua, Nicaragua, with an active lava lake in Santiago Crater emitting continuous gas plumes and periodic explosions.',
                 'type' => 'Caldera',
-                'image_url' => 'masaya.jpg'
+                'image_url' => 'masaya'
             ],
             [
                 'name' => 'Mashkovtsev',
@@ -2827,7 +2827,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 503,
                 'description' => 'A small stratovolcano located on the southern Kamchatka Peninsula in Russia, showing no recorded historical activity.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'mashkovtsev.jpg'
+                'image_url' => 'mashkovtsev'
             ],
             [
                 'name' => 'Mashu',
@@ -2839,7 +2839,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 855,
                 'description' => 'A scenic caldera in eastern Hokkaido containing Lake Mashu, one of the clearest lakes in the world, formed by explosive eruptions thousands of years ago.',
                 'type' => 'Caldera',
-                'image_url' => 'mashu.jpg'
+                'image_url' => 'mashu'
             ],
             [
                 'name' => 'Mauna Kea',
@@ -2851,7 +2851,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 4205,
                 'description' => 'The tallest volcano in Hawaii and the highest point in the Pacific Ocean basin, Mauna Kea is a dormant shield volcano topped with astronomical observatories.',
                 'type' => 'Shield',
-                'image_url' => 'mauna-kea.jpg'
+                'image_url' => 'mauna-kea'
             ],
             [
                 'name' => 'Mauna Loa',
@@ -2863,7 +2863,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 4170,
                 'description' => 'The largest active volcano on Earth, covering half of Hawaii’s Big Island, Mauna Loa has erupted 33 times since 1843, most recently in 2022.',
                 'type' => 'Shield',
-                'image_url' => 'mauna-loa.jpeg'
+                'image_url' => 'mauna-loa'
             ],
             [
                 'name' => 'Mayon',
@@ -2875,7 +2875,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 2462,
                 'description' => 'A perfectly symmetrical stratovolcano in southern Luzon, famous for its frequent eruptions and near-perfect cone shape, often called the world’s most beautiful volcano.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'mayon.jpg'
+                'image_url' => 'mayon'
             ],
             [
                 'name' => 'McDonald Islands',
@@ -2887,7 +2887,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 230,
                 'description' => 'A remote volcanic island group in the southern Indian Ocean, part of Australia’s external territories, with eruptions recorded since 1992.',
                 'type' => 'Complex',
-                'image_url' => 'mcdonald-islands.jpg'
+                'image_url' => 'mcdonald-islands'
             ],
             [
                 'name' => 'McLoughlin',
@@ -2899,7 +2899,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 2894,
                 'description' => 'A steep-sided stratovolcano in southern Oregon, part of the Cascade Range, that last erupted about 30,000 years ago and is considered dormant.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'mcloughlin.jpg'
+                'image_url' => 'mcloughlin'
             ],
             [
                 'name' => 'Mega Basalt Field',
@@ -2911,7 +2911,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1067,
                 'description' => 'A vast volcanic field extending across southern Ethiopia and northern Kenya, characterized by extensive lava flows and cinder cones from Pleistocene activity.',
                 'type' => 'Cinder cone',
-                'image_url' => 'mega-basalt-field.jpg'
+                'image_url' => 'mega-basalt-field'
             ],
             [
                 'name' => 'Menan Buttes',
@@ -2923,7 +2923,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1713,
                 'description' => 'Twin tuff cones in Idaho formed by phreatomagmatic eruptions about 10,000 years ago, among the largest volcanic tuff rings in the world.',
                 'type' => 'Tuff ring',
-                'image_url' => 'menan-buttes.jpg'
+                'image_url' => 'menan-buttes'
             ],
             [
                 'name' => 'Menengai',
@@ -2935,7 +2935,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 2278,
                 'description' => 'A massive caldera in Kenya’s Rift Valley formed about 8,000 years ago, with geothermal vents and ongoing fumarolic activity within its floor.',
                 'type' => 'Shield',
-                'image_url' => 'menengai.jpg'
+                'image_url' => 'menengai'
             ],
             [
                 'name' => 'Merapi',
@@ -2947,7 +2947,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 2911,
                 'description' => 'One of Indonesia’s most active volcanoes, Merapi frequently erupts with pyroclastic flows and lava domes near the densely populated city of Yogyakarta.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'merapi.jpg'
+                'image_url' => 'merapi'
             ],
             [
                 'name' => 'Merbabu',
@@ -2959,7 +2959,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 3145,
                 'description' => 'A twin volcano located just north of Merapi in Central Java, Merbabu is covered with grasslands and shows signs of past explosive eruptions.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'merbabu.jpg'
+                'image_url' => 'merbabu'
             ],
             [
                 'name' => 'Meru',
@@ -2971,7 +2971,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 4565,
                 'description' => 'Mount Meru is a massive stratovolcano near Arusha, Tanzania, and the second-highest mountain in the country, with a partially collapsed crater and fumarolic activity.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'meru.webp'
+                'image_url' => 'meru'
             ],
             [
                 'name' => 'Methana',
@@ -2983,7 +2983,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 760,
                 'description' => 'A volcanic peninsula in the Saronic Gulf of Greece, formed by numerous lava domes and fumarolic vents, with the last eruption occurring around 230 BCE.',
                 'type' => 'Lava dome',
-                'image_url' => 'methana.jpg'
+                'image_url' => 'methana'
             ],
             [
                 'name' => 'Metis Shoal',
@@ -2995,7 +2995,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 43,
                 'description' => 'A shallow submarine volcano in Tonga known for forming and destroying temporary islands during frequent explosive eruptions.',
                 'type' => 'Submarine',
-                'image_url' => 'metis-shoal.jpg'
+                'image_url' => 'metis-shoal'
             ],
             [
                 'name' => 'Michael',
@@ -3007,7 +3007,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 990,
                 'description' => 'Mount Michael is a remote stratovolcano on Saunders Island in the South Sandwich Islands, noted for its persistent lava lake within the summit crater.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'michael.jpg'
+                'image_url' => 'michael'
             ],
             [
                 'name' => 'Michoacan-Guanajuato',
@@ -3019,7 +3019,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 3860,
                 'description' => 'A vast volcanic field in central Mexico with over 1,400 cinder cones, including Parícutin, which famously emerged in 1943 and grew over 400 meters high.',
                 'type' => 'Cinder cone',
-                'image_url' => 'michoacan-guanajuato.jpg'
+                'image_url' => 'michoacan-guanajuato'
             ],
             [
                 'name' => 'Mílos',
@@ -3031,7 +3031,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 751,
                 'description' => 'A volcanic island in the Aegean Sea, Milos is part of the South Aegean volcanic arc and known for its caldera, fumaroles, and rich mineral deposits.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'milos.jpg'
+                'image_url' => 'milos'
             ],
             [
                 'name' => 'Miyake-jima',
@@ -3043,7 +3043,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 815,
                 'description' => 'An active volcanic island in the Izu chain south of Tokyo, Miyake-jima experienced major eruptions and gas emissions in 2000 leading to a temporary evacuation.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'miyake-jima.webp'
+                'image_url' => 'miyake-jima'
             ],
             [
                 'name' => 'Moffett',
@@ -3055,7 +3055,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1196,
                 'description' => 'A deeply eroded stratovolcano on Adak Island in Alaska’s Aleutian chain, showing no recent activity but prominent glacial valleys and lava flows.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'moffett.jpg'
+                'image_url' => 'moffett'
             ],
             [
                 'name' => 'Mojanda',
@@ -3067,7 +3067,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 4263,
                 'description' => 'An eroded stratovolcano north of Quito, Ecuador, featuring several crater lakes including Laguna de Mojanda, formed after major explosive eruptions in the Pleistocene.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'mojanda.jpg'
+                'image_url' => 'mojanda'
             ],
             [
                 'name' => 'Momotombo',
@@ -3079,7 +3079,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1297,
                 'description' => 'A symmetrical stratovolcano on the shores of Lake Managua, Nicaragua, Momotombo erupted most recently in 2015 after a century of quiet activity.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'momotombo.jpg'
+                'image_url' => 'momotombo'
             ],
             [
                 'name' => 'Monaco Bank',
@@ -3091,7 +3091,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => -197,
                 'description' => 'A seamount volcanic feature near the Azores, Portugal, associated with tectonic and volcanic activity along the Mid-Atlantic Ridge.',
                 'type' => 'Submarine',
-                'image_url' => 'monaco-bank.jpg'
+                'image_url' => 'monaco-bank'
             ],
             [
                 'name' => 'Mono Lake Volcanic Field',
@@ -3103,7 +3103,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 2121,
                 'description' => 'A volcanic field near Mono Lake, California, containing lava domes, craters, and cinder cones, with eruptions as recent as 1350 CE at Panum Crater.',
                 'type' => 'Volcanic field',
-                'image_url' => 'mono-lake-vol-field.jpg'
+                'image_url' => 'mono-lake-vol-field'
             ],
             [
                 'name' => 'Monowai Seamount',
@@ -3115,7 +3115,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => -132,
                 'description' => 'A highly active submarine volcano in the Kermadec arc north of New Zealand, frequently reshaping its summit through eruptions and collapses.',
                 'type' => 'Submarine',
-                'image_url' => 'monowai-seamount.jpg'
+                'image_url' => 'monowai-seamount'
             ],
             [
                 'name' => 'Moti',
@@ -3127,7 +3127,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 950,
                 'description' => 'A small stratovolcano forming Moti Island in the Halmahera region of Indonesia, with no recorded historical eruptions and heavily forested slopes.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'moti.jpg'
+                'image_url' => 'moti'
             ],
             [
                 'name' => 'Muria',
@@ -3139,7 +3139,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1625,
                 'description' => 'An extinct stratovolcano in Central Java, Indonesia, surrounded by fertile agricultural land and last active thousands of years ago.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'muria.jpg'
+                'image_url' => 'muria'
             ],
             [
                 'name' => 'Nantai',
@@ -3151,7 +3151,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 2486,
                 'description' => 'A sacred stratovolcano in the Nikko region of Japan, revered in Shinto tradition, with its last eruption occurring over 7,000 years ago.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'nantai.jpg'
+                'image_url' => 'nantai'
             ],
             [
                 'name' => 'Nasu',
@@ -3163,7 +3163,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1915,
                 'description' => 'A group of stratovolcanoes in northern Honshu, Japan, showing ongoing fumarolic activity and minor phreatic eruptions in historical times.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'nasu.jpg'
+                'image_url' => 'nasu'
             ],
             [
                 'name' => 'Navajo Volcanic Field',
@@ -3175,7 +3175,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 2740,
                 'description' => 'A volcanic field across the Arizona–New Mexico border featuring diatremes, plugs, and maars formed about 25 million years ago during mantle-driven eruptions.',
                 'type' => 'Volcanic field',
-                'image_url' => 'navajo-volcanic-field.jpg'
+                'image_url' => 'navajo-volcanic-field'
             ],
             [
                 'name' => 'Cerro Negro',
@@ -3187,7 +3187,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 728,
                 'description' => 'A cinder cone volcano in Nicaragua, part of the volcanic chain along the Pacific Ring of Fire, with no historical eruptions recorded.',
                 'type' => 'Cinder cone',
-                'image_url' => 'cerro-negro.png'
+                'image_url' => 'cerro-negro'
             ],
             [
                 'name' => 'Nemo Peak',
@@ -3199,7 +3199,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1018,
                 'description' => 'A stratovolcano located in the southern Kamchatka Peninsula, Russia, with no recorded historical eruptions and an eroded summit crater.',
                 'type' => 'Caldera',
-                'image_url' => 'nemo-peak.jpg'
+                'image_url' => 'nemo-peak'
             ],
             [
                 'name' => 'Nevis Peak',
@@ -3211,7 +3211,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 985,
                 'description' => 'A stratovolcano forming the island of Nevis in the Caribbean, featuring dense tropical vegetation and a crater lake, with no recent eruptions.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'nevis-peak.jpg'
+                'image_url' => 'nevis-peak'
             ],
             [
                 'name' => 'Newberry',
@@ -3223,7 +3223,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 2434,
                 'description' => 'A large shield volcano in central Oregon, USA, containing numerous cinder cones, lava flows, and the Newberry Caldera, last active in the Holocene.',
                 'type' => 'Shield',
-                'image_url' => 'newberry.jpg'
+                'image_url' => 'newberry'
             ],
             [
                 'name' => 'Newer Volcanics Province',
@@ -3235,7 +3235,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1011,
                 'description' => 'A volcanic field in southeastern Australia, featuring basaltic lava flows, scoria cones, and maars, with the most recent activity around 5,000 years ago.',
                 'type' => 'Shield',
-                'image_url' => 'newer-volcanics-province.jpeg'
+                'image_url' => 'newer-volcanics-province'
             ],
             [
                 'name' => 'Ngauruhoe',
@@ -3247,7 +3247,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1978,
                 'description' => 'An active stratovolcano in the Tongariro volcanic complex on the North Island, New Zealand, famous for frequent eruptions and its symmetrical cone.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'ngauruhoe.jpg'
+                'image_url' => 'ngauruhoe'
             ],
             [
                 'name' => 'Nikko-Shirane',
@@ -3259,7 +3259,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 2578,
                 'description' => 'A shield volcano in the Nikko region of Japan, part of the Nikkō Mountains, with fumarolic activity but no eruptions in recorded history.',
                 'type' => 'Shield',
-                'image_url' => 'nikko-shirane.jpg'
+                'image_url' => 'nikko-shirane'
             ],
             [
                 'name' => 'Nipesotsu-Maruyama',
@@ -3271,7 +3271,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 2013,
                 'description' => 'A stratovolcano on Hokkaido, Japan, with a complex of overlapping cones, showing no recorded historical eruptions and extensive forest cover.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'nipesotsu-maruyama.jpg'
+                'image_url' => 'nipesotsu-maruyama'
             ],
             [
                 'name' => 'Nisyros',
@@ -3283,7 +3283,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 698,
                 'description' => 'A volcanic island in the Aegean Sea, Greece, featuring a large caldera and fumarolic activity, with the last eruption recorded in 1888.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'nisyros.jpg'
+                'image_url' => 'nisyros'
             ],
             [
                 'name' => 'Nyambeni Hills',
@@ -3295,7 +3295,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 750,
                 'description' => 'A shield volcano in northern Kenya, part of the Eastern Rift system, consisting of eroded volcanic cones and lava flows with no recorded historical activity.',
                 'type' => 'Shield',
-                'image_url' => 'nyambeni-hills.jpg'
+                'image_url' => 'nyambeni-hills'
             ],
             [
                 'name' => 'Nyamuragira',
@@ -3307,7 +3307,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 3058,
                 'description' => 'One of Africa’s most active shield volcanoes, located in the Virunga Mountains, producing frequent lava flows and covering vast areas with basaltic lava.',
                 'type' => 'Shield',
-                'image_url' => 'nyamuragira.png'
+                'image_url' => 'nyamuragira'
             ],
             [
                 'name' => 'Nyiragongo',
@@ -3319,7 +3319,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 3470,
                 'description' => 'A stratovolcano known for its extremely fluid lava and persistent lava lake, located near the city of Goma in the Democratic Republic of Congo.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'nyiragongo.jpg'
+                'image_url' => 'nyiragongo'
             ],
             [
                 'name' => 'Oahu',
@@ -3331,7 +3331,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1220,
                 'description' => 'A Hawaiian island consisting mainly of two shield volcanoes: Waiʻanae (west) and Koʻolau (east), largely inactive with last eruptions thousands of years ago.',
                 'type' => 'Shield',
-                'image_url' => 'oahu.jpg'
+                'image_url' => 'oahu'
             ],
             [
                 'name' => 'Ojos del Salado',
@@ -3343,7 +3343,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 6887,
                 'description' => 'The highest active volcano in the world, straddling the Chile-Argentina border, with a massive stratovolcano structure and small summit crater lakes.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'ojos-del-salado.jpg'
+                'image_url' => 'ojos-del-salado'
             ],
             [
                 'name' => 'Okataina',
@@ -3355,7 +3355,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1111,
                 'description' => 'A complex volcanic system in New Zealand’s Taupo Volcanic Zone, consisting of lava domes, calderas, and geothermal features, frequently erupting in historical times.',
                 'type' => 'Lava dome',
-                'image_url' => 'okataina.jpg'
+                'image_url' => 'okataina'
             ],
             [
                 'name' => 'Okmok',
@@ -3367,7 +3367,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1073,
                 'description' => 'A shield volcano in the Aleutian Islands, Alaska, with a large caldera and frequent Holocene eruptions, including significant activity in 2008.',
                 'type' => 'Shield',
-                'image_url' => 'okmok.jpg'
+                'image_url' => 'okmok'
             ],
             [
                 'name' => 'Oku Volcanic Field',
@@ -3379,7 +3379,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 3011,
                 'description' => 'A stratovolcano and volcanic field in the Cameroon Volcanic Line, featuring multiple cones and calderas, with no recent recorded eruptions.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'oku-volcanic-field.webp'
+                'image_url' => 'oku-volcanic-field'
             ],
             [
                 'name' => 'Ol Doinyo Lengai',
@@ -3391,7 +3391,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 2962,
                 'description' => 'The only active natrocarbonatite volcano in the world, located in the East African Rift, producing highly fluid, low-temperature lava.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'ol-doinyo-lengai.jpg'
+                'image_url' => 'ol-doinyo-lengai'
             ],
             [
                 'name' => 'Opala',
@@ -3403,7 +3403,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1776,
                 'description' => 'A caldera volcano in southern Kamchatka, Russia, featuring a large crater lake and fumarolic activity but no recent eruptions.',
                 'type' => 'Caldera',
-                'image_url' => 'opala.jpg'
+                'image_url' => 'opala'
             ],
             [
                 'name' => 'Oraefajokull',
@@ -3415,7 +3415,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 2119,
                 'description' => 'Iceland’s largest glacier-capped stratovolcano, featuring summit ice caps and a large caldera, with last known eruption in 1727.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'oraefajokull.jpg'
+                'image_url' => 'oraefajokull'
             ],
             [
                 'name' => 'Oshima',
@@ -3427,7 +3427,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 764,
                 'description' => 'A stratovolcano located on Oshima Island, Japan, known for frequent phreatic eruptions and a history of explosive activity affecting nearby settlements.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'oshima.jpg'
+                'image_url' => 'oshima'
             ],
             [
                 'name' => 'Pacaya',
@@ -3439,7 +3439,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 2552,
                 'description' => 'One of Guatemala’s most active volcanoes, Pacaya is a complex volcanic system frequently erupting lava flows and ash, popular with tourists and researchers.',
                 'type' => 'Complex',
-                'image_url' => 'pacaya.jpg'
+                'image_url' => 'pacaya'
             ],
             [
                 'name' => 'Pagan',
@@ -3451,7 +3451,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 570,
                 'description' => 'A stratovolcano on Pagan Island in the Northern Mariana Islands, USA, with active lava flows and eruptions recorded in historical times.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'pagan.jpg'
+                'image_url' => 'pagan'
             ],
             [
                 'name' => 'Pago',
@@ -3463,7 +3463,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 742,
                 'description' => 'A young post-caldera cone within the Witori Caldera on New Britain Island, with documented eruptions in the 20th and 21st centuries.',
                 'type' => 'Caldera',
-                'image_url' => 'pago.jpg'  
+                'image_url' => 'pago'  
             ],
 
             [
@@ -3476,7 +3476,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 2665,
                 'description' => 'A stratovolcano in West Java, Indonesia, known for hydrothermal activity and past eruptions. (Data from general Indonesian volcano records.)',
                 'type' => 'Stratovolcano',
-                'image_url' => 'papandayan.jpg'
+                'image_url' => 'papandayan'
             ],
 
             [
@@ -3489,7 +3489,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 3170,
                 'description' => 'A famous cinder cone volcano in Michoacán formed in 1943; erupted until ~1952 and then ceased activity, now quiescent.',
                 'type' => 'Cinder cone',
-                'image_url' => 'paricutin.jpg'
+                'image_url' => 'paricutin'
             ],
 
             [
@@ -3502,7 +3502,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 6348,
                 'description' => 'A high-altitude stratovolcano on the Bolivia–Chile border. Part of the Payachata volcanic group (with Pomerape). Known for glacial erosion and possible recent dome growth. (Holocene activity) ',
                 'type' => 'Stratovolcano',
-                'image_url' => 'parinacota.jpg'
+                'image_url' => 'parinacota'
             ],
 
             [
@@ -3515,7 +3515,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1070,
                 'description' => 'A lava dome volcano in the Kamchatka region. No well-documented Holocene activity found in common sources.',
                 'type' => 'Lava dome',
-                'image_url' => 'pauzhetka.jpg'
+                'image_url' => 'pauzhetka'
             ],
 
             [
@@ -3528,7 +3528,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 2519,
                 'description' => 'A stratovolcano on the Alaska Peninsula known for frequent eruptive activity and lava/ash emissions.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'pavlof.jpg'
+                'image_url' => 'pavlof'
             ],
 
             [
@@ -3541,7 +3541,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 2142,
                 'description' => 'A lesser stratovolcanic peak adjacent to Pavlof; minimal eruptive history and considered inactive in modern times.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'pavlof-sister.jpg'
+                'image_url' => 'pavlof-sister'
             ],
 
             [
@@ -3554,7 +3554,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1397,
                 'description' => 'A stratovolcano at the northern tip of Martinique (French West Indies) and part of the Lesser Antilles arc; historically destructive eruptions including 1902 that destroyed Saint-Pierre.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'pelee.jpg'
+                'image_url' => 'pelee'
             ],
 
             [
@@ -3567,7 +3567,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 2785,
                 'description' => 'A volcanic complex in northwest Sumatra with four summit peaks, including lava domes; recorded eruptive activity occurred between 1918–1921, 1998–2000 (explosive / ash emissions)’',
                 'type' => 'Complex',
-                'image_url' => 'peuet-sague.jpg'
+                'image_url' => 'peuet-sague'
             ],
 
             [
@@ -3580,7 +3580,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 2351,
                 'description' => 'The highest mountain in Portugal, located on Pico Island (Azores), built by volcanic activity; no confirmed historical eruptions in recent centuries but part of the Azores volcanic system.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'pico.jpg' 
+                'image_url' => 'pico' 
             ],
 
             [
@@ -3593,7 +3593,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1700,
                 'description' => 'A stratovolcano in Nicaragua, part of the Central American volcanic arc; limited historical activity recorded, sometimes considered dormant.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'las-pilas.jpg'
+                'image_url' => 'las-pilas'
             ],
 
             [
@@ -3606,7 +3606,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1200,
                 'description' => 'Part of the Pinacate volcanic field (El Pinacate and Gran Desierto de Altar region) with many cinder cones and lava flows; no recent historical eruptions.',
                 'type' => 'Cinder cone',
-                'image_url' => 'pinacate.jpg'
+                'image_url' => 'pinacate'
             ],
 
             [
@@ -3619,7 +3619,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1486,
                 'description' => 'A large stratovolcano in Luzon, known for the catastrophic 1991 eruption (one of the largest 20th-century eruptions). Between eruptions it remains quiet but not extinct.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'pinatubo.jpg'
+                'image_url' => 'pinatubo'
             ],
 
             [
@@ -3632,7 +3632,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1495,
                 'description' => 'A volcanic field in southeastern California, USA, consisting of basaltic lava flows and small volcanic cones; no recent volcanic activity.',
                 'type' => 'Volcanic field',
-                'image_url' => 'pisgah.jpg'
+                'image_url' => 'pisgah'
             ],
 
             [
@@ -3645,7 +3645,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 2631,
                 'description' => 'A very active shield volcano located on Reunion Island (Indian Ocean), one of the world’s most active volcanoes, regularly erupting lava flows from fissures. (Often described as basaltic shield) ',
                 'type' => 'Shield',
-                'image_url' => 'piton-de-la-fournaise.jpg'
+                'image_url' => 'piton-de-la-fournaise'
             ],
 
             [
@@ -3658,7 +3658,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 2708,
                 'description' => 'A stratovolcano in central Costa Rica, with frequent phreatic / fumarolic and minor explosive activity; one of the country’s most active volcanoes.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'poas.jpg'
+                'image_url' => 'poas'
             ],
 
             [
@@ -3671,7 +3671,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 5246,
                 'description' => 'One of Mexico’s most active stratovolcanoes, located near Mexico City; frequent eruptions, ash emissions, and volcanic hazard to nearby population.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'popocatepetl.jpg'
+                'image_url' => 'popocatepetl'
             ],
 
             [
@@ -3684,7 +3684,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1360,
                 'description' => 'A stratovolcano on Simushir Island (Kuril Islands), with historical eruptions in 1765 and 1825; no known modern activity.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'prevo.jpg'
+                'image_url' => 'prevo'
             ],
             
             [
@@ -3697,7 +3697,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 4650,
                 'description' => 'An andesitic stratovolcano in the Los Coconucos chain, frequently active with small to moderate explosive eruptions; the most recent unrest and gas-steam emissions were recorded in 2022 and 2025',
                 'type' => 'Stratovolcano',
-                'image_url' => 'purace.jpg'
+                'image_url' => 'purace'
             ],
 
             [
@@ -3710,7 +3710,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 601,
                 'description' => 'A volcanic crater forming the highest point of Sint Eustatius island (Leeward Islands); no known historical eruptions, considered dormant. (Also known as Mazus or The Quill) ',
                 'type' => 'Stratovolcano',
-                'image_url' => 'quill.jpg'
+                'image_url' => 'quill'
             ],
 
             [
@@ -3723,7 +3723,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 688,
                 'description' => 'A large caldera / volcanic complex in East New Britain; includes active vents (e.g., Tavurvur, Vulcan) and frequent eruptions. Major destructive eruption in 1994. ',
                 'type' => 'Shield',
-                'image_url' => 'rabaul.jpg'
+                'image_url' => 'rabaul'
             ],
 
             [
@@ -3736,7 +3736,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 2815,
                 'description' => 'A basaltic–andesitic stratovolcano on Mindanao (also called Piapayungan); historical eruptions from 1760s to 1916, seismic activity continues}',
                 'type' => 'Stratovolcano',
-                'image_url' => 'ragang.jpg'
+                'image_url' => 'ragang'
             ],
 
             [
@@ -3749,7 +3749,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 551,
                 'description' => 'A small stratovolcano on a tiny island in the Kurils; eruptive in recent decades, e.g. major eruption in 2019. ',
                 'type' => 'Stratovolcano',
-                'image_url' => 'raikoke.jpg'
+                'image_url' => 'raikoke'
             ],
 
             [
@@ -3762,7 +3762,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 4392,
                 'description' => 'A massive stratovolcano in Washington State, U.S.A.; last major eruption ~1,000 years ago, but hydrothermal and glacial activity persist. ',
                 'type' => 'Stratovolcano',
-                'image_url' => 'rainier.jpg'
+                'image_url' => 'rainier'
             ],
 
             [
@@ -3775,7 +3775,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1281,
                 'description' => 'A stratovolcano in southern Sumatra (Lampung), Indonesia; limited records and few / no recent eruptions, typically treated as dormant. ',
                 'type' => 'Stratovolcano',
-                'image_url' => 'rajabasa.jpg'
+                'image_url' => 'rajabasa'
             ],
 
             [
@@ -3788,7 +3788,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 516,
                 'description' => 'A stratovolcano on Raoul Island in the Kermadec Islands (New Zealand territory), with past eruptive activity and ongoing seismic / fumarolic activity, but no recent major eruptions. ',
                 'type' => 'Stratovolcano',
-                'image_url' => 'raoul-island.jpg'
+                'image_url' => 'raoul-island'
             ],
 
             [
@@ -3801,7 +3801,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 956,
                 'description' => 'A stratovolcano on Rasshua Island in the Kuril chain; no major recent eruptions documented, considered dormant. ',
                 'type' => 'Stratovolcano',
-                'image_url' => 'rasshua.jpg'
+                'image_url' => 'rasshua'
             ],
 
             [
@@ -3814,7 +3814,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 3332,
                 'description' => 'A stratovolcano in eastern Java, frequently active with ash emissions, thermal anomalies, and recent eruptions (latest in 2021/2022).',
                 'type' => 'Stratovolcano',
-                'image_url' => 'mount-raung.jpg'
+                'image_url' => 'mount-raung'
             ],
             
             [
@@ -3827,7 +3827,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1660,
                 'description' => 'An andesitic-to-dacitic stratovolcano with summit lava domes on the Shiretoko Peninsula, NE Hokkaido. Its most recent eruption is estimated between 1750 and 1850 CE.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'rausu.jpg'
+                'image_url' => 'rausu'
             ],
 
             [
@@ -3840,7 +3840,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 3108,
                 'description' => 'A stratovolcano in Alaska’s Aleutian arc, frequently monitored; last major eruptions occurred in 2009 and earlier periods.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'mount-redoubt.jpg'
+                'image_url' => 'mount-redoubt'
             ],
 
             [
@@ -3853,7 +3853,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 3562,
                 'description' => 'A stratovolcano in the eastern Andes, with a 4-km wide avalanche scarp and active cone rising ~1,300 m inside the caldera. Frequent explosive and effusive eruptions, daily gas/ash emissions have been recorded as of 2023.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'reventador.jpg'
+                'image_url' => 'reventador'
             ],
 
             [
@@ -3866,7 +3866,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1916,
                 'description' => 'A complex volcano in northwest Costa Rica, hosting multiple vents (lava flows, phreatic explosions, fumarolic activity). It has exhibited eruptions (steam / ash) in modern times and is continuously monitored.',
                 'type' => 'Complex',
-                'image_url' => 'rincon-de-la-vieja.jpg'
+                'image_url' => 'rincon-de-la-vieja'
             ],
 
             [
@@ -3879,7 +3879,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1871,
                 'description' => 'A stratovolcano in the Alaska region (remote), with no recorded Holocene eruptions; considered extinct.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'roundtop.jpg'
+                'image_url' => 'roundtop'
             ],
 
             [
@@ -3892,7 +3892,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 2797,
                 'description' => 'One of New Zealand’s most active stratovolcanoes, with regular eruptions (lava, ash, steam) and an active crater lake. It is continuously monitored. ',
                 'type' => 'Stratovolcano',
-                'image_url' => 'mount-ruapehu.jpg'
+                'image_url' => 'mount-ruapehu'
             ],
 
             [
@@ -3905,7 +3905,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 542,
                 'description' => 'A stratovolcano with no known Holocene or historical eruptions; generally considered extinct.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'rudakov.jpg'
+                'image_url' => 'rudakov'
             ],
 
             [
@@ -3918,7 +3918,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 5321,
                 'description' => 'A stratovolcano in central Colombia, part of the Andean Volcanic Belt. Famous for the 1985 catastrophe (lahar) and periodic eruptions, fumarolic / steam activity ongoing. ',
                 'type' => 'Stratovolcano',
-                'image_url' => 'nevado-del-ruiz.jpg'
+                'image_url' => 'nevado-del-ruiz'
             ],
 
             [
@@ -3931,7 +3931,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 500,
                 'description' => 'A seamount volcano in the Kermadec arc, known as Rumble IV; no recent eruptions above sea level. ',
                 'type' => 'Submarine',
-                'image_url' => 'rumble-iv.jpg'
+                'image_url' => 'rumble-iv'
             ],
 
             [
@@ -3944,7 +3944,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 887,
                 'description' => 'A stratovolcano forming the island of Saba in the Caribbean, also called Mount Scenery. No recorded historical eruptions; considered dormant. ',
                 'type' => 'Stratovolcano',
-                'image_url' => 'mount-scenery.jpg'
+                'image_url' => 'mount-scenery'
             ],
 
             [
@@ -3957,7 +3957,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 5967,
                 'description' => 'A stratovolcano in southern Peru (part of the Ampato‐Sabancaya volcanic complex). Its current eruption period started in November 2016, and it produces frequent explosions, gas & ash plumes, and thermal anomalies.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'sabancaya.jpg'
+                'image_url' => 'sabancaya'
             ],
 
             [
@@ -3970,7 +3970,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 992,
                 'description' => 'A stratovolcano in Papua New Guinea with sparse or no recent recorded activity. No well-documented recent eruptions.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'sakar.jpg'
+                'image_url' => 'sakar'
             ],
 
             [
@@ -3983,7 +3983,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1117,
                 'description' => 'One of Japan’s most active volcanoes (on Kagoshima Bay, Kyushu). Frequent ash eruptions, lava flows, and persistent activity in recent decades.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'sakurajima.jpg'
+                'image_url' => 'sakurajima'
             ],
 
             [
@@ -3996,7 +3996,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 2211,
                 'description' => 'A stratovolcano in West Java, Indonesia. It is not known for frequent historical eruptions; generally considered dormant in modern observations.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'mount-salak.jpg'
+                'image_url' => 'mount-salak'
             ],
 
             [
@@ -4009,7 +4009,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1745,
                 'description' => 'The highest and most active volcano in Nicaragua, with frequent small to moderate eruptions and persistent fumarolic / gas emissions.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'san-cristobal.jpg'
+                'image_url' => 'san-cristobal'
             ],
 
             [
@@ -4022,7 +4022,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1893,
                 'description' => 'A stratovolcano near the capital (Boquerón edifice). The last confirmed eruption was in 1917. Seismic and fumarolic activity has been recorded.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'san-salvador.jpg'
+                'image_url' => 'san-salvador'
             ],
 
             [
@@ -4035,7 +4035,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 697,
                 'description' => 'San Vicente (El Salvador) is a stratovolcano (aka Chichontepec) with fumaroles and hot springs. Its last major eruption is unknown / undocumented, perhaps many centuries ago.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'san-vicente.jpg'
+                'image_url' => 'san-vicente'
             ],
 
             [
@@ -4048,7 +4048,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 4949,
                 'description' => 'A large shield volcano in the Wrangell Mountains of Alaska. It is not known to have had historical eruptions — generally considered dormantly or quiescent.',
                 'type' => 'Shield',
-                'image_url' => 'mount-sanford.jpg'
+                'image_url' => 'mount-sanford'
             ],
 
             [
@@ -4061,7 +4061,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 5230,
                 'description' => 'One of Ecuador’s most active stratovolcanoes, with frequent explosive eruptions, ash emissions, and pyroclastic flows. It is continuously monitored. ',
                 'type' => 'Stratovolcano',
-                'image_url' => 'sangay.jpg'
+                'image_url' => 'sangay'
             ],
 
             [
@@ -4074,7 +4074,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 2381,
                 'description' => 'Also called Ilamatepec, this stratovolcano in western El Salvador had a notable eruption in October 2005 and remains a monitored active volcano. ',
                 'type' => 'Stratovolcano',
-                'image_url' => 'santa-ana.jpg'
+                'image_url' => 'santa-ana'
             ],
 
             [
@@ -4087,7 +4087,7 @@ class VolcanoesTableSeeder extends Seeder
             'elevation' => 3772,
             'description' => 'A large stratovolcano in the Western Highlands of Guatemala. It erupted catastrophically in 1902 (one of the 20th century’s largest eruptions). Continuous activity occurs at the Santiaguito lava dome complex, formed after that event.',
             'type' => 'Stratovolcano',
-            'image_url' => 'santa-maria.jpg'
+            'image_url' => 'santa-maria'
             ],
 
             [
@@ -4100,7 +4100,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 367,
                 'description' => 'A caldera-forming volcanic complex in the southern Aegean Sea. The island group is composed of overlapping shield volcanoes and multiple calderas; the most famous eruption is the Minoan eruption (~1600 BC). The last subaerial eruption occurred in 1950; since then activity is limited to fumaroles, seismic events, and ground deformation.',
                 'type' => 'Shield',
-                'image_url' => 'santorini.jpg'
+                'image_url' => 'santorini'
             ],
 
             [
@@ -4113,7 +4113,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1496,
                 'description' => 'A young, highly symmetrical stratovolcano on Matua Island, Kurils, within a 3–3.5 km caldera. Known for frequent explosive eruptions (e.g. 2009).',
                 'type' => 'Stratovolcano',
-                'image_url' => 'sarychev-peak.jpg'
+                'image_url' => 'sarychev-peak'
             ],
 
             [
@@ -4126,7 +4126,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 485,
                 'description' => 'A stratovolcano in the Solomon Islands. Historical records are sparse; last known eruption likely in the 19th century or earlier, so it is generally considered dormant.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'savo.jpg'
+                'image_url' => 'savo'
             ],
 
             [
@@ -4139,7 +4139,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1160,
                 'description' => 'A stratovolcano in the Aleutian chain. It has no recorded Holocene eruptions, so is considered extinct or heavily eroded and inactive.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'segula.jpg'
+                'image_url' => 'segula'
             ],
 
             [
@@ -4152,7 +4152,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 3676,
                 'description' => 'The highest volcano on Java. A stratovolcano with frequent eruptions (ash, pyroclastic flows) and a persistent lava dome (Mahameru). It is continuously active in historical time. ',
                 'type' => 'Stratovolcano',
-                'image_url' => 'mount-semeru.jpg'
+                'image_url' => 'mount-semeru'
             ],
 
             [
@@ -4165,7 +4165,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1221,
                 'description' => 'A volcanic island in the western Aleutians, comprising a wide caldera and multiple cones. The current eruptive period began in early 2021 and includes ash explosions, elevated thermal signals, sulfur dioxide output.',
                 'type' => 'Caldera',
-                'image_url' => 'semisopochnoi.jpg'
+                'image_url' => 'semisopochnoi'
             ],
 
             [
@@ -4178,7 +4178,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 856,
                 'description' => 'A stratovolcanic on São Miguel Island, Azores. It comprises lava domes, cones, and multiple collapse calderas. Its last eruptions are dated to ~1880.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'sete-cidades.jpg'
+                'image_url' => 'sete-cidades'
             ],
 
             [
@@ -4191,7 +4191,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 4317,
                 'description' => 'A stratovolcano in northern California (Cascade Range). Its last significant eruption is believed to have occurred ~200–300 years ago; it is monitored and considered dormant / potentially active. ',
                 'type' => 'Stratovolcano',
-                'image_url' => 'mount-shasta.jpg'
+                'image_url' => 'mount-shasta'
             ],
 
             [
@@ -4204,7 +4204,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 3283,
                 'description' => 'One of Kamchatka’s most active stratovolcanoes. It has had at least 60 large eruptions during the Holocene. The current eruptive period began in 1999, with repeated lava dome growth, explosions, ash plumes, dome collapses, and pyroclastic events.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'shiveluch.jpg'
+                'image_url' => 'shiveluch'
             ],
 
             [
@@ -4217,7 +4217,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1320,
                 'description' => 'A caldera volcano in Hokkaido; contains Lake Shikotsu. Most historical eruptions are from Tarumai vent (on caldera rim). Last eruption circa 1981 (phreatic). Holocene activity includes large eruptions in 1667, 1739.',
                 'type' => 'Caldera',
-                'image_url' => 'shikotsu.jpg'
+                'image_url' => 'shikotsu'
             ],
 
             [
@@ -4230,7 +4230,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1563,
                 'description' => 'A stratovolcano (“Iwo-zan”) in the Shiretoko Peninsula region; high elevation, steep terrain. Activity is poorly documented; considered dormant in historical period.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'shiretoko-iwo-zan.jpg'
+                'image_url' => 'shiretoko-iwo-zan'
             ],
 
             [
@@ -4243,7 +4243,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 2857,
                 'description' => 'A highly symmetric, remote stratovolcano on Unimak Island in the Aleutians. Very frequently active: many eruptions recorded since the 18th century; recent ash & steam emissions. Monitored via AVO.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'shishaldin.jpg'
+                'image_url' => 'shishaldin'
             ],
 
             [
@@ -4256,7 +4256,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 934,
                 'description' => 'A stratovolcano in the Kuril Islands. No recent eruptions documented in modern period; considered dormant. ',
                 'type' => 'Stratovolcano',
-                'image_url' => 'sinarka.jpg'
+                'image_url' => 'sinarka'
             ],
 
             [
@@ -4269,7 +4269,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1189,
                 'description' => 'A stratovolcano in the Russian Far East. Historical records are scant; no known eruptions in recent centuries; considered dormant. ',
                 'type' => 'Stratovolcano',
-                'image_url' => 'smirnov.jpg'
+                'image_url' => 'smirnov'
             ],
 
             [
@@ -4282,7 +4282,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 2282,
                 'description' => 'A caldera volcano in southern Chile, with glacier cover. Holocene eruptions, but little activity in the historic period; considered dormant. ',
                 'type' => 'Caldera',
-                'image_url' => 'sollipulli.jpg'
+                'image_url' => 'sollipulli'
             ],
 
             [
@@ -4295,7 +4295,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1784,
                 'description' => 'A stratovolcano in Sulawesi, Indonesia. Known for regular explosive eruptions; active “eruptive cycles” in recent decades. ',
                 'type' => 'Stratovolcano',
-                'image_url' => 'soputan.jpg'
+                'image_url' => 'soputan'
             ],
 
             [
@@ -4308,7 +4308,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1467,
                 'description' => 'A stratovolcano with an active hydrothermal system; regularly monitored. Periods of increased unrest and fumarolic / thermal activity. No large recent eruption but considered active due to continuous degassing and potential for explosive activity.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'la-grande-soufriere.jpg'
+                'image_url' => 'la-grande-soufriere'
             ],
 
             [
@@ -4321,7 +4321,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 915,
                 'description' => 'A complex stratovolcano with many lava domes on Montserrat. After dormancy, became strongly active from 1995 onward; last eruption in 2013. Monitoring continues due to risk.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'soufriere-hills.jpg'
+                'image_url' => 'soufriere-hills'
             ],
 
             [
@@ -4334,7 +4334,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1220,
                 'description' => 'A stratovolcano on the island of St. Vincent. Known for major explosive eruptions, with the most recent one in 2021. Steep cone, hazardous to nearby populations. ',
                 'type' => 'Stratovolcano',
-                'image_url' => 'soufriere-st-vincent.jpg'
+                'image_url' => 'soufriere-st-vincent'
             ],
             
             [
@@ -4347,7 +4347,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 800,
                 'description' => '“South Island” in Kenya — limited documentation; considered dormant in local records; likely a small volcanic remnant or cone.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'south-island.jpg'
+                'image_url' => 'south-island'
             ],
 
             [
@@ -4360,7 +4360,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 2141,
                 'description' => 'A cinder cone volcano (SP Mountain) in Arizona / southwestern USA; no known recent eruptions, considered dormant.',
                 'type' => 'Cinder cone',
-                'image_url' => 'sp-mountain.jpg'
+                'image_url' => 'sp-mountain'
             ],
 
             [
@@ -4373,7 +4373,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 3374,
                 'description' => 'A stratovolcano in the Aleutian arc, with two historical eruptions from Crater Peak (1953, 1992). Current unrest (seismic activity, ground deformation) is monitored.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'mount-spurr.jpg'
+                'image_url' => 'mount-spurr'
             ],
 
             [
@@ -4386,7 +4386,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 36,
                 'description' => 'A seamount volcano in the Kurils. No known Holocene eruptions; considered extinct or inactive. ',
                 'type' => 'Submarine',
-                'image_url' => 'srednii.jpg'
+                'image_url' => 'srednii'
             ],
 
             [
@@ -4399,7 +4399,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 2272,
                 'description' => 'A stratovolcano on the Alaska Peninsula. No historical eruptions recorded; often considered extinct. ',
                 'type' => 'Stratovolcano',
-                'image_url' => 'mount-steller.jpg'
+                'image_url' => 'mount-steller'
             ],
 
             [
@@ -4412,7 +4412,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 924,
                 'description' => 'One of the world’s most persistently active volcanoes. Stromboli exhibits continuous Strombolian (explosive) activity, with multiple vents producing regular bursts of lava bombs and ash.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'stromboli.jpg'
+                'image_url' => 'stromboli'
             ],
 
             [
@@ -4425,7 +4425,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 3990,
                 'description' => 'A stratovolcano in Ecuador. Limited historical activity; considered dormant in modern times. ',
                 'type' => 'Stratovolcano',
-                'image_url' => 'sumaco.jpg'
+                'image_url' => 'sumaco'
             ],
 
             [
@@ -4438,7 +4438,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 3371,
                 'description' => 'A stratovolcano on Java, Indonesia. Last known activity is prehistoric / poorly documented; considered dormant. ',
                 'type' => 'Stratovolcano',
-                'image_url' => 'mount-sumbing.jpg'
+                'image_url' => 'mount-sumbing'
             ],
 
             [
@@ -4451,7 +4451,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 3136,
                 'description' => 'A stratovolcano in Central Java, Indonesia. No recent confirmed eruptions; often categorized as dormant. ',
                 'type' => 'Stratovolcano',
-                'image_url' => 'mount-sundoro.jpg'
+                'image_url' => 'mount-sundoro'
             ],
 
             [
@@ -4464,7 +4464,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 2447,
                 'description' => 'A cinder cone volcanic field in northern Arizona (Sunset Craters). Last eruptions occurred ~1,000 years ago; now considered dormant. ',
                 'type' => 'Cinder cone',
-                'image_url' => 'sunset-crater.jpg'
+                'image_url' => 'sunset-crater'
             ],
 
             [
@@ -4477,7 +4477,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 2356,
                 'description' => 'Mount Suswa is a shield volcano in Kenya’s Great Rift Valley, characterized by a double caldera and lava caves. No historical eruptions; considered dormant.',
                 'type' => 'Shield',
-                'image_url' => 'suswa.jpg'
+                'image_url' => 'suswa'
             ],
 
             [
@@ -4490,7 +4490,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 799,
                 'description' => 'Suwanosejima is one of Japan’s most active volcanoes, with frequent strombolian eruptions and ash plumes. It forms part of the Ryukyu Islands arc.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'suwanosejima.jpg'
+                'image_url' => 'suwanosejima'
             ],
             [
                 'name' => 'Taal',
@@ -4502,7 +4502,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 311,
                 'description' => 'Taal Volcano is a large caldera system located in Batangas, Philippines. Known for its 2020 eruption; remains one of the most active volcanoes in the country.',
                 'type' => 'Caldera',
-                'image_url' => 'taal.jpg'
+                'image_url' => 'taal'
             ],
             [
                 'name' => 'Talang',
@@ -4514,7 +4514,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 2597,
                 'description' => 'Mount Talang is a stratovolcano in West Sumatra, Indonesia. It has produced phreatic eruptions in the 21st century and is classified as active.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'talang.jpg'
+                'image_url' => 'talang'
             ],
             [
                 'name' => 'Tambora',
@@ -4526,7 +4526,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 2850,
                 'description' => 'Mount Tambora is a stratovolcano in Sumbawa, Indonesia, famous for its 1815 eruption — the largest in recorded history. Currently shows mild fumarolic activity and is considered dormant.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'tambora.jpg'
+                'image_url' => 'tambora'
             ],
             [
                 'name' => 'Tanaga and Takawangha',
@@ -4538,7 +4538,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1806,
                 'description' => 'Tanaga and Takawangha are neighboring stratovolcanoes on Tanaga Island, Alaska. Both are considered active; Tanaga erupted in 2023 with seismic unrest continuing.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'tanaga-and-takawangha.jpg'
+                'image_url' => 'tanaga-and-takawangha'
             ],
             [
                 'name' => 'Tangkuban Perahu',
@@ -4550,7 +4550,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 2084,
                 'description' => 'Tangkuban Parahu is a stratovolcano north of Bandung, Indonesia. It experiences minor phreatic explosions, most recently in 2019.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'tangkuban-perahu.jpg'
+                'image_url' => 'tangkuban-perahu'
             ],
             [
                 'name' => 'Tao-Rusyr Caldera',
@@ -4562,7 +4562,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1325,
                 'description' => 'Tao-Rusyr Caldera is located on Onekotan Island in the Kuril chain. The last known eruption occurred in 1952; currently considered extinct.',
                 'type' => 'Caldera',
-                'image_url' => 'tao-rusyr-caldera.jpg'
+                'image_url' => 'tao-rusyr-caldera'
             ],
             [
                 'name' => 'Tarso Voon',
@@ -4574,7 +4574,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 3100,
                 'description' => 'Tarso Voon is a volcanic massif in northern Chad’s Tibesti Mountains. No known Holocene eruptions; regarded as extinct.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'tarso-voon.jpg'
+                'image_url' => 'tarso-voon'
             ],
             [
                 'name' => 'Telica',
@@ -4586,7 +4586,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1010,
                 'description' => 'Telica is one of Nicaragua’s most active volcanoes, frequently emitting ash and gas. Part of the Maribios volcanic range.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'telica.jpg'
+                'image_url' => 'telica'
             ],
 
             [
@@ -4599,7 +4599,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 3715,
                 'description' => 'Mount Teide is a stratovolcano on Tenerife in the Canary Islands. It is the highest peak in Spain and has a large caldera; last eruption occurred in 1909, currently dormant.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'mount-teide.jpg'
+                'image_url' => 'mount-teide'
             ],
 
             [
@@ -4612,7 +4612,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 2329,
                 'description' => 'A volcanic complex in East Java, Indonesia, consisting of the Tengger Caldera and active Bromo cone. Bromo regularly emits ash and steam; historically very active.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'tengger-caldera-and-bromo.jpg'
+                'image_url' => 'tengger-caldera-and-bromo'
             ],
             [
                 'name' => 'Three Fingered Jack',
@@ -4624,7 +4624,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 2390,
                 'description' => 'An extinct stratovolcano in Oregon’s Cascade Range. Highly eroded; no Holocene eruptions.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'three-fingered-jack.jpg'
+                'image_url' => 'Three Fingered Jack'
             ],
             [
                 'name' => 'Three Sisters',
@@ -4636,7 +4636,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 3100,
                 'description' => 'A trio of heavily eroded stratovolcanoes in Oregon’s Cascade Range. No Holocene eruptions; considered extinct.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'three-sisters.jpg'
+                'image_url' => 'three-sisters'
             ],
             [
                 'name' => 'Thule Islands',
@@ -4648,7 +4648,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1075,
                 'description' => 'A volcanic island group in the South Sandwich Islands. Limited eruption records; currently dormant.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'thule-islands.jpg'
+                'image_url' => 'thule-islands'
             ],
             [
                 'name' => 'Tyatya',
@@ -4660,7 +4660,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1819,
                 'description' => 'A stratovolcano in Russia’s Far East. No recorded Holocene eruptions; considered dormant.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'tyatya.jpg'
+                'image_url' => 'tyatya'
             ],
             [
                 'name' => 'Toba',
@@ -4672,7 +4672,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 2157,
                 'description' => 'Toba Caldera is a massive caldera on Sumatra, Indonesia, site of the largest known Quaternary eruption (~74,000 years ago). No recent eruptions; dormant.',
                 'type' => 'Caldera',
-                'image_url' => 'toba.jpg'
+                'image_url' => 'toba'
             ],
             [
                 'name' => 'Todoko-Ranu',
@@ -4684,7 +4684,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 979,
                 'description' => 'A caldera volcano on Halmahera, Indonesia. No known recent eruptions; considered dormant.',
                 'type' => 'Caldera',
-                'image_url' => 'todokoranu.jpg'
+                'image_url' => 'todokoranu'
             ],
             [
                 'name' => 'Mount Tokachi',
@@ -4696,7 +4696,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 2077,
                 'description' => 'Mount Tokachi in Hokkaido is an active volcano with frequent minor eruptions, lava flows, and ash emissions monitored by JMA.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'mount-tokachi.jpg'
+                'image_url' => 'mount-tokachi'
             ],
             [
                 'name' => 'Tolbachik',
@@ -4708,7 +4708,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 3682,
                 'description' => 'Tolbachik is a large stratovolcano in Kamchatka, Russia, famous for fissure eruptions. Last major eruption 2012–2013; considered active.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'tolbachik.jpg'
+                'image_url' => 'tolbachik'
             ],
             
             [
@@ -4721,7 +4721,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 3158,
                 'description' => 'Tolimán is a stratovolcano on the shores of Lake Atitlán, Guatemala. No recorded historical eruptions; considered dormant.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'toliman.jpg'
+                'image_url' => 'toliman'
             ],
 
             [
@@ -4734,7 +4734,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1159,
                 'description' => 'Towada is a caldera volcano in northern Honshu, Japan. Although the last magmatic eruption was prehistoric, it has active hydrothermal activity and minor eruptions, considered active.',
                 'type' => 'Caldera',
-                'image_url' => 'towada.jpg'
+                'image_url' => 'towada'
             ],
             [
                 'name' => "Traitor's Head",
@@ -4746,7 +4746,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1881,
                 'description' => 'A stratovolcano on Ambrym Island, Vanuatu. Known for past eruptions, but currently considered dormant.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'traitors-head.jpg'
+                'image_url' => 'traitors-head'
             ],
             [
                 'name' => 'Tri Sestry',
@@ -4758,7 +4758,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 998,
                 'description' => 'Tri Sestry is a group of eroded stratovolcanoes in Kamchatka, Russia. No Holocene eruptions; considered extinct.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'tri-sestry.jpg'
+                'image_url' => 'tri-sestry'
             ],
             [
                 'name' => 'Tristan da Cunha',
@@ -4770,7 +4770,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 2060,
                 'description' => 'A shield volcano forming the main island of Tristan da Cunha in the South Atlantic. No recent eruptions; considered dormant.',
                 'type' => 'Shield',
-                'image_url' => 'tristan-da-cunha.jpg'
+                'image_url' => 'tristan-da-cunha'
             ],
             [
                 'name' => 'Mount Tsurumi',
@@ -4782,7 +4782,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1584,
                 'description' => 'A lava dome volcano in Kyushu, Japan. No recorded historical eruptions; considered dormant.',
                 'type' => 'Lava dome',
-                'image_url' => 'mount-tsurumi.jpg'
+                'image_url' => 'mount-tsurumi'
             ],
             [
                 'name' => 'Tungurahua',
@@ -4794,7 +4794,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 2011,
                 'description' => 'Tungurahua is an active stratovolcano in Ecuador. Frequent eruptions, ash emissions, and pyroclastic activity make it one of Ecuador’s most monitored volcanoes.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'tungurahua.jpg'
+                'image_url' => 'tungurahua'
             ],
             [
                 'name' => 'Ubehebe Craters',
@@ -4806,7 +4806,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 752,
                 'description' => 'A volcanic maar field in Death Valley National Park, California. Last eruption ~2,000 years ago; now considered dormant.',
                 'type' => 'Tuff ring',
-                'image_url' => 'ubehebe-craters.jpg'
+                'image_url' => 'ubehebe-craters'
             ],
             [
                 'name' => 'Ubinas',
@@ -4818,7 +4818,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 5672,
                 'description' => 'Ubinas is the most active volcano in Peru. Frequent explosive eruptions, ash emissions, and lava flows. Currently monitored by INGEMMET.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'ubinas.jpg'
+                'image_url' => 'ubinas'
             ],
             [
                 'name' => 'Udina',
@@ -4830,7 +4830,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 2923,
                 'description' => 'Udina is a stratovolcano in Kamchatka, Russia, part of the Eastern volcanic belt. Last major eruption occurred 2013–2014; still considered active.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'udina.jpg'
+                'image_url' => 'udina'
             ],
 
             [
@@ -4843,7 +4843,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1474,
                 'description' => 'A pair of stratovolcanoes in Alaska’s Aleutian arc. No recorded historical eruptions; considered dormant.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'ugashik-and-peulik.jpg'
+                'image_url' => 'ugashik-and-peulik'
             ],
 
             [
@@ -4856,7 +4856,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1555,
                 'description' => 'A volcanic field in northwest Arizona, USA. Consists of cinder cones and lava flows; last eruption ~1,500 years ago; dormant.',
                 'type' => 'Volcanic field',
-                'image_url' => 'uinkaret-volcanic-field.jpg'
+                'image_url' => 'uinkaret-volcanic-field'
             ],
             [
                 'name' => 'Ulawun',
@@ -4868,7 +4868,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 2334,
                 'description' => 'Ulawun is the highest and most active volcano in Papua New Guinea. Frequent explosive eruptions and lava flows are recorded.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'ulawun.jpg'
+                'image_url' => 'ulawun'
             ],
             [
                 'name' => 'Umboi',
@@ -4880,7 +4880,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1548,
                 'description' => 'A complex volcano on Umboi Island. No Holocene eruptions recorded; considered extinct.',
                 'type' => 'Complex',
-                'image_url' => 'umboi.jpg'
+                'image_url' => 'umboi'
             ],
             [
                 'name' => 'Undara',
@@ -4892,7 +4892,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1020,
                 'description' => 'A shield volcano in northern Queensland, Australia. Last erupted in the Pleistocene; considered extinct. Famous for its lava tubes.',
                 'type' => 'Shield',
-                'image_url' => 'undara.jpg'
+                'image_url' => 'undara'
             ],
             [
                 'name' => 'Ungaran and Telomoyo',
@@ -4904,7 +4904,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 2050,
                 'description' => 'A pair of stratovolcanoes in Central Java, Indonesia. No historical eruptions; classified as extinct.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'ungaran-and-telomoyo.jpg'
+                'image_url' => 'ungaran-and-telomoyo'
             ],
             [
                 'name' => 'Mount Unzen',
@@ -4916,7 +4916,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1500,
                 'description' => 'Unzen is a complex volcano in Kyushu, Japan. Produced deadly pyroclastic flows during 1990–1995 eruptions; considered active.',
                 'type' => 'Complex',
-                'image_url' => 'mount-unzen.jpg'
+                'image_url' => 'mount-unzen'
             ],
             [
                 'name' => 'Urataman',
@@ -4928,7 +4928,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 678,
                 'description' => 'A somma volcano in Kamchatka, Russia. No historical eruptions; considered extinct.',
                 'type' => 'Somma',
-                'image_url' => 'urataman.jpg'
+                'image_url' => 'urataman'
             ],
             [
                 'name' => 'Ushishur',
@@ -4940,7 +4940,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 401,
                 'description' => 'A caldera volcano in the Kuril Islands, Russia. No recent eruptions; classified as dormant.',
                 'type' => 'Caldera',
-                'image_url' => 'ushishur.jpg'
+                'image_url' => 'ushishur'
             ],
             [
                 'name' => 'Mount Usu',
@@ -4952,7 +4952,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 737,
                 'description' => 'Mount Usu is an active stratovolcano in Hokkaido, Japan. Frequent eruptions include phreatic explosions and lava flows; last erupted in 2000.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'mount-usu.jpg'
+                'image_url' => 'mount-usu'
             ],
 
             [
@@ -4965,7 +4965,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1617,
                 'description' => 'Uzon is a caldera volcano in the Kamchatka Peninsula, Russia. No historical eruptions; features geothermal activity and fumaroles.',
                 'type' => 'Caldera',
-                'image_url' => 'uzon.jpg'
+                'image_url' => 'uzon'
             ],
 
             [
@@ -4978,7 +4978,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 2507,
                 'description' => 'Veniaminof is an active stratovolcano in Alaska. Its eruptions produce lava flows and ash emissions; monitored by AVO.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'mount-veniaminof.jpg'
+                'image_url' => 'mount-veniaminof'
             ],
             [
                 'name' => 'Vernadskii Ridge',
@@ -4990,7 +4990,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1183,
                 'description' => 'A cinder cone ridge in Kamchatka, Russia. No Holocene eruptions; considered extinct.',
                 'type' => 'Cinder cone',
-                'image_url' => 'vernadskii-ridge.jpg'
+                'image_url' => 'vernadskii-ridge'
             ],
             [
                 'name' => 'Mount Vesuvius',
@@ -5002,7 +5002,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1281,
                 'description' => 'Vesuvius is a somma-type volcano near Naples, Italy. Famous for the 79 AD eruption; currently dormant but closely monitored.',
                 'type' => 'Somma',
-                'image_url' => 'mount-vesuvius.jpg'
+                'image_url' => 'mount-vesuvius'
             ],
             [
                 'name' => 'Villarrica',
@@ -5014,7 +5014,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 2847,
                 'description' => 'Villarrica is one of Chile’s most active stratovolcanoes, frequently erupting lava and ash. Part of the Southern Volcanic Zone.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'villarrica.jpg'
+                'image_url' => 'villarrica'
             ],
             [
                 'name' => 'Vilyuchik',
@@ -5026,7 +5026,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 2173,
                 'description' => 'A stratovolcano in Kamchatka, Russia. No historical eruptions; currently dormant.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'vilyuchik.jpg'
+                'image_url' => 'vilyuchik'
             ],
             [
                 'name' => 'Visoke',
@@ -5038,7 +5038,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 3711,
                 'description' => 'Visoke is a stratovolcano in the Virunga Mountains, straddling Rwanda and Congo. No recent eruptions; considered dormant.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'visoke.jpg'
+                'image_url' => 'visoke'
             ],
             [
                 'name' => 'Vsevidof and Recheschnoi',
@@ -5050,7 +5050,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 2149,
                 'description' => 'A pair of stratovolcanoes in the Aleutian Islands, Alaska. No historical eruptions; considered extinct.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'vsevidof-and-recheschnoi.jpg'
+                'image_url' => 'vsevidof-and-recheschnoi'
             ],
             [
                 'name' => 'Vulcano',
@@ -5062,7 +5062,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 500,
                 'description' => 'Vulcano is a small volcanic island in the Aeolian Islands, Italy. Last major eruptions occurred in the late 19th century; currently dormant.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'vulcano.jpg'
+                'image_url' => 'vulcano'
             ],
             [
                 'name' => 'Washington',
@@ -5074,7 +5074,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 2376,
                 'description' => 'Mount Washington is a shield volcano in Oregon, part of the Cascade Range. No Holocene eruptions; considered dormant.',
                 'type' => 'Shield',
-                'image_url' => 'washington.jpg'
+                'image_url' => 'washington'
             ],
 
             [
@@ -5087,7 +5087,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 547,
                 'description' => 'A caldera volcano in Libya’s central desert. No historical eruptions; considered extinct.',
                 'type' => 'Caldera',
-                'image_url' => 'wau-an-namus.jpg'
+                'image_url' => 'wau-an-namus'
             ],
             
             [
@@ -5100,7 +5100,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1654,
                 'description' => 'Westdahl is a stratovolcano in the Aleutian Islands, Alaska. Last eruption in 1992; currently dormant.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'westdahl.jpg'
+                'image_url' => 'westdahl'
             ],
             [
                 'name' => 'White Island',
@@ -5112,7 +5112,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 321,
                 'description' => 'Whakaari / White Island is an active stratovolcano in New Zealand. Frequent eruptions, including the deadly 2019 event.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'white-island.jpg'
+                'image_url' => 'white-island'
             ],
             [
                 'name' => 'Mount Wrangell',
@@ -5124,7 +5124,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 4317,
                 'description' => 'Mount Wrangell is a shield volcano in Alaska. Last minor eruptions occurred in the 19th century; currently dormant.',
                 'type' => 'Shield',
-                'image_url' => 'mount-wrangell.jpg'
+                'image_url' => 'mount-wrangell'
             ],
             [
                 'name' => 'Wudalianchi',
@@ -5136,7 +5136,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 597,
                 'description' => 'A volcanic field in Heilongjiang Province, China. Last eruptions in the 18th century; currently dormant.',
                 'type' => 'Volcanic field',
-                'image_url' => 'wudalianchi.jpg'
+                'image_url' => 'wudalianchi'
             ],
             [
                 'name' => 'Mount Yake',
@@ -5148,7 +5148,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 2455,
                 'description' => 'Yake-dake is a stratovolcano in Nagano Prefecture, Japan. Regular minor eruptions; actively monitored.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'mount-yake.jpg'
+                'image_url' => 'mount-yake'
             ],
             [
                 'name' => 'Yali',
@@ -5160,7 +5160,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 180,
                 'description' => 'A lava dome volcano in the Dodecanese Islands, Greece. No historical eruptions; considered dormant.',
                 'type' => 'Lava dome',
-                'image_url' => 'yali.jpg'
+                'image_url' => 'yali'
             ],
             [
                 'name' => 'Yantarni',
@@ -5172,7 +5172,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 1345,
                 'description' => 'A stratovolcano in Alaska’s Aleutian arc. Last eruption ~1930s; currently dormant.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'yantarni.jpg'
+                'image_url' => 'yantarni'
             ],
             [
                 'name' => 'Mount Yasur',
@@ -5184,7 +5184,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 361,
                 'description' => 'Yasur is one of Vanuatu’s most active volcanoes. Strombolian eruptions occur almost continuously, making it a popular tourist attraction.',
                 'type' => 'Stratovolcano',
-                'image_url' => 'mount-yasur.jpg'
+                'image_url' => 'mount-yasur'
             ],
             [
                 'name' => 'Yellowstone',
@@ -5196,7 +5196,7 @@ class VolcanoesTableSeeder extends Seeder
                 'elevation' => 2805,
                 'description' => 'Yellowstone Caldera is a supervolcano in Wyoming, USA. Last major eruption ~640,000 years ago; currently dormant but monitored for geothermal activity.',
                 'type' => 'Caldera',
-                'image_url' => 'yellowstone.jpg'
+                'image_url' => 'yellowstone'
             ]                  
         ];
             

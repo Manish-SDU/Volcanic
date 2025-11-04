@@ -41,36 +41,55 @@ class Volcano extends Model
      *
      * @return string
      */
+    // public function getSafeImageUrlAttribute()
+    // {
+    //     // If the image_url field contains a URL, return it directly
+    //     if (is_string($this->image_url) && filter_var($this->image_url, FILTER_VALIDATE_URL)) {
+    //         return $this->image_url;
+    //     }
+        
+    //     // Look for image using the image_url field as filename
+    //     $extensions = ['jpg', 'jpeg', 'png', 'gif', 'webp'];
+        
+    //     // First try using the image_url field directly
+    //     if ($this->image_url) {
+    //         foreach ($extensions as $ext) {
+    //             $imagePath = "images/volcanoes/{$this->image_url}.{$ext}";
+    //             if (file_exists(public_path($imagePath))) {
+    //                 return asset($imagePath);
+    //             }
+    //         }
+    //     }
+        
+    //     // Fallback: Look for any supported image format using volcano name
+    //     $baseName = strtolower(str_replace(' ', '-', $this->name));
+    //     foreach ($extensions as $ext) {
+    //         $imagePath = "images/volcanoes/{$baseName}.{$ext}";
+    //         if (file_exists(public_path($imagePath))) {
+    //             return asset($imagePath);
+    //         }
+    //     }
+        
+    //     // If no image is found, return the placeholder
+    //     return asset('images/volcanoes/placeholder.png');
+    // }
+
     public function getSafeImageUrlAttribute()
     {
+        // GitHub repository base URL
+        $githubBaseUrl = 'https://raw.githubusercontent.com/Lara-Ghi/volcanic-images/main';
+
         // If the image_url field contains a URL, return it directly
         if (is_string($this->image_url) && filter_var($this->image_url, FILTER_VALIDATE_URL)) {
             return $this->image_url;
         }
-        
-        // Look for image using the image_url field as filename
-        $extensions = ['jpg', 'jpeg', 'png', 'gif', 'webp'];
-        
-        // First try using the image_url field directly
+
+        // If image_url exists, use it directly (now includes extension from database)
         if ($this->image_url) {
-            foreach ($extensions as $ext) {
-                $imagePath = "images/volcanoes/{$this->image_url}.{$ext}";
-                if (file_exists(public_path($imagePath))) {
-                    return asset($imagePath);
-                }
-            }
+            return "{$githubBaseUrl}/{$this->image_url}";
         }
-        
-        // Fallback: Look for any supported image format using volcano name
-        $baseName = strtolower(str_replace(' ', '-', $this->name));
-        foreach ($extensions as $ext) {
-            $imagePath = "images/volcanoes/{$baseName}.{$ext}";
-            if (file_exists(public_path($imagePath))) {
-                return asset($imagePath);
-            }
-        }
-        
-        // If no image is found, return the placeholder
+
+        // Fallback: return placeholder
         return asset('images/volcanoes/placeholder.png');
     }
 
