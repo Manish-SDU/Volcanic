@@ -94,8 +94,8 @@ class VolcanoesTableSeeder extends Seeder
             ],
             [
                 'name' => 'Adams Seamount',
-                'country' => 'N/A',
-                'continent' => 'International Waters',
+                'country' => 'International Waters',
+                'continent' => 'Australia',
                 'activity' => 'Active',
                 'latitude' => -25.37,
                 'longitude' => -129.27,
@@ -143,7 +143,7 @@ class VolcanoesTableSeeder extends Seeder
             [
                 'name' => 'Agrigan',
                 'country' => 'United States',
-                'continent' => 'Asia',
+                'continent' => 'North America',
                 'activity' => 'Inactive',
                 'latitude' => 18.77,
                 'longitude' => 145.67,
@@ -527,8 +527,8 @@ class VolcanoesTableSeeder extends Seeder
             ],
             [
                 'name' => 'Ascensión',
-                'country' => 'N/A',
-                'continent' => 'International Waters',
+                'country' => 'International Waters',
+                'continent' => 'Africa',
                 'activity' => 'Inactive',
                 'latitude' => -7.95,
                 'longitude' => -14.37,
@@ -635,8 +635,8 @@ class VolcanoesTableSeeder extends Seeder
             ],
             [
                 'name' => 'Axial Seamount',
-                'country' => 'N/A',
-                'continent' => 'International Waters',
+                'country' => 'International Waters',
+                'continent' => 'North America',
                 'activity' => 'Active',
                 'latitude' => 45.95,
                 'longitude' => -130.0,

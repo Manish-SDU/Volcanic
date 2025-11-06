@@ -44,6 +44,16 @@ class User extends Authenticatable
     {
         return $this->hasMany(UserVolcano::class);
     }
+    
+    public function volcanoes()
+    {
+        return $this->belongsToMany(
+            Volcano::class,
+            'user_volcanoes',
+            'user_id',
+            'volcanoes_id'
+        )->withPivot(['status', 'visited_at'])->withTimestamps();
+    }
 
     //Many-to-Many relationship between achievements and users
     public function achievements(): BelongsToMany

@@ -16,7 +16,7 @@ class AchievementSeeder extends Seeder
         $achievements = [
             [
                 'name' => 'First Eruption',
-                'description' => 'Visit your First Volcano.',
+                'description' => 'Visit your first volcano.',
                 'metric' => 'total_visits',
                 'dimensions' => null,
                 'aggregator' => 'count',
@@ -25,7 +25,7 @@ class AchievementSeeder extends Seeder
             ],
             [
                 'name' => 'Lava Rookie',
-                'description' => 'Visit 5 Volcanoes.',
+                'description' => 'Visit 5 volcanoes.',
                 'metric' => 'total_visits',
                 'dimensions' => null,
                 'aggregator' => 'count',
@@ -34,9 +34,9 @@ class AchievementSeeder extends Seeder
             ],
             [
                 'name' => 'Explorer',
-                'description' => 'Visit one Volcano in each continent.',
+                'description' => 'Visit one volcano in each continent.',
                 'metric' => 'visits_by_continent',
-                'dimensions' => null,
+                'dimensions' => json_encode(['continent' => ['Asia', 'Europe', 'Africa', 'North America', 'South America', 'Australia']]),
                 'aggregator' => 'count_distinct',
                 'threshold' => 6,
                 'image_path' => 'images/badges/Explorer.png',
@@ -49,7 +49,44 @@ class AchievementSeeder extends Seeder
                 'aggregator' => 'count',
                 'threshold' => 1,
                 'image_path' => 'images/badges/Dormant Dreamer.png',
-            ]
+            ],
+            [
+                'name' => 'Ash Walker',
+                'description' => 'Visit 10 volcanoes.',
+                'metric' => 'total_visits',
+                'dimensions' => null,
+                'aggregator' => 'count',
+                'threshold' => 10,
+                'image_path' => 'images/badges/Ash Walker.png',
+            ],
+            [
+                'name' => 'Lava Lover',
+                'description' => 'Visit an active volcano.',
+                'metric' => 'visits_by_activity',
+                'dimensions' => json_encode(['activity' => 'Active']),
+                'aggregator' => 'count',
+                'threshold' => 1,
+                'image_path' => 'images/badges/Lava Lover.png',
+            ],
+            [
+                'name' => 'Volcano Veteran',
+                'description' => 'Visit 25 volcanoes.',
+                'metric' => 'total_visits',
+                'dimensions' => null,
+                'aggregator' => 'count',
+                'threshold' => 25,
+                'image_path' => 'images/badges/Volcano Veteran.png',
+            ],
+            [
+                'name' => 'Magma Master',
+                'description' => 'Visit 50 volcanoes.',
+                'metric' => 'total_visits',
+                'dimensions' => null,
+                'aggregator' => 'count',
+                'threshold' => 50,
+                'image_path' => 'images/badges/Magma Master.png',
+            ],
+
         ];
 
         foreach ($achievements as $achievement) {
