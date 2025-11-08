@@ -116,4 +116,22 @@ class UserVolcanoController extends Controller
             return response()->json(['error' => 'Server error'], 500);
         }
     }
+
+    public function updateVisitedAt(Request $request, $volcanoId)
+    {
+        $request->validate([
+            'visited_date' => 'required|date',
+        ]);
+
+        // Find using user_id and volcanoes_id instead of id (since table has no id column)
+        $userVolcano = UserVolcano::where([
+            'user_id' => Auth::id(),
+            'volcanoes_id' => $volcanoId
+        ])->firstOrFail();
+        
+        $userVolcano->visited_at = $request->input('visited_date');
+        $userVolcano->save();
+
+        return redirect()->back()->with('success', 'Visited date updated successfully.');
+    }
 }

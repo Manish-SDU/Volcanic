@@ -115,6 +115,8 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/user/volcanoes/{id}/{status}', [UserVolcanoController::class, 'toggleStatus']);
     Route::get('/user/volcanoes/lists', [UserVolcanoController::class, 'getLists']);
     Route::get('/user/volcanoes/{id}/status', [UserVolcanoController::class, 'checkStatus']);
+    Route::put('/user/volcanoes/{volcanoId}/update-date', [UserVolcanoController::class, 'updateVisitedAt'])
+        ->name('user.volcanoes.updateDate');
 });
 
 Route::middleware(['auth'])->group(function () {

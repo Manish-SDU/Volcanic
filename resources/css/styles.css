@@ -3196,3 +3196,206 @@ form .signup-link span {
           font-size: 1.1rem;
       }
   }
+
+  /* ==================
+       Edit Date POPUP
+     ================== */
+
+.date-edit-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    border-radius: var(--border-radius-lg);
+    border: 2px solid var(--primary-color);
+    z-index: 1000;
+    width: 90%;
+    max-width: 400px;
+}
+
+.date-modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+.date-modal-content {
+    padding: 0;
+}
+
+.date-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 24px;
+    border-bottom: 2px solid var(--border-color);
+    background: var(--bg-primary);
+    border-radius: var(--border-radius-lg) var(--border-radius-lg) 0 0;
+}
+
+.date-modal-title {
+    margin: 0;
+    color: var(--text-primary);
+    font-size: 18px;
+    font-family: var(--font-heading);
+    font-weight: 700;
+}
+
+.date-modal-title i {
+    color: var(--primary-color);
+    margin-right: 8px;
+}
+
+.date-modal-close {
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    color: var(--text-secondary);
+    padding: 5px;
+    border-radius: 4px;
+}
+
+.date-modal-close:hover {
+    color: var(--primary-color);
+    background-color: var(--bg-secondary);
+}
+
+.date-modal-body {
+    padding: 24px;
+    background: white;
+    border-radius: 0 0 var(--border-radius-lg) var(--border-radius-lg);
+}
+
+.date-modal-body p {
+    margin: 0 0 20px 0;
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+.date-modal-form-group {
+    margin-bottom: 20px;
+}
+
+.date-modal-label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--text-primary);
+    font-size: 14px;
+}
+
+.date-modal-label i {
+    color: var(--primary-color);
+    margin-right: 6px;
+}
+
+.date-modal-input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid var(--border-color);
+    border-radius: var(--border-radius);
+    font-size: 16px;
+    font-family: var(--font-primary);
+    background: white;
+    color: var(--text-primary);
+}
+
+.date-modal-input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.date-modal-actions {
+    display: flex;
+    gap: 12px;
+    justify-content: flex-end;
+    margin-top: 24px;
+}
+
+.date-edit-btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-size: 14px;
+    margin: 8px;
+    align-items: center;
+    gap: 6px;
+    font-family: var(--font-heading);
+    font-weight: 600;
+}
+
+.date-edit-btn:hover {
+    background-color: var(--primary-hover);
+}
+
+.date-save-btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-family: var(--font-heading);
+    font-weight: 600;
+}
+
+.date-save-btn:hover {
+    background-color: var(--primary-hover);
+}
+
+.date-cancel-btn {
+    background-color: var(--text-secondary);
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-family: var(--font-heading);
+    font-weight: 600;
+}
+
+.date-cancel-btn:hover {
+    background-color: var(--text-primary);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .date-edit-modal {
+        width: 95%;
+        margin: 20px;
+    }
+    
+    .date-modal-actions {
+        flex-direction: column;
+    }
+    
+    .date-save-btn, .date-cancel-btn {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .date-modal-body {
+        padding: 20px;
+    }
+    
+    .date-modal-header {
+        padding: 16px 20px;
+    }
+}

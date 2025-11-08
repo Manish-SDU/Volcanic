@@ -15,7 +15,8 @@ export default defineConfig({
                 'resources/js/home/volcano-map.js',
                 'resources/js/profile/profile.js',
                 'resources/js/my-volcanoes/panels.js',
-                'resources/js/my-volcanoes/number_increment.js'
+                'resources/js/my-volcanoes/number_increment.js',
+                'resources/js/my-volcanoes/edit-date-popup.js'
             ],
             refresh: true,
         }),

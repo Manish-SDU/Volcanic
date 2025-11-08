@@ -3,7 +3,7 @@
 @section('title', 'My Volcanoes')
 
 @section('head_js')
-    @vite(['resources/js/my-volcanoes/panels.js', 'resources/js/my-volcanoes/number_increment.js', 'resources/js/my-volcanoes/volcano-actions.js'])
+    @vite(['resources/js/my-volcanoes/panels.js', 'resources/js/my-volcanoes/number_increment.js', 'resources/js/my-volcanoes/volcano-actions.js', 'resources/js/my-volcanoes/edit-date-popup.js'])
 @endsection
 
 @section('content')
@@ -72,6 +72,11 @@
                                     Visited on {{ $userVolcano->visited_at->format('M d, Y') }}
                                 </p>
                             @endif
+
+                            <button type="button" class="date-edit-btn" onclick="openDateModal({{ $userVolcano->volcano->id }}, '{{ $userVolcano->visited_at ? $userVolcano->visited_at->format('Y-m-d') : date('Y-m-d') }}', '{{ $userVolcano->volcano->name }}')">
+                                <i class="fas fa-edit"></i> Edit Visited Date
+                            </button>            
+                            
                             <form action="{{ route('user.volcanoes.toggle', ['id' => $userVolcano->volcano->id, 'status' => 'visited']) }}" 
                                   method="POST">
                                 @csrf
@@ -175,4 +180,45 @@
             <a href="{{ route('home') }}">Explore Volcanoes</a>
         </div>
     </template>
+
+    <!-- Date Edit Modal -->
+    <div id="dateModal" class="date-edit-modal" style="display: none;">
+        <div class="date-modal-content">
+            <div class="date-modal-header">
+                <h3 class="date-modal-title"><i class="fas fa-calendar-edit"></i> Edit Visited Date</h3>
+                <button type="button" class="date-modal-close" onclick="closeDateModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="date-modal-body">
+                <p>Update the visited date for <strong id="modal-volcano-name"></strong>:</p>
+                <form id="dateUpdateForm" method="POST">
+                    @csrf
+                    @method('PUT')
+                    <div class="date-modal-form-group">
+                        <label for="modal-visited-date" class="date-modal-label">
+                            <i class="fas fa-calendar-check"></i> Visited Date:
+                        </label>
+                        <input type="date" 
+                            id="modal-visited-date" 
+                            name="visited_date" 
+                            class="date-modal-input"
+                            max="{{ date('Y-m-d') }}"
+                            required>
+                    </div>
+                    <div class="date-modal-actions">
+                        <button type="button" class="date-cancel-btn" onclick="closeDateModal()">
+                            <i class="fas fa-times"></i> Cancel
+                        </button>
+                        <button type="submit" class="date-save-btn">
+                            <i class="fas fa-save"></i> Save Date
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    {{-- Modal backdrop --}}
+    <div id="modalBackdrop" class="date-modal-backdrop" style="display: none;" onclick="closeDateModal()"></div>
 @endsection
