@@ -1,4 +1,4 @@
-function animatedValue(id, duration = 2000)
+function animatedValue(id, duration = 1000)
 {
     const element = document.getElementById(id);
     const endValue = parseInt(element.textContent, 10);
