@@ -109,7 +109,7 @@
         @else
             <div class="volcano-grid">
                 @foreach($wishlist as $userVolcano)
-                    <div class="volcano-card">
+                    <div class="volcano-card" data-volcano-id="{{ $userVolcano->volcano->id }}">
                         <div class="image-container">
                             <img src="{{ $userVolcano->volcano->safe_image_url }}" 
                                  alt="{{ $userVolcano->volcano->name }}" 
@@ -121,13 +121,22 @@
                                 <i class="fas fa-map-marker-alt"></i> 
                                 {{ $userVolcano->volcano->country }}
                             </p>
-                            <form action="{{ route('user.volcanoes.toggle', ['id' => $userVolcano->volcano->id, 'status' => 'wishlist']) }}" 
-                                  method="POST">
-                                @csrf
-                                <button type="submit" class="remove-btn">
-                                    <i class="fas fa-times"></i> Remove
-                                </button>
-                            </form>
+                            <div class="wishlist-actions">
+                                <form action="{{ route('user.volcanoes.toggle', ['id' => $userVolcano->volcano->id, 'status' => 'visited']) }}"
+                                    method="POST" class="mark-visited-form">
+                                    @csrf
+                                    <button type="submit" class="mark-visited-btn">
+                                        <i class="fas fa-check"></i> Mark as Visited
+                                    </button>
+                                </form>
+                                <form action="{{ route('user.volcanoes.toggle', ['id' => $userVolcano->volcano->id, 'status' => 'wishlist']) }}" 
+                                    method="POST">
+                                    @csrf
+                                    <button type="submit" class="remove-btn">
+                                        <i class="fas fa-times"></i> Remove
+                                    </button>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 @endforeach
@@ -178,6 +187,37 @@
         <div class="empty-state">
             <p>Your wishlist is empty</p>
             <a href="{{ route('home') }}">Explore Volcanoes</a>
+        </div>
+    </template>
+
+    <!-- Volcano Card Template for dynamically added cards -->
+    <template id="volcano-card-template">
+        <div class="volcano-card" data-volcano-id="">
+            <div class="image-container">
+                <img src="" alt="" class="volcano-thumb">
+            </div>
+            <div class="card-content">
+                <h3></h3>
+                <p class="country">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span class="country-name"></span>
+                </p>
+                <p class="visited-date">
+                    <i class="fas fa-calendar-alt"></i>
+                    <span class="date-text"></span>
+                </p>
+                
+                <button type="button" class="date-edit-btn" onclick="">
+                    <i class="fas fa-edit"></i> Edit Visited Date
+                </button>
+                
+                <form method="POST" action="" class="remove-form">
+                    <input type="hidden" name="_token" value="">
+                    <button type="submit" class="remove-btn">
+                        <i class="fas fa-times"></i> Remove
+                    </button>
+                </form>
+            </div>
         </div>
     </template>
 

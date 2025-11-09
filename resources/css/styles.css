@@ -2574,21 +2574,6 @@ form .signup-link span {
     color: var(--primary-color);
 }
 
-.myv-panel .remove-btn {
-    margin-top: 1rem;
-    padding: 0.5rem 1rem;
-    background: var(--primary-color);
-    color: white;
-    border: none;
-    border-radius: var(--border-radius);
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.myv-panel .remove-btn:hover {
-    background: var(--primary-hover);
-}
-
 .myv-panel .visited-date {
     display: flex;
     align-items: center;
@@ -2670,6 +2655,71 @@ form .signup-link span {
 .myv-panel .empty-state a:hover {
     background: var(--primary-hover);
     transform: translateY(-2px);
+}
+
+/* Visit button into volcano card */
+.wishlist-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-top: 1rem;
+}
+
+
+.mark-visited-btn {
+    padding: 0.75rem 1rem;
+    background: #48bb78;
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-family: var(--font-heading);
+}
+
+
+.mark-visited-btn:hover {
+    background: #38a169;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(72, 187, 120, 0.3);
+}
+
+
+.mark-visited-btn:active {
+    transform: translateY(0);
+}
+
+
+.myv-panel .remove-btn {
+    padding: 0.75rem 1rem;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    font-size: 0.95rem;
+    font-family: var(--font-heading);
+    width: 100%;
+}
+
+
+.myv-panel .remove-btn:hover {
+    background: var(--primary-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(187, 1, 1, 0.3);
+}
+
+
+.myv-panel .remove-btn:active {
+    transform: translateY(0);
 }
 
    /* =========================
