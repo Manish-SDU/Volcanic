@@ -84,6 +84,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 if (data.success) {
                     showSuccessMessage(data.message);
+                    await refreshStats();
                     
                     volcanoCard.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
                     volcanoCard.style.opacity = '0';
@@ -149,6 +150,8 @@ document.addEventListener('DOMContentLoaded', function() {
                
                 if (data.success) {
                     showSuccessMessage(data.message);
+
+                    await refreshStats();
                    
                     // Add to visited panel FIRST
                     addToVisitedPanel(volcanoId, volcanoName, volcanoCountry, volcanoImage, csrfToken);
@@ -237,14 +240,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 addedCard.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
                 addedCard.style.opacity = '1';
                 addedCard.style.transform = 'scale(1)';
+
+                 // Attach event listener to the new remove button
+                const removeBtn = addedCard.querySelector('.remove-btn');
+                if (removeBtn) {
+                    attachRemoveButtonListener(removeBtn);
+                }
             }
         }, 10);
-        
-        // Attach event listener to the new remove button
-        const removeBtn = newCard.querySelector('.remove-btn');
-        if (removeBtn) {
-            attachRemoveButtonListener(removeBtn);
-        }
     }
 
 
@@ -272,6 +275,8 @@ document.addEventListener('DOMContentLoaded', function() {
                
                 if (data.success) {
                     showSuccessMessage(data.message);
+
+                    await refreshStats();
                    
                     volcanoCard.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
                     volcanoCard.style.opacity = '0';
@@ -325,4 +330,25 @@ document.addEventListener('DOMContentLoaded', function() {
         const notificationEl = container.lastElementChild;
         setTimeout(() => notificationEl.remove(), 3000);
     }
+
+    async function refreshStats() {
+    try {
+        const response = await fetch('/my-volcanoes', {
+            headers: {
+                'Accept': 'application/json',
+                'X-Requested-With': 'XMLHttpRequest'
+            }
+        });
+        const data = await response.json();
+        
+        // Update the stats display
+        document.getElementById('visited-value').textContent = data.stats.volcanoes_visited;
+        document.getElementById('countries-value').textContent = data.stats.countries_explored;
+        document.getElementById('active-value').textContent = data.stats.active_volcanoes;
+        document.getElementById('inactive-value').textContent = data.stats.inactive_volcanoes;
+        
+    } catch (error) {
+        console.error('Error refreshing stats:', error);
+    }
+}
 });

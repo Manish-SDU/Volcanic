@@ -15,7 +15,7 @@ class VolcanoesController extends Controller
      *
      * @return \Illuminate\View\View
      */
-    public function index()
+    public function index(Request $request)
     {
         $user = Auth::user();
     
@@ -29,6 +29,15 @@ class VolcanoesController extends Controller
         $wishlist = $userVolcanoes->get('wishlist', collect());
 
         $stats = $this->calculateStats($visited);
+
+        // If it's an AJAX request asking for stats, return JSON
+        if ($request->wantsJson() || $request->ajax()) {
+            return response()->json([
+                'visited' => $visited,
+                'wishlist' => $wishlist,
+                'stats' => $stats
+            ]);
+        }
 
         return view('my-volcanoes.index', [
             'visited' => $visited,
