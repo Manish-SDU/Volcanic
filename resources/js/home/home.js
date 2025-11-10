@@ -43,6 +43,7 @@ function initializeSearch() {
     const searchToggle = document.getElementById('searchToggle');
     const heroSearchBar = document.getElementById('heroSearchBar');
     const searchInput = heroSearchBar.querySelector('input');
+    const searchToggleWrapper = searchToggle ? searchToggle.closest('.search-toggle-wrapper') : null;
     const volcanoGrid = document.querySelector('.volcano-grid');
     const noResultsMessage = document.getElementById('no-results-message');
     const searchTermSpan = document.getElementById('search-term');
@@ -54,9 +55,17 @@ function initializeSearch() {
     const defaultSearchStatus = document.getElementById('search-status').textContent;
         
     searchToggle.addEventListener('click', function() {
-        heroSearchBar.classList.toggle('hidden');
-        
-        if (!heroSearchBar.classList.contains('hidden')) {
+        const isHidden = heroSearchBar.classList.toggle('hidden');
+
+        if (searchToggleWrapper) {
+            if (!isHidden) {
+                searchToggleWrapper.classList.add('hide-tooltip');
+            } else {
+                searchToggleWrapper.classList.remove('hide-tooltip');
+            }
+        }
+
+        if (!isHidden) {
             animateTextChange(textStates.searching);
             setTimeout(() => {
                 heroSearchBar.querySelector('input').focus();
@@ -80,6 +89,9 @@ function initializeSearch() {
             heroSearchBar.classList.add('hidden');
             animateTextChange(textStates.initial);
             updateSearchStatus(defaultSearchStatus);
+            if (searchToggleWrapper) {
+                searchToggleWrapper.classList.remove('hide-tooltip');
+            }
         }
     });
 

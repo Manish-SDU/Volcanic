@@ -58,8 +58,14 @@
             <h1 class="hero-title">
                 The <i class="fa-solid fa-volcano"></i> volcano<br>
                 <span class="exploration-line">
-                    <button id="searchToggle" class="search-icon-inline"><i
-                            class="fa-solid fa-magnifying-glass"></i></button>
+                    <span class="search-toggle-wrapper">
+                        <button id="searchToggle" class="search-icon-inline" aria-describedby="searchToggleTooltip">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                        <span class="search-tooltip" id="searchToggleTooltip" role="tooltip">
+                            Search volcanoes!
+                        </span>
+                    </span>
                     <span class="word-part">exploration platform</span>
                 </span>
             </h1>

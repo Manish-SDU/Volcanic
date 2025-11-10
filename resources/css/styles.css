@@ -658,6 +658,73 @@ body {
     font-size: 1.5rem;
 }
 
+/* Tooltip for hero search button when carousel is hovered */
+.search-toggle-wrapper {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-tooltip {
+    position: absolute;
+    bottom: 120%;
+    left: 50%;
+    transform: translate(-50%, 10px) scale(0.98);
+    background: linear-gradient(135deg, rgba(255, 118, 50, 0.95), rgba(255, 214, 94, 0.9));
+    color: #1f0f02;
+    padding: 0.55rem 0.9rem;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    box-shadow: 0 18px 36px rgba(255, 107, 53, 0.35);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+    z-index: 5;
+}
+
+.search-tooltip::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 18px;
+    height: 10px;
+    background: linear-gradient(135deg, rgba(255, 118, 50, 0.95), rgba(255, 214, 94, 0.9));
+    clip-path: polygon(50% 100%, 0 0, 100% 0);
+}
+
+.hero-section:hover .search-tooltip,
+.search-toggle-wrapper:hover .search-tooltip,
+.search-icon-inline:focus + .search-tooltip,
+.search-icon-inline:focus-visible + .search-tooltip {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, -2px) scale(1);
+    animation: tooltipFloat 3.2s ease-in-out infinite;
+}
+
+.search-toggle-wrapper.hide-tooltip .search-tooltip {
+    opacity: 0 !important;
+    visibility: hidden !important;
+    transform: translate(-50%, 12px) scale(0.92) !important;
+    animation: none !important;
+}
+
+@keyframes tooltipFloat {
+    0%, 100% {
+        transform: translate(-50%, -2px) scale(1);
+    }
+    50% {
+        transform: translate(-50%, -6px) scale(1.02);
+    }
+}
+
 /* Search Bar */
 .hero-search-bar {
     max-width: 500px;
