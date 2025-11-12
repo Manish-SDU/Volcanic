@@ -64,6 +64,10 @@ Route::put('/profile', [ProfileController::class, 'update'])
     ->middleware('auth')
     ->name('profile.update');
 
+Route::delete('/profile', [ProfileController::class, 'destroy'])
+    ->middleware('auth')
+    ->name('profile.destroy');
+
 // Admin Dashboard (only for admins)
 Route::get('/admin/dashboard', [AdminDashboardController::class, 'index'])
     ->middleware(['auth', IsAdmin::class])

@@ -15,6 +15,16 @@
       <br>
       <!-- Header: avatar + identity + action -->
       <header class="profile-header">
+
+        <!-- Delete Button -->
+        <form action="{{ route('profile.destroy') }}" method="POST" class="delete-form">
+          @csrf
+          @method('DELETE')
+          <button type="submit" class="delete-btn" aria-label="Delete account">
+            <i class="fa-solid fa-trash"></i> Delete
+          </button>
+        </form>
+
         <div class="profile-ident">
           {{-- Avatar: using a default image for now (since pfp is not stored) --}}
           <img id="userPhoto" class="profile-avatar" alt="User photo"
@@ -29,6 +39,7 @@
         <a class="edit-btn" href="{{ route('profile.edit') }}" aria-label="Edit profile">
           <i class="fa-solid fa-pen"></i> Edit
         </a>
+
       </header>
       
       <!-- Bio section -->
@@ -108,5 +119,33 @@
         @endforeach
       </ul>
     </section>
+    
+    {{-- Delete Confirmation Modal --}}
+    <div id="deleteModal" class="modal-overlay">
+      <div class="modal-content">
+        <div class="modal-icon warning">
+          <i class="fa-solid fa-triangle-exclamation"></i>
+        </div>
+        <h3>Delete Account?</h3>
+        <p>Are you sure you want to delete your account?</p>
+        <p class="modal-warning">
+          This action is <strong>irreversible</strong>. All your data will be permanently deleted:
+        </p>
+        <ul class="modal-list">
+          <li><i class="fa-solid fa-circle-check"></i> Visited volcanoes</li>
+          <li><i class="fa-solid fa-circle-check"></i> Wishlist items</li>
+          <li><i class="fa-solid fa-circle-check"></i> Achievements</li>
+          <li><i class="fa-solid fa-circle-check"></i> Profile information</li>
+        </ul>
+        <div class="modal-actions">
+          <button type="button" id="cancelDelete" class="modal-btn cancel-btn">
+            <i class="fa-solid fa-xmark"></i> Cancel
+          </button>
+          <button type="button" id="confirmDelete" class="modal-btn delete-btn-modal">
+            <i class="fa-solid fa-trash"></i> Delete Forever
+          </button>
+        </div>
+      </div>
+    </div>
   </main>
 @endsection
