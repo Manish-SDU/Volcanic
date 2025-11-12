@@ -80,6 +80,9 @@
                 <div class="hero-search-input">
                     <input type="text" placeholder="Enter volcano name or country...">
                 </div>
+                <div class="search-suggestions suggestion-empty" aria-live="polite">
+                    <span class="search-suggestion-hint">Try "Fuji", "Japan", or "JP"</span>
+                </div>
             </div>
 
             <!-- Github Button -->
@@ -233,7 +236,7 @@
             </div>
 
             <!-- Load More Button -->
-            <div class="load-more-container" style="text-align: center; margin: 40px 0;">
+            <div class="load-more-container" id="loadMoreContainer" style="text-align: center; margin: 40px 0;">
                 <button id="load-more-btn" class="btn-load-more" data-load-count="9">
                     Load More Volcanoes
                 </button>
