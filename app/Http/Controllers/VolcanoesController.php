@@ -7,9 +7,37 @@ use App\Models\Volcano;
 use App\Support\CountryAcronymMapper;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Collection;
 
 class VolcanoesController extends Controller
 {
+    /**
+     * Words that should be ignored when generating fallback search terms.
+     *
+     * @var array<int, string>
+     */
+    private array $searchStopWords = [
+        'mount',
+        'mt',
+        'mt.',
+        'mount.',
+        'mountain',
+        'volcano',
+        'volcanoes',
+        'volcan',
+        'peak',
+        'pico',
+        'cerro',
+        'the',
+        'la',
+        'el',
+        'st',
+        'st.',
+        'saint',
+        'de',
+        'del'
+    ];
+
     /**
      * Display the my volcanoes page.
      *
@@ -88,44 +116,133 @@ class VolcanoesController extends Controller
      */
     public function search(Request $request)
     {
-        $query = $request->get('query', '');
-        
-        if (empty($query)) {
+        $query = trim($request->get('query', ''));
+
+        if ($query === '') {
             return response()->json([
                 'success' => false,
                 'message' => 'Query parameter is required'
             ]);
         }
-        
-        // Search across multiple fields simultaneously
-        // This ensures we catch all matches regardless of field
-        $volcanoes = Volcano::where(function($q) use ($query) {
-            // Search in name field
-            $q->whereRaw('LOWER(name) LIKE LOWER(?)', ['%' . $query . '%'])
-              // Search in country field
-              ->orWhereRaw('LOWER(country) LIKE LOWER(?)', ['%' . $query . '%'])
-              // Search in continent field
-              ->orWhereRaw('LOWER(continent) LIKE LOWER(?)', ['%' . $query . '%'])
-              // Search in type field
-              ->orWhereRaw('LOWER(type) LIKE LOWER(?)', ['%' . $query . '%'])
-              // Search in activity field
-              ->orWhereRaw('LOWER(activity) LIKE LOWER(?)', ['%' . $query . '%']);
-        })->get();
-        
-        // If no results found, try with country acronym mapper as fallback
-        if ($volcanoes->isEmpty()) {
-            $countryMapper = new CountryAcronymMapper();
-            $countryMatches = $countryMapper->getCountryMatches($query);
-            
-            if (!empty($countryMatches)) {
-                $country = $countryMatches[0];
-                $volcanoes = Volcano::whereRaw('LOWER(country) LIKE LOWER(?)', ['%' . $country . '%'])->get();
-            }
+
+        $normalizedQuery = $this->normalizeQuery($query);
+        $significantTerms = $this->extractSignificantTerms($normalizedQuery);
+
+        $volcanoes = $this->searchVolcanoesByTokens([$normalizedQuery]);
+
+        if (!empty($significantTerms)) {
+            $volcanoes = $volcanoes->merge(
+                $this->searchVolcanoesByTokens($significantTerms)
+            );
         }
-        
+
+        $countryMatches = $this->resolveCountryMatches($normalizedQuery, $significantTerms);
+
+        if (!empty($countryMatches)) {
+            $volcanoes = $volcanoes->merge(
+                $this->searchVolcanoesByCountryNames($countryMatches)
+            );
+        }
+
+        $volcanoes = $volcanoes->unique('id')->values();
+
         return response()->json([
             'success' => true,
             'data' => $volcanoes
         ]);
+    }
+
+    private function normalizeQuery(string $query): string
+    {
+        $query = preg_replace('/\s+/', ' ', $query);
+
+        return trim($query);
+    }
+
+    private function extractSignificantTerms(string $query): array
+    {
+        $query = strtolower($query);
+        $tokens = preg_split('/[\s,;:+\-]+/', $query) ?: [];
+
+        $cleanTokens = [];
+
+        foreach ($tokens as $token) {
+            $token = trim($token, " \t\n\r\0\x0B'\".-_()/\\");
+
+            if ($token === '') {
+                continue;
+            }
+
+            if (in_array($token, $this->searchStopWords, true)) {
+                continue;
+            }
+
+            $cleanTokens[] = $token;
+        }
+
+        return array_values(array_unique($cleanTokens));
+    }
+
+    private function searchVolcanoesByTokens(array $tokens): Collection
+    {
+        $tokens = array_values(array_filter(array_map('trim', $tokens)));
+
+        if (empty($tokens)) {
+            return collect();
+        }
+
+        return Volcano::where(function ($query) use ($tokens) {
+            foreach ($tokens as $token) {
+                $like = '%' . strtolower($token) . '%';
+
+                $query->orWhere(function ($subQuery) use ($like) {
+                    $subQuery->whereRaw('LOWER(name) LIKE ?', [$like])
+                        ->orWhereRaw('LOWER(country) LIKE ?', [$like])
+                        ->orWhereRaw('LOWER(continent) LIKE ?', [$like])
+                        ->orWhereRaw('LOWER(type) LIKE ?', [$like])
+                        ->orWhereRaw('LOWER(activity) LIKE ?', [$like]);
+                });
+            }
+        })->get();
+    }
+
+    private function resolveCountryMatches(string $normalizedQuery, array $tokens): array
+    {
+        $countryMapper = new CountryAcronymMapper();
+        $matches = collect();
+
+        if (!empty($tokens)) {
+            foreach ($tokens as $token) {
+                $matches = $matches->merge($countryMapper->getCountryMatches($token));
+            }
+        }
+
+        if ($matches->isEmpty()) {
+            $matches = collect($countryMapper->getCountryMatches($normalizedQuery));
+        }
+
+        return $matches
+            ->filter()
+            ->map(fn ($country) => trim($country))
+            ->filter()
+            ->unique()
+            ->values()
+            ->all();
+    }
+
+    private function searchVolcanoesByCountryNames(array $countries): Collection
+    {
+        if (empty($countries)) {
+            return collect();
+        }
+
+        $countries = array_map(fn ($country) => strtolower($country), $countries);
+
+        return Volcano::where(function ($query) use ($countries) {
+            foreach ($countries as $country) {
+                $likeCountry = '%' . $country . '%';
+                $query->orWhereRaw('LOWER(country) LIKE ?', [$likeCountry]);
+            }
+        })->get();
     }
 }

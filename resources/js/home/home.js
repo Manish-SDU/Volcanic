@@ -44,12 +44,146 @@ function initializeSearch() {
     const heroSearchBar = document.getElementById('heroSearchBar');
     const searchInput = heroSearchBar.querySelector('input');
     const searchToggleWrapper = searchToggle ? searchToggle.closest('.search-toggle-wrapper') : null;
+    const suggestionContainer = heroSearchBar.querySelector('.search-suggestions');
+    const defaultSuggestionMarkup = suggestionContainer ? suggestionContainer.innerHTML : '';
+    const loadMoreContainer = document.getElementById('loadMoreContainer');
+    const loadMoreBtn = document.getElementById('load-more-btn');
+    const allLoadedMessage = document.getElementById('all-loaded-message');
     const volcanoGrid = document.querySelector('.volcano-grid');
     const noResultsMessage = document.getElementById('no-results-message');
     const searchTermSpan = document.getElementById('search-term');
     
     let hasStartedTyping = false;
     let searchTimeout = null;
+
+    function setLoadMoreVisibility(isVisible) {
+        if (!loadMoreContainer) {
+            return;
+        }
+
+        loadMoreContainer.style.display = isVisible ? '' : 'none';
+    }
+
+    function restoreSuggestionHint() {
+        if (!suggestionContainer) {
+            return;
+        }
+
+        suggestionContainer.innerHTML = defaultSuggestionMarkup;
+        suggestionContainer.classList.add('suggestion-empty');
+    }
+
+    function renderSuggestionChips(volcanoes) {
+        if (!suggestionContainer) {
+            return;
+        }
+
+        if (!Array.isArray(volcanoes) || volcanoes.length === 0) {
+            restoreSuggestionHint();
+            return;
+        }
+
+        const suggestionMap = new Map();
+
+        const addSuggestion = (type, label, value) => {
+            if (!label || !value) {
+                return;
+            }
+
+            const trimmedValue = value.toString().trim();
+            const trimmedLabel = label.toString().trim();
+            if (!trimmedValue || !trimmedLabel) {
+                return;
+            }
+
+            const key = `${type}|${trimmedValue.toLowerCase()}`;
+            if (suggestionMap.has(key)) {
+                return;
+            }
+
+            suggestionMap.set(key, {
+                type,
+                label: trimmedLabel,
+                value: trimmedValue
+            });
+        };
+
+        volcanoes.forEach(volcano => {
+            if (!volcano || typeof volcano !== 'object') {
+                return;
+            }
+
+            if (volcano.name) {
+                addSuggestion('name', volcano.name, volcano.name);
+            }
+
+            if (volcano.country) {
+                addSuggestion('country', volcano.country, volcano.country);
+            }
+        });
+
+        const suggestions = Array.from(suggestionMap.values()).slice(0, 6);
+
+        if (suggestions.length === 0) {
+            restoreSuggestionHint();
+            return;
+        }
+
+        suggestionContainer.classList.remove('suggestion-empty');
+        suggestionContainer.innerHTML = '';
+
+        suggestions.forEach(suggestion => {
+            const button = document.createElement('button');
+            button.type = 'button';
+            button.className = `search-suggestion search-suggestion-${suggestion.type}`;
+            button.dataset.query = suggestion.value;
+            button.dataset.suggestionType = suggestion.type;
+            button.textContent = suggestion.label;
+
+            const ariaLabel = suggestion.type === 'country'
+                ? `Search for volcanoes in ${suggestion.label}`
+                : `Search for volcano ${suggestion.label}`;
+            button.setAttribute('aria-label', ariaLabel);
+
+            suggestionContainer.appendChild(button);
+        });
+    }
+
+    if (suggestionContainer) {
+        suggestionContainer.addEventListener('click', event => {
+            const target = event.target.closest('.search-suggestion');
+            if (!target) {
+                return;
+            }
+
+            const query = target.dataset.query || target.textContent.trim();
+            if (!query) {
+                return;
+            }
+
+            if (searchTimeout) {
+                clearTimeout(searchTimeout);
+                searchTimeout = null;
+            }
+
+            if (heroSearchBar.classList.contains('hidden')) {
+                heroSearchBar.classList.remove('hidden');
+                if (searchToggleWrapper) {
+                    searchToggleWrapper.classList.add('hide-tooltip');
+                }
+            }
+
+            searchInput.value = query;
+            hasStartedTyping = true;
+            animateTextChange(textStates.typing);
+
+            setTimeout(() => searchInput.focus(), 60);
+            performSearch(query);
+        });
+    }
+
+    restoreSuggestionHint();
+    setLoadMoreVisibility(true);
 
     // Default search status text
     const defaultSearchStatus = document.getElementById('search-status').textContent;
@@ -71,11 +205,15 @@ function initializeSearch() {
                 heroSearchBar.querySelector('input').focus();
             }, 300);
         } else {
+            hasStartedTyping = false;
             animateTextChange(textStates.initial);
             // Reset search when closing
             if (searchInput.value) {
                 searchInput.value = '';
                 resetSearch();
+            } else {
+                restoreSuggestionHint();
+                setLoadMoreVisibility(true);
             }
         }
     });
@@ -92,6 +230,9 @@ function initializeSearch() {
             if (searchToggleWrapper) {
                 searchToggleWrapper.classList.remove('hide-tooltip');
             }
+            hasStartedTyping = false;
+            restoreSuggestionHint();
+            setLoadMoreVisibility(true);
         }
     });
 
@@ -154,17 +295,28 @@ function initializeSearch() {
         
         const cards = document.querySelectorAll('.volcano-card');
         cards.forEach((card, index) => {
+            card.style.removeProperty('display');
+
             if (index < 9) {
-                card.style.display = '';
                 card.classList.remove('homepage-hidden');
             } else {
-                card.style.display = 'none';
                 card.classList.add('homepage-hidden');
             }
         });
         
         noResultsMessage.classList.add('hidden');
         volcanoGrid.classList.remove('no-results');
+        hasStartedTyping = false;
+        restoreSuggestionHint();
+        setLoadMoreVisibility(true);
+
+        if (loadMoreBtn) {
+            loadMoreBtn.style.removeProperty('display');
+        }
+
+        if (allLoadedMessage) {
+            allLoadedMessage.style.display = 'none';
+        }
         
         setTimeout(() => {
             updateSearchStatus(defaultSearchStatus);
@@ -187,6 +339,7 @@ function initializeSearch() {
         }
         
         volcanoGrid.classList.add('search-active');
+        setLoadMoreVisibility(false);
         
         // Show searching status with styled term
         const styledTerm = `<span style="color: #ff6b35; font-weight: 600;">"${searchTerm}"</span>`;
@@ -206,6 +359,7 @@ function initializeSearch() {
             .then(data => {
                 console.log('API search results:', data);
                 if (data.success) {
+                    renderSuggestionChips(data.data);
                     displaySearchResults(data.data, searchTerm);
                 } else {
                     throw new Error('Invalid response format');
@@ -225,6 +379,7 @@ function initializeSearch() {
         
         // Make search active for all cards including the ones hidden in database
         volcanoGrid.classList.add('search-active');
+        setLoadMoreVisibility(false);
         
         // Create a map for volcanoes IDs that should be visible
         const volcanoIdMap = new Map();
@@ -236,7 +391,7 @@ function initializeSearch() {
             const volcanoId = card.dataset.volcanoId;
             
             if (volcanoIdMap.has(volcanoId)) {
-                card.style.display = '';
+                card.style.removeProperty('display');
                 card.classList.remove('homepage-hidden');
                 visibleCount++;
             } else {
