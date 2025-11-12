@@ -61,14 +61,13 @@
                     <div class="login-data form-col">
                         <label for="surname">
                             <i class="fas fa-user"></i>
-                            Surname <span class="required">*</span>
+                            Surname
                         </label>
                         <input 
                             type="text" 
                             id="surname" 
                             name="surname" 
                             value="{{ old('surname', $user->surname) }}" 
-                            required 
                             autocomplete="family-name"
                             placeholder="Your last name"
                             class="form-input"

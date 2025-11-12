@@ -104,8 +104,37 @@
 
     <!-- Main Content -->
     <main>
-        @yield('content')
-    </main>
+      {{-- Success/Error Message Modal --}}
+      @if(session('success') || session('error'))
+          <div id="flashModal" class="modal-overlay active">
+              <div class="modal-content">
+                  @if(session('success'))
+                      <div class="modal-icon success">
+                          <i class="fa-solid fa-circle-check"></i>
+                      </div>
+                      <h3>Success!</h3>
+                      <p>{{ session('success') }}</p>
+                  @endif
+
+                  @if(session('error'))
+                      <div class="modal-icon warning">
+                          <i class="fa-solid fa-circle-exclamation"></i>
+                      </div>
+                      <h3>Error</h3>
+                      <p>{{ session('error') }}</p>
+                  @endif
+
+                  <div class="modal-actions">
+                      <button type="button" id="closeFlash" class="modal-btn cancel-btn">
+                          <i class="fa-solid fa-xmark"></i> Close
+                      </button>
+                  </div>
+              </div>
+          </div>
+      @endif
+
+      @yield('content')
+  </main>
 
     <!-- Footer -->
     <footer class="glass-footer">

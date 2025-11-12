@@ -68,4 +68,12 @@ class ProfileController extends Controller
             ->route('profile')
             ->with('status', 'Profile updated successfully.');
     }
+
+    public function destroy()
+    {
+        $user = Auth::user();
+        Auth::logout();
+        $user->delete();
+        return redirect()->route('home')->with('success', 'Account deleted successfully');
+    }
 }

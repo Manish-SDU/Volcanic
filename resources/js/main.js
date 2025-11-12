@@ -190,3 +190,28 @@ window.VolcanicCommon = {
           });
       });
   }
+
+/**
+ * Flash Message Modal - Close functionality
+ */
+const flashModal = document.getElementById('flashModal');
+const closeFlashBtn = document.getElementById('closeFlash');
+
+if (flashModal && closeFlashBtn) {
+    // Close on button click
+    closeFlashBtn.addEventListener('click', function() {
+        flashModal.classList.remove('active');
+    });
+
+    // Close when clicking outside
+    flashModal.addEventListener('click', function(event) {
+        if (event.target === flashModal) {
+            flashModal.classList.remove('active');
+        }
+    });
+
+    // Auto-close after 5 seconds
+    setTimeout(function() {
+        flashModal.classList.remove('active');
+    }, 5000);
+}

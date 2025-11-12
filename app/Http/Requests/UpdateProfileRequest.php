@@ -19,7 +19,7 @@ class UpdateProfileRequest extends FormRequest
 
         return [
             'name'          => ['required', 'string', 'max:255'],
-            'surname'       => ['required', 'string', 'max:255'],
+            'surname'       => ['nullable', 'string', 'max:255'],
             'username'      => [
                 'required', 'string', 'max:255',
                 Rule::unique('users', 'username')->ignore($userId),

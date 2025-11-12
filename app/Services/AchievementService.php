@@ -133,4 +133,53 @@ class AchievementService
         }
         return true;
     }
+    public function revokeInvalidAchievements(User $user): void
+    {
+        // Get user's achievements
+        $userAchievements = $user->achievements;
+
+        foreach ($userAchievements as $achievement) {
+            $earned = false;
+            
+            switch ($achievement->metric) {
+                case 'total_visits':
+                    $count = DB::table('user_volcanoes')
+                        ->where('user_id', $user->id)
+                        ->where('status', 'visited')
+                        ->count();
+                    $earned = $count >= $achievement->threshold;
+                    break;
+
+                case 'visits_by_continent':
+                    if ($achievement->aggregator === 'count_distinct') {
+                        $distinct = DB::table('user_volcanoes')
+                            ->join('volcanoes', 'user_volcanoes.volcanoes_id', '=', 'volcanoes.id')
+                            ->where('user_volcanoes.user_id', $user->id)
+                            ->where('user_volcanoes.status', 'visited')
+                            ->distinct()
+                            ->count('volcanoes.continent');
+                        $earned = $distinct >= $achievement->threshold;
+                    }
+                    break;
+
+                case 'visits_by_activity':
+                    if (!empty($dimensions['activity'])) {
+                        $count = DB::table('user_volcanoes')
+                            ->join('volcanoes', 'user_volcanoes.volcanoes_id', '=', 'volcanoes.id')
+                            ->where('user_volcanoes.user_id', $user->id)
+                            ->where('user_volcanoes.status', 'visited')
+                            ->where('volcanoes.activity', $achievement->dimensions['activity'])
+                            ->count();
+                        $earned = $count >= $achievement->threshold;
+                    }
+                    break;
+            }
+
+            // If achievement is no longer valid, detach it
+            if (!$earned) {
+                $user->achievements()->detach($achievement->id);
+                Log::info("Achievement {$achievement->name} revoked from user {$user->id}");
+            }
+        }
+    }
 }
