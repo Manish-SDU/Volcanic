@@ -128,6 +128,9 @@ Route::middleware(['auth'])->group(function () {
          ->name('user.volcanoes.toggle');
 });
 
+// Individual Volcano API Route
+Route::get('/api/volcanoes/{id}', [App\Http\Controllers\VolcanoesController::class, 'getVolcano']);
+
 // Debug route
 Route::get('/debug/image-paths', function () {
     $volcanoes = Volcano::all();

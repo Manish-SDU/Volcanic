@@ -245,4 +245,25 @@ class VolcanoesController extends Controller
             }
         })->get();
     }
+    
+    public function getVolcano($id)
+    {
+        try {
+            $volcano = Volcano::findOrFail($id);
+            
+            // Add the safe_image_url to the response
+            $volcanoData = $volcano->toArray();
+            $volcanoData['safe_image_url'] = $volcano->safe_image_url;
+            
+            return response()->json([
+                'success' => true,
+                'volcano' => $volcanoData
+            ]);
+        } catch (\Exception $e) {
+            return response()->json([
+                'success' => false,
+                'error' => 'Volcano not found'
+            ], 404);
+        }
+    }
 }

@@ -75,17 +75,6 @@ function initializeVolcanoCards() {
         });
     });
 
-    // Handle learn more button clicks
-    document.querySelectorAll('.learn-more-btn').forEach(btn => {
-        btn.addEventListener('click', function(e) {
-            e.stopPropagation();
-            const volcanoId = this.dataset.volcano;
-            showNotification('Learn more feature coming soon!', 'info');
-            // Here you could redirect to a detailed page
-            // window.location.href = `/volcano/${volcanoId}`;
-        });
-    });
-
     // Load saved states
     loadSavedStates();
 }

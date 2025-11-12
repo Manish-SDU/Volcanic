@@ -24,7 +24,7 @@
 @endsection
 
 @section('head_js')
-    @vite(['resources/js/home/lazy-load.js', 'resources/js/home/load-more.js', 'resources/js/home/volcano-animation.js', 'resources/js/home/home.js', 'resources/js/home/volcano-map.js', 'resources/js/my-volcanoes/volcano-actions.js'])
+    @vite(['resources/js/home/lazy-load.js', 'resources/js/home/load-more.js', 'resources/js/home/volcano-animation.js', 'resources/js/home/home.js', 'resources/js/home/volcano-map.js', 'resources/js/my-volcanoes/volcano-actions.js', 'resources/js/home/volcano-modal.js'])
     <!-- Dependencies -->
     <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
     <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
@@ -257,7 +257,42 @@
         </div>
     </section>
 
-
+    <!-- Volcano Details Modal -->
+<div id="volcano-modal" class="volcano-modal hidden">
+    <div class="volcano-modal-overlay">
+        <div class="volcano-modal-content">
+            <button class="volcano-modal-close" aria-label="Close modal">
+                <i class="fas fa-times"></i>
+            </button>
+            
+            <div class="volcano-modal-header">
+                <div class="volcano-image-container">
+                    <img id="modal-volcano-image" src="" alt="" class="modal-volcano-image">
+                </div>
+                <div class="volcano-info">
+                    <h2 id="modal-volcano-name"></h2>
+                    <div class="volcano-meta">
+                        <span class="volcano-location">
+                            <i class="fas fa-globe-americas"></i>
+                            <span id="modal-volcano-continent"></span>
+                        </span>
+                        <span class="volcano-coordinates">
+                            <i class="fas fa-map-pin"></i>
+                            <span id="modal-volcano-latitude"></span>°, <span id="modal-volcano-longitude"></span>°
+                        </span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="volcano-modal-body">
+                <div class="volcano-description">
+                    <h3>About this volcano</h3>
+                    <p id="modal-volcano-description">Loading...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
     <!-- Volcano Animation -->
     <section id="volcano-container"></section>

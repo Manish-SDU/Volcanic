@@ -311,24 +311,48 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Helper function to show success messages
     function showSuccessMessage(message) {
-        const template = document.getElementById('success-notification-template');
-        const notification = template.content.cloneNode(true);
-        notification.querySelector('.notification-message').textContent = message;
-        
-        container.appendChild(notification);
-        const notificationEl = container.lastElementChild;
-        setTimeout(() => notificationEl.remove(), 3000);
+        // Use the same notification system as main.js
+        showNotification(message, 'success');
     }
 
-    // Helper function to show error messages
     function showErrorMessage(message) {
-        const template = document.getElementById('error-notification-template');
-        const notification = template.content.cloneNode(true);
-        notification.querySelector('.notification-message').textContent = message;
+        // Use the same notification system as main.js  
+        showNotification(message, 'error');
+    }
+
+    function showNotification(message, type = 'info') {
+        const container = document.getElementById('notifications-container');
+        if (!container) {
+            // On home page - just do nothing, buttons already show visual feedback
+            console.log(`${type}: ${message}`);
+            return;
+        }
+
+        // Remove existing notifications
+        const existing = container.querySelector('.notification');
+        if (existing) {
+            existing.remove();
+        }
+
+        // Use the existing templates from My Volcanoes page
+        const templateId = type === 'success' ? 'success-notification-template' : 'error-notification-template';
+        const template = document.getElementById(templateId);
         
-        container.appendChild(notification);
-        const notificationEl = container.lastElementChild;
-        setTimeout(() => notificationEl.remove(), 3000);
+        if (template) {
+            const notification = template.content.cloneNode(true);
+            notification.querySelector('.notification-message').textContent = message;
+            container.appendChild(notification);
+            
+            // Auto remove after 3 seconds
+            setTimeout(() => {
+                const notificationElement = container.lastElementChild;
+                if (notificationElement) {
+                    notificationElement.remove();
+                }
+            }, 3000);
+        } else {
+            console.log(`${type}: ${message}`);
+        }
     }
 
     async function refreshStats() {
