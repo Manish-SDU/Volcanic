@@ -38,6 +38,17 @@ class DatabaseSeeder extends Seeder
             'password'      => Hash::make('user123'),
             'is_admin'      => false, // No admin role for regular user check
         ]);
+
+        User::create([
+            'name'          => 'deleteme',
+            'surname'       => 'NA',
+            'username'      => 'deleteme',
+            'date_of_birth' => '2000-01-01',
+            'where_from'    => 'France',
+            'bio'           => 'Im just a test',
+            'password'      => Hash::make('123'),
+            'is_admin'      => false,
+        ]);
             
         // Run the volcano and achievements seeders
         $this->call([
