@@ -41,4 +41,18 @@ class UserVolcanoObserver
         // Delegate achievement logic to the service (single source of truth)
         app(AchievementService::class)->checkAchievements($user, $volcano);
     }
+    
+    public function deleted(UserVolcano $userVolcano): void
+    {
+        if ($userVolcano->status === 'visited') {
+            $user = $userVolcano->user;
+            if (!$user) {
+                Log::error('UserVolcanoObserver: No user found for userVolcano being deleted');
+                return;
+            }
+
+            // Recheck all achievements
+            app(AchievementService::class)->revokeInvalidAchievements($user);
+        }
+    }
 }
