@@ -71,12 +71,6 @@
                         </button>
                     </div>
                 </div>
-                <div class="forgot-password">
-                    <a href="{{ route('password.request') }}" class="forgot-link">
-                        <i class="fas fa-question-circle"></i>
-                        Forgot Password?
-                    </a>
-                </div>
 
                 <div class="loginpage-btn">
                     <button type="submit" class="login-submit-btn">

@@ -147,15 +147,6 @@
                     <small class="hint" id="bioCount">Max 1000 characters.</small>
                 </div>
 
-                <div class="login-data">
-                    <div class="login-data form-col">
-                        <p class="tiny-note" style="margin-top:.75rem;">
-                            You can't change your password here. 
-                            <a href="{{ route('password.request') }}">Reset your password</a>.
-                        </p>
-                    </div>
-                </div>
-
                 <div class="form-actions">
                     <a href="{{ route('profile') }}" class="btn btn-secondary" aria-label="Cancel editing and go back">
                         Cancel

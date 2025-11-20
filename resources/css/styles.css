@@ -2314,33 +2314,6 @@ form .login-data label i {
     box-shadow: none;
 }
 
-form .forgot-password {
-    margin-top: 15px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.forgot-link {
-    color: var(--primary-color);
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 0.95rem;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.4rem;
-    transition: all 0.3s ease;
-    padding: 0.4rem 0.6rem;
-    border-radius: 4px;
-}
-
-.forgot-link:hover {
-    color: var(--primary-hover);
-    background: rgba(187, 1, 1, 0.05);
-    transform: translateX(2px);
-}
-
 form .loginpage-btn {
     margin: 35px 0 25px;
     width: 100%;

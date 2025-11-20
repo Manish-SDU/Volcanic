@@ -1,17 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\HomeController;
-use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\VolcanoesController;
-use App\Http\Controllers\UserVolcanoController;
-use App\Http\Controllers\SchemaController;
-use App\Http\Controllers\Admin\DashboardController as AdminDashboardController;
-use App\Http\Middleware\IsAdmin;
-use App\Models\Volcano;
-use App\Http\Controllers\Auth\RegisterController;
-use App\Http\Controllers\Auth\LoginController;
-use Illuminate\Http\Request;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,127 +13,9 @@ use Illuminate\Http\Request;
 |
 */
 
-// Home Routes
-Route::get('/', [HomeController::class, 'index'])->name('home');
-
-// Authentication Routes
-Route::middleware('guest')->group(function () {
-    // Registration
-    Route::get('/register', [RegisterController::class, 'show'])->name('register.show');
-    Route::post('/register', [RegisterController::class, 'store'])->name('register.store');
-
-    // Login
-    Route::get('/login', [LoginController::class, 'show'])->name('login');
-    Route::post('/login', [LoginController::class, 'authenticate'])->name('login.perform');
-});
-
-Route::get('/login', [LoginController::class, 'show'])->name('login');
-
-// Logout (only accessible when authenticated)
-Route::post('/logout', [LoginController::class, 'logout'])
-    ->middleware('auth')
-    ->name('logout');
-
-// Password Reset Routes (placeholders for future implementation)
-Route::get('/forgot-password', function() {
-    return redirect()->route('login');
-})->name('password.request');
-
-// Profile Routes
-Route::get('/profile', [ProfileController::class, 'index'])
-    ->middleware('auth')
-    ->name('profile');
-
-// Edit Profile Routes
-Route::get('/profile/edit', [ProfileController::class, 'edit'])
-    ->middleware('auth')
-    ->name('profile.edit');
-
-Route::put('/profile', [ProfileController::class, 'update'])
-    ->middleware('auth')
-    ->name('profile.update');
-
-Route::delete('/profile', [ProfileController::class, 'destroy'])
-    ->middleware('auth')
-    ->name('profile.destroy');
-
-// Admin Dashboard (only for admins)
-Route::get('/admin/dashboard', [AdminDashboardController::class, 'index'])
-    ->middleware(['auth', IsAdmin::class])
-    ->name('admin.dashboard');
-
-// My Volcanoes Routes
-Route::get('/my-volcanoes', [VolcanoesController::class, 'index'])
-    ->middleware('auth')
-    ->name('my-volcanoes');
-
-// Schema route (for development only)
-Route::get('/schema', [App\Http\Controllers\SchemaController::class, 'showSchema']);
-
-// API routes for volcanoes
-Route::get('/api/volcanoes', function() {
-    try {
-        \Log::info('API /api/volcanoes called');
-        $volcanoes = App\Models\Volcano::select('id', 'name', 'country', 'activity', 'type', 'elevation', 'image_url', 'latitude', 'longitude', 'description')
-            ->orderBy('name')
-            ->get()
-            ->map(function($volcano) {
-                // Ensure coordinates are numbers
-                $volcano->latitude = (float) $volcano->latitude;
-                $volcano->longitude = (float) $volcano->longitude;
-                $volcano->elevation = (int) $volcano->elevation;
-                return $volcano;
-            });
-        
-        \Log::info('Volcanoes retrieved: ' . $volcanoes->count());
-        
-        return response()->json([
-            'success' => true,
-            'data' => $volcanoes,
-            'count' => $volcanoes->count()
-        ]);
-    } catch (\Exception $e) {
-        \Log::error('API Error: ' . $e->getMessage());
-        return response()->json([
-            'success' => false,
-            'error' => $e->getMessage()
-        ], 500);
-    }
-})->name('api.volcanoes');
-Route::get('/api/volcanoes/search', [VolcanoesController::class, 'search'])
-    ->name('api.volcanoes.search');
-
-//Visited/WishList
-Route::middleware(['auth'])->group(function () {
-    Route::post('/user/volcanoes/{id}/{status}', [UserVolcanoController::class, 'toggleStatus']);
-    Route::get('/user/volcanoes/lists', [UserVolcanoController::class, 'getLists']);
-    Route::get('/user/volcanoes/{id}/status', [UserVolcanoController::class, 'checkStatus']);
-    Route::put('/user/volcanoes/{volcanoId}/update-date', [UserVolcanoController::class, 'updateVisitedAt'])
-        ->name('user.volcanoes.updateDate');
-});
-
-Route::middleware(['auth'])->group(function () {
-    Route::post('/user/volcanoes/{id}/{status}', [UserVolcanoController::class, 'toggleStatus'])
-         ->name('user.volcanoes.toggle');
-});
-
-// Individual Volcano API Route
-Route::get('/api/volcanoes/{id}', [App\Http\Controllers\VolcanoesController::class, 'getVolcano']);
-
-// Debug route
-Route::get('/debug/image-paths', function () {
-    $volcanoes = Volcano::all();
-    $paths = [];
-    
-    foreach ($volcanoes as $volcano) {
-        $baseName = strtolower(str_replace(' ', '_', $volcano->name));
-        $paths[] = [
-            'volcano_name' => $volcano->name,
-            'base_name' => $baseName,
-            'safe_image_url' => $volcano->safe_image_url,
-            'file_exists' => file_exists(public_path("images/volcanoes/{$baseName}.png"))
-        ];
-    }
-    
-    return response()->json($paths);
-})->name('debug.image-paths');
+(require __DIR__ . '/web/home.php')();
+(require __DIR__ . '/web/auth.php')();
+(require __DIR__ . '/web/profile.php')();
+(require __DIR__ . '/web/admin.php')();
+(require __DIR__ . '/web/volcanoes.php')();
+(require __DIR__ . '/web/dev.php')();
