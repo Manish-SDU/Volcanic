@@ -1,0 +1,160 @@
+:root{
+    --red: #BB0101;
+    --orange: #FF6F15;
+    --grey: #F5F5F5;
+}
+
+.chat-window {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 20px;
+    position: fixed;
+    bottom: 148px;
+    right: 20px;
+    z-index: 999;
+    height: 600px;
+    width: 360px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: white;
+}
+
+.chat-window .close {
+    border: none;
+    padding: 8px 0;
+    background-color: var(--red);
+    color: white;
+    border-radius: 20px 20px 0 0;
+    cursor: pointer;
+}
+
+.chat-window .chat {
+    flex: 1;
+    padding: 0 8px;
+    overflow-y: scroll;
+}
+
+.chat-window .chat p {
+    border-radius: 20px;
+    width: 80%;
+    margin: 8px 0;
+    font-size: 16px;
+}
+
+.chat-window .chat .model p {
+    background-color: var(--grey);
+    padding: 16px;
+}
+
+.chat-window .chat .ai p {
+    background-color: var(--grey);
+    padding: 16px;
+    border-radius: 20px;
+    width: 80%;
+    margin: 8px 0;
+    font-size: 16px;
+}
+
+.chat-window .chat .ai.loading p {
+    background-color: var(--grey);
+    font-style: italic;
+    opacity: 0.8;
+}
+
+.chat-window .chat .ai.error p {
+    background-color: var(--grey);
+    color: var(--red);
+}
+
+.chat-window .chat .user {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.chat-window .chat .user p {
+    background-color: var(--orange);
+    color: white;
+    padding: 16px;
+}
+
+.chat-window .input-area {
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 8px;
+    border-top: 1px solid lightgrey;
+}
+
+.chat-window .input-area input {
+    height: 40px;
+    flex: 1;
+    border: none;
+    background-color: var(--grey);
+    border-radius: 20px;
+    padding-left: 20px;
+    font-size: 16px;
+}
+
+.chat-window .input-area button {
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+    border: none;
+    margin-left: 12px;
+    background-color: var(--red);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.chat-window .input-area button img {
+    width: 18px;
+}
+
+/* AI Bot Button */
+.ai-bot-toggle {
+    position: fixed;
+    bottom: 100px;
+    right: 25px;
+    z-index: 998;
+    background: var(--red);
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    padding: 16px;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.ai-bot-toggle:hover {
+    background: var(--orange);
+}
+
+.ai-bot-toggle i {
+    color: white;
+    font-size: 24px;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.ai-bot-hidden {
+    display: none;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .ai-bot-toggle {
+        bottom: 20px;
+        right: 75px;  /* Adjust for mobile */
+    }
+    
+    .chat-window {
+        bottom: 80px;
+    }
+}

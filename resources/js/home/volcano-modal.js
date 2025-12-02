@@ -112,7 +112,7 @@ document.addEventListener('DOMContentLoaded', function() {
         continentElement.textContent = volcano.continent || 'Unknown';
     }
     
-    // Image handling (keep this the same)
+    // Image handling 
     const modalImage = document.getElementById('modal-volcano-image');
     if (modalImage) {
         let imageUrl = '';
@@ -154,21 +154,16 @@ document.addEventListener('DOMContentLoaded', function() {
             this.onerror = null;
         };
     }
-}
 
-    function getActivityIcon(activity) {
-        switch (activity) {
-            case 'active':
-                return 'fa-fire';
-            case 'dormant':
-                return 'fa-clock';
-            case 'inactive':
-            case 'extinct':
-                return 'fa-moon';
-            default:
-                return 'fa-question';
-        }
+    // Ask AI button
+    const askAiBtn = document.getElementById('ask-ai-about-volcano');
+    if (askAiBtn) {
+        askAiBtn.onclick = function() {
+            openChatWithPrompt(`Could you tell me more about ${volcano.name}?`);
+            closeModal(); 
+        };
     }
+}
 
     function closeModal() {
         console.log('Closing modal');

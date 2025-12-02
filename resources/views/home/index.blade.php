@@ -3,7 +3,7 @@
 @section('title', 'Home')
 
 @section('additional_css')
-    @vite(['resources/css/home/volcano-animation.css', 'resources/css/home/volcano-map.css'])
+    @vite(['resources/css/home/volcano-animation.css', 'resources/css/home/volcano-map.css', 'resources/css/home/ai-bot.css'])
     <!-- Leaflet CSS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
         integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
@@ -24,7 +24,7 @@
 @endsection
 
 @section('head_js')
-    @vite(['resources/js/home/lazy-load.js', 'resources/js/home/load-more.js', 'resources/js/home/volcano-animation.js', 'resources/js/home/home.js', 'resources/js/home/volcano-map.js', 'resources/js/my-volcanoes/volcano-actions.js', 'resources/js/home/volcano-modal.js'])
+    @vite(['resources/js/home/lazy-load.js', 'resources/js/home/load-more.js', 'resources/js/home/volcano-animation.js', 'resources/js/home/home.js', 'resources/js/home/volcano-map.js', 'resources/js/my-volcanoes/volcano-actions.js', 'resources/js/home/volcano-modal.js', 'resources/js/home/ai-bot.js'])
     <!-- Dependencies -->
     <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
     <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
@@ -258,41 +258,66 @@
     </section>
 
     <!-- Volcano Details Modal -->
-<div id="volcano-modal" class="volcano-modal hidden">
-    <div class="volcano-modal-overlay">
-        <div class="volcano-modal-content">
-            <button class="volcano-modal-close" aria-label="Close modal">
-                <i class="fas fa-times"></i>
-            </button>
-            
-            <div class="volcano-modal-header">
-                <div class="volcano-image-container">
-                    <img id="modal-volcano-image" src="" alt="" class="modal-volcano-image">
-                </div>
-                <div class="volcano-info">
-                    <h2 id="modal-volcano-name"></h2>
-                    <div class="volcano-meta">
-                        <span class="volcano-location">
-                            <i class="fas fa-globe-americas"></i>
-                            <span id="modal-volcano-continent"></span>
-                        </span>
-                        <span class="volcano-coordinates">
-                            <i class="fas fa-map-pin"></i>
-                            <span id="modal-volcano-latitude"></span>°, <span id="modal-volcano-longitude"></span>°
-                        </span>
+    <div id="volcano-modal" class="volcano-modal hidden">
+        <div class="volcano-modal-overlay">
+            <div class="volcano-modal-content">
+                <button class="volcano-modal-close" aria-label="Close modal">
+                    <i class="fas fa-times"></i>
+                </button>
+                
+                <div class="volcano-modal-header">
+                    <div class="volcano-image-container">
+                        <img id="modal-volcano-image" src="" alt="" class="modal-volcano-image">
+                    </div>
+                    <div class="volcano-info">
+                        <h2 id="modal-volcano-name"></h2>
+                        <div class="volcano-meta">
+                            <span class="volcano-location">
+                                <i class="fas fa-globe-americas"></i>
+                                <span id="modal-volcano-continent"></span>
+                            </span>
+                            <span class="volcano-coordinates">
+                                <i class="fas fa-map-pin"></i>
+                                <span id="modal-volcano-latitude"></span>°, <span id="modal-volcano-longitude"></span>°
+                            </span>
+                        </div>
                     </div>
                 </div>
-            </div>
-            
-            <div class="volcano-modal-body">
-                <div class="volcano-description">
-                    <h3>About this volcano</h3>
-                    <p id="modal-volcano-description">Loading...</p>
+                
+                <div class="volcano-modal-body">
+                    <div class="volcano-description">
+                        <h3>About this volcano</h3>
+                        <p id="modal-volcano-description">Loading...</p>
+                    </div>
+                    <div style="text-align: center; margin-top: 20px;">
+                        <button id="ask-ai-about-volcano" class="primary-btn" style="background: #BB0101;">
+                            <i class="fas fa-robot"></i>
+                            Ask AI for More Info
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+
+    <!-- AI Bot Floating Button & Chat Window -->
+    <button id="ai-bot-toggle" class="ai-bot-toggle">
+        <i class="fas fa-robot"></i>
+    </button>
+    <section class="chat-window ai-bot-hidden">
+        <button class="close" id="ai-bot-close">x close</button>
+        <div class="chat">
+            <div class="model">
+                <p>Hi, how can I help you?</p>
+            </div>
+        </div>
+        <div class="input-area">
+            <input placeholder="Ask me anything..." type="text">
+            <button>
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </section>
 
     <!-- Volcano Animation -->
     <section id="volcano-container"></section>
