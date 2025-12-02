@@ -60,3 +60,13 @@ DB_PASSWORD=
 ```
 
 U can adjust the `DB_USERNAME` and `DB_PASSWORD` according to your local MySQL setup, but I normally leave it as root and password empty (Manish) because we are not hosting it and just running locally.
+
+## Gemini Key for Configuration in .env
+
+FIrst of all, run this command in the terminal: npm install @google/genai. (I did it and it modified the package.json and the package-lock.json files, but I think you should do it as well)
+
+Then, search on Google https://aistudio.google.com/app/api-keys. In this page there will be a button with `Create API Key`. Click it, create a key (the name doesn't matter) and copy it.
+
+After doing this, go in the `.env` file, not the example one, your personal, and add that key: GEMINI_API_KEY=your_key_name. I put it at the end of the page, but it shouldn't matter.
+
+Now you should be good to go.
