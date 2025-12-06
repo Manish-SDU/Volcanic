@@ -70,3 +70,25 @@ Then, search on Google https://aistudio.google.com/app/api-keys. In this page th
 After doing this, go in the `.env` file, not the example one, your personal, and add that key: GEMINI_API_KEY=your_key_name. I put it at the end of the page, but it shouldn't matter.
 
 Now you should be good to go.
+
+## Ambee API Key for Configuration in `.env`
+
+To enable the Ambee Natural Disasters API in the project, you need to obtain an API key from Ambee and expose it to Laravel via your `.env` file.
+
+1. **Create or log into your Ambee account**
+
+   - Go to the Ambee dashboard: https://api-dashboard.getambee.com  
+   - Register for a new account or sign in with an existing one.
+   - Verify your email address.
+
+2. **Locate your Ambee API key**
+
+   - Once logged in, navigate to the **Dashboard** section and you will see the **API key** section with your key.
+   - Copy the API key value (a long alphanumeric string).
+
+3. **Add the key to your local `.env` file**
+
+   Open `.env` and add the following line (the position in the file does not matter):
+
+   ```env
+   AMBEE_API_KEY=your_ambee_api_key_here

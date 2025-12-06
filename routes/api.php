@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\VolcanoRealtimeController; 
 
 Route::post('/gemini', function (Request $request) {
     $prompt = $request->input('prompt');
@@ -31,3 +32,6 @@ Route::post('/gemini', function (Request $request) {
     
     return $response->json();
 });
+
+Route::get('/volcano/latest', [VolcanoRealtimeController::class, 'latest'])
+    ->name('api.volcano.latest');

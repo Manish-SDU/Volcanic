@@ -54,6 +54,14 @@
                         <i class="fa-solid fa-house"></i>
                         Home
                     </a>
+
+                    {{-- Events (real-time activity), visible to everyone --}}
+                    <a href="{{ route('volcano.realtime') }}"
+                    class="nav-link {{ request()->routeIs('volcano.realtime') ? 'active' : '' }}">
+                        <i class="fa-solid fa-calendar-days"></i>
+                        Events
+                    </a>
+
                     {{-- Show "My Volcanoes" only when logged in --}}
                     @auth
                         <a href="{{ route('my-volcanoes') }}" class="nav-link {{ request()->routeIs('my-volcanoes') ? 'active' : '' }}">

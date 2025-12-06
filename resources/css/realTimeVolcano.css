@@ -1,0 +1,226 @@
+.volcano-activity-page {
+    padding: 3rem 0;
+}
+
+.volcano-activity-header {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: center;  
+    text-align: center;      
+    margin-bottom: 2rem;
+}
+
+.volcano-activity-header-text {
+    max-width: 650px;
+}
+
+.volcano-activity-header-text h1 {
+    font-size: 2.4rem;
+    margin-bottom: 0.5rem;
+}
+
+.volcano-activity-header-text p {
+    opacity: 0.9;
+}
+
+.volcano-activity-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    align-items: center;
+    justify-content: center; 
+}
+
+.volcano-activity-controls label {
+    font-size: 0.9rem;
+    margin-right: 0.35rem;
+}
+
+.volcano-activity-controls select {
+    padding: 0.35rem 0.6rem;
+    border-radius: 999px;
+    border: 1px solid rgba(255,255,255,0.2);
+    background: rgba(0,0,0,0.25);
+    color: inherit;
+}
+
+.volcano-activity-controls select:focus {
+    outline: none;
+    border-color: #ff8c00;
+}
+
+.volcano-activity-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+}
+
+/* CARD LAYOUT */
+
+.volcano-card {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 1rem;
+    padding: 1.25rem 1.3rem;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.35);
+    backdrop-filter: blur(10px);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.volcano-card-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.35rem;
+}
+
+.volcano-card-title {
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin: 0;
+    line-height: 1.4;
+    word-break: break-word;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.4rem;
+}
+
+.volcano-card-title-text {
+    display: block;
+}
+
+.volcano-card-title i {
+    margin-right: 0.4rem;
+}
+
+.volcano-card-meta {
+    font-size: 0.85rem;
+    opacity: 0.9;
+}
+
+.volcano-card-meta span {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    margin-right: 0.75rem;
+}
+
+.volcano-card-meta i {
+    font-size: 0.8rem;
+}
+
+.volcano-card-body {
+    font-size: 0.88rem;
+    line-height: 1.5;
+    opacity: 0.95;
+    flex-grow: 1;
+}
+
+.volcano-card-body p {
+    margin: 0.25rem 0;
+}
+
+.volcano-card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0.25rem;
+    font-size: 0.8rem;
+    opacity: 0.85;
+}
+
+.volcano-card-footer .vei-pill {
+    padding: 0.2rem 0.6rem;
+    border-radius: 999px;
+    border: 1px solid rgba(255,255,255,0.2);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.volcano-card-footer .vei-pill i {
+    font-size: 0.8rem;
+}
+
+.volcano-card-footer .pop-pill {
+    opacity: 0.85;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.volcano-card-footer-right {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.volcano-learn-more {
+    font-size: 0.8rem;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    cursor: pointer;
+}
+
+.volcano-learn-more i {
+    font-size: 0.75rem;
+}
+
+.volcano-loading,
+.volcano-error,
+.volcano-empty {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.volcano-loading i {
+    animation: spin 1s linear infinite;
+    display: inline-block;
+    margin-bottom: 0.5rem;
+}
+
+.volcano-error {
+    color: #ff6666;
+}
+
+.volcano-empty {
+    opacity: 0.85;
+}
+
+.volcano-powered-by {
+    font-size: 0.75rem;
+    opacity: 0.7;
+    margin-top: 0.3rem;
+}
+
+.volcano-powered-by a {
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-style: dotted;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+@media (max-width: 768px) {
+    .volcano-activity-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+.volcano-fallback-label {
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    color: var(--text-secondary);
+}

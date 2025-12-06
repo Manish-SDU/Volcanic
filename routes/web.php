@@ -19,3 +19,4 @@ use Illuminate\Support\Facades\Route;
 (require __DIR__ . '/web/admin.php')();
 (require __DIR__ . '/web/volcanoes.php')();
 (require __DIR__ . '/web/dev.php')();
+(require __DIR__ . '/web/events.php')();
