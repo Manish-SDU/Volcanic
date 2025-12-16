@@ -74,7 +74,7 @@
 
                         {{-- Control Dashboard (only for admins) --}}
                         @if(Auth::user()->is_admin)
-                            <a href="{{ route('admin.dashboard') }}" class="nav-link {{ request()->routeIs('admin.dashboard') ? 'active' : '' }}">
+                            <a href="{{ route('admin.dashboard') }}" class="nav-link {{ (request()->routeIs('admin.dashboard') || request()->routeIs('admin.*')) ? 'active' : '' }} ">
                                 <i class="fa-solid fa-crown"></i>
                                 Control Dashboard
                             </a>
@@ -110,8 +110,26 @@
         </nav>
     </header>
 
-    <!-- Main Content -->
+        <!-- Main Content -->
     <main>
+      {{-- Admin Navigation (only show on admin pages) --}}
+      @if(request()->routeIs('admin.*'))
+        <nav class="nav-admin">
+            <a href="{{ route('admin.manage-volcanoes') }}" 
+                class="@if(Route::is('admin.manage-volcanoes')) active @endif">
+                Manage Volcanoes
+            </a>
+            <a href="{{ route('admin.manage-achievements') }}" 
+                class="@if(Route::is('admin.manage-achievements')) active @endif">
+                Manage Achievements
+            </a>
+            <a href="{{ route('admin.manage-users') }}"
+                class="@if(Route::is('admin.manage-users')) active @endif">
+                Manage Users
+            </a>
+        </nav>
+      @endif
+
       {{-- Success/Error Message Modal --}}
       @if(session('success') || session('error'))
           <div id="flashModal" class="modal-overlay active">

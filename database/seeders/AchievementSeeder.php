@@ -21,7 +21,8 @@ class AchievementSeeder extends Seeder
                 'dimensions' => null,
                 'aggregator' => 'count',
                 'threshold' => 1,
-                'image_path' => 'images/badges/First Eruption.png',
+                'image_path' => 'First Eruption.png',
+                'locked_image_path' => 'First Eruption Locked.png',
             ],
             [
                 'name' => 'Lava Rookie',
@@ -30,7 +31,8 @@ class AchievementSeeder extends Seeder
                 'dimensions' => null,
                 'aggregator' => 'count',
                 'threshold' => 5,
-                'image_path' => 'images/badges/Lava Rookie.png',
+                'image_path' => 'Lava Rookie.png',
+                'locked_image_path' => 'Lava Rookie Locked.png',
             ],
             [
                 'name' => 'Explorer',
@@ -39,7 +41,8 @@ class AchievementSeeder extends Seeder
                 'dimensions' => json_encode(['continent' => ['Asia', 'Europe', 'Africa', 'North America', 'South America', 'Australia']]),
                 'aggregator' => 'count_distinct',
                 'threshold' => 6,
-                'image_path' => 'images/badges/Explorer.png',
+                'image_path' => 'Explorer.png',
+                'locked_image_path' => 'Explorer Locked.png',
             ],
             [
                 'name' => 'Dormant Dreamer',
@@ -48,7 +51,8 @@ class AchievementSeeder extends Seeder
                 'dimensions' => json_encode(['activity' => 'Extinct']),
                 'aggregator' => 'count',
                 'threshold' => 1,
-                'image_path' => 'images/badges/Dormant Dreamer.png',
+                'image_path' => 'Dormant Dreamer.png',
+                'locked_image_path' => 'Dormant Dreamer Locked.png',
             ],
             [
                 'name' => 'Ash Walker',
@@ -57,7 +61,8 @@ class AchievementSeeder extends Seeder
                 'dimensions' => null,
                 'aggregator' => 'count',
                 'threshold' => 10,
-                'image_path' => 'images/badges/Ash Walker.png',
+                'image_path' => 'Ash Walker.png',
+                'locked_image_path' => 'Ash Walker Locked.png',
             ],
             [
                 'name' => 'Lava Lover',
@@ -66,7 +71,8 @@ class AchievementSeeder extends Seeder
                 'dimensions' => json_encode(['activity' => 'Active']),
                 'aggregator' => 'count',
                 'threshold' => 1,
-                'image_path' => 'images/badges/Lava Lover.png',
+                'image_path' => 'Lava Lover.png',
+                'locked_image_path' => 'Lava Lover Locked.png',
             ],
             [
                 'name' => 'Volcano Veteran',
@@ -75,7 +81,8 @@ class AchievementSeeder extends Seeder
                 'dimensions' => null,
                 'aggregator' => 'count',
                 'threshold' => 25,
-                'image_path' => 'images/badges/Volcano Veteran.png',
+                'image_path' => 'Volcano Veteran.png',
+                'locked_image_path' => 'Volcano Veteran Locked.png',
             ],
             [
                 'name' => 'Magma Master',
@@ -84,7 +91,8 @@ class AchievementSeeder extends Seeder
                 'dimensions' => null,
                 'aggregator' => 'count',
                 'threshold' => 50,
-                'image_path' => 'images/badges/Magma Master.png',
+                'image_path' => 'Magma Master.png',
+                'locked_image_path' => 'Magma Master locked.png',
             ],
 
         ];

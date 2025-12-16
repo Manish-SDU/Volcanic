@@ -88,6 +88,47 @@ body {
     overflow: visible; /* Allow logo to overflow without affecting height */
 }
 
+.nav-admin {
+    background: rgba(255, 165, 0, 0.05);
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: var(--shadow-sm);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    overflow: visible;
+    max-width: 800px;
+    margin: 0 auto;
+    width: 100%;
+    border-radius: var(--border-radius-lg);
+}
+
+.nav-admin a {
+    padding: 1rem 1.5rem;
+    text-align: center;
+    color: var(--text-primary);
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: inline-block;
+    border-bottom: 2px solid transparent;
+}
+
+.nav-admin a:hover {
+    color: var(--primary-color);
+    border-bottom-color: var(--primary-color);
+}
+
+.nav-admin a.active {
+    color: var(--primary-color);
+    border-bottom-color: var(--primary-color);
+    font-weight: 700;
+}
+
 /* Bubble Effect to simulate Lava on the NavBar */
 .nav-bubble-container {
     position: absolute;
@@ -3107,6 +3148,7 @@ form .signup-link span {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 .admin-page main {
@@ -3114,12 +3156,9 @@ form .signup-link span {
 }
 
 .admin-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 30px 20px;
-    min-height: 80vh;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
 }
 
 .admin-card {
@@ -3327,6 +3366,485 @@ form .signup-link span {
     .stat-item i {
         font-size: 2rem;
     }
+}
+
+/* ==================
+   MANAGE VOLCANOES PAGE
+   ================== */
+
+.admin-header {
+    margin-bottom: 3rem;
+}
+
+.admin-header h1 {
+    font-size: 2.5rem;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.admin-header p {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+}
+
+.admin-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+@media (max-width: 700px) {
+    .admin-grid {
+        flex-direction: column;
+    }
+}
+
+.add-volcano-form {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e0e0e0;
+}
+
+.add-volcano-form h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.form-group {
+    margin-bottom: 1.2rem;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+    font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #d0d0d0;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: all 0.3s ease;
+    background-color: #fafafa;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    background-color: white;
+    box-shadow: 0 0 0 3px rgba(255, 140, 0, 0.1);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.form-group input[type="file"] {
+    padding: 0.5rem;
+    cursor: pointer;
+    width: fit-content !important;
+}
+
+.form-group input[type="file"]::file-selector-button {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.form-group input[type="file"]::file-selector-button:hover {
+    background: var(--primary-hover);
+    transform: translateY(-1px);
+}
+
+.form-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.btn-submit {
+    flex: 1;
+    padding: 0.875rem;
+    background: #48bb78;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.btn-submit:hover {
+    background: #38a169;
+    transform: translateY(-1px);
+}
+
+.btn-submit:active {
+    transform: translateY(0);
+}
+
+.volcanoes-list {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e0e0e0;
+}
+
+.volcanoes-list h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.volcano-stats {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.volcano-stat {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.volcano-stat-number {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.volcano-stat-label {
+    color: var(--text-secondary);
+    font-size: 1rem;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+}
+
+.volcanoes-list table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.volcanoes-list thead {
+    background: #f5f5f5;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.volcanoes-list th {
+    padding: 1rem;
+    text-align: left;
+    font-weight: 600;
+    color: var(--text-primary);
+    font-size: 0.95rem;
+    white-space: nowrap;
+}
+
+.volcanoes-list td {
+    padding: 1rem;
+    border-bottom: 1px solid #f0f0f0;
+    color: var(--text-primary);
+}
+
+.volcanoes-list tbody tr {
+    transition: all 0.3s ease;
+}
+
+.volcanoes-list tbody tr:hover {
+    background-color: #fafafa;
+}
+
+.action-cell {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.btn-delete {
+    padding: 0.5rem 0.75rem;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.btn-delete:hover {
+    background: #8d0101;
+    transform: translateY(-1px);
+}
+
+.btn-delete:active {
+    transform: translateY(0);
+}
+
+.empty-state {
+    text-align: center;
+    padding: 3rem 1rem;
+    color: var(--text-secondary);
+}
+
+.empty-state i {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    opacity: 0.3;
+}
+
+.empty-state p {
+    font-size: 1.1rem;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+    padding: 0.75rem 1rem;
+    background: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.search-box:focus-within {
+    background: white;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(255, 140, 0, 0.1);
+}
+
+.search-box i {
+    color: var(--primary-color);
+    font-size: 1rem;
+}
+
+.search-box input {
+    flex: 1;
+    border: none;
+    background: transparent;
+    font-size: 1rem;
+    font-family: inherit;
+    outline: none;
+    color: var(--text-primary);
+}
+
+.search-box input::placeholder {
+    color: var(--text-secondary);
+}
+
+.volcano-no-results {
+    text-align: center;
+    padding: 2rem;
+    color: var(--text-secondary);
+}
+
+.volcano-no-results i {
+    font-size: 2rem;
+    margin-right: 0.5rem;
+    color: var(--primary-color);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.form-row.full {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+@media (max-width: 768px) {
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .admin-header h1 {
+        font-size: 1.8rem;
+    }
+
+    .volcanoes-list th,
+    .volcanoes-list td {
+        padding: 0.75rem 0.5rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* ===============================
+            PAGINATION
+   =============================== */
+.pagination-wrapper {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.pagination-nav {
+    margin: 0;
+    padding: 0;
+}
+
+.pagination-list {
+    list-style: none;
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.pagination-item {
+    display: inline-flex;
+}
+
+.pagination-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 40px;
+    height: 40px;
+    padding: 0.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    background-color: #fff;
+    color: var(--text-primary);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.pagination-link:hover {
+    background-color: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.pagination-item.active .pagination-link {
+    background-color: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+    font-weight: 600;
+    box-shadow: var(--shadow-md);
+}
+
+.pagination-item.disabled .pagination-link {
+    background-color: #f3f4f6;
+    color: #d1d5db;
+    border-color: #e5e7eb;
+    cursor: not-allowed;
+}
+
+.pagination-item.disabled .pagination-link:hover {
+    background-color: #f3f4f6;
+    color: #d1d5db;
+    border-color: #e5e7eb;
+    transform: none;
+    box-shadow: none;
+}
+
+/* ===============================
+        FORM ERROR STYLES
+   =============================== */
+.form-errors {
+    background-color: #fee2e2;
+    border: 1px solid #fecaca;
+    border-radius: var(--border-radius);
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+}
+
+.form-errors strong {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.form-errors ul {
+    margin: 0.5rem 0 0 0;
+    padding-left: 1.5rem;
+}
+
+.form-errors li {
+    margin-bottom: 0.25rem;
+}
+
+.form-input-error {
+    border-color: var(--primary-color) !important;
+}
+
+.form-input-error-message {
+    color: var(--primary-color);
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+    display: block;
+}
+
+/* =====================================
+      NO RESULTS MESSAGE - ADMIN FORMS
+   ===================================== */
+.no-results-message {
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    margin-top: 1rem;
+    text-align: center;
+    color: var(--text-secondary);
+}
+
+.no-results-message p {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 500;
 }
 
   /* ==================

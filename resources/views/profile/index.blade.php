@@ -92,7 +92,11 @@
       <ul class="achievement-grid badge-container">
         @forelse($unlockedAchievements as $achievement)
         <li class="badgedesc">
-          <img src="{{ asset($achievement->image_path) }}" alt="Badge for {{ $achievement->description }}">
+          @if(str_starts_with($achievement->image_path, 'images/'))
+            <img src="{{ asset($achievement->image_path) }}" alt="Badge for {{ $achievement->description }}">
+          @else
+            <img src="{{ asset('images/badges/' . $achievement->image_path) }}" alt="Badge for {{ $achievement->description }}">
+          @endif
           <h4>{{ $achievement->name }}</h4>
           <p class="long-desc">{{ $achievement->description }}</p>
         </li>
@@ -111,7 +115,15 @@
       <ul id="lockedBadges" class="achievement-grid badge-container">
         @foreach($lockedAchievements as $achievement)
         <li class="badgedesc">
-          <img src="{{ asset(str_replace('.png', ' Locked.png', $achievement->image_path)) }}" 
+          @php
+            $lockedPath = $achievement->locked_image_path;
+            if(!$lockedPath) {
+              $lockedPath = 'placeholder.png';
+            } elseif(!str_starts_with($lockedPath, 'images/')) {
+              $lockedPath = 'images/badges/' . $lockedPath;
+            }
+          @endphp
+          <img src="{{ asset($lockedPath) }}" 
                alt="Badge for {{ $achievement->description }}">
           <h4>{{ $achievement->name }}</h4>
           <p class="long-desc">{{ $achievement->description }}</p>

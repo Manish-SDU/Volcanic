@@ -90,4 +90,30 @@ class Volcano extends Model
             ->where('status', 'wishlist')
             ->exists();
     }
+
+    // Cache needs to be cleared in order for added volcanoes to show up in the home page.
+    public static function clearCache()
+    {
+        \Illuminate\Support\Facades\Cache::forget('home_volcanoes');
+    }
+
+    protected static function boot()
+    {
+        parent::boot();
+
+        // Clear cache after creating a volcano
+        static::created(function ($model) {
+            static::clearCache();
+        });
+
+        // Clear cache after deleting a volcano
+        static::deleted(function ($model) {
+            static::clearCache();
+        });
+
+        // Clear cache after updating a volcano
+        static::updated(function ($model) {
+            static::clearCache();
+        });
+    }
 }

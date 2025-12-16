@@ -48,14 +48,19 @@ class AchievementService
                     break;
 
                 case 'visits_by_continent':
-                    if ($achievement->aggregator === 'count_distinct') {
-                        $distinct = DB::table('user_volcanoes')
-                            ->join('volcanoes', 'user_volcanoes.volcanoes_id', '=', 'volcanoes.id')
-                            ->where('user_volcanoes.user_id', $user->id)
-                            ->where('user_volcanoes.status', 'visited')
-                            ->distinct()
-                            ->count('volcanoes.continent');
-                        $earned = $distinct >= $achievement->threshold;
+                    if (!empty($dimensions['continent'])) {
+                        $requiredContinents = $dimensions['continent'];
+                        
+                        if ($achievement->aggregator === 'count_distinct') {
+                            $distinct = DB::table('user_volcanoes')
+                                ->join('volcanoes', 'user_volcanoes.volcanoes_id', '=', 'volcanoes.id')
+                                ->where('user_volcanoes.user_id', $user->id)
+                                ->where('user_volcanoes.status', 'visited')
+                                ->whereIn('volcanoes.continent', $requiredContinents)
+                                ->distinct()
+                                ->count('volcanoes.continent');
+                            $earned = $distinct >= $achievement->threshold;
+                        }
                     }
                     break;
 
@@ -141,6 +146,16 @@ class AchievementService
         foreach ($userAchievements as $achievement) {
             $earned = false;
             
+            // Normalize dimensions (DB may store null, array, or JSON string)
+            $raw = $achievement->dimensions ?? [];
+            if (is_string($raw)) {
+                $dimensions = json_decode($raw, true) ?: [];
+            } elseif (is_array($raw)) {
+                $dimensions = $raw;
+            } else {
+                $dimensions = [];
+            }
+            
             switch ($achievement->metric) {
                 case 'total_visits':
                     $count = DB::table('user_volcanoes')
@@ -151,14 +166,19 @@ class AchievementService
                     break;
 
                 case 'visits_by_continent':
-                    if ($achievement->aggregator === 'count_distinct') {
-                        $distinct = DB::table('user_volcanoes')
-                            ->join('volcanoes', 'user_volcanoes.volcanoes_id', '=', 'volcanoes.id')
-                            ->where('user_volcanoes.user_id', $user->id)
-                            ->where('user_volcanoes.status', 'visited')
-                            ->distinct()
-                            ->count('volcanoes.continent');
-                        $earned = $distinct >= $achievement->threshold;
+                    if (!empty($dimensions['continent'])) {
+                        $requiredContinents = $dimensions['continent'];
+                        
+                        if ($achievement->aggregator === 'count_distinct') {
+                            $distinct = DB::table('user_volcanoes')
+                                ->join('volcanoes', 'user_volcanoes.volcanoes_id', '=', 'volcanoes.id')
+                                ->where('user_volcanoes.user_id', $user->id)
+                                ->where('user_volcanoes.status', 'visited')
+                                ->whereIn('volcanoes.continent', $requiredContinents)
+                                ->distinct()
+                                ->count('volcanoes.continent');
+                            $earned = $distinct >= $achievement->threshold;
+                        }
                     }
                     break;
 
@@ -168,7 +188,7 @@ class AchievementService
                             ->join('volcanoes', 'user_volcanoes.volcanoes_id', '=', 'volcanoes.id')
                             ->where('user_volcanoes.user_id', $user->id)
                             ->where('user_volcanoes.status', 'visited')
-                            ->where('volcanoes.activity', $achievement->dimensions['activity'])
+                            ->where('volcanoes.activity', $dimensions['activity'])
                             ->count();
                         $earned = $count >= $achievement->threshold;
                     }
