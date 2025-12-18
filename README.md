@@ -6,13 +6,6 @@ Volcanic is a comprehensive web application for exploring and tracking volcanic 
   <img src="Images/volcanic.png" alt="Volcanic App" width="100%">
 </div>
 
-## Highlights
-
-- **Real-Time Tracking**: Monitor global volcanic activity with live data updates.
-- **Interactive Chatbot**: Get instant answers to your volcano-related questions.
-- **Advanced Search**: Powerful filtering to find specific volcanoes and events.
-- **Admin Management**: Robust tools for managing users, achievements, and volcanic data.
-
 ## 🚀 Getting Started
 
 For full setup instructions, including local environment configuration, database setup, and API key requirements (for features like the Chatbot and Real-Time Activity), please refer to the [SETUP.md](SETUP.md) guide.
