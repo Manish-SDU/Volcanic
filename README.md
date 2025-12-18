@@ -23,36 +23,9 @@ Once the application is running and seeded, you can log in with the following cr
 
 | Feature | Contributor | Description |
 | :--- | :--- | :--- |
-| Admin Forms | Carolina | Manage Volcanoes, Achievements & Users |
-| Chatbot | Gabriele | Interactive assistant using REST API |
-| Real-Time Activity | Luigi | Integration of Ambee API for live data |
+| Admin Forms | [Carolina](https://github.com/chaeyrie) | Manage Volcanoes, Achievements & Users |
+| Chatbot | [Gabriele](https://github.com/Gabbo693) | Interactive assistant using REST API |
+| Real-Time Activity | [Luigi](https://github.com/Lucol24) | Integration of Ambee API for live data |
 | Advanced Search | Manish | Sophisticated filtering for volcanoes |
-
-## 👥 Contributors
-
-<table width="100%">
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>GitHub Profile</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><b>Luigi</b></td>
-      <td><a href="https://github.com/Lucol24">Lucol24</a></td>
-    </tr>
-    <tr>
-      <td><b>Carolina</b></td>
-      <td><a href="https://github.com/chaeyrie">chaeyrie</a></td>
-    </tr>
-    <tr>
-      <td><b>Gabriele</b></td>
-      <td><a href="https://github.com/Gabbo693">Gabbo693</a></td>
-    </tr>
-    <tr>
-      <td><b>Manish</b></td>
-      <td><a href="https://github.com/Manish-SDU">Manish-SDU</a></td>
-    </tr>
-  </tbody>
-</table>
+| X | [Lara](https://github.com/Lara-Ghi) | - |
+| X | [Mats](https://github.com/mqts241) | - |
