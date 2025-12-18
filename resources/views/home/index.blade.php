@@ -115,8 +115,16 @@
                     </span>
                 </div>
             </div>
-            
+
             <!-- Interactive Map Container -->
+            <div id="interactive-map" style="display: none; width: 100%; height: 500px; margin-bottom: 2rem; border-radius: 12px;">
+            <!-- TODO: The map will be rendered here by Leaflet -->
+            </div>
+
+
+            
+        <!-- TODO: remove this code when map implemented -->
+            <!-- Interactive Map Container
             <div id="volcano-map" style="width: 100%; height: 500px; border-radius: 16px; display: none; margin-bottom: 2rem;"></div>
             <div id="map-description" style="display: none; text-align: center; margin-bottom: 1rem; color: var(--text-secondary); font-style: italic;">
                 Explore the locations of volcanoes around the world. Click on markers to discover each volcano's story.
@@ -126,7 +134,8 @@
                     <i class="fas fa-search fa-3x"></i>
                     <p>No "<span id="search-term"></span>" found in our database</p>
                 </div>
-            </div>
+            </div> -->
+
             <div class="volcano-grid">
                 @foreach($volcanoes as $index => $volcano)
                 <article class="volcano-card {{ $index >= 9 ? 'homepage-hidden' : '' }}" data-volcano-id="{{ $volcano->id }}" data-card-index="{{ $index }}">
