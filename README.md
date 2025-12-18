@@ -1,6 +1,6 @@
 # Volcanic
 
-Volcanic is a comprehensive web application for exploring and tracking volcanic activity worldwide. It combines real-time data, interactive tools, and gamified elements to provide an engaging experience for volcano enthusiasts.
+Volcanic is a comprehensive web application for exploring and tracking volcanic activity worldwide. It combines real-time data and interactive tools to provide an engaging experience for volcano enthusiasts.
 
 <div align="center">
   <img src="Images/volcanic.png" alt="Volcanic App" width="100%">
@@ -26,26 +26,14 @@ Once the application is running and seeded, you can log in with the following cr
 | **Admin** | `admin` | `admin123` |
 | **User** | `MarioR` | `user123` |
 
-## Key Features
+## Individual Features & Contributions
 
-### 🌋 Real-Time Volcano Activity
-*Developed by Luigi*
-Integration with the **Ambee API** to provide up-to-the-minute data on volcanic eruptions and activity levels around the globe.
-
-### 🤖 Chatbot
-*Developed by Gabriele*
-An intelligent assistant powered by a **REST API** to answer user queries and provide information about volcanoes interactively.
-
-### 🔍 Advanced Search Functionality
-*Developed by Manish Raj Moriche*
-A sophisticated search engine allowing users to filter volcanoes by various criteria, ensuring easy access to specific data.
-
-### 🛠️ Admin Forms
-*Developed by Carolina*
-Comprehensive management interfaces for Administrators to handle:
-- **Volcanoes**: Create, update, and delete volcano records.
-- **Achievements**: Manage user badges and rewards.
-- **Users**: Oversee user accounts and permissions.
+| Feature | Contributor | Description |
+| :--- | :--- | :--- |
+| Admin Forms | Carolina | Manage Volcanoes, Achievements & Users |
+| Chatbot | Gabriele | Interactive assistant using REST API |
+| Real-Time Activity | Luigi | Integration of Ambee API for live data |
+| Advanced Search | Manish | Sophisticated filtering for volcanoes |
 
 ## 👥 Contributors
 
