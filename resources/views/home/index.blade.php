@@ -24,11 +24,16 @@
 @endsection
 
 @section('head_js')
-    @vite(['resources/js/home/lazy-load.js', 'resources/js/home/load-more.js', 'resources/js/home/volcano-animation.js', 'resources/js/home/home.js', 'resources/js/home/volcano-map.js', 'resources/js/my-volcanoes/volcano-actions.js', 'resources/js/home/volcano-modal.js', 'resources/js/home/ai-bot.js'])
+    @vite(['resources/js/home/lazy-load.js', 'resources/js/home/load-more.js', 'resources/js/home/volcano-animation.js', 'resources/js/home/home.js', 'resources/js/my-volcanoes/volcano-actions.js', 'resources/js/home/volcano-modal.js', 'resources/js/home/ai-bot.js', 'resources/js/home/interactive-map.js', 'resources/js/home/volcano-map.js'])
+  
+    <!-- TODO: remove'resources/js/home/volcano-map.js', once the file is deleted -->
+   
     <!-- Dependencies -->
     <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
     <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
-    <!-- Leaflet JS for Interactive Map -->
+   
+   
+    <!-- Leaflet JS -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
         integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
         crossorigin=""></script>
