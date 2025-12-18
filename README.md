@@ -1,4 +1,4 @@
-# Volcanic
+# Volcanic by Group 3
 
 Volcanic is a comprehensive web application for exploring and tracking volcanic activity worldwide. It combines real-time data and interactive tools to provide an engaging experience for volcano enthusiasts.
 
@@ -19,7 +19,7 @@ Once the application is running and seeded, you can log in with the following cr
 | **Admin** | `admin` | `admin123` |
 | **User** | `MarioR` | `user123` |
 
-## Individual Features & Contributions
+## Individual Features
 
 | Feature | Contributor | Description |
 | :--- | :--- | :--- |
