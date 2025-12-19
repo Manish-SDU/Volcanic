@@ -1,4 +1,6 @@
 let volcanoMap = null;
+let allMarkers = [];  // Store all markers for easy access
+window.allMarkers = allMarkers;  // Make accessible globally
 window.toggleMap = toggleMap;
 
 function toggleMap() {
@@ -115,14 +117,18 @@ function updateLegend(userStatusMap, totalVolcanoes) {
     const notVisitedCount = totalVolcanoes - visitedCount - wishlistCount;
 
     legendText.innerHTML = `
-          <strong>${window.userAuth.userName}</strong>, you have 
-          <span style="color: #1e8449; font-weight: bold;">${visitedCount} visited volcano${visitedCount !== 1 ? 's' : ''}</span> 
-          <span style="display: inline-block; width: 20px; height: 20px; background: #27ae60; border-radius: 50%; vertical-align: middle; margin: 0 4px;"></span>, 
-          <span style="color: #d68910; font-weight: bold;">${wishlistCount} volcano${wishlistCount !== 1 ? 's' : ''} on your wish to visit list</span> 
-          <span style="display: inline-block; width: 20px; height: 20px; background: #f39c12; border-radius: 50%; vertical-align: middle; margin: 0 4px;"></span>, 
-          and <span style="color: #c0392b; font-weight: bold;">${notVisitedCount} volcano${notVisitedCount !== 1 ? 's' : ''} yet to discover!</span> 
-          <span style="display: inline-block; width: 20px; height: 20px; background: #e74c3c; border-radius: 50%; vertical-align: middle; margin: 0 4px;"></span>
-      `;
+      <strong>${window.userAuth.userName}</strong>, you have 
+      <span style="color: #1e8449; font-weight: bold;">${visitedCount} visited volcano${visitedCount !== 1 ? 's' : ''}</span> 
+      <span style="display: inline-block; width: 20px; height: 20px; background: #27ae60; border-radius: 50%; vertical-align: middle; margin: 0 4px;"></span>, 
+      <span style="color: #d68910; font-weight: bold;">${wishlistCount} volcano${wishlistCount !== 1 ? 's' : ''} on your wish to visit list</span> 
+      <span style="display: inline-block; width: 20px; height: 20px; background: #f39c12; border-radius: 50%; vertical-align: middle; margin: 0 4px;"></span>, 
+      and <span style="color: #c0392b; font-weight: bold;">${notVisitedCount} volcano${notVisitedCount !== 1 ? 's' : ''} yet to discover!</span> 
+      <span style="display: inline-block; width: 20px; height: 20px; background: #e74c3c; border-radius: 50%; vertical-align: middle; margin: 0 4px;"></span>
+      <br>
+      <span style="font-size: 14px; color: #7f8c8d; margin-top: 8px; display: inline-block;">
+          💡 Click a volcano to access its switch status button.
+      </span>
+  `;
 
     legendDiv.style.display = 'none';
 }
@@ -183,35 +189,78 @@ function createPopupHTML(volcano, userStatus, isAuthenticated) {
       `;
     }
 
+    let cycleButtonHTML = '';
+
+    if (isAuthenticated) {
+        let buttonText;
+        let nextStatus;
+
+        if (userStatus === null) {
+            buttonText = '🔄 Add to Wishlist';
+            nextStatus = 'wishlist';
+        } else if (userStatus === 'wishlist') {
+            buttonText = '🔄 Mark as Visited';
+            nextStatus = 'visited';
+        } else if (userStatus === 'visited') {
+            buttonText = '🔄 Unsave';
+            nextStatus = 'null';
+        }
+
+        cycleButtonHTML = `
+            <button 
+                class="cycle-status-btn" 
+                data-volcano-id="${volcano.id}"
+                data-current-status="${userStatus}"
+                data-next-status="${nextStatus}"
+                style="
+                    width: 100%;
+                    background: transparent;
+                    color: #2c3e50;
+                    border: none;
+                    border-radius: 6px;
+                    font-weight: bold;
+                    cursor: pointer;
+                    transition: opacity 0.2s;
+                "
+                onmouseover="this.style.opacity='0.7'"
+                onmouseout="this.style.opacity='1'"
+            >
+                ${buttonText}
+            </button>
+        `;
+    }
+
     return `
-          <div style="min-width: 200px; max-width: 250px; padding: 12px; text-align: center;">
-              ${userStatusHTML}
-              
-              <h3 style="margin: 0 0 12px 0; color: #2c3e50; font-size: 18px;">
-                  ${volcano.name}
-              </h3>
-              
-              <div style="margin-bottom: 8px;;">
-                  <strong>Elevation:</strong> ${volcano.elevation}m
-              </div>
-              <div style="margin-bottom: 8px;">
-                  <strong>Type:</strong> ${volcano.type}
-              </div>
-              <div style="margin-bottom: 8px;">
-                  <strong>Status:</strong> 
-                  <span style="
-                      padding: 2px 8px; 
-                      border-radius: 4px; 
-                      background: ${volcano.activity === 'Active' ? '#e74c3c' : volcano.activity === 'Dormant' ? '#f39c12' : '#95a5a6'};
-                      color: white;
-                      font-weight: bold;
-                      font-size: 12px;
-                  ">
-                      ${volcano.activity}
-                  </span>
-              </div>
+      <div style="min-width: 200px; max-width: 250px; padding: 12px; text-align: center;">
+          
+          <h3 style="margin: 0 0 12px 0; color: #2c3e50; font-size: 18px;">
+              ${volcano.name}
+          </h3>
+          
+          <div style="margin-bottom: 8px;">
+              <strong>Elevation:</strong> ${volcano.elevation}m
           </div>
-      `;
+          <div style="margin-bottom: 8px;">
+              <strong>Type:</strong> ${volcano.type}
+          </div>
+          <div style="margin-bottom: 8px;">
+              <strong>Status:</strong> 
+              <span style="
+                  padding: 2px 8px; 
+                  border-radius: 4px; 
+                  background: ${volcano.activity === 'Active' ? '#e74c3c' : volcano.activity === 'Dormant' ? '#f39c12' : '#95a5a6'};
+                  color: white;
+                  font-weight: bold;
+                  font-size: 12px;
+              ">
+                  ${volcano.activity}
+              </span>
+          </div>
+
+          ${userStatusHTML}
+          ${cycleButtonHTML}
+      </div>
+  `;
 }
 
 function createVolcanoIcon(userStatus, isAuthenticated) {
@@ -283,6 +332,13 @@ function addMarkers(volcanoes, userStatusMap) {
             { icon: customIcon }
         );
 
+        // Store status on marker for easy access
+        marker.volcanoStatus = userStatus;
+        marker.volcanoData = volcano;
+
+        // Store marker globally
+        allMarkers.push(marker);
+
         const popupHTML = createPopupHTML(volcano, userStatus, isAuthenticated);
         marker.bindPopup(popupHTML);
         markers.addLayer(marker);
@@ -331,3 +387,94 @@ function fetchUserLists() {
             return {};
         });
 }
+
+function cycleVolcanoStatus(volcanoId, currentStatus, marker, volcano) {
+    // Only logged-in users can cycle status
+    if (!window.userAuth.isAuthenticated) {
+        alert('Please log in to track volcanoes.');
+        return;
+    }
+
+    // Determine next status
+    let nextStatus;
+    let apiEndpoint;
+
+    if (currentStatus === null) {
+        // Red -> Orange (add to wishlist)
+        nextStatus = 'wishlist';
+        apiEndpoint = `/user/volcanoes/${volcanoId}/wishlist`;
+    } else if (currentStatus === 'wishlist') {
+        // Orange -> Green (mark as visited)
+        nextStatus = 'visited';
+        apiEndpoint = `/user/volcanoes/${volcanoId}/visited`;
+    } else if (currentStatus === 'visited') {
+        // Green -> Red (remove from lists)
+        nextStatus = null;
+        apiEndpoint = `/user/volcanoes/${volcanoId}/visited`;
+    }
+
+    console.log(`Cycling ${volcano.name}: ${currentStatus} -> ${nextStatus}`);
+
+    // Update marker icon immediately (optimistic update)
+    const newIcon = createVolcanoIcon(nextStatus, true);
+    marker.setIcon(newIcon);
+
+    // Update popup content
+    const newPopupHTML = createPopupHTML(volcano, nextStatus, true);
+    marker.setPopupContent(newPopupHTML);
+
+    // Make API call to update database
+    fetch(apiEndpoint, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').content
+        }
+    })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Failed to update volcano status');
+            }
+            return response.json();
+        })
+        .then(data => {
+            console.log('Status updated successfully:', data);
+
+            // Update the marker's stored status
+            marker.volcanoStatus = nextStatus;
+
+            // TODO: check persitancy of database update
+            // TODO: update legend counts
+            // TODO: update volcano card in grid if visible
+            // TODO: check if there is interference with the search feature
+            // TODO: update Readme
+
+            // Show success message
+            console.log(`✓ ${volcano.name} is now: ${nextStatus || 'not in any list'}`);
+        })
+        .catch(error => {
+            console.error('Error updating status:', error);
+
+            // Revert the marker if API call failed
+            marker.setIcon(createVolcanoIcon(currentStatus, true));
+            marker.setPopupContent(createPopupHTML(volcano, currentStatus, true));
+
+            alert('Failed to update volcano status. Please try again.');
+        });
+}
+
+document.addEventListener('click', function (e) {
+    // Check if clicked element is a cycle status button
+    if (e.target.classList.contains('cycle-status-btn')) {
+        const button = e.target;
+        const volcanoId = parseInt(button.dataset.volcanoId);
+        const currentStatus = button.dataset.currentStatus === 'null' ? null : button.dataset.currentStatus;
+
+        // Find the marker for this volcano
+        const marker = window.allMarkers?.find(m => m.volcanoData?.id === volcanoId);
+
+        if (marker) {
+            cycleVolcanoStatus(volcanoId, currentStatus, marker, marker.volcanoData);
+        }
+    }
+});
