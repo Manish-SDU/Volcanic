@@ -4,7 +4,6 @@
 
 @section('additional_css')
     @vite(['resources/css/home/volcano-animation.css', 'resources/css/home/ai-bot.css'])
-    <!-- TODO: delete file: 'resources/css/home/volcano-map.css' removed from here already -->
 
     <!-- Leaflet CSS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
@@ -29,9 +28,7 @@
 @endsection
 
 @section('head_js')
-    @vite(['resources/js/home/lazy-load.js', 'resources/js/home/load-more.js', 'resources/js/home/volcano-animation.js', 'resources/js/home/home.js', 'resources/js/my-volcanoes/volcano-actions.js', 'resources/js/home/volcano-modal.js', 'resources/js/home/ai-bot.js', 'resources/js/home/interactive-map.js', 'resources/js/home/volcano-map.js'])
-
-    <!-- TODO: remove'resources/js/home/volcano-map.js', once the file is deleted -->
+    @vite(['resources/js/home/lazy-load.js', 'resources/js/home/load-more.js', 'resources/js/home/volcano-animation.js', 'resources/js/home/home.js', 'resources/js/my-volcanoes/volcano-actions.js', 'resources/js/home/volcano-modal.js', 'resources/js/home/ai-bot.js', 'resources/js/home/interactive-map.js'])
 
     <!-- Dependencies -->
     <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
@@ -140,19 +137,6 @@
                 style="display: none; width: 100%; height: 110vh; margin-bottom: 2rem; border-radius: 12px; text-align: center">
                 <!-- The map will be rendered here by Leaflet (see imteractive-map.js) -->
             </div>
-
-            <!-- TODO: remove this code when map implemented -->
-            <!-- Interactive Map Container
-                        <div id="volcano-map" style="width: 100%; height: 500px; border-radius: 16px; display: none; margin-bottom: 2rem;"></div>
-                        <div id="map-description" style="display: none; text-align: center; margin-bottom: 1rem; color: var(--text-secondary); font-style: italic;">
-                            Explore the locations of volcanoes around the world. Click on markers to discover each volcano's story.
-                        </div>
-                        <div id="no-results-message" class="hidden">
-                            <div class="empty-state">
-                                <i class="fas fa-search fa-3x"></i>
-                                <p>No "<span id="search-term"></span>" found in our database</p>
-                            </div>
-                        </div> -->
 
             <div class="volcano-grid">
                 @foreach($volcanoes as $index => $volcano)
