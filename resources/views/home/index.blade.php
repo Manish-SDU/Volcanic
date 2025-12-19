@@ -4,8 +4,8 @@
 
 @section('additional_css')
     @vite(['resources/css/home/volcano-animation.css', 'resources/css/home/ai-bot.css'])
-   <!-- TODO: delete file: 'resources/css/home/volcano-map.css' removed from here already -->
-   
+    <!-- TODO: delete file: 'resources/css/home/volcano-map.css' removed from here already -->
+
     <!-- Leaflet CSS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
         integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
@@ -127,26 +127,32 @@
                 </div>
             </div>
 
+            <!-- Map Legend (only for logged-in users) -->
+            <div id="map-legend"
+                style="display: none; margin-bottom: 1rem; padding: 12px 20px; background: #f8f9fa; border-radius: 8px; text-align: center;">
+                <p style="margin: 0; color: #2c3e50; font-size: 16px; font-weight: 500;">
+                    <span id="legend-text">Loading...</span>
+                </p>
+            </div>
+
             <!-- Interactive Map Container -->
             <div id="interactive-map"
                 style="display: none; width: 100%; height: 110vh; margin-bottom: 2rem; border-radius: 12px; text-align: center">
-                <!-- TODO: The map will be rendered here by Leaflet -->
+                <!-- The map will be rendered here by Leaflet (see imteractive-map.js) -->
             </div>
-
-
 
             <!-- TODO: remove this code when map implemented -->
             <!-- Interactive Map Container
-                    <div id="volcano-map" style="width: 100%; height: 500px; border-radius: 16px; display: none; margin-bottom: 2rem;"></div>
-                    <div id="map-description" style="display: none; text-align: center; margin-bottom: 1rem; color: var(--text-secondary); font-style: italic;">
-                        Explore the locations of volcanoes around the world. Click on markers to discover each volcano's story.
-                    </div>
-                    <div id="no-results-message" class="hidden">
-                        <div class="empty-state">
-                            <i class="fas fa-search fa-3x"></i>
-                            <p>No "<span id="search-term"></span>" found in our database</p>
+                        <div id="volcano-map" style="width: 100%; height: 500px; border-radius: 16px; display: none; margin-bottom: 2rem;"></div>
+                        <div id="map-description" style="display: none; text-align: center; margin-bottom: 1rem; color: var(--text-secondary); font-style: italic;">
+                            Explore the locations of volcanoes around the world. Click on markers to discover each volcano's story.
                         </div>
-                    </div> -->
+                        <div id="no-results-message" class="hidden">
+                            <div class="empty-state">
+                                <i class="fas fa-search fa-3x"></i>
+                                <p>No "<span id="search-term"></span>" found in our database</p>
+                            </div>
+                        </div> -->
 
             <div class="volcano-grid">
                 @foreach($volcanoes as $index => $volcano)

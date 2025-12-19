@@ -6,10 +6,14 @@ function toggleMap() {
 
     // Get the map container
     const mapContainer = document.getElementById('interactive-map');
+    const legendDiv = document.getElementById('map-legend');
     const buttonText = document.getElementById('map-pill-text');
 
     if (mapContainer.style.display === 'none') {
         mapContainer.style.display = 'block';
+        if (window.userAuth.isAuthenticated && legendDiv) { // Show legend if user is authenticated
+            legendDiv.style.display = 'block';
+        }
         buttonText.textContent = 'Hide Map';
 
         // IMPORTANT: Tell Leaflet to recalculate size
@@ -20,6 +24,9 @@ function toggleMap() {
         console.log('Map is now visible');
     } else {
         mapContainer.style.display = 'none';
+        if (legendDiv) {
+            legendDiv.style.display = 'none';
+        }
         buttonText.textContent = 'View Map';
 
         console.log('Map is now hidden');
@@ -36,15 +43,15 @@ function initializeMap() {
     console.log('Initializing map...');
 
     volcanoMap = L.map('interactive-map', {
-        center: [20, 0],  // Slightly north to center continents better
+        center: [20, 0],
         zoom: 0,
-        minZoom: 2,       // Prevent zooming out too far
-        maxZoom: 18,      // Prevent zooming in too close
-        maxBounds: [      // Restrict panning to these coordinates
-            [-90, -180],  // Southwest corner (bottom-left)
-            [90, 180]     // Northeast corner (top-right)
+        minZoom: 2,
+        maxZoom: 18,
+        maxBounds: [
+            [-90, -180],
+            [90, 180]
         ],
-        maxBoundsViscosity: 1.0  // Make boundaries "hard" (can't drag past them)
+        maxBoundsViscosity: 1.0
     });
 
     // Add the tile layer (the actual map images) using OpenStreetMap
@@ -80,6 +87,7 @@ function loadVolcanoes() {
             console.log(`Loaded ${volcanoData.count} volcanoes`);
 
             addMarkers(volcanoes, userStatusMap);
+            updateLegend(userStatusMap, volcanoData.count);
         })
         .catch(error => {
             console.error('Error loading volcanoes:', error);
@@ -87,8 +95,39 @@ function loadVolcanoes() {
         });
 }
 
+function updateLegend(userStatusMap, totalVolcanoes) {
+    const legendDiv = document.getElementById('map-legend');
+    const legendText = document.getElementById('legend-text');
+
+    if (!window.userAuth.isAuthenticated) {
+        legendDiv.style.display = 'none';
+        return;
+    }
+
+    let visitedCount = 0;
+    let wishlistCount = 0;
+
+    Object.values(userStatusMap).forEach(status => {
+        if (status === 'visited') visitedCount++;
+        if (status === 'wishlist') wishlistCount++;
+    });
+
+    const notVisitedCount = totalVolcanoes - visitedCount - wishlistCount;
+
+    legendText.innerHTML = `
+          <strong>${window.userAuth.userName}</strong>, you have 
+          <span style="color: #1e8449; font-weight: bold;">${visitedCount} visited volcano${visitedCount !== 1 ? 's' : ''}</span> 
+          <span style="display: inline-block; width: 20px; height: 20px; background: #27ae60; border-radius: 50%; vertical-align: middle; margin: 0 4px;"></span>, 
+          <span style="color: #d68910; font-weight: bold;">${wishlistCount} volcano${wishlistCount !== 1 ? 's' : ''} on your wish to visit list</span> 
+          <span style="display: inline-block; width: 20px; height: 20px; background: #f39c12; border-radius: 50%; vertical-align: middle; margin: 0 4px;"></span>, 
+          and <span style="color: #c0392b; font-weight: bold;">${notVisitedCount} volcano${notVisitedCount !== 1 ? 's' : ''} yet to discover!</span> 
+          <span style="display: inline-block; width: 20px; height: 20px; background: #e74c3c; border-radius: 50%; vertical-align: middle; margin: 0 4px;"></span>
+      `;
+
+    legendDiv.style.display = 'none';
+}
+
 function createPopupHTML(volcano, userStatus, isAuthenticated) {
-    // User status badge (only for logged-in users)
     let userStatusHTML = '';
 
     if (isAuthenticated) {
@@ -130,7 +169,6 @@ function createPopupHTML(volcano, userStatus, isAuthenticated) {
               `;
         }
     } else {
-        // Guest user badge - encourage sign in/up
         userStatusHTML = `
           <div style="
               margin-bottom: 12px; 
