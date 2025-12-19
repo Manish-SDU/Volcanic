@@ -1,29 +1,6 @@
 let volcanoMap = null;
 window.toggleMap = toggleMap;
 
-document.addEventListener('DOMContentLoaded', function () {
-    console.log('Page ready.'); // confirms page is fully loaded before initializing the map
-    initializeMap();
-    loadVolcanoes(); // Load volcanoes from API
-});
-
-function initializeMap() {
-    console.log('Initializing map...');
-
-    // Create the map and set its view to show the whole world
-    // [0, 0] = center of world (latitude, longitude)
-    // 2 = zoom level (1=far, 18=close)
-    volcanoMap = L.map('interactive-map').setView([0, 0], 2);
-
-    // Add the tile layer (the actual map images) using OpenStreetMap
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '© OpenStreetMap contributors',
-        maxZoom: 18,
-    }).addTo(volcanoMap);
-
-    console.log('Map initialized successfully.');
-}
-
 function toggleMap() {
     console.log('Toggle map clicked.');
 
@@ -31,9 +8,7 @@ function toggleMap() {
     const mapContainer = document.getElementById('interactive-map');
     const buttonText = document.getElementById('map-pill-text');
 
-    // Check if map is currently visible
     if (mapContainer.style.display === 'none') {
-        // Show the map
         mapContainer.style.display = 'block';
         buttonText.textContent = 'Hide Map';
 
@@ -44,7 +19,6 @@ function toggleMap() {
 
         console.log('Map is now visible');
     } else {
-        // Hide the map
         mapContainer.style.display = 'none';
         buttonText.textContent = 'View Map';
 
@@ -52,54 +26,148 @@ function toggleMap() {
     }
 }
 
+document.addEventListener('DOMContentLoaded', function () {
+    console.log('Page ready.'); // confirms page is fully loaded before initializing the map
+    initializeMap();
+    loadVolcanoes(); // Load volcanoes from API
+});
+
+function initializeMap() {
+    console.log('Initializing map...');
+
+    volcanoMap = L.map('interactive-map', {
+        center: [20, 0],  // Slightly north to center continents better
+        zoom: 0,
+        minZoom: 2,       // Prevent zooming out too far
+        maxZoom: 18,      // Prevent zooming in too close
+        maxBounds: [      // Restrict panning to these coordinates
+            [-90, -180],  // Southwest corner (bottom-left)
+            [90, 180]     // Northeast corner (top-right)
+        ],
+        maxBoundsViscosity: 1.0  // Make boundaries "hard" (can't drag past them)
+    });
+
+    // Add the tile layer (the actual map images) using OpenStreetMap
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '© OpenStreetMap contributors',
+        maxZoom: 18,
+    }).addTo(volcanoMap);
+
+    console.log('Map initialized successfully.');
+}
+
 function loadVolcanoes() {
     console.log('Fetching volcanoes from API...');
 
-    // Fetch data from Laravel API
-    fetch('/api/volcanoes')
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Failed to fetch volcanoes');
-            }
-            // Parse JSON response
-            return response.json();
+    let userStatusPromise;
+
+    if (window.userAuth.isAuthenticated) {
+        console.log('User is logged in, fetching their lists...');
+        userStatusPromise = fetchUserLists();
+    } else {
+        console.log('User is a guest, no lists to fetch');
+        userStatusPromise = Promise.resolve({});
+    }
+
+    Promise.all([
+        fetch('/api/volcanoes').then(r => r.json()),
+        userStatusPromise
+    ])
+        .then(([volcanoData, userStatusMap]) => {
+            console.log('Received volcanoes:', volcanoData);
+
+            const volcanoes = volcanoData.data;
+            console.log(`Loaded ${volcanoData.count} volcanoes`);
+
+            addMarkers(volcanoes, userStatusMap);
         })
-
-        .then(data => {
-            console.log('Received volcanoes:', data);
-
-            const volcanoes = data.data;
-            console.log(`Loaded ${data.count} volcanoes`);
-
-            addMarkers(volcanoes);
-        })
-
         .catch(error => {
             console.error('Error loading volcanoes:', error);
             alert('Could not load volcanoes. Please refresh the page.');
         });
 }
 
-function createPopupHTML(volcano) {
+function createPopupHTML(volcano, userStatus, isAuthenticated) {
+    // User status badge (only for logged-in users)
+    let userStatusHTML = '';
+
+    if (isAuthenticated) {
+        if (userStatus === 'visited') {
+            userStatusHTML = `
+                  <div style="
+                      margin-bottom: 12px; 
+                      padding: 8px 12px; 
+                      background: #d5f4e6; 
+                      border-left: 4px solid #27ae60;
+                      border-radius: 4px;
+                  ">
+                      <strong style="color: #1e8449;">You've visited this volcano!</strong>
+                  </div>
+              `;
+        } else if (userStatus === 'wishlist') {
+            userStatusHTML = `
+                  <div style="
+                      margin-bottom: 12px; 
+                      padding: 8px 12px; 
+                      background: #fef5e7; 
+                      border-left: 4px solid #f39c12;
+                      border-radius: 4px;
+                  ">
+                      <strong style="color: #d68910;">On your wishlist</strong>
+                  </div>
+              `;
+        } else {
+            userStatusHTML = `
+                  <div style="
+                      margin-bottom: 12px; 
+                      padding: 8px 12px; 
+                      background: #fadbd8; 
+                      border-left: 4px solid #e74c3c;
+                      border-radius: 4px;
+                  ">
+                      <strong style="color: #c0392b;">Waiting to be explored!</strong>
+                  </div>
+              `;
+        }
+    } else {
+        // Guest user badge - encourage sign in/up
+        userStatusHTML = `
+          <div style="
+              margin-bottom: 12px; 
+              padding: 8px 12px; 
+              background: #d6eaf8; 
+              border-left: 4px solid #3498db;
+              border-radius: 4px;
+              text-align: center;
+          ">
+              <strong style="color: #2874a6;">🔐 Sign in or sign up to save!</strong>
+          </div>
+      `;
+    }
+
     return `
-          <div style="min-width: 50px; padding: 8px; text-align: center ">   
-              <h3 style="margin: 0 0 10px 0; color: #2c3e50;">
+          <div style="min-width: 200px; max-width: 250px; padding: 12px; text-align: center;">
+              ${userStatusHTML}
+              
+              <h3 style="margin: 0 0 12px 0; color: #2c3e50; font-size: 18px;">
                   ${volcano.name}
               </h3>
-              <div style="margin-bottom: 8px;">
-                  <strong>🏔️ Elevation:</strong> ${volcano.elevation}m
+              
+              <div style="margin-bottom: 8px;;">
+                  <strong>Elevation:</strong> ${volcano.elevation}m
               </div>
               <div style="margin-bottom: 8px;">
-                  <strong>🌋 Type:</strong> ${volcano.type}
+                  <strong>Type:</strong> ${volcano.type}
               </div>
               <div style="margin-bottom: 8px;">
-                  <strong>⚡ Status:</strong> 
+                  <strong>Status:</strong> 
                   <span style="
                       padding: 2px 8px; 
                       border-radius: 4px; 
                       background: ${volcano.activity === 'Active' ? '#e74c3c' : volcano.activity === 'Dormant' ? '#f39c12' : '#95a5a6'};
                       color: white;
                       font-weight: bold;
+                      font-size: 12px;
                   ">
                       ${volcano.activity}
                   </span>
@@ -108,23 +176,120 @@ function createPopupHTML(volcano) {
       `;
 }
 
-function addMarkers(volcanoes) {
-      console.log(`Adding ${volcanoes.length} markers to map...`);
+function createVolcanoIcon(userStatus, isAuthenticated) {
+    let filter;
 
-      const markers = L.markerClusterGroup({
-          maxClusterRadius: 60,  
-          spiderfyOnMaxZoom: true,  
-          showCoverageOnHover: false,  
-          zoomToBoundsOnClick: true  
-      });
+    if (!isAuthenticated) {
+        // Guest users see blue volcanoes
+        filter = 'brightness(0) saturate(100%) invert(53%) sepia(89%) saturate(1750%) hue-rotate(177deg) brightness(96%) contrast(91%)';
+    } else if (userStatus === 'visited') {
+        // Green for visited
+        filter = 'brightness(0) saturate(100%) invert(43%) sepia(96%) saturate(638%) hue-rotate(92deg) brightness(91%) contrast(88%)';
+    } else if (userStatus === 'wishlist') {
+        // Orange for wishlist
+        filter = 'brightness(0) saturate(100%) invert(68%) sepia(89%) saturate(1531%) hue-rotate(359deg) brightness(99%) contrast(95%)';
+    } else {
+        // Red for not visited/wishlist (logged-in user)
+        filter = 'brightness(0) saturate(100%) invert(30%) sepia(95%) saturate(2198%) hue-rotate(344deg) brightness(94%) contrast(92%)';
+    }
 
-      volcanoes.forEach(volcano => {
-          const marker = L.marker([volcano.latitude, volcano.longitude]);
-          const popupHTML = createPopupHTML(volcano);
-          marker.bindPopup(popupHTML);
-          markers.addLayer(marker);
-      });
+    const iconHTML = `
+          <div style="
+              width: 60px;
+              height: 60px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+          ">
+              <img 
+                  src="/images/volcanoes/volcano-marker.png" 
+                  alt="volcano marker"
+                  style="
+                      width: 100%;
+                      height: 100%;
+                      filter: ${filter};
+                      drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+                  "
+              />
+          </div>
+      `;
 
-      volcanoMap.addLayer(markers);
-      console.log('All markers added with clustering.');
-  }
+    return L.divIcon({
+        html: iconHTML,
+        className: 'custom-volcano-marker',
+        iconSize: [60, 60],
+        iconAnchor: [30, 30],
+        popupAnchor: [0, -5]
+    });
+}
+
+function addMarkers(volcanoes, userStatusMap) {
+    console.log(`Adding ${volcanoes.length} markers to map...`);
+
+    const markers = L.markerClusterGroup({
+        maxClusterRadius: 60,
+        spiderfyOnMaxZoom: true,
+        showCoverageOnHover: false,
+        zoomToBoundsOnClick: true
+    });
+
+    const isAuthenticated = window.userAuth.isAuthenticated;
+
+    volcanoes.forEach(volcano => {
+        const userStatus = userStatusMap[volcano.id] || null;
+
+        const customIcon = createVolcanoIcon(userStatus, isAuthenticated);
+
+        const marker = L.marker(
+            [volcano.latitude, volcano.longitude],
+            { icon: customIcon }
+        );
+
+        const popupHTML = createPopupHTML(volcano, userStatus, isAuthenticated);
+        marker.bindPopup(popupHTML);
+        markers.addLayer(marker);
+    });
+
+    volcanoMap.addLayer(markers);
+
+    console.log('All markers added with custom icons.');
+}
+
+function fetchUserLists() {
+    console.log('Fetching user lists...');
+
+    return fetch('/user/volcanoes/lists')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Failed to fetch user lists');
+            }
+            return response.json();
+        })
+        .then(lists => {
+            console.log('User lists received:', lists);
+
+            // Create a lookup object: { volcanoId: status }
+            // Example: { 1: "visited", 5: "wishlist", 12: "visited" }
+            const statusMap = {};
+
+            if (lists.visited && Array.isArray(lists.visited)) {
+                lists.visited.forEach(volcano => {
+                    statusMap[volcano.volcanoes_id] = 'visited';
+                });
+            }
+
+            if (lists.wishlist && Array.isArray(lists.wishlist)) {
+                lists.wishlist.forEach(volcano => {
+                    statusMap[volcano.volcanoes_id] = 'wishlist';
+                });
+            }
+
+            console.log(`User has ${Object.keys(statusMap).length} volcanoes in their lists`);
+            console.log('Status map:', statusMap);
+            return statusMap;
+        })
+        .catch(error => {
+            console.error('Error fetching user lists:', error);
+            return {};
+        });
+}

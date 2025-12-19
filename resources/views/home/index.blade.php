@@ -43,7 +43,6 @@
         integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
     <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
 
-    
 @endsection
 
 @section('content')
@@ -130,7 +129,7 @@
 
             <!-- Interactive Map Container -->
             <div id="interactive-map"
-                style="display: none; width: 100%; height: 500px; margin-bottom: 2rem; border-radius: 12px;">
+                style="display: none; width: 100%; height: 110vh; margin-bottom: 2rem; border-radius: 12px; text-align: center">
                 <!-- TODO: The map will be rendered here by Leaflet -->
             </div>
 
