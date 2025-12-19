@@ -13,12 +13,6 @@
 
     <!-- Map Styles -->
     <style>
-        #filter-pill:hover {
-            background: #ff8c00 !important;
-            color: white !important;
-            border-color: #ff8c00 !important;
-        }
-
         #map-toggle-pill:hover {
             background: #3498db !important;
             color: white !important;
@@ -111,11 +105,6 @@
                 <h2>Ignite Your Volcano Journey</h2>
                 <p id="search-status" class="section-description">Discover Earth's Fiery Secrets</p>
                 <div style="position: absolute; top: 0; right: 0; display: flex; gap: 12px;">
-                    <span id="filter-pill" class="action-btn"
-                        style="border-color: #ff8c00; color: #ff8c00; min-width: 85px; justify-content: center;">
-                        <i class="fas fa-filter"></i>
-                        <span>Filter</span>
-                    </span>
                     <span id="map-toggle-pill" onclick="toggleMap()" class="action-btn"
                         style="border-color: #3498db; color: #3498db; min-width: 130px; justify-content: center; white-space: nowrap;">
                         <i class="fas fa-map"></i>
