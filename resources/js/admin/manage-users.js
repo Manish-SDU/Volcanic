@@ -42,4 +42,20 @@ document.addEventListener('DOMContentLoaded', function() {
         })
         .catch(error => console.error('Search error:', error));
     }
+
+    // Initialize delete button handlers with event delegation
+    document.addEventListener('click', function(e) {
+        const deleteBtn = e.target.closest('.btn-delete');
+        if (deleteBtn) {
+            e.preventDefault();
+            const form = deleteBtn.closest('.delete-form');
+            if (form) {
+                const name = deleteBtn.dataset.deleteName;
+                
+                if (confirm(`Are you sure you want to delete "${name}"?`)) {
+                    form.submit();
+                }
+            }
+        }
+    }, true);
 });

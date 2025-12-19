@@ -42,4 +42,22 @@ document.addEventListener('DOMContentLoaded', function() {
         })
         .catch(error => console.error('Search error:', error));
     }
+
+    // Initialize delete button handlers with event delegation
+    // Use document-level delegation to avoid duplicate listeners
+    document.addEventListener('click', function(e) {
+        const deleteBtn = e.target.closest('.btn-delete');
+        if (deleteBtn) {
+            e.preventDefault();
+            const form = deleteBtn.closest('.delete-form');
+            if (form) {
+                const volcanoName = deleteBtn.dataset.deleteName;
+                const deleteType = deleteBtn.dataset.deleteType;
+                
+                if (confirm(`Are you sure you want to delete "${volcanoName}"?`)) {
+                    form.submit();
+                }
+            }
+        }
+    }, true);
 });
