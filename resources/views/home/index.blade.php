@@ -22,7 +22,7 @@
 @endsection
 
 @section('head_js')
-    @vite(['resources/js/home/lazy-load.js', 'resources/js/home/load-more.js', 'resources/js/home/volcano-animation.js', 'resources/js/home/home.js', 'resources/js/my-volcanoes/volcano-actions.js', 'resources/js/home/volcano-modal.js', 'resources/js/home/ai-bot.js', 'resources/js/home/interactive-map.js'])
+    @vite(['resources/js/home/lazy-load.js', 'resources/js/home/load-more.js', 'resources/js/home/volcano-animation.js', 'resources/js/home/home.js', 'resources/js/my-volcanoes/volcano-actions.js', 'resources/js/home/volcano-modal.js', 'resources/js/home/ai-bot.js', 'resources/js/home/interactive-map/map-core.js', 'resources/js/home/interactive-map/map-display.js', 'resources/js/home/interactive-map/map-sync.js', ])
 
     <!-- Dependencies -->
     <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
@@ -124,7 +124,7 @@
             <!-- Interactive Map Container -->
             <div id="interactive-map"
                 style="display: none; width: 100%; height: 110vh; margin-bottom: 2rem; border-radius: 12px; text-align: center">
-                <!-- The map will be rendered here by Leaflet (see imteractive-map.js) -->
+                <!-- The map will be rendered here by Leaflet (see resources > js > home > interactive map) -->
             </div>
 
             <!-- No Results Message (for search) -->
