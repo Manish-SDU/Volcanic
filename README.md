@@ -27,5 +27,5 @@ Once the application is running and seeded, you can log in with the following cr
 | Chatbot | [Gabriele](https://github.com/Gabbo693) | Interactive assistant using REST API |
 | Real-Time Activity | [Luigi](https://github.com/Lucol24) | Integration of Ambee API for live data |
 | Advanced Search | Manish | Sophisticated filtering for volcanoes |
-| X | [Lara](https://github.com/Lara-Ghi) | - |
+| Interactive Map | [Lara](https://github.com/Lara-Ghi) | Custom Leaflet-based map with real-time status updates |
 | X | [Mats](https://github.com/mqts241) | - |
