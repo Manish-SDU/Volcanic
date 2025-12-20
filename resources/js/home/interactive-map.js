@@ -1,5 +1,8 @@
 let volcanoMap = null;
 let allMarkers = [];  // Store all markers for easy access
+let visitedCount = 0;    // Make counts accessible globally
+let wishlistCount = 0;
+let notVisitedCount = 0;
 window.allMarkers = allMarkers;  // Make accessible globally
 window.toggleMap = toggleMap;
 
@@ -99,23 +102,28 @@ function loadVolcanoes() {
 
 function updateLegend(userStatusMap, totalVolcanoes) {
     const legendDiv = document.getElementById('map-legend');
-    const legendText = document.getElementById('legend-text');
 
     if (!window.userAuth.isAuthenticated) {
         legendDiv.style.display = 'none';
         return;
     }
 
-    let visitedCount = 0;
-    let wishlistCount = 0;
+    visitedCount = 0;
+    wishlistCount = 0;
 
     Object.values(userStatusMap).forEach(status => {
         if (status === 'visited') visitedCount++;
         if (status === 'wishlist') wishlistCount++;
     });
 
-    const notVisitedCount = totalVolcanoes - visitedCount - wishlistCount;
+    notVisitedCount = totalVolcanoes - visitedCount - wishlistCount;
+    legendDiv.style.display = 'none';
+    updateLegendHTML();
+}
 
+function updateLegendHTML() {
+    const legendDiv = document.getElementById('map-legend');
+    const legendText = document.getElementById('legend-text');
     legendText.innerHTML = `
       <strong>${window.userAuth.userName}</strong>, you have 
       <span style="color: #1e8449; font-weight: bold;">${visitedCount} visited volcano${visitedCount !== 1 ? 's' : ''}</span> 
@@ -129,8 +137,6 @@ function updateLegend(userStatusMap, totalVolcanoes) {
           💡 Click a volcano to access its switch status button.
       </span>
   `;
-
-    legendDiv.style.display = 'none';
 }
 
 function createPopupHTML(volcano, userStatus, isAuthenticated) {
@@ -415,7 +421,7 @@ function cycleVolcanoStatus(volcanoId, currentStatus, marker, volcano) {
 
     console.log(`Cycling ${volcano.name}: ${currentStatus} -> ${nextStatus}`);
 
-    // Update marker icon immediately (optimistic update)
+    // Update marker icon immediately 
     const newIcon = createVolcanoIcon(nextStatus, true);
     marker.setIcon(newIcon);
 
@@ -439,17 +445,9 @@ function cycleVolcanoStatus(volcanoId, currentStatus, marker, volcano) {
         })
         .then(data => {
             console.log('Status updated successfully:', data);
-
-            // Update the marker's stored status
             marker.volcanoStatus = nextStatus;
-
-            // TODO: check persitancy of database update
-            // TODO: update legend counts
-            // TODO: update volcano card in grid if visible
-            // TODO: check if there is interference with the search feature
-            // TODO: update Readme
-
-            // Show success message
+            // Update numbers showed in the Legend
+            updateLegendCounts(currentStatus, nextStatus);
             console.log(`✓ ${volcano.name} is now: ${nextStatus || 'not in any list'}`);
         })
         .catch(error => {
@@ -461,6 +459,32 @@ function cycleVolcanoStatus(volcanoId, currentStatus, marker, volcano) {
 
             alert('Failed to update volcano status. Please try again.');
         });
+}
+
+function updateLegendCounts(oldStatus, newStatus) {
+    if (!window.userAuth.isAuthenticated) {
+        return;
+    }
+
+    // Calculate changes (subtract from old status)
+    if (oldStatus === 'visited') {
+        visitedCount--;          
+    } else if (oldStatus === 'wishlist') {
+        wishlistCount--;
+    } else {  // oldStatus === null
+        notVisitedCount--;
+    }
+
+    // Add to new status
+    if (newStatus === 'visited') {
+        visitedCount++;
+    } else if (newStatus === 'wishlist') {
+        wishlistCount++;
+    } else {  // newStatus === null
+        notVisitedCount++;
+    }
+
+    updateLegendHTML();
 }
 
 document.addEventListener('click', function (e) {
@@ -478,3 +502,8 @@ document.addEventListener('click', function (e) {
         }
     }
 });
+
+            // TODO: update volcano card in grid if visible
+            // TODO: check if there is interference with the search feature
+            // TODO: refactore/ split code more clearly?
+            // TODO: update Readme
