@@ -549,6 +549,5 @@ document.addEventListener('click', function (e) {
     }
 });
 
-// TODO: check if there is interference with the search feature
 // TODO: refactore/ split code more clearly?
 // TODO: update Readme

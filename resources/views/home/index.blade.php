@@ -127,6 +127,14 @@
                 <!-- The map will be rendered here by Leaflet (see imteractive-map.js) -->
             </div>
 
+            <!-- No Results Message (for search) -->
+            <div id="no-results-message" class="hidden">
+                <div class="empty-state">
+                    <i class="fas fa-search fa-3x"></i>
+                    <p>No "<span id="search-term"></span>" found in our database</p>
+                </div>
+            </div>
+
             <div class="volcano-grid">
                 @foreach($volcanoes as $index => $volcano)
                     <article class="volcano-card {{ $index >= 9 ? 'homepage-hidden' : '' }}"
