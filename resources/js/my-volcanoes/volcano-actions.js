@@ -1,20 +1,20 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const container = document.getElementById('notifications-container');
 
     // Handle visited and wishlist buttons on home page
     const actionButtons = document.querySelectorAll('.visited-btn, .wishlist-btn');
-    
+
     actionButtons.forEach(button => {
-        button.addEventListener('click', async function(e) {
+        button.addEventListener('click', async function (e) {
             e.preventDefault();
-            
+
             const form = this.closest('form');
             const action = form.getAttribute('action');
             const csrfToken = form.querySelector('[name="_token"]').value;
             const volcanoCard = this.closest('.volcano-card');
             const visitedBtn = volcanoCard.querySelector('.visited-btn');
             const wishlistBtn = volcanoCard.querySelector('.wishlist-btn');
-            
+
             try {
                 const response = await fetch(action, {
                     method: 'POST',
@@ -23,15 +23,15 @@ document.addEventListener('DOMContentLoaded', function() {
                         'Accept': 'application/json',
                     }
                 });
-                
+
                 const data = await response.json();
-                
+
                 if (data.success) {
                     showSuccessMessage(data.message);
-                    
+
                     if (data.action === 'added') {
                         this.classList.add('active');
-                        
+
                         if (this === visitedBtn) {
                             wishlistBtn.disabled = true;
                         }
@@ -40,13 +40,24 @@ document.addEventListener('DOMContentLoaded', function() {
                         }
                     } else if (data.action === 'removed') {
                         this.classList.remove('active');
-                        
+
                         if (this === visitedBtn) {
                             wishlistBtn.disabled = false;
                         }
                         if (this === wishlistBtn) {
                             visitedBtn.disabled = false;
                         }
+                    }
+                    // Update the map marker and legend
+                    if (window.updateVolcanoMarker) {
+                        const volcanoId = parseInt(volcanoCard.dataset.volcanoId);
+                        let newStatus = null;
+                        if (this === visitedBtn && data.action === 'added') {
+                            newStatus = 'visited';
+                        } else if (this === wishlistBtn && data.action === 'added') {
+                            newStatus = 'wishlist';
+                        }
+                        window.updateVolcanoMarker(volcanoId, newStatus);
                     }
                 } else {
                     showErrorMessage(data.error || 'Something went wrong');
@@ -60,17 +71,17 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Handle remove buttons on my-volcanoes page
     const removeButtons = document.querySelectorAll('.remove-btn');
-    
+
     removeButtons.forEach(button => {
-        button.addEventListener('click', async function(e) {
+        button.addEventListener('click', async function (e) {
             e.preventDefault();
-            
+
             const form = this.closest('form');
             const action = form.getAttribute('action');
             const csrfToken = form.querySelector('[name="_token"]').value;
             const volcanoCard = this.closest('.volcano-card');
             const gridContainer = volcanoCard.closest('.volcano-grid');
-            
+
             try {
                 const response = await fetch(action, {
                     method: 'POST',
@@ -79,31 +90,31 @@ document.addEventListener('DOMContentLoaded', function() {
                         'Accept': 'application/json',
                     }
                 });
-                
+
                 const data = await response.json();
-                
+
                 if (data.success) {
                     showSuccessMessage(data.message);
                     await refreshStats();
-                    
+
                     volcanoCard.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
                     volcanoCard.style.opacity = '0';
                     volcanoCard.style.transform = 'scale(0.95)';
-                    
+
                     setTimeout(() => {
                         volcanoCard.remove();
-                        
+
                         // Check if list is now empty
                         if (gridContainer && gridContainer.children.length === 0) {
                             // Get the panel ID to determine which template to use
                             const panelId = gridContainer.closest('.myv-panel').id;
-                            const templateId = panelId === 'visited' 
-                                ? 'visited-empty-template' 
+                            const templateId = panelId === 'visited'
+                                ? 'visited-empty-template'
                                 : 'wishlist-empty-template';
-                            
+
                             const template = document.getElementById(templateId);
                             const emptyState = template.content.cloneNode(true);
-                            
+
                             gridContainer.innerHTML = '';
                             gridContainer.appendChild(emptyState);
                         }
@@ -120,23 +131,23 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Handle mark-visited buttons on my-volcanoes wishlist
     const markVisitedButtons = document.querySelectorAll('.mark-visited-btn');
-   
+
     markVisitedButtons.forEach(button => {
-        button.addEventListener('click', async function(e) {
+        button.addEventListener('click', async function (e) {
             e.preventDefault();
-           
+
             const form = this.closest('form');
             const action = form.getAttribute('action');
             const csrfToken = form.querySelector('[name="_token"]').value;
             const volcanoCard = this.closest('.volcano-card');
             const gridContainer = volcanoCard.closest('.volcano-grid');
-           
+
             // Store volcano data before removing
             const volcanoId = volcanoCard.dataset.volcanoId;
             const volcanoName = volcanoCard.querySelector('h3').textContent;
             const volcanoCountry = volcanoCard.querySelector('.country').textContent.trim();
             const volcanoImage = volcanoCard.querySelector('.volcano-thumb').src;
-           
+
             try {
                 const response = await fetch(action, {
                     method: 'POST',
@@ -145,25 +156,25 @@ document.addEventListener('DOMContentLoaded', function() {
                         'Accept': 'application/json',
                     }
                 });
-               
+
                 const data = await response.json();
-               
+
                 if (data.success) {
                     showSuccessMessage(data.message);
 
                     await refreshStats();
-                   
+
                     // Add to visited panel FIRST
                     addToVisitedPanel(volcanoId, volcanoName, volcanoCountry, volcanoImage, csrfToken);
-                   
+
                     // Then fade out and remove from wishlist
                     volcanoCard.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
                     volcanoCard.style.opacity = '0';
                     volcanoCard.style.transform = 'scale(0.95)';
-                   
+
                     setTimeout(() => {
                         volcanoCard.remove();
-                       
+
                         // Check if wishlist is now empty
                         if (gridContainer && gridContainer.children.length === 0) {
                             const template = document.getElementById('wishlist-empty-template');
@@ -187,25 +198,25 @@ document.addEventListener('DOMContentLoaded', function() {
     function addToVisitedPanel(volcanoId, volcanoName, volcanoCountry, volcanoImage, csrfToken) {
         const visitedPanel = document.getElementById('visited');
         const visitedGrid = visitedPanel.querySelector('.volcano-grid');
-        
+
         // Remove empty state if it exists
         const emptyState = visitedGrid.querySelector('.empty-state');
         if (emptyState) {
             emptyState.remove();
         }
-        
+
         // Clone template
         const template = document.getElementById('volcano-card-template');
         const newCard = template.content.cloneNode(true);
-        
+
         // Get the volcano card element from the cloned template
         const card = newCard.querySelector('.volcano-card');
-        
+
         // Fill in data
         card.dataset.volcanoId = volcanoId;
         card.style.opacity = '0';
         card.style.transform = 'scale(0.95)';
-        
+
         newCard.querySelector('.volcano-thumb').src = volcanoImage;
         newCard.querySelector('.volcano-thumb').alt = volcanoName;
         newCard.querySelector('h3').textContent = volcanoName;
@@ -223,16 +234,16 @@ document.addEventListener('DOMContentLoaded', function() {
         // Set up edit date button
         const editBtn = newCard.querySelector('.date-edit-btn');
         const todayFormatted = today.toISOString().split('T')[0]; // YYYY-MM-DD format
-        editBtn.onclick = function() {
+        editBtn.onclick = function () {
             openDateModal(volcanoId, todayFormatted, volcanoName);
         };
-        
+
         newCard.querySelector('.remove-form').action = `/user/volcanoes/${volcanoId}/visited`;
         newCard.querySelector('.remove-form input[name="_token"]').value = csrfToken;
-        
+
         // Add to grid
         visitedGrid.appendChild(newCard);
-        
+
         // Animate in
         setTimeout(() => {
             const addedCard = visitedGrid.querySelector(`[data-volcano-id="${volcanoId}"]`);
@@ -241,7 +252,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 addedCard.style.opacity = '1';
                 addedCard.style.transform = 'scale(1)';
 
-                 // Attach event listener to the new remove button
+                // Attach event listener to the new remove button
                 const removeBtn = addedCard.querySelector('.remove-btn');
                 if (removeBtn) {
                     attachRemoveButtonListener(removeBtn);
@@ -253,15 +264,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Helper function to attach remove button listener
     function attachRemoveButtonListener(button) {
-        button.addEventListener('click', async function(e) {
+        button.addEventListener('click', async function (e) {
             e.preventDefault();
-           
+
             const form = this.closest('form');
             const action = form.getAttribute('action');
             const csrfToken = form.querySelector('[name="_token"]').value;
             const volcanoCard = this.closest('.volcano-card');
             const gridContainer = volcanoCard.closest('.volcano-grid');
-           
+
             try {
                 const response = await fetch(action, {
                     method: 'POST',
@@ -270,30 +281,30 @@ document.addEventListener('DOMContentLoaded', function() {
                         'Accept': 'application/json',
                     }
                 });
-               
+
                 const data = await response.json();
-               
+
                 if (data.success) {
                     showSuccessMessage(data.message);
 
                     await refreshStats();
-                   
+
                     volcanoCard.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
                     volcanoCard.style.opacity = '0';
                     volcanoCard.style.transform = 'scale(0.95)';
-                   
+
                     setTimeout(() => {
                         volcanoCard.remove();
-                       
+
                         if (gridContainer && gridContainer.querySelectorAll('.volcano-card').length === 0) {
                             const panelId = gridContainer.closest('.myv-panel').id;
                             const templateId = panelId === 'visited'
                                 ? 'visited-empty-template'
                                 : 'wishlist-empty-template';
-                           
+
                             const template = document.getElementById(templateId);
                             const emptyState = template.content.cloneNode(true);
-                           
+
                             gridContainer.innerHTML = '';
                             gridContainer.appendChild(emptyState);
                         }
@@ -337,12 +348,12 @@ document.addEventListener('DOMContentLoaded', function() {
         // Use the existing templates from My Volcanoes page
         const templateId = type === 'success' ? 'success-notification-template' : 'error-notification-template';
         const template = document.getElementById(templateId);
-        
+
         if (template) {
             const notification = template.content.cloneNode(true);
             notification.querySelector('.notification-message').textContent = message;
             container.appendChild(notification);
-            
+
             // Auto remove after 3 seconds
             setTimeout(() => {
                 const notificationElement = container.lastElementChild;
@@ -356,23 +367,23 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     async function refreshStats() {
-    try {
-        const response = await fetch('/my-volcanoes', {
-            headers: {
-                'Accept': 'application/json',
-                'X-Requested-With': 'XMLHttpRequest'
-            }
-        });
-        const data = await response.json();
-        
-        // Update the stats display
-        document.getElementById('visited-value').textContent = data.stats.volcanoes_visited;
-        document.getElementById('countries-value').textContent = data.stats.countries_explored;
-        document.getElementById('active-value').textContent = data.stats.active_volcanoes;
-        document.getElementById('inactive-value').textContent = data.stats.inactive_volcanoes;
-        
-    } catch (error) {
-        console.error('Error refreshing stats:', error);
+        try {
+            const response = await fetch('/my-volcanoes', {
+                headers: {
+                    'Accept': 'application/json',
+                    'X-Requested-With': 'XMLHttpRequest'
+                }
+            });
+            const data = await response.json();
+
+            // Update the stats display
+            document.getElementById('visited-value').textContent = data.stats.volcanoes_visited;
+            document.getElementById('countries-value').textContent = data.stats.countries_explored;
+            document.getElementById('active-value').textContent = data.stats.active_volcanoes;
+            document.getElementById('inactive-value').textContent = data.stats.inactive_volcanoes;
+
+        } catch (error) {
+            console.error('Error refreshing stats:', error);
+        }
     }
-}
 });

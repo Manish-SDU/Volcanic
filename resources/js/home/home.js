@@ -10,11 +10,11 @@ const textStates = {
 function animateTextChange(newText) {
     const heroDescription = document.getElementById('heroDescription');
     if (heroDescription.textContent === newText) return;
-    
+
     heroDescription.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
     heroDescription.style.opacity = '0';
     heroDescription.style.transform = 'translateY(-10px)';
-    
+
     setTimeout(() => {
         heroDescription.textContent = newText;
         heroDescription.style.opacity = '1';
@@ -25,14 +25,14 @@ function animateTextChange(newText) {
 function updateSearchStatus(newText) {
     const searchStatus = document.getElementById('search-status');
     if (!searchStatus) return;
-    
+
     // Check if content is the same (comparing stripped HTML for detection)
     const currentContent = searchStatus.innerHTML;
     if (currentContent === newText) return;
-    
+
     searchStatus.style.transition = 'opacity 0.3s ease';
     searchStatus.style.opacity = '0';
-    
+
     setTimeout(() => {
         searchStatus.innerHTML = newText;
         searchStatus.style.opacity = '1';
@@ -52,7 +52,7 @@ function initializeSearch() {
     const volcanoGrid = document.querySelector('.volcano-grid');
     const noResultsMessage = document.getElementById('no-results-message');
     const searchTermSpan = document.getElementById('search-term');
-    
+
     let hasStartedTyping = false;
     let searchTimeout = null;
 
@@ -187,8 +187,8 @@ function initializeSearch() {
 
     // Default search status text
     const defaultSearchStatus = document.getElementById('search-status').textContent;
-        
-    searchToggle.addEventListener('click', function() {
+
+    searchToggle.addEventListener('click', function () {
         const isHidden = heroSearchBar.classList.toggle('hidden');
 
         if (searchToggleWrapper) {
@@ -219,48 +219,53 @@ function initializeSearch() {
     });
 
     // Hide search bar when clicking outside
-    document.addEventListener('click', function(event) {
+    document.addEventListener('click', function (event) {
         const isClickInsideSearch = heroSearchBar.contains(event.target);
         const isClickOnToggle = searchToggle.contains(event.target);
-        
+
         if (!isClickInsideSearch && !isClickOnToggle && !heroSearchBar.classList.contains('hidden')) {
-            heroSearchBar.classList.add('hidden');
-            animateTextChange(textStates.initial);
-            updateSearchStatus(defaultSearchStatus);
-            if (searchToggleWrapper) {
-                searchToggleWrapper.classList.remove('hide-tooltip');
+            // Only hide search bar if there's NO active search
+            const hasActiveSearch = searchInput.value.trim().length > 0;
+
+            if (!hasActiveSearch) {
+                heroSearchBar.classList.add('hidden');
+                animateTextChange(textStates.initial);
+                updateSearchStatus(defaultSearchStatus);
+                if (searchToggleWrapper) {
+                    searchToggleWrapper.classList.remove('hide-tooltip');
+                }
+                hasStartedTyping = false;
+                restoreSuggestionHint();
+                setLoadMoreVisibility(true);
             }
-            hasStartedTyping = false;
-            restoreSuggestionHint();
-            setLoadMoreVisibility(true);
         }
     });
 
-    searchInput.addEventListener('input', function() {
+    searchInput.addEventListener('input', function () {
         const searchTerm = this.value.trim();
-        
+
         if (searchTimeout) {
             clearTimeout(searchTimeout);
             searchTimeout = null;
         }
-        
+
         // Handle empty search immediately
         if (searchTerm.length === 0) {
             console.log('Empty search detected - resetting to homepage view');
-            
+
             hasStartedTyping = false;
             animateTextChange(textStates.searching);
-            
+
             resetSearch();
             return;
         }
-        
+
         if (!hasStartedTyping && searchTerm.length > 0) {
             hasStartedTyping = true;
             animateTextChange(textStates.typing);
             updateSearchStatus("Filtering volcanoes as you type...");
         }
-        
+
         searchTimeout = setTimeout(() => {
             const currentTerm = searchInput.value.trim();
             if (currentTerm.length > 0) {
@@ -271,7 +276,7 @@ function initializeSearch() {
         }, 300);
     });
 
-    searchToggle.addEventListener('click', function() {
+    searchToggle.addEventListener('click', function () {
         if (heroSearchBar.classList.contains('hidden')) {
             hasStartedTyping = false;
             searchInput.value = '';
@@ -279,7 +284,7 @@ function initializeSearch() {
         }
     });
 
-    searchInput.addEventListener('keypress', function(event) {
+    searchInput.addEventListener('keypress', function (event) {
         if (event.key === 'Enter') {
             const searchTerm = this.value.trim();
             if (searchTerm) {
@@ -287,12 +292,12 @@ function initializeSearch() {
             }
         }
     });
-    
+
     function resetSearch() {
         console.log('Search reset triggered');
-        
+
         volcanoGrid.classList.remove('search-active');
-        
+
         const cards = document.querySelectorAll('.volcano-card');
         cards.forEach((card, index) => {
             card.style.removeProperty('display');
@@ -303,7 +308,7 @@ function initializeSearch() {
                 card.classList.add('homepage-hidden');
             }
         });
-        
+
         noResultsMessage.classList.add('hidden');
         volcanoGrid.classList.remove('no-results');
         hasStartedTyping = false;
@@ -317,13 +322,13 @@ function initializeSearch() {
         if (allLoadedMessage) {
             allLoadedMessage.style.display = 'none';
         }
-        
+
         setTimeout(() => {
             updateSearchStatus(defaultSearchStatus);
             animateTextChange(textStates.initial);
-            
+
             searchTermSpan.textContent = '';
-            
+
             volcanoGrid.style.opacity = '0.99';
             setTimeout(() => {
                 volcanoGrid.style.opacity = '1';
@@ -331,24 +336,24 @@ function initializeSearch() {
             }, 10);
         }, 20);
     }
-    
+
     function performSearch(searchTerm) {
         if (!searchTerm) {
             resetSearch();
             return;
         }
-        
+
         volcanoGrid.classList.add('search-active');
         setLoadMoreVisibility(false);
-        
+
         // Show searching status with styled term
         const styledTerm = `<span style="color: #ff6b35; font-weight: 600;">"${searchTerm}"</span>`;
         updateSearchStatus(`Searching for ${styledTerm}...`);
         searchTermSpan.textContent = searchTerm;
-        
+
         // Always use API search
         console.log('Using API search for:', searchTerm);
-        
+
         fetch(`/api/volcanoes/search?query=${encodeURIComponent(searchTerm)}`)
             .then(response => {
                 if (!response.ok) {
@@ -371,25 +376,25 @@ function initializeSearch() {
                 noResultsMessage.classList.remove('hidden');
             });
     }
-    
+
     // Results from API
     function displaySearchResults(volcanoes, searchTerm) {
         const cards = document.querySelectorAll('.volcano-card');
         let visibleCount = 0;
-        
+
         // Make search active for all cards including the ones hidden in database
         volcanoGrid.classList.add('search-active');
         setLoadMoreVisibility(false);
-        
+
         // Create a map for volcanoes IDs that should be visible
         const volcanoIdMap = new Map();
         volcanoes.forEach(volcano => {
             volcanoIdMap.set(volcano.id.toString(), true);
         });
-        
+
         cards.forEach(card => {
             const volcanoId = card.dataset.volcanoId;
-            
+
             if (volcanoIdMap.has(volcanoId)) {
                 card.style.removeProperty('display');
                 card.classList.remove('homepage-hidden');
@@ -399,14 +404,14 @@ function initializeSearch() {
                 card.classList.add('homepage-hidden');
             }
         });
-        
+
         updateResultsUI(visibleCount, searchTerm);
     }
-    
+
     // Update UI based on search results count
     function updateResultsUI(visibleCount, searchTerm) {
         console.log(`Updating results UI for ${visibleCount} visible volcanoes`);
-        
+
         if (visibleCount === 0) {
             noResultsMessage.classList.remove('hidden');
             volcanoGrid.classList.add('no-results');
@@ -414,10 +419,10 @@ function initializeSearch() {
         } else {
             noResultsMessage.classList.add('hidden');
             volcanoGrid.classList.remove('no-results');
-            
+
             // Create styled search term
             const styledTerm = `<span style="color: #ff6b35; font-weight: 600;">"${searchTerm}"</span>`;
-            
+
             if (visibleCount === 1) { // IN case there is a singular count
                 updateSearchStatus(`1 volcano found for ${styledTerm}`);
                 console.log('Single volcano result - using singular form');
@@ -437,15 +442,15 @@ function initializeCarousel() {
     let autoSlideInterval;
     carouselBgs.forEach((bg, index) => {
         const bgUrl = bg.dataset.bg;
-        
+
         // Extract the actual image URL from the CSS url() format
         const imageUrl = bgUrl.replace(/url\(['"]?/, '').replace(/['"]?\)$/, '');
-        
+
         // Preload the image
         const preloadImg = new Image();
         preloadImg.onload = () => {
             bg.style.backgroundImage = bgUrl;
-            
+
             if (index === 0) {
                 bg.classList.add('active');
             }
@@ -456,10 +461,10 @@ function initializeCarousel() {
     function showSlide(index) {
         carouselBgs.forEach(bg => bg.classList.remove('active'));
         indicators.forEach(indicator => indicator.classList.remove('active'));
-        
+
         carouselBgs[index].classList.add('active');
         indicators[index].classList.add('active');
-        
+
         currentSlide = index;
     }
 
@@ -486,7 +491,7 @@ function initializeCarousel() {
     startAutoSlide();
 }
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     initializeSearch();
     initializeCarousel();
     initializeSmoothScroll();
@@ -497,17 +502,17 @@ document.addEventListener('DOMContentLoaded', function() {
 function initializeSmoothScroll() {
     const searchLink = document.querySelector('.search-link');
     if (searchLink) {
-        searchLink.addEventListener('click', function(e) {
+        searchLink.addEventListener('click', function (e) {
             e.preventDefault();
             const targetId = this.getAttribute('href').substring(1);
             const targetElement = document.getElementById(targetId);
-            
+
             if (targetElement) {
                 targetElement.scrollIntoView({
                     behavior: 'smooth',
                     block: 'start'
                 });
-                
+
                 setTimeout(() => {
                     const searchToggle = document.getElementById('searchToggle');
                     if (searchToggle) {
