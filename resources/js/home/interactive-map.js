@@ -139,6 +139,51 @@ function updateLegendHTML() {
   `;
 }
 
+function updateVolcanoCard(volcanoId, newStatus) {
+    // Find the card on the page
+    const card = document.querySelector(`.volcano-card[data-volcano-id="${volcanoId}"]`);
+    if (!card) return; // Card not visible/doesn't exist
+
+    const visitedBtn = card.querySelector('.visited-btn');
+    const wishlistBtn = card.querySelector('.wishlist-btn');
+
+    if (!visitedBtn || !wishlistBtn) return; // Buttons don't exist (guest user)
+
+    // Reset all states first
+    visitedBtn.classList.remove('active');
+    wishlistBtn.classList.remove('active');
+    visitedBtn.disabled = false;
+    wishlistBtn.disabled = false;
+
+    // Set new state
+    if (newStatus === 'visited') {
+        visitedBtn.classList.add('active');
+        wishlistBtn.disabled = true;
+    } else if (newStatus === 'wishlist') {
+        wishlistBtn.classList.add('active');
+        visitedBtn.disabled = true;
+    }
+    // else newStatus === null, both inactive and enabled (already set above)
+}
+
+function updateVolcanoMarker(volcanoId, newStatus) {
+    const marker = window.allMarkers?.find(m => m.volcanoData?.id === volcanoId);
+    if (!marker) return; // Marker not found
+
+    const volcano = marker.volcanoData;
+    const oldStatus = marker.volcanoStatus;
+    const newIcon = createVolcanoIcon(newStatus, true);
+    marker.setIcon(newIcon);
+    marker.volcanoStatus = newStatus;
+    const newPopupHTML = createPopupHTML(volcano, newStatus, true);
+    marker.setPopupContent(newPopupHTML);
+    updateLegendCounts(oldStatus, newStatus);
+
+    console.log(`✓ Marker updated: ${volcano.name} is now ${newStatus || 'not in any list'}`);
+}
+// Make it globally accessible so volcano-actions.js can call it
+  window.updateVolcanoMarker = updateVolcanoMarker;
+
 function createPopupHTML(volcano, userStatus, isAuthenticated) {
     let userStatusHTML = '';
 
@@ -448,6 +493,7 @@ function cycleVolcanoStatus(volcanoId, currentStatus, marker, volcano) {
             marker.volcanoStatus = nextStatus;
             // Update numbers showed in the Legend
             updateLegendCounts(currentStatus, nextStatus);
+            updateVolcanoCard(volcanoId, nextStatus); 
             console.log(`✓ ${volcano.name} is now: ${nextStatus || 'not in any list'}`);
         })
         .catch(error => {
@@ -468,7 +514,7 @@ function updateLegendCounts(oldStatus, newStatus) {
 
     // Calculate changes (subtract from old status)
     if (oldStatus === 'visited') {
-        visitedCount--;          
+        visitedCount--;
     } else if (oldStatus === 'wishlist') {
         wishlistCount--;
     } else {  // oldStatus === null
@@ -503,7 +549,6 @@ document.addEventListener('click', function (e) {
     }
 });
 
-            // TODO: update volcano card in grid if visible
-            // TODO: check if there is interference with the search feature
-            // TODO: refactore/ split code more clearly?
-            // TODO: update Readme
+// TODO: check if there is interference with the search feature
+// TODO: refactore/ split code more clearly?
+// TODO: update Readme
