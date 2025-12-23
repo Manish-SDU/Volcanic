@@ -3,8 +3,7 @@
 @section('title', 'Home')
 
 @section('additional_css')
-    @vite(['resources/css/home/volcano-animation.css', 'resources/css/home/ai-bot.css'])
-
+    @vite(['resources/css/home/volcano-animation.css', 'resources/css/home/volcano-map.css', 'resources/css/home/ai-bot.css', 'resources/css/home/filter-modal.css', 'resources/css/home/sort-dropdown.css'])
     <!-- Leaflet CSS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
         integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
@@ -13,6 +12,11 @@
 
     <!-- Map Styles -->
     <style>
+        #filter-pill:hover {
+            background: #ff8c00 !important;
+            color: white !important;
+            border-color: #ff8c00 !important;
+        }
         #map-toggle-pill:hover {
             background: #3498db !important;
             color: white !important;
@@ -22,7 +26,7 @@
 @endsection
 
 @section('head_js')
-    @vite(['resources/js/home/lazy-load.js', 'resources/js/home/load-more.js', 'resources/js/home/volcano-animation.js', 'resources/js/home/home.js', 'resources/js/my-volcanoes/volcano-actions.js', 'resources/js/home/volcano-modal.js', 'resources/js/home/ai-bot.js', 'resources/js/home/interactive-map/map-core.js', 'resources/js/home/interactive-map/map-display.js', 'resources/js/home/interactive-map/map-sync.js', ])
+    @vite(['resources/js/home/lazy-load.js', 'resources/js/home/load-more.js', 'resources/js/home/volcano-animation.js', 'resources/js/home/home.js', 'resources/js/my-volcanoes/volcano-actions.js', 'resources/js/home/volcano-modal.js', 'resources/js/home/ai-bot.js', 'resources/js/home/interactive-map/map-core.js', 'resources/js/home/interactive-map/map-display.js', 'resources/js/home/interactive-map/map-sync.js', 'resources/js/home/filter-modal.js', 'resources/js/home/sort-dropdown.js'])
 
     <!-- Dependencies -->
     <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
@@ -102,9 +106,36 @@
     <section class="content-section">
         <div class="container">
             <div style="position: relative;">
+                <div id="sort-dropdown-container" class="sort-dropdown-container" style="position: absolute; top: 0; left: 0;">
+                    <button id="sort-dropdown-btn" class="action-btn" 
+                        style="border-color: #9b59b6; color: #9b59b6; min-width: 185px; justify-content: center; white-space: nowrap;"
+                        title="Sort volcanoes">
+                        <i class="fas fa-sort"></i>
+                        <span id="sort-label">Alphabetical</span>
+                        <i class="fas fa-chevron-down" style="margin-left: 8px; font-size: 12px;"></i>
+                    </button>
+                    <div id="sort-dropdown-menu" class="sort-dropdown-menu" style="display: none;">
+                        <button class="sort-option active" data-sort="alphabetical">
+                            <i class="fas fa-sort-alpha-down"></i>
+                            <span>Alphabetical</span>
+                        </button>
+                        <button class="sort-option" data-sort="random">
+                            <i class="fas fa-random"></i>
+                            <span>Random Discovery</span>
+                        </button>
+                    </div>
+                </div>
+                
                 <h2>Ignite Your Volcano Journey</h2>
                 <p id="search-status" class="section-description">Discover Earth's Fiery Secrets</p>
-                <div style="position: absolute; top: 0; right: 0; display: flex; gap: 12px;">
+                
+                <!-- Filter and Map buttons on the right -->
+                <div style="position: absolute; top: 0; right: 0; display: flex; gap: 12px; align-items: center;">
+                    <span id="filter-pill" class="action-btn"
+                        style="border-color: #ff8c00; color: #ff8c00; min-width: 130px; justify-content: center; white-space: nowrap;">
+                        <i class="fas fa-filter"></i>
+                        <span>Filter</span>
+                    </span>
                     <span id="map-toggle-pill" onclick="toggleMap()" class="action-btn"
                         style="border-color: #3498db; color: #3498db; min-width: 130px; justify-content: center; white-space: nowrap;">
                         <i class="fas fa-map"></i>
@@ -330,6 +361,85 @@
             </button>
         </div>
     </section>
+
+    <!-- Filter Modal -->
+    <div id="filterModal" class="filter-modal">
+        <div class="filter-modal-content">
+            <div class="filter-modal-header">
+                <h2><i class="fas fa-filter"></i> Filter Volcanoes</h2>
+                <span class="close">&times;</span>
+            </div>
+            <form action="{{ route('home') }}" method="GET">
+                <div class="filter-modal-body">
+                    <div class="filter-group">
+                        <label for="country"><i class="fas fa-flag"></i> Country</label>
+                        <input type="text" name="country" id="country" value="{{ request('country') }}" placeholder="Enter country name (e.g., Japan, Italy)">
+                    </div>
+
+                    <div class="filter-group">
+                        <label for="continent"><i class="fas fa-globe-americas"></i> Continent</label>
+                        <select name="continent" id="continent">
+                            <option value="">All Continents</option>
+                            <option value="Africa" {{ request('continent') == 'Africa' ? 'selected' : '' }}>Africa</option>
+                            <option value="Asia" {{ request('continent') == 'Asia' ? 'selected' : '' }}>Asia</option>
+                            <option value="Europe" {{ request('continent') == 'Europe' ? 'selected' : '' }}>Europe</option>
+                            <option value="North America" {{ request('continent') == 'North America' ? 'selected' : '' }}>North America</option>
+                            <option value="South America" {{ request('continent') == 'South America' ? 'selected' : '' }}>South America</option>
+                            <option value="Oceania" {{ request('continent') == 'Oceania' ? 'selected' : '' }}>Oceania</option>
+                            <option value="Antarctica" {{ request('continent') == 'Antarctica' ? 'selected' : '' }}>Antarctica</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label for="activity"><i class="fas fa-fire"></i> Activity Status</label>
+                        <select name="activity" id="activity">
+                            <option value="">All Activity Levels</option>
+                            <option value="Active" {{ request('activity') == 'Active' ? 'selected' : '' }}>Active</option>
+                            <option value="Inactive" {{ request('activity') == 'Inactive' ? 'selected' : '' }}>Inactive</option>
+                            <option value="Extinct" {{ request('activity') == 'Extinct' ? 'selected' : '' }}>Extinct</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label for="type"><i class="fas fa-mountain"></i> Type</label>
+                        <select name="type" id="type">
+                            <option value="">All Types</option>
+                            <option value="Stratovolcano" {{ request('type') == 'Stratovolcano' ? 'selected' : '' }}>Stratovolcano</option>
+                            <option value="Shield" {{ request('type') == 'Shield' ? 'selected' : '' }}>Shield</option>
+                            <option value="Caldera" {{ request('type') == 'Caldera' ? 'selected' : '' }}>Caldera</option>
+                            <option value="Complex" {{ request('type') == 'Complex' ? 'selected' : '' }}>Complex</option>
+                            <option value="Cinder cone" {{ request('type') == 'Cinder cone' ? 'selected' : '' }}>Cinder cone</option>
+                            <option value="Lava dome" {{ request('type') == 'Lava dome' ? 'selected' : '' }}>Lava dome</option>
+                            <option value="Submarine" {{ request('type') == 'Submarine' ? 'selected' : '' }}>Submarine</option>
+                            <option value="Fissure vent" {{ request('type') == 'Fissure vent' ? 'selected' : '' }}>Fissure vent</option>
+                            <option value="Volcanic field" {{ request('type') == 'Volcanic field' ? 'selected' : '' }}>Volcanic field</option>
+                            <option value="Flood basalt" {{ request('type') == 'Flood basalt' ? 'selected' : '' }}>Flood basalt</option>
+                            <option value="Somma" {{ request('type') == 'Somma' ? 'selected' : '' }}>Somma</option>
+                            <option value="Tuff ring" {{ request('type') == 'Tuff ring' ? 'selected' : '' }}>Tuff ring</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label for="elevation_min"><i class="fas fa-arrow-up"></i> Elevation (meters)</label>
+                        <div class="elevation-range">
+                            <input type="number" name="elevation_min" id="elevation_min" value="{{ request('elevation_min') }}" placeholder="Min (e.g., 1000)">
+                            <span>to</span>
+                            <input type="number" name="elevation_max" id="elevation_max" value="{{ request('elevation_max') }}" placeholder="Max (e.g., 5000)">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="filter-modal-actions">
+                    <button type="submit" class="btn-apply">
+                        <i class="fas fa-check"></i> Apply Filters
+                    </button>
+                    <a href="{{ route('home') }}" class="btn-clear">
+                        <i class="fas fa-times"></i> Clear All
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
 
     <!-- Volcano Animation -->
     <section id="volcano-container"></section>

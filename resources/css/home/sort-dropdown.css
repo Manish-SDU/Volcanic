@@ -1,0 +1,102 @@
+/* Sort Dropdown Styles */
+.sort-dropdown-container {
+    position: relative;
+    display: inline-block;
+}
+
+#sort-dropdown-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 20px;
+    background: white;
+    border: 2px solid;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+#sort-dropdown-btn:hover:not(.disabled) {
+    background: #9b59b6 !important;
+    color: white !important;
+    border-color: #9b59b6 !important;
+}
+
+#sort-dropdown-btn.disabled {
+    pointer-events: none;
+}
+
+#sort-dropdown-btn .fa-chevron-down {
+    transition: transform 0.3s ease;
+}
+
+.sort-dropdown-menu {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    background: white;
+    border: 2px solid #9b59b6;
+    border-radius: 8px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.sort-option {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    padding: 12px 20px;
+    background: white;
+    border: none;
+    border-bottom: 1px solid #f0f0f0;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    color: #2c3e50;
+    transition: all 0.2s ease;
+    text-align: left;
+}
+
+.sort-option:last-child {
+    border-bottom: none;
+}
+
+.sort-option:hover {
+    background: #f8f4fb;
+    color: #9b59b6;
+}
+
+.sort-option.active {
+    background: #9b59b6;
+    color: white;
+}
+
+.sort-option.active:hover {
+    background: #8e44ad;
+}
+
+.sort-option i {
+    width: 20px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.sort-option span {
+    flex: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .sort-dropdown-container {
+        position: static;
+    }
+    
+    .sort-dropdown-menu {
+        right: auto;
+        left: 0;
+    }
+}
