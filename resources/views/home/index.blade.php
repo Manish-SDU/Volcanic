@@ -91,14 +91,6 @@
                 </div>
             </div>
 
-            <!-- Github Button -->
-            <div class="hero-actions">
-                <div class="hero-badge">
-                    <span>MADE BY THE WONDERFUL GROUP 3 - </span>
-                    <strong><a href="https://github.com/Manish-SDU/Volcanic.git" target="_blank" class="github-link"
-                            title="Visit our GitHub repository">Volcanic <i class="fa-brands fa-github"></i></a></strong>
-                </div>
-            </div>
         </div>
     </section>
 
