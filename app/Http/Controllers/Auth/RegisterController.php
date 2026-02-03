@@ -7,6 +7,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Validation\Rules\Password;
 
 class RegisterController extends Controller
 {
@@ -21,10 +22,18 @@ class RegisterController extends Controller
             'name'          => ['required', 'string', 'max:100'],
             'surname'       => ['nullable', 'string', 'max:100'],
             'username'      => ['required', 'string', 'max:60', 'alpha_dash', 'unique:users,username'],
-            'date_of_birth' => ['nullable', 'date', 'before:today'],
+            'date_of_birth' => ['required', 'date', 'before:today'],
             'where_from'    => ['nullable', 'string', 'max:100'],
             'bio'           => ['nullable', 'string', 'max:5000'],
-            'password'      => ['required', 'string', 'min:8', 'confirmed'],
+            'password'      => [
+                'required',
+                'confirmed',
+                Password::min(12)
+                    ->mixedCase()
+                    ->numbers()
+                    ->symbols()
+                    ->uncompromised(),
+            ],
         ]);
 
         $user = User::create([

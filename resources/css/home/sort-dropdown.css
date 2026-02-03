@@ -89,10 +89,18 @@
     flex: 1;
 }
 
+.home-controls {
+    padding-bottom: 32px;
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .sort-dropdown-container {
         position: static;
+    }
+
+    .home-controls {
+        padding-bottom: 12px;
     }
     
     .sort-dropdown-menu {

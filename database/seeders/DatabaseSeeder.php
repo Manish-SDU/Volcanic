@@ -24,7 +24,7 @@ class DatabaseSeeder extends Seeder
             'date_of_birth' => '2005-04-27',
             'where_from'    => 'VolcanoLandia',
             'bio'           => 'Im the bossy boss 🌋',
-            'password'      => Hash::make('admin123'), 
+            'password'      => Hash::make('Volcanic!Demo#2026'), 
             'is_admin'      => true,
         ]);
 
@@ -35,7 +35,7 @@ class DatabaseSeeder extends Seeder
             'date_of_birth' => '2000-01-01',
             'where_from'    => 'Italy',
             'bio'           => 'I rate volcanoes the way sommeliers rate wine. 🌋🇮🇹',
-            'password'      => Hash::make('user123'),
+            'password'      => Hash::make('Volcanic!User#2026'),
             'is_admin'      => false, // No admin role for regular user check
         ]);
 
@@ -46,7 +46,7 @@ class DatabaseSeeder extends Seeder
             'date_of_birth' => '2000-01-01',
             'where_from'    => 'France',
             'bio'           => 'Im just a test',
-            'password'      => Hash::make('123'),
+            'password'      => Hash::make('Volcanic!Test#2026'),
             'is_admin'      => false,
         ]);
             

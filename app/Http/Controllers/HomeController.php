@@ -16,6 +16,7 @@ class HomeController extends Controller
     public function index(Request $request)
     {
         $query = Volcano::query();
+        $demoLimit = (int) env('DEMO_VOLCANO_LIMIT', 0);
         
         // Apply filters if present
         $hasFilters = false;
@@ -55,22 +56,38 @@ class HomeController extends Controller
         
         // If filters are applied, don't use cache and ignore sort
         if ($hasFilters) {
-            $volcanoes = $query->select('id', 'name', 'country', 'type', 'activity', 'elevation', 'image_url', 'latitude', 'longitude', 'description')
-                ->orderBy('name')
-                ->get();
+            $filteredQuery = $query->select('id', 'name', 'country', 'type', 'activity', 'elevation', 'image_url', 'latitude', 'longitude', 'description')
+                ->orderBy('name');
+
+            if ($demoLimit > 0) {
+                $filteredQuery->limit($demoLimit);
+            }
+
+            $volcanoes = $filteredQuery->get();
         } else {
             // Apply sorting based on user preference (only when no filters)
             if ($sortOption === 'random') {
                 // For random sorting, don't use cache and apply random order
-                $volcanoes = Volcano::select('id', 'name', 'country', 'type', 'activity', 'elevation', 'image_url', 'latitude', 'longitude', 'description')
-                    ->inRandomOrder()
-                    ->get();
+                $randomQuery = Volcano::select('id', 'name', 'country', 'type', 'activity', 'elevation', 'image_url', 'latitude', 'longitude', 'description')
+                    ->inRandomOrder();
+
+                if ($demoLimit > 0) {
+                    $randomQuery->limit($demoLimit);
+                }
+
+                $volcanoes = $randomQuery->get();
             } else {
                 // Cache alphabetically sorted volcanoes for 24 hours to improve performance
-                $volcanoes = Cache::remember('home_volcanoes', 60*60*24, function () {
-                    return Volcano::select('id', 'name', 'country', 'type', 'activity', 'elevation', 'image_url', 'latitude', 'longitude', 'description')
-                        ->orderBy('name')
-                        ->get();
+                $cacheKey = $demoLimit > 0 ? "home_volcanoes_limit_{$demoLimit}" : 'home_volcanoes';
+                $volcanoes = Cache::remember($cacheKey, 60*60*24, function () use ($demoLimit) {
+                    $baseQuery = Volcano::select('id', 'name', 'country', 'type', 'activity', 'elevation', 'image_url', 'latitude', 'longitude', 'description')
+                        ->orderBy('name');
+
+                    if ($demoLimit > 0) {
+                        $baseQuery->limit($demoLimit);
+                    }
+
+                    return $baseQuery->get();
                 });
             }
         }

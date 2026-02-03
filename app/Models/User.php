@@ -40,6 +40,10 @@ class User extends Authenticatable
         'remember_token',
     ];
 
+    protected $casts = [
+        'date_of_birth' => 'date',
+    ];
+
     public function userVolcanoes(): HasMany
     {
         return $this->hasMany(UserVolcano::class);
