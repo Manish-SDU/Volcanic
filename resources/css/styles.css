@@ -2119,6 +2119,7 @@ html {
     flex-direction: column;
     padding: 30px 20px;
     min-height: 80vh;
+    position: relative;
 }
     
 .login-container .text {
@@ -2179,6 +2180,131 @@ html {
     color: #7f1d1d;
     font-weight: 500;
     font-size: 0.95rem;
+}
+
+/* Demo credentials popup */
+.demo-credentials-popup {
+    position: absolute;
+    top: 120px;
+    left: 50%;
+    transform: translateX(280px);
+    width: min(360px, 90vw);
+    background: linear-gradient(160deg, rgba(187, 1, 1, 0.08) 0%, rgba(248, 178, 89, 0.15) 100%);
+    border: 1px solid rgba(187, 1, 1, 0.15);
+    border-radius: var(--border-radius-lg);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.12);
+    padding: 1rem 1.25rem;
+    z-index: 50;
+    animation: fadeInUp 0.4s ease-out;
+}
+
+.demo-credentials-popup.is-hidden {
+    display: none;
+}
+
+.demo-credentials-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.75rem;
+}
+
+.demo-credentials-header span {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+}
+
+.demo-credentials-header span::before {
+    content: '•';
+    color: var(--primary-color);
+    font-size: 1.4rem;
+    line-height: 1;
+}
+
+.demo-credentials-close {
+    border: none;
+    background: transparent;
+    color: var(--text-secondary);
+    font-size: 1.4rem;
+    line-height: 1;
+    cursor: pointer;
+    padding: 0.15rem 0.35rem;
+    border-radius: 6px;
+}
+
+.demo-credentials-close:hover {
+    color: var(--primary-color);
+    background: rgba(187, 1, 1, 0.08);
+}
+
+.demo-credentials-body {
+    display: grid;
+    gap: 0.85rem;
+}
+
+.demo-credentials-row {
+    border: none;
+    text-align: left;
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 0.75rem 0.85rem;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    border: 1px solid rgba(187, 1, 1, 0.12);
+    display: grid;
+    grid-template-columns: 70px 1fr;
+    gap: 0.75rem;
+    align-items: start;
+}
+
+.demo-credentials-row:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 18px rgba(187, 1, 1, 0.15);
+    border-color: rgba(187, 1, 1, 0.35);
+}
+
+.demo-credentials-row:focus-visible {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+.demo-credentials-role {
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.demo-credentials-details {
+    display: grid;
+    gap: 0.25rem;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+.demo-credentials-label {
+    display: inline-block;
+    min-width: 76px;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.demo-credentials-hint {
+    margin-top: 0.85rem;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+@media (max-width: 1100px) {
+    .demo-credentials-popup {
+        position: static;
+        width: 100%;
+        margin: 0 0 1.5rem;
+        left: auto;
+        transform: none;
+    }
 }
 
 @keyframes slideDown {
@@ -2537,6 +2663,16 @@ form .signup-link span {
 
     form .signup-link span {
         margin-bottom: 0.5rem;
+    }
+
+    .demo-credentials-popup {
+        position: static;
+        width: 100%;
+        margin: 0 0 1.5rem;
+        top: auto;
+        right: auto;
+        left: auto;
+        transform: none;
     }
 }
 

@@ -20,3 +20,7 @@ use Illuminate\Support\Facades\Route;
 (require __DIR__ . '/web/volcanoes.php')();
 (require __DIR__ . '/web/dev.php')();
 (require __DIR__ . '/web/events.php')();
+
+Route::get('/health', function () {
+	return response()->json(['status' => 'ok']);
+});

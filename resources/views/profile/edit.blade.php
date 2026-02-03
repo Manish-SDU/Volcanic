@@ -155,6 +155,16 @@
                         Save Changes
                     </button>
                 </div>
+
+                <div class="form-divider">
+                    <span>Security</span>
+                </div>
+
+                <div class="form-actions">
+                    <a href="{{ route('password.change.show') }}" class="btn btn-secondary" aria-label="Change your password">
+                        Change Password
+                    </a>
+                </div>
             </form>
         </section>
     </main>
